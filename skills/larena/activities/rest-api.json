@@ -1,0 +1,10 @@
+{
+  "activity_id": "rest-api",
+  "title": "REST and OpenAPI",
+  "triggers": ["rest", "api", "swagger", "openapi", "/api/v1/run"],
+  "required_specialists": ["rest-api", "security-permissions", "qa-validation"],
+  "optional_specialists": ["package-installer"],
+  "knowledge_packs": ["rest-safety", "package-map"],
+  "required_gates": ["explicit API contract", "ACL/token behavior", "OpenAPI sync", "401/403 tests"],
+  "required_outputs": ["API contract", "safety verdict", "tests/checks", "upgrade notes"]
+}

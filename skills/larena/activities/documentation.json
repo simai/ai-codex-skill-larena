@@ -1,0 +1,10 @@
+{
+  "activity_id": "documentation",
+  "title": "Documentation and knowledge",
+  "triggers": ["docs", "documentation", "knowledge", "skill", "source", "handoff"],
+  "required_specialists": ["documentation-learning"],
+  "optional_specialists": ["platform-architect", "docara-product", "qa-validation"],
+  "knowledge_packs": ["product-architecture"],
+  "required_gates": ["audience split", "source vs stable docs", "secret-free"],
+  "required_outputs": ["updated docs/knowledge", "scope", "verification"]
+}

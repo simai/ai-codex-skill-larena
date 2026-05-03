@@ -1,0 +1,10 @@
+{
+  "activity_id": "ops-runtime",
+  "title": "Runtime and operations",
+  "triggers": ["runtime", "deploy", "server", "queue", "cron", "healthcheck", "slow", "500"],
+  "required_specialists": ["ops-runtime", "qa-validation"],
+  "optional_specialists": ["package-installer", "security-permissions", "update-registration"],
+  "knowledge_packs": ["update-registration"],
+  "required_gates": ["real config/logs when accessible", "health checks", "rollback/restart path"],
+  "required_outputs": ["runtime diagnosis", "fix or plan", "verification", "residual risk"]
+}

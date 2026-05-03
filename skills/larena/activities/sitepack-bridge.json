@@ -1,0 +1,10 @@
+{
+  "activity_id": "sitepack-bridge",
+  "title": "SitePack bridge",
+  "triggers": ["sitepack", ".sitepack", "export", "import", "backup", "restore", "migration package"],
+  "required_specialists": ["sitepack-bridge", "data-settings-props", "qa-validation"],
+  "optional_specialists": ["docara-product", "package-installer", "security-permissions"],
+  "knowledge_packs": ["sitepack-bridge", "settings-storage-props-layout"],
+  "required_gates": ["manifest/catalog use", "artifact paths", "relation handling", "validator where available"],
+  "required_outputs": ["mapping", "adapter boundary", "verification", "warnings/open questions"]
+}

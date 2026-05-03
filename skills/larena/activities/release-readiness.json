@@ -1,0 +1,10 @@
+{
+  "activity_id": "release-readiness",
+  "title": "Release readiness",
+  "triggers": ["release", "ready", "publish", "quality gate", "preflight"],
+  "required_specialists": ["qa-validation", "package-installer", "security-permissions"],
+  "optional_specialists": ["platform-architect", "ops-runtime", "documentation-learning"],
+  "knowledge_packs": ["package-map", "product-architecture"],
+  "required_gates": ["install", "tests", "security/access", "docs", "rollback"],
+  "required_outputs": ["readiness verdict", "blocking issues", "conditions", "verification evidence"]
+}

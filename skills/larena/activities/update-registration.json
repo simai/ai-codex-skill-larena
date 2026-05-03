@@ -1,0 +1,10 @@
+{
+  "activity_id": "update-registration",
+  "title": "Update and registration infrastructure",
+  "triggers": ["larena-update", "upserv", "registration", "license", "update server", "installer"],
+  "required_specialists": ["update-registration", "security-permissions", "ops-runtime", "qa-validation"],
+  "optional_specialists": ["package-installer", "sitepack-bridge"],
+  "knowledge_packs": ["update-registration", "product-architecture"],
+  "required_gates": ["registration boundary", "safe file delivery", "runtime health", "rollback"],
+  "required_outputs": ["architecture/patch", "security notes", "verification", "deployment notes"]
+}

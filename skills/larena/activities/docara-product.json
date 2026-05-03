@@ -1,0 +1,10 @@
+{
+  "activity_id": "docara-product",
+  "title": "Docara product proof",
+  "triggers": ["docara", "documentation product", "first product", "product proof"],
+  "required_specialists": ["docara-product", "package-installer", "qa-validation"],
+  "optional_specialists": ["sitepack-bridge", "modular-admin", "security-permissions"],
+  "knowledge_packs": ["docara-proof", "package-map"],
+  "required_gates": ["install path", "admin/public smoke", "content/assets/settings coverage"],
+  "required_outputs": ["product readiness", "package baseline", "verification", "remaining gaps"]
+}

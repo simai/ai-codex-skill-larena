@@ -1,0 +1,10 @@
+{
+  "activity_id": "entry-install-readiness",
+  "title": "Entry app install readiness",
+  "triggers": ["install larena", "self deploy", "bootstrap repo", "installation readiness"],
+  "required_specialists": ["package-installer", "qa-validation"],
+  "optional_specialists": ["ops-runtime", "platform-architect", "security-permissions"],
+  "knowledge_packs": ["product-architecture", "package-map"],
+  "required_gates": ["composer graph", "env/install docs", "artisan health checks when runnable"],
+  "required_outputs": ["install verdict", "blockers", "commands run", "user-facing fixes"]
+}

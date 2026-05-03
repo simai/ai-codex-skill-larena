@@ -1,0 +1,10 @@
+{
+  "activity_id": "new-package",
+  "title": "New Larena package",
+  "triggers": ["new larena package", "new module", "create package"],
+  "required_specialists": ["platform-architect", "package-installer", "security-permissions", "qa-validation"],
+  "optional_specialists": ["modular-admin", "rest-api", "data-settings-props"],
+  "knowledge_packs": ["package-map", "product-architecture"],
+  "required_gates": ["module metadata", "install command", "provider", "tests", "docs/changelog"],
+  "required_outputs": ["package contract", "implementation", "verification", "migration/upgrade notes"]
+}

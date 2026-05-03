@@ -1,0 +1,16 @@
+{
+  "activities": [
+    "package-diagnostics",
+    "entry-install-readiness",
+    "new-package",
+    "admin-platform",
+    "update-registration",
+    "sitepack-bridge",
+    "docara-product",
+    "rest-api",
+    "settings-storage-props-layout",
+    "release-readiness",
+    "documentation",
+    "ops-runtime"
+  ]
+}

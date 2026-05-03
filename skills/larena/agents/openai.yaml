@@ -1,0 +1,4 @@
+interface:
+  display_name: "Larena"
+  short_description: "SIMAI Laravel CMS platform"
+  default_prompt: "Используй $larena, чтобы диагностировать или развивать Larena с учетом пакетов, update server, SitePack, SF5 и Docara."
