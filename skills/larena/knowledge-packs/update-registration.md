@@ -51,6 +51,21 @@ When a Bitrix or Larena update client reports an API failure while reading the p
 
 The update server must fail controlled with JSON when an archive source is missing. Do not patch vendor/runtime code directly on production as a substitute for a proper deployment.
 
+Aggregate zip generation is successful only after the generated file exists and at least one source archive was actually added. Guard every `filemtime()`, size calculation and signed URL generation behind that check; missing source archives should be logged with distribution/file/storage context and returned as a controlled item/API diagnostic, not as a feed-wide HTML 500.
+
+Do not compute checksums for every large generated archive synchronously inside the update feed request. Either precompute/cache archive checksums out of the request path, or emit checksums only below a configured size threshold and treat checksum fields as optional for large archives. Always keep `size` available for disk/preflight checks.
+
+Archive corruption tests must cover nested archives, not only the top-level aggregate zip. A valid aggregate zip can still contain a corrupt `<version>.zip`; update clients should fail the download/unpack step controlled, preserve the detailed error in operation state, and avoid printing duplicate concatenated `ERR_...` responses.
+
+For `larena/upserv` runtime maintenance, prefer the packaged read-only command before ad-hoc tinker snippets:
+
+```bash
+sudo -u simai php artisan simai:upserv:distribution-files:audit --json --include-orphans
+sudo -u simai php artisan simai:upserv:distribution-files:audit --strict
+```
+
+The command audits `sf_distribution_files.file -> sf_file.id -> sf_file.url -> storage/app/<url>`, reports missing file rows/URLs/physical archives, size mismatches and linked deleted files. `--strict` must fail non-zero when real defects are present, so it is suitable for monitoring. Treat orphan `sf_file` rows as a separate storage-policy signal, not an automatic release blocker.
+
 ## Product Segmentation
 
 Core/minimum CMS should be free/open. Paid products and solution layers should be delivered through update/product infrastructure later. Exact free-core key policy remains product/marketing decision.
