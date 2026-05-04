@@ -6,6 +6,19 @@
 - `larena-upserv`: historical/legacy naming for update server. Do not use `larena-upserv` for new package identity, docs or Composer requirements. Keep `larena/upserv` only as a Composer `replace` alias when maintaining backward compatibility. The canonical Composer package should be `larena/update`.
 - `larena-update-registration`: closed-contour registration/licensing server.
 
+## Canonical Alias Migration Rule
+
+Do not mass-rename legacy update-server internals in one patch. Use alias-first migration:
+
+- Composer requirements, new docs and new install instructions must use `larena/update`.
+- New commands should prefer the canonical `simai:update:*` and `simai:install-update` names.
+- New config publishing may use `simai_update`, while keeping `simai_upserv` as the old implementation config.
+- Keep `Simai\Upserv`, `simai_upserv`, `UPSERV_*`, `upserv.*`, legacy DB tables and `simai:upserv:*` as a backward-compatible implementation layer until major-safe migrations exist.
+- New source can add `Simai\Update\...` wrappers, provider aliases and command aliases that delegate to the old implementation.
+- Rename tables, permissions, env keys or URL contracts only with explicit migration, aliases, rollback notes and runtime verification.
+
+This avoids breaking existing update-server installs while making `larena/update` the visible product contract.
+
 ## Repository/Runtime Source Of Truth
 
 Before changing update or registration servers, reconcile production runtime with repositories:
@@ -85,11 +98,11 @@ Do not compute checksums for every large generated archive synchronously inside 
 
 Archive corruption tests must cover nested archives, not only the top-level aggregate zip. A valid aggregate zip can still contain a corrupt `<version>.zip`; update clients should fail the download/unpack step controlled, preserve the detailed error in operation state, and avoid printing duplicate concatenated `ERR_...` responses.
 
-For `larena/update` runtime maintenance, prefer the packaged read-only command before ad-hoc tinker snippets. Existing command names may still include `upserv` for backward compatibility:
+For `larena/update` runtime maintenance, prefer the packaged read-only command before ad-hoc tinker snippets. Use canonical command names when available; legacy `upserv` command names may still work for backward compatibility:
 
 ```bash
-sudo -u simai php artisan simai:upserv:distribution-files:audit --json --include-orphans
-sudo -u simai php artisan simai:upserv:distribution-files:audit --strict
+sudo -u simai php artisan simai:update:distribution-files:audit --json --include-orphans
+sudo -u simai php artisan simai:update:distribution-files:audit --strict
 ```
 
 The command audits `sf_distribution_files.file -> sf_file.id -> sf_file.url -> storage/app/<url>`, reports missing file rows/URLs/physical archives, size mismatches and linked deleted files. `--strict` must fail non-zero when real defects are present, so it is suitable for monitoring. Treat orphan `sf_file` rows as a separate storage-policy signal, not an automatic release blocker.

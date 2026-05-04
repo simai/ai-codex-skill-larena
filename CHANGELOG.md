@@ -10,6 +10,8 @@
 - Added knowledge packs for product architecture, package map, `module.yaml` standard, update/registration, Docara proof, REST safety, SitePack bridge, settings/storage/props/layout, admin platform, ordinary-hosting scheduler and AI-agent service architecture.
 - Added session-safe background enrichment knowledge for link preview, external fetch, AI-agent context gathering, endpoint session modes, queue bulkheads, circuit breakers and diagnostics.
 - Added package install readiness guidance for `larena:doctor` and provider bootstrap safety during Composer/Laravel package discovery.
+- Added Docara acceptance gate guidance for `larena:doctor --docara`, `docara:sync --dry-run`, route checks and the next browser/admin product gate.
+- Added update-server canonical alias migration guidance: use `larena/update`, `simai:update:*` and `simai_update` for new contracts while preserving `Simai\Upserv`, `simai_upserv` and legacy commands as compatibility surfaces.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
