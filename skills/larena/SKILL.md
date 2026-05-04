@@ -162,6 +162,7 @@ Use old developer-authored materials when selected by routing:
 
 - General package rules: [knowledge/simai-package-rules.md](./knowledge/simai-package-rules.md)
 - Current package manifest standard: [knowledge-packs/module-yaml-standard.md](./knowledge-packs/module-yaml-standard.md)
+- Session-safe background enrichment: [knowledge-packs/session-safe-background-enrichment.md](./knowledge-packs/session-safe-background-enrichment.md)
 - Quick start: [knowledge/quickstart.md](./knowledge/quickstart.md)
 - Admin package: [knowledge/modules/admin.md](./knowledge/modules/admin.md)
 - Access package: [knowledge/modules/access.md](./knowledge/modules/access.md)

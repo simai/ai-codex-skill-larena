@@ -8,6 +8,7 @@
 - Added Larena engineering-council architecture with kernel rules, activities, specialists, quality templates and knowledge packs.
 - Added product DNA, platform scope and non-negotiables for Larena as a SIMAI/Laravel/SF5 CMS platform.
 - Added knowledge packs for product architecture, package map, `module.yaml` standard, update/registration, Docara proof, REST safety, SitePack bridge, settings/storage/props/layout, admin platform, ordinary-hosting scheduler and AI-agent service architecture.
+- Added session-safe background enrichment knowledge for link preview, external fetch, AI-agent context gathering, endpoint session modes, queue bulkheads, circuit breakers and diagnostics.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
 - Added routing and decision-policy rules for package diagnostics, entry install readiness, update/registration, SitePack, Docara, REST/API, docs, runtime and release-readiness work.
 

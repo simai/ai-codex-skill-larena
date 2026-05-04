@@ -3,8 +3,36 @@
 ## Roles
 
 - `larena-update`: update server.
-- `larena-upserv`: alias/historical naming for update server.
+- `larena-upserv`: historical/legacy naming for update server. Do not use a separate `larena-upserv` checkout as the production source of truth unless the current runtime proves that it is the configured Composer source. In the current SIMAI update contour, the production `larena/upserv` package source is `larena-update`.
 - `larena-update-registration`: closed-contour registration/licensing server.
+
+## Repository/Runtime Source Of Truth
+
+Before changing update or registration servers, reconcile production runtime with repositories:
+
+- update server package changes go to `larena-update`;
+- registration/licensing changes go to `larena-update-registration`;
+- Bitrix update-client changes go to the Bitrix module repository, for example `bx-simai.update`;
+- legacy/scratch repositories must not receive production-only fixes.
+
+For the update server, the Laravel app may not be a root git checkout. Verify the package source through Composer:
+
+```bash
+cd /home/simai/www/update.simai.ru
+sudo -u simai composer show larena/upserv
+```
+
+Record the package version, source URL and source reference before deploy and after deploy. Production code changes are not complete until the matching source repository has a commit/tag and the runtime package reference points to it.
+
+For the registration server, verify the app checkout itself:
+
+```bash
+cd /home/simai/www/reg-internal.local
+sudo -u simai git status --short --branch
+sudo -u simai git log --oneline -5 --decorate
+```
+
+Treat production database fixes, uploaded release artifacts and temporary fixtures as operational changes: save snapshots, record IDs/files, verify cleanup, and decide whether a permanent command, migration or monitor is needed. Do not confuse these data/runtime actions with source-code fixes.
 
 ## Current Bitrix Flow
 
