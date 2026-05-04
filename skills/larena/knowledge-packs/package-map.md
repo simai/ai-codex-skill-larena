@@ -14,14 +14,15 @@ Current package map should be verified against the active repository, but use th
 - `larena/rest-doc`: Swagger/OpenAPI docs.
 - `larena/docara-core`: public documentation engine.
 - `larena/docara-admin`: Docara admin/editor/revisions/import.
-- `larena/upserv`: Composer package name historically associated with update server.
+- `larena/update`: canonical Composer package name for the update server.
+- `larena/upserv`: legacy Composer alias historically associated with update server.
 - `larena/logs`: documented package/repo, but verify whether it is in first baseline.
 
 Known cleanup risks:
 
 - root app may still identify as `laravel/laravel`;
 - docs may still mention old `simai/*` package names;
-- `larena-upserv` vs `larena-update` Git source must be technically reconciled;
+- `larena-update` is the canonical Git source; `larena-upserv` is legacy naming only;
 - package default branches may be unusual and should not be assumed stable without verification.
 
 When diagnosing packages, inspect:

@@ -210,4 +210,4 @@ Current package scans have found:
 - missing `module.yaml` in some package copies;
 - missing `edition`, `license`, `product_layer`, `docs`, `health_checks`;
 - `depends_on` entries not reflected in Composer `require`;
-- unresolved `larena-update` versus `larena-upserv` source-of-truth question.
+- `larena-update` is the canonical update-server source; `larena-upserv` is legacy naming only and should survive only as explicit compatibility alias.

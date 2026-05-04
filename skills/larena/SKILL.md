@@ -38,8 +38,8 @@ When new repeatable project experience should improve this skill, apply [rules/l
 - `simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before Larena update-server bootstrap exists; it is not the full platform implementation.
 - `larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, migrations, language files, tests, `module.yaml`, and package docs; these are the primary source of Larena platform code.
 - Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution model.
-- `larena-update`: update server that stores installers/updates and coordinates developer/server and user/server flows.
-- `larena-upserv`: alias or historical naming for the update server.
+- `larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server flows.
+- `larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under this name.
 - `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement checks.
 - `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.
 - `Docara`: likely first product-level proof that Larena is a usable CMS platform.

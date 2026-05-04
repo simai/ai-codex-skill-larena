@@ -29,8 +29,8 @@ Larena is also an AI-agent-ready platform direction. Modules/packages/services s
 ## Core Roles
 
 - `simai/larena`: user-facing bootstrap repo until update-server bootstrap is ready.
-- `larena-update`: update server storing installers/updates and coordinating product delivery.
-- `larena-upserv`: alias/historical name for update server.
+- `larena-update`: canonical update server storing installers/updates and coordinating product delivery.
+- `larena-upserv`: legacy alias/historical name for update server; do not use it for new package identity.
 - `larena-update-registration`: closed-contour registration/licensing server queried by update server.
 - SitePack: platform-neutral data package/transport standard.
 - Docara: likely first product proof.

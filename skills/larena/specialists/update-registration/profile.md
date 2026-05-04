@@ -15,8 +15,8 @@ Owns update server, registration server, licensing, product channels, installers
 
 ## Gatekeeper Rules
 
-- `larena-update` is the update server.
-- `larena-upserv` is alias/historical naming for the update server.
+- `larena-update` is the canonical update server.
+- `larena-upserv` is legacy alias/historical naming for the update server. New Composer/manifests/docs should use `larena/update`; keep `larena/upserv` only as compatibility alias where needed.
 - `larena-update-registration` is closed-contour registration/licensing server.
 - Users should not talk directly to registration server.
 - Serve update files through controlled delivery, not public filesystem paths.

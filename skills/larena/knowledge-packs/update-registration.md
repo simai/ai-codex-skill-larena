@@ -2,8 +2,8 @@
 
 ## Roles
 
-- `larena-update`: update server.
-- `larena-upserv`: historical/legacy naming for update server. Do not use a separate `larena-upserv` checkout as the production source of truth unless the current runtime proves that it is the configured Composer source. In the current SIMAI update contour, the production `larena/upserv` package source is `larena-update`.
+- `larena-update`: canonical update server.
+- `larena-upserv`: historical/legacy naming for update server. Do not use `larena-upserv` for new package identity, docs or Composer requirements. Keep `larena/upserv` only as a Composer `replace` alias when maintaining backward compatibility. The canonical Composer package should be `larena/update`.
 - `larena-update-registration`: closed-contour registration/licensing server.
 
 ## Repository/Runtime Source Of Truth
@@ -19,7 +19,7 @@ For the update server, the Laravel app may not be a root git checkout. Verify th
 
 ```bash
 cd /home/simai/www/update.simai.ru
-sudo -u simai composer show larena/upserv
+sudo -u simai composer show larena/update
 ```
 
 Record the package version, source URL and source reference before deploy and after deploy. Production code changes are not complete until the matching source repository has a commit/tag and the runtime package reference points to it.
@@ -85,7 +85,7 @@ Do not compute checksums for every large generated archive synchronously inside 
 
 Archive corruption tests must cover nested archives, not only the top-level aggregate zip. A valid aggregate zip can still contain a corrupt `<version>.zip`; update clients should fail the download/unpack step controlled, preserve the detailed error in operation state, and avoid printing duplicate concatenated `ERR_...` responses.
 
-For `larena/upserv` runtime maintenance, prefer the packaged read-only command before ad-hoc tinker snippets:
+For `larena/update` runtime maintenance, prefer the packaged read-only command before ad-hoc tinker snippets. Existing command names may still include `upserv` for backward compatibility:
 
 ```bash
 sudo -u simai php artisan simai:upserv:distribution-files:audit --json --include-orphans

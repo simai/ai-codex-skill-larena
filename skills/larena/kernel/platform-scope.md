@@ -36,8 +36,8 @@ A monorepo/workspace may exist for technical cross-package development, local pa
 
 ## Update And Registration
 
-- `larena-update`: update server.
-- `larena-upserv`: alias or historical naming for update server.
+- `larena-update`: canonical update server.
+- `larena-upserv`: legacy alias/historical naming for update server. New Composer/manifests/docs should use `larena/update`; keep `larena/upserv` only as compatibility alias where needed.
 - `larena-update-registration`: closed registration/licensing server.
 
 Registration server is not a public surface; update server is the public/controlled gateway.
