@@ -9,7 +9,7 @@ Current package map should be verified against the active repository, but use th
 - `larena/setting`: settings UI/storage.
 - `larena/props`: universal property rendering/edit/filter contracts.
 - `larena/filesystem`: files/uploads/downloads/archive storage.
-- `larena/lang`: translations and custom language lifecycle.
+- `larena/lang`: translations, custom language overrides and regional settings. Do not expand AI translation, language packs or SitePack localization flows until command/access/audit/SitePack contracts are accepted.
 - `larena/rest`: REST runner/API runtime.
 - `larena/rest-doc`: Swagger/OpenAPI docs.
 - `larena/docara-core`: public documentation engine.

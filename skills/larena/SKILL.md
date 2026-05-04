@@ -169,6 +169,7 @@ Use old developer-authored materials when selected by routing:
 - Access package: [knowledge/modules/access.md](./knowledge/modules/access.md)
 - REST package: [knowledge/modules/rest.md](./knowledge/modules/rest.md)
 - RestDoc package: [knowledge/modules/rest-doc.md](./knowledge/modules/rest-doc.md)
+- Lang package: [knowledge/modules/lang.md](./knowledge/modules/lang.md)
 - Docara Core/Admin: [knowledge/modules/docara-core.md](./knowledge/modules/docara-core.md), [knowledge/modules/docara-admin.md](./knowledge/modules/docara-admin.md)
 - Work scenarios: [knowledge/work-scenarios.md](./knowledge/work-scenarios.md)
 - Checklists: [checklists/](./checklists/)
