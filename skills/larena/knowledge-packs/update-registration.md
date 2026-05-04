@@ -16,6 +16,7 @@ Do not mass-rename legacy update-server internals in one patch. Use alias-first 
 - Keep `Simai\Upserv`, `simai_upserv`, `UPSERV_*`, `upserv.*`, legacy DB tables and `simai:upserv:*` as a backward-compatible implementation layer until major-safe migrations exist.
 - New source can add `Simai\Update\...` wrappers, provider aliases and command aliases that delegate to the old implementation.
 - Rename tables, permissions, env keys or URL contracts only with explicit migration, aliases, rollback notes and runtime verification.
+- User-facing documentation must lead with `larena/update`, `config/simai_update.php`, `simai:install-update` and `simai:update:*`. Legacy `upserv` directory names, wrapper filenames, env keys, table names and commands may remain visible only when they are explicitly labeled as compatibility or historical runtime evidence.
 
 This avoids breaking existing update-server installs while making `larena/update` the visible product contract.
 
