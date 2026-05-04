@@ -1,7 +1,7 @@
-# Пакет `simai/rest` (паспорт)
+# Пакет `larena/rest` (паспорт)
 
 ## Роль
-- REST-слой и генерация/поддержка Swagger-метаданных для API.
+- REST Runner, API discovery, controlled method invocation and API capability boundary for Larena.
 
 ## Ключевые точки
 - Swagger unit-тесты: `packages/rest/tests/Unit/SwaggerDocServiceTest.php`.
@@ -12,6 +12,8 @@
 - Любое изменение API сопровождается обновлением контрактов и тестов.
 - Формат ошибок и статусов единообразен.
 - Не использовать внешние CDN в runtime-документации API.
+- `/api/v1/run` не является автоматическим публичным доступом к `class@method`: метод должен быть discoverable, ACL-aware, bounded and auditable.
+- `scope=all` должен считаться повышенным риском; для public/agent exposure требуются явный allowlist, rate limits, audit и timeout/queue policy.
 
 ## Типовые риски
 - Расхождение фактического API и Swagger-описания.
