@@ -16,6 +16,15 @@ Docara can validate that Larena is usable as a CMS platform, not just a package 
 - future update packaging;
 - future SitePack import/export.
 
+## Product Boundary
+
+Keep Docara split into two deliberate layers:
+
+- `larena/docara-core`: free public runtime for installed/imported documentation, local assets, public routes, file/DB reads and view access checks.
+- `larena/docara-admin`: paid/Pro editor/admin layer for page management, create/edit/save, preview, revisions, rollback, sync/import, product packs and AI-assisted documentation workflows.
+
+Do not blur this boundary during package work. Commercial entitlement should later be enforced through the Larena update/registration server flow, not through ad hoc package-local checks.
+
 ## Product First Version
 
 Docara running on Larena with enough base packages for real work:
