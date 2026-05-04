@@ -12,6 +12,7 @@
 - Added package install readiness guidance for `larena:doctor` and provider bootstrap safety during Composer/Laravel package discovery.
 - Added Docara acceptance gate guidance for `larena:doctor --docara`, `docara:sync --dry-run`, route checks and the next browser/admin product gate.
 - Added Docara browser/admin gate guidance for real installed-stand checks: login, page tree, create/edit/save, public render, revisions, rollback, denial and cleanup.
+- Added Docara SitePack import/export baseline guidance with links to RFC 0003, acceptance gate and validator-friendly example package.
 - Added update-server canonical alias migration guidance: use `larena/update`, `simai:update:*` and `simai_update` for new contracts while preserving `Simai\Upserv`, `simai_upserv` and legacy commands as compatibility surfaces.
 - Added update-server documentation migration guidance: user-facing docs must lead with canonical `larena/update` and `simai:update:*`, while legacy `upserv` names remain compatibility or historical evidence only.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.

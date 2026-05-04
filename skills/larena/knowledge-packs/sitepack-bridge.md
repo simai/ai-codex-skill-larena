@@ -37,3 +37,32 @@ Likely layers:
 - Treat unknown media/entity types as warnings when allowed.
 - Prefer two-pass import for relations.
 - Produce import/export reports with warnings and mappings.
+
+## Docara Import/Export Baseline
+
+`simai/larena` has a committed draft contract for the first Docara SitePack product scenario:
+
+- `docs/developer/rfc/0003-docara-sitepack-import-export.md`
+- `docs/developer/docara-sitepack-acceptance.md`
+- `docs/developer/examples/sitepack/docara-docs-site/`
+
+Use this baseline when designing or reviewing `larena/sitepack`, `larena/docara-admin` import/export, or SitePack product packs for documentation.
+
+Working rules:
+
+- minimum Docara profiles are `site-structure` and `content-assets`;
+- `config-only` is review-first and must never auto-apply secrets;
+- `product-package` may describe paid/free documentation products, but must not auto-install executable code;
+- map SitePack `site-map.pages[]` into Docara route/tree/menu fields and store source ids under `meta.sitepack`;
+- map `document.page` entities into filesystem-backed markdown and `docara_page_revisions`;
+- import uses two passes for page creation and parent/asset relation resolution;
+- admin UI should dispatch queued/CLI-backed jobs rather than run import/export as a long web request;
+- unsupported extensions, unknown entity types and missing optional assets are warnings, not crashes.
+
+The example package should validate with the SitePack PHP validator before implementation is considered ready:
+
+```bash
+cd /Users/rim/Documents/GitHub/sitepack/sitepack-tools-php
+/Applications/ServBay/bin/php bin/sitepack-validate package /Users/rim/Documents/GitHub/larena/docs/developer/examples/sitepack/docara-docs-site --profile site-structure --no-digest --check-asset-blobs
+/Applications/ServBay/bin/php bin/sitepack-validate package /Users/rim/Documents/GitHub/larena/docs/developer/examples/sitepack/docara-docs-site --profile content-assets --no-digest --check-asset-blobs
+```

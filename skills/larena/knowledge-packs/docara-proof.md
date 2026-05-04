@@ -84,3 +84,17 @@ Minimum accepted browser/admin scenario:
 - temporary page, temporary content file and no-access user are cleaned up.
 
 Known live-smoke caveat: current editor create/save is asynchronous. Do not rely only on navigation after clicking `Create` or `Save`; verify status text plus database/public page state.
+
+## SitePack Gate
+
+After browser/admin acceptance, the next Docara product proof is portable import/export through SitePack. Use these committed references in `simai/larena`:
+
+- `docs/developer/rfc/0003-docara-sitepack-import-export.md`
+- `docs/developer/docara-sitepack-acceptance.md`
+
+Minimum direction:
+
+- Free Docara Core remains the public runtime for already installed/imported documentation.
+- Paid Docara Admin/Pro owns managed import/export, conflict resolution, revision governance, scheduled sync, product packs and AI-assisted documentation workflows.
+- SitePack import/export must validate manifest+catalog first, avoid long web requests, use non-executable temp storage, import markdown through `larena/filesystem`, create revisions, and produce machine-readable reports.
+- SitePack is the neutral transport. Do not build a direct Bitrix-to-Docara converter as the durable architecture; use Bitrix -> SitePack -> Docara/Larena.
