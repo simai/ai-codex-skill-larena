@@ -45,6 +45,16 @@ Do not mass-rename legacy update-server internals in one patch. Use alias-first 
 
 This avoids breaking existing update-server installs while making `larena/update` the visible product contract.
 
+Current safe alias documentation baseline is complete when the update repo contains:
+
+- `docs/developer/alias-contract.md`;
+- `docs/developer/concept-alignment.md`;
+- `docs/developer/smoke.md`;
+- canonical `larena/update` identity in `SPEC.md`;
+- `module.yaml.concept_alignment` and update-server operational risks.
+
+After this baseline, do not keep spending effort on cosmetic `upserv` naming cleanup. The next meaningful work is functional architecture/hardening: registration service-auth, signed artifact trust, channel/licensing policy, response redaction, audit/rate limits, and only then major-safe legacy migration planning.
+
 ## Repository/Runtime Source Of Truth
 
 Before changing update or registration servers, reconcile production runtime with repositories:
