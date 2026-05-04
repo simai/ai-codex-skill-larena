@@ -62,3 +62,25 @@ Expected local result:
 - route list includes public docs, assets, search index and admin Docara routes.
 
 This gate is still not the full product acceptance. The next product-facing gate must add browser/admin checks for login, list, create/edit, preview, save, revision history, rollback, sync/import and permission denial.
+
+## Browser/Admin Gate
+
+After the command-level gate passes, use the committed browser/admin gate in `simai/larena`:
+
+- `docs/developer/docara-browser-admin-acceptance.md`
+
+Minimum accepted browser/admin scenario:
+
+- guest `/admin/docara/pages` redirects to login;
+- admin login works;
+- page tree renders grouped by version and locale;
+- editor assets load locally without CDN dependency;
+- admin creates a temporary page through `/admin/docara/pages/create`;
+- created page opens in `/admin/docara/pages/{id}/edit`;
+- public page renders under `/docs/{version}/{locale}/{slug}`;
+- editor save creates an `editor_save` revision;
+- rollback restores an earlier revision;
+- authenticated user without Docara access receives `403`;
+- temporary page, temporary content file and no-access user are cleaned up.
+
+Known live-smoke caveat: current editor create/save is asynchronous. Do not rely only on navigation after clicking `Create` or `Save`; verify status text plus database/public page state.
