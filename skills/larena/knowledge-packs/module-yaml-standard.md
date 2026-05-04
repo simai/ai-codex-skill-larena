@@ -126,6 +126,15 @@ If `module.yaml.depends_on` names a required Larena package, the matching Compos
 
 Use `integrations.optional` for optional Larena integrations.
 
+When resolving dependency drift, inspect actual source imports, service providers, commands, migrations and routes before changing metadata:
+
+- if code imports another package class or middleware directly, add the matching `larena/*` package to Composer `require` and keep it in `module.yaml.depends_on`;
+- if the relationship is only a future extension point, UI affinity, optional feature, or documented compatibility target, keep it out of Composer `require` and declare it under `integrations.optional`;
+- do not add hard Composer dependencies only to silence the validator;
+- do not remove a manifest dependency that represents a real runtime import.
+
+After dependency alignment, tag the package and update the bootstrap repository lock if the entry app currently installs the stale contract.
+
 ## Product Boundary Rule
 
 `edition`, `product_layer`, `license`, and `distribution.access` must make the package's product position explicit.
