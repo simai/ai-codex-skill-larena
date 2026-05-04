@@ -15,6 +15,7 @@
 - Added Docara SitePack import/export baseline guidance with links to RFC 0003, acceptance gate and validator-friendly example package.
 - Added update-server canonical alias migration guidance: use `larena/update`, `simai:update:*` and `simai_update` for new contracts while preserving `Simai\Upserv`, `simai_upserv` and legacy commands as compatibility surfaces.
 - Added update-server documentation migration guidance: user-facing docs must lead with canonical `larena/update` and `simai:update:*`, while legacy `upserv` names remain compatibility or historical evidence only.
+- Added concept-alignment governance guidance: Larena package repositories must pass repository/docs baseline and shared SIMAI/SF5/Larena concept audit before new package functionality is added.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.

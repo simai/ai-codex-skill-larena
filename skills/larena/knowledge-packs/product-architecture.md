@@ -84,9 +84,15 @@ License bias:
 - Reason from general to specific: product role -> strategic direction -> platform boundaries -> shared concepts -> architecture -> package implementation -> code action.
 - Shared conceptual specs plus platform adapters are preferred over a premature universal runtime across Bitrix and Laravel.
 - Product direction should be checked against code, but current implementation gaps do not automatically invalidate the direction.
+- Before new package functionality, complete concept alignment for that package: identify the shared SIMAI/SF5/Larena concept, matching Bitrix/SF5 references where they exist, Laravel-specific implementation details, gaps, risks and standard decisions.
 - First public path must work without update server.
 - Use SF5 as the frontend analogy for modular composition: small prepared primitives compose into richer units, while the runtime handles loading/caching/configuration without forcing ordinary hosting to run complex build infrastructure.
 - Backend/platform modules should strive for the same Lego-like quality through manifests, docs, API contracts, service boundaries, install/update contracts and tests.
+
+For current repository cleanup, use the two-stage model documented in `simai/larena` at `docs/developer/repository-standardization-plan.md`:
+
+1. Repository/documentation baseline.
+2. Concept alignment audit in `docs/developer/concept-alignment.md` before functional growth.
 
 Technical decisions should explicitly state which product-level goal they serve: easier self-install, safer updates, Bitrix/SF5 migration continuity, better admin UX, SitePack portability, Docara product readiness, or third-party developer ecosystem.
 
