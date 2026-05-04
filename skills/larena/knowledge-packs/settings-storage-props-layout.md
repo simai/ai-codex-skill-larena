@@ -35,6 +35,18 @@ Observed types include:
 
 Larena should separate property storage, UI render/edit/filter contracts and CRUD integration.
 
+Current `larena/props` is a file-based property type/template package, not the final universal property value model. It ships JSON definitions, translations and Blade templates and exposes admin template editing/import/export.
+
+When inspecting or extending `larena/props`, require an explicit safety gate before functional growth:
+
+- do not treat submitted translation/template content as safe executable code;
+- replace or gate `eval()`-style parsing;
+- restrict template save paths to approved roots;
+- harden ZIP import with canonical path checks and extension allowlists;
+- protect admin routes with explicit `larena/access` operations, not only generic `auth`;
+- add audit/rollback for executable Blade template edits;
+- keep SitePack mapping separate until property schema and entity-bound values are accepted.
+
 ## Storage
 
 Storage 2.0 reference:
