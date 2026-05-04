@@ -6,6 +6,31 @@
 - `larena-upserv`: historical/legacy naming for update server. Do not use `larena-upserv` for new package identity, docs or Composer requirements. Keep `larena/upserv` only as a Composer `replace` alias when maintaining backward compatibility. The canonical Composer package should be `larena/update`.
 - `larena-update-registration`: closed-contour registration/licensing server.
 
+## Registration Server Boundary
+
+`larena/update-registration` is a standalone internal Laravel application, not a customer-installable Larena package.
+
+The accepted request chain is:
+
+```text
+Customer site -> larena/update -> larena/update-registration
+```
+
+Do not design new customer-site, package-installer, public-user or AI-agent flows that call registration directly. Registration is the private entitlement backend behind the update server.
+
+Before expanding entitlement/licensing flows, require:
+
+- service-to-service authentication from `larena/update` to registration;
+- private network/IP or equivalent deployment boundary;
+- redacted update-server-facing response DTOs;
+- audit events for license/coupon/key lookup, mutation and migration;
+- rate limits and replay protection;
+- Key V2 rollout, rollback and legacy fallback retirement notes.
+
+Current registration code still has legacy API routes and an authorization TODO in `routes/api.php`; treat direct public exposure as forbidden until the hardening batch is implemented and verified.
+
+Key V2 direction is valid: keep public key format stable while storing fingerprint, cipher, mask, last4, version and migration timestamp. Use dry-run migration before writes and do not commit real keys, coupon values, ciphers, raw responses or customer data.
+
 ## Canonical Alias Migration Rule
 
 Do not mass-rename legacy update-server internals in one patch. Use alias-first migration:
