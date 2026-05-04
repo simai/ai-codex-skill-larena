@@ -2,7 +2,9 @@
 
 ## Entry App
 
-`simai/larena` is the user-facing bootstrap repository. It must support a practical install path before update-server bootstrap exists.
+`simai/larena` is the user-facing bootstrap/distribution entry repository for the free starter set. It must support a practical install path before update-server bootstrap exists.
+
+Do not treat `simai/larena` as the full platform implementation or as the package source of truth. It connects official packages, provides install/readiness tooling and documents the starting path.
 
 Allowed work:
 
@@ -14,7 +16,7 @@ Allowed work:
 
 ## Larena Packages
 
-`larena/*` Composer packages implement CMS/platform capabilities.
+`larena-*` repositories / `larena/*` Composer packages implement CMS/platform capabilities and are the primary source of platform code.
 
 Expected surfaces:
 
@@ -27,6 +29,10 @@ Expected surfaces:
 - tests;
 - `module.yaml`;
 - package README/SPEC/CHANGELOG when present.
+
+## Development Workspace
+
+A monorepo/workspace may exist for technical cross-package development, local path repositories and combined QA. It is development-only and must not replace the customer-facing bootstrap/update-server distribution model.
 
 ## Update And Registration
 
