@@ -157,6 +157,29 @@ Every official package should eventually define at least one `health_checks` ent
 
 Release readiness must state which health check was run or why it cannot run.
 
+## Provider Bootstrap Rule
+
+Laravel service providers are part of the package install contract.
+
+Provider `register()` and `boot()` must not break Composer/Laravel package discovery when `.env` is missing, DB is unavailable, or migrations have not run yet.
+
+Allowed during provider boot:
+
+- register bindings;
+- merge/publish config;
+- load routes, views, translations and migrations;
+- register commands.
+
+Not allowed during provider discovery/boot:
+
+- require migrated DB tables;
+- execute long-running work;
+- fetch external URLs;
+- write runtime state;
+- fail the whole install because optional lifecycle tables are absent.
+
+DB-aware state checks must fail open before migrations and move writes to explicit commands, HTTP/runtime paths, queue jobs or post-install flows.
+
 ## Package Alignment Workflow
 
 For each package:
