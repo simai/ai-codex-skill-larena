@@ -258,3 +258,33 @@ Safe rollout for already-running servers:
 Do not replace this with a public static token in query params or body. Do not expose registration directly to customer sites even when service-auth exists.
 
 For secret rotation, temporarily configure registration with the new secret as current and the old secret as `REGISTRATION_SERVICE_AUTH_UPDATE_PREVIOUS_SECRET`, switch the update server to the new secret, verify signed calls, then remove the previous secret.
+
+## Entitlement Response Redaction
+
+`larena/update` is the public-facing boundary and must redact registration-derived entitlement responses before returning them to customer sites, portals or public clients.
+
+Default update-side env:
+
+```text
+UPSERV_REGISTRATION_REDACT_ENTITLEMENT_RESPONSES=true
+UPSERV_REGISTRATION_REDACT_KEYS=key,coupon_key,hash,license_hash,activation_token,key_cipher,key_fingerprint,key_mask,key_last4,contact,log,logs,c_name,c_second_name,c_company_name,c_phone,c_email,email,phone
+```
+
+Redaction should replace sensitive values with `[REDACTED]` while preserving product/update metadata needed for decisions: package technical names, package names, statuses, date ranges, operation metadata, secure archive links, archive size and checksum.
+
+Apply redaction at the update-server API boundary even if registration later gains safer resources, because registration is an internal service and update is the layer exposed to clients.
+
+Do not return raw registration `LicenseResource`, `CouponResource`, customer contact fields, activation tokens, key hashes, key ciphers or raw logs from public/portal update APIs.
+
+## Service Auth Audit And Rate Limits
+
+Registration service-auth should also bound trusted internal traffic:
+
+- `REGISTRATION_SERVICE_AUTH_RATE_LIMIT_ENABLED=true`
+- `REGISTRATION_SERVICE_AUTH_READ_PER_MINUTE=240`
+- `REGISTRATION_SERVICE_AUTH_MUTATION_PER_MINUTE=120`
+- `REGISTRATION_SERVICE_AUTH_AUDIT_ENABLED=true`
+- `REGISTRATION_SERVICE_AUTH_AUDIT_SUCCESS_READS=false`
+- `REGISTRATION_SERVICE_AUTH_AUDIT_SUCCESS_MUTATIONS=true`
+
+Failures, bad signatures, replay attempts and rate-limit blocks should be logged as warnings without secrets. Successful mutations should be logged as info. Successful reads should be opt-in to avoid log noise. This log audit is the first boundary and does not replace later DB-backed entitlement audit events.
