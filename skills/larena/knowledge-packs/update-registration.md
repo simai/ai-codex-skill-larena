@@ -130,6 +130,14 @@ The update server must fail controlled with JSON when an archive source is missi
 
 Aggregate zip generation is successful only after the generated file exists and at least one source archive was actually added. Guard every `filemtime()`, size calculation and signed URL generation behind that check; missing source archives should be logged with distribution/file/storage context and returned as a controlled item/API diagnostic, not as a feed-wide HTML 500.
 
+Legacy Bitrix `/api/v1/update` is a cold-cache risk because it can synchronously build large aggregate zip files on the first request. During rollout/testing, distinguish:
+
+- PHP/server failure: `502`, PHP-FPM child timeout or `max_execution_time` kill;
+- client timeout: `499` from nginx while the update server may still be warming aggregate archives;
+- warmed-cache success: repeat request returns `200` quickly and the update admin pages load.
+
+Do not treat a single admin page HTTP `200` as full update-flow proof when nginx shows `502`/`499` for `/api/v1/update`. Check update-server access/error logs and PHP-FPM logs, then repeat after cache warm-up or run a dedicated prewarm command when available. The target hardening direction is a packaged prewarm/background/cache-observability flow, not relying on an operator to warm archives manually.
+
 Do not compute checksums for every large generated archive synchronously inside the update feed request. Either precompute/cache archive checksums out of the request path, or emit checksums only below a configured size threshold and treat checksum fields as optional for large archives. Always keep `size` available for disk/preflight checks.
 
 Archive corruption tests must cover nested archives, not only the top-level aggregate zip. A valid aggregate zip can still contain a corrupt `<version>.zip`; update clients should fail the download/unpack step controlled, preserve the detailed error in operation state, and avoid printing duplicate concatenated `ERR_...` responses.
@@ -248,6 +256,7 @@ Current implementation baseline:
 - `larena/update` exposes `GET /api/v2/manifest`.
 - `larena/update` provides `simai:update:manifest:generate` and legacy `simai:upserv:manifest:generate`.
 - `larena/update` provides `simai:update:manifest:keygen` and legacy `simai:upserv:manifest:keygen` for Ed25519 keypair generation; the command prints secrets for operator placement, but never stores them in git.
+- Key-generation dotenv output uses `--dotenv`, not `--env`; Laravel reserves `--env` as a global environment option and package commands must not reuse it.
 - Manifest signing is config-gated with `UPSERV_SIGNED_MANIFEST_ENABLED`, `UPSERV_SIGNED_MANIFEST_KEY_ID`, `UPSERV_SIGNED_MANIFEST_PRIVATE_KEY_BASE64` and optional public key config.
 - Unsigned diagnostic generation is allowed only through explicit `--allow-unsigned` command mode.
 - Private Ed25519 keys belong only in the update-server `.env`/secret store. Rotate by publishing the new public key to clients before switching server `key_id`; keep old public keys for the rollback/update window.
