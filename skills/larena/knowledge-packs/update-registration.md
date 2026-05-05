@@ -148,7 +148,16 @@ The latest JSON report defaults to `storage/app/upserv/monitoring/api-v1-aggrega
 
 Do not compute checksums for every large generated archive synchronously inside the update feed request. Either precompute/cache archive checksums out of the request path, or emit checksums only below a configured size threshold and treat checksum fields as optional for large archives. Always keep `size` available for disk/preflight checks.
 
-Signed manifest rollout for the current legacy Bitrix v1 client must stay in `diagnostic` until artifact semantics are aligned. Current `/api/v2/manifest` describes stored distribution artifacts, while legacy `/api/v1/update` returns generated aggregate zip files. A diagnostic download can therefore log `Downloaded module is missing from signed update manifest` even when the download itself succeeds. Do not enable Bitrix `SIGNED_MANIFEST_MODE=enforce` for this flow until either aggregate artifacts are included in the signed manifest or the Bitrix client moves to a v2 artifact-level download contract.
+Signed manifest rollout for the current legacy Bitrix v1 client must stay in `diagnostic` until artifact semantics are aligned. Legacy `/api/v1/update` returns generated aggregate zip files, so the signed manifest must include `entity_type=aggregate` artifacts with `compatibility=bitrix-api-v1`, exact `size` and 64-character SHA-256 for the aggregate zip actually downloaded by the client. The Bitrix verifier should prefer those aggregate artifacts for legacy v1 downloads and only fall back to module/source artifacts for future artifact-level flows. Do not enable Bitrix `SIGNED_MANIFEST_MODE=enforce` for this flow until aggregate artifacts are present and diagnostic verification passes on the real client flow, or until the Bitrix client moves to a v2 artifact-level download contract.
+
+Aggregate manifest artifacts must be sourced from a prewarmed/cache report, not by building or hashing large zips inside public `GET /api/v2/manifest`. For `larena/update`, the practical sequence is:
+
+```bash
+sudo -u simai php artisan simai:update:api-v1-aggregate-prewarm --version-type=release --strict
+sudo -u simai php artisan simai:update:manifest:generate --channel=public-core --path=upserv/manifests/public-core.json --strict
+```
+
+The prewarm report must have `failed_count=0`, `missing_source_count=0`, and non-empty SHA-256 checksums for included aggregate artifacts before any client-side enforcement.
 
 When enabling Bitrix client diagnostic mode on a test stand, do not leave `ENABLE_LOGS=Y` unless the page rendering is being specifically debugged: the current `simai_update.php` verbose tab can dump the full update context and exhaust memory on large feeds.
 
