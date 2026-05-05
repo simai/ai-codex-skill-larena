@@ -4,6 +4,9 @@
 
 ### Added
 
+- Added UX implementation contract guidance for Larena modular admin,
+  settings/storage/props/layout UI, install/update UI, registration/licensing,
+  and Docara product interfaces.
 - Restructured the skill into the standard Codex skill repository layout under `skills/larena/`.
 - Added Larena engineering-council architecture with kernel rules, activities, specialists, quality templates and knowledge packs.
 - Added product DNA, platform scope and non-negotiables for Larena as a SIMAI/Laravel/SF5 CMS platform.

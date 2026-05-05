@@ -24,10 +24,11 @@ Follow this sequence for substantial Larena tasks:
 2. Identify the primary activity from [activities/activity-registry.json](./activities/activity-registry.json).
 3. Select the smallest sufficient specialist set using [rules/routing.md](./rules/routing.md).
 4. Load only selected specialist profiles and knowledge packs referenced by those profiles.
-5. Apply the baseline Larena contracts from kernel and knowledge packs.
-6. For non-trivial work, collect compact specialist assessments before finalizing.
-7. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
-8. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
+5. For modular admin, settings/storage/props/layout UI, install/update UI, registration/licensing screens, Docara UI, or package admin screens, read [knowledge-packs/ux-implementation-contract.md](./knowledge-packs/ux-implementation-contract.md) and use `$ux` screen spec or UX handoff as the interface contract.
+6. Apply the baseline Larena contracts from kernel and knowledge packs.
+7. For non-trivial work, collect compact specialist assessments before finalizing.
+8. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
+9. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
 
 Do not load every reference file. Keep `SKILL.md` lean and use progressive disclosure.
 
