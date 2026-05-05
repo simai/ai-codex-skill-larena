@@ -25,10 +25,11 @@ Follow this sequence for substantial Larena tasks:
 3. Select the smallest sufficient specialist set using [rules/routing.md](./rules/routing.md).
 4. Load only selected specialist profiles and knowledge packs referenced by those profiles.
 5. For modular admin, settings/storage/props/layout UI, install/update UI, registration/licensing screens, Docara UI, or package admin screens, read [knowledge-packs/ux-implementation-contract.md](./knowledge-packs/ux-implementation-contract.md) and use `$ux` screen spec or UX handoff as the interface contract.
-6. Apply the baseline Larena contracts from kernel and knowledge packs.
-7. For non-trivial work, collect compact specialist assessments before finalizing.
-8. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
-9. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
+6. For public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara bridge, structured data, documentation/product pages, or SEO Contract implementation, treat `$seo` as the contract owner. Implement the SEO Contract through Larena-native routes, storage, views, middleware, packages, or Docara bridge surfaces and return changed routes/templates/config for `$seo` review and `$tester` acceptance. If the SEO Contract conflicts with Larena constraints, report a blocker to `$seo`; do not silently rewrite SEO decisions.
+7. Apply the baseline Larena contracts from kernel and knowledge packs.
+8. For non-trivial work, collect compact specialist assessments before finalizing.
+9. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
+10. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
 
 Do not load every reference file. Keep `SKILL.md` lean and use progressive disclosure.
 

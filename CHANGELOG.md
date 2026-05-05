@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added SEO Contract implementation guidance so `$larena` treats `$seo` as the owner of public-route SEO decisions while Larena implements them through routes, meta storage, Blade/UI, sitemap/robots middleware, packages, and Docara bridge surfaces.
 - Added UX implementation contract guidance for Larena modular admin,
   settings/storage/props/layout UI, install/update UI, registration/licensing,
   and Docara product interfaces.
