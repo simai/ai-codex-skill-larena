@@ -143,6 +143,41 @@ sudo -u simai php artisan simai:update:distribution-files:audit --strict
 
 The command audits `sf_distribution_files.file -> sf_file.id -> sf_file.url -> storage/app/<url>`, reports missing file rows/URLs/physical archives, size mismatches and linked deleted files. `--strict` must fail non-zero when real defects are present, so it is suitable for monitoring. Treat orphan `sf_file` rows as a separate storage-policy signal, not an automatic release blocker.
 
+## Archive Integrity Baseline
+
+Stored distribution archives in `larena/update` must have a first-class integrity baseline on `sf_distribution_files`:
+
+- `archive_size_bytes`;
+- `archive_sha256`;
+- `archive_integrity_status`;
+- `archive_integrity_checked_at`;
+- `archive_integrity_error`.
+
+`sf_file.hash` is still an MD5-level filesystem deduplication field and must not be treated as the update artifact trust baseline.
+
+Capture or refresh the baseline whenever a distribution archive file is assigned:
+
+1. module archive upload;
+2. chunked upload;
+3. admin archive replacement;
+4. final processed output from `SimaiArchiveQueue`.
+
+For existing servers, run migrations first, then:
+
+```bash
+sudo -u simai php artisan simai:update:distribution-files:integrity-backfill --only-missing
+sudo -u simai php artisan simai:update:distribution-files:audit --strict
+```
+
+Legacy aliases may remain available:
+
+```bash
+sudo -u simai php artisan simai:upserv:distribution-files:integrity-backfill --only-missing
+sudo -u simai php artisan simai:upserv:distribution-files:audit --strict
+```
+
+Strict audit must fail when integrity columns are missing, a ready baseline is missing, or `archive_size_bytes` / `archive_sha256` differ from the physical archive.
+
 ## Product Segmentation
 
 Core/minimum CMS should be free/open. Paid products and solution layers should be delivered through update/product infrastructure later. Exact free-core key policy remains product/marketing decision.
@@ -200,13 +235,15 @@ Candidate feeds/channels:
 Update delivery should evolve in phases:
 
 1. service-auth between `larena/update` and `larena-update-registration`;
-2. `sha256`/checksum verification for archives;
+2. required `archive_size_bytes` and `archive_sha256` baseline for stored distribution archives;
 3. signed update manifest with package name, version, channel, size, checksum and metadata;
 4. later full artifact signing and release transparency/audit.
 
-Signed manifests are the target architecture. They do not have to be the first implementation task, but update/package schemas should not block adding them later.
+Signed manifests are the target architecture. Use Ed25519-style public verification for customer-facing manifests; do not use HMAC for client manifest verification because customers must not receive signing secrets.
 
-For the next architecture batch, prioritize service-auth and redacted entitlement responses before signed artifacts.
+A manifest artifact is eligible only when the distribution row has `archive_integrity_status=ready`, non-empty `archive_size_bytes` and a 64-character lowercase SHA-256. Clients must verify the manifest signature first, then downloaded archive size and SHA-256 before installation.
+
+For the next architecture batch, implement the server-side signed manifest generator in `larena/update`, then add client verification to Larena/Bitrix update clients.
 
 ## Service Auth Contract
 
