@@ -366,3 +366,25 @@ Registration service-auth should also bound trusted internal traffic:
 - `REGISTRATION_SERVICE_AUTH_AUDIT_SUCCESS_MUTATIONS=true`
 
 Failures, bad signatures, replay attempts and rate-limit blocks should be logged as warnings without secrets. Successful mutations should be logged as info. Successful reads should be opt-in to avoid log noise. This log audit is the first boundary and does not replace later DB-backed entitlement audit events.
+
+## Signed Manifest Runtime Publishing
+
+When publishing Bitrix-compatible update artifacts from `larena/update`, remember that legacy Bitrix `/api/v1/update` downloads aggregate ZIP files, not only source `sf_distribution_files` archives.
+
+Required publishing rules:
+
+- source archives must live under the path resolved by `storage_path('app/'.sf_file.url)`;
+- private file URLs like `private/<module>/<token>/<version>.zip` must physically exist under `storage/app/private/...`;
+- `sf_distribution_files.archive_integrity_status` must be `ready`, not `verified`;
+- `archive_size_bytes` and `archive_sha256` must match the physical archive;
+- run `simai:update:distribution-files:audit --strict` before manifest generation;
+- run a full `simai:update:api-v1-aggregate-prewarm --version-type=release --strict --json` before generating a production manifest, because module-only prewarm can leave an incomplete latest monitoring report;
+- generate the signed manifest only after prewarm: `simai:update:manifest:generate --channel=public-core --path=upserv/manifests/public-core.json --strict`.
+
+For Bitrix diagnostic rollout, a real legacy download is accepted only when client logs include:
+
+- `status=verified`;
+- `artifact_entity_type=aggregate`;
+- `artifact_compatibility=bitrix-api-v1`.
+
+Do not enable `SIGNED_MANIFEST_MODE=enforce` for legacy Bitrix clients until aggregate artifacts are present in the signed manifest and the diagnostic period has no mismatch/failure signals.
