@@ -391,6 +391,8 @@ Do not enable `SIGNED_MANIFEST_MODE=enforce` for legacy Bitrix clients until agg
 
 ## Artifact-Level Update API V2 Direction
 
+The SIMAI update system is a universal update platform. Larena is one client/adapter of this platform, not the only reason the platform exists.
+
 Larena update client should be v2-first and artifact-level from the beginning. Do not design new Larena update flows around legacy aggregate ZIPs.
 
 Strategic flow:
@@ -410,4 +412,23 @@ Reasons:
 
 Legacy aggregate artifacts remain a compatibility adapter for existing Bitrix `/api/v1/update` clients only. They should be secured, prewarmed and monitored, but not treated as the target architecture for Larena.
 
-Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especially `docs/roadmap/artifact-level-v2-update-flow.md`.
+Universal concepts should remain platform-neutral:
+
+- products;
+- packages;
+- releases;
+- artifacts;
+- channels;
+- manifests/signatures;
+- entitlement;
+- plans;
+- operations;
+- steps;
+- audit and monitoring.
+
+Platform-specific behavior belongs to adapters such as `bitrix-module`, `larena-package`, `sitepack` and `docara-product`.
+
+Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especially:
+
+- `docs/architecture/universal-update-platform.md`;
+- `docs/roadmap/artifact-level-v2-update-flow.md`.
