@@ -153,6 +153,18 @@ Docara is currently treated as a paid product direction with a free documentatio
 
 Do not make the update server a purely paid feature. Larena adoption depends on a safe, simple update path for free users too.
 
+Accepted channel baseline:
+
+- `public-core`: free core, baseline packages, security fixes and bugfixes.
+- `stable`: normal stable updates. Free packages remain available; paid packages require entitlement.
+- `commercial`: paid products, Pro packages, industry packs and premium modules.
+- `beta`: opt-in developer/test/early access channel.
+
+Reserved future channels:
+
+- `enterprise-lts`: paid long-term support and controlled enterprise version lines.
+- `staged-rollout`: percent/cohort/tenant staged rollout.
+
 Working rules:
 
 - Community/Core can use the update server.
@@ -162,6 +174,10 @@ Working rules:
 - A subscription ending should not break an already running site; it should stop access to commercial updates/support/paid channels according to policy.
 - Admin update UI should show available updates and clearly explain which packages or channels require a license.
 - License/entitlement state should control visible packages and channels, while the registration server remains closed and is queried only by the update server.
+- Expired paid subscription must not break a running site or already installed paid package.
+- Expiration blocks commercial/Pro/Enterprise updates, paid support, LTS/enterprise channels, paid cloud/AI services and new premium package/template versions.
+- Free core/security/bugfix updates remain available after paid subscription expiration.
+- Admin UI should explain expiration clearly, e.g. "License expired. Renew to receive commercial updates."
 
 Before the update/registration servers are production-ready, enforce paid/free boundaries primarily through package access:
 
@@ -178,3 +194,16 @@ Candidate feeds/channels:
 - stable channel;
 - beta/dev channel;
 - staged rollout/test channel for Enterprise.
+
+## Artifact Trust Model
+
+Update delivery should evolve in phases:
+
+1. service-auth between `larena/update` and `larena-update-registration`;
+2. `sha256`/checksum verification for archives;
+3. signed update manifest with package name, version, channel, size, checksum and metadata;
+4. later full artifact signing and release transparency/audit.
+
+Signed manifests are the target architecture. They do not have to be the first implementation task, but update/package schemas should not block adding them later.
+
+For the next architecture batch, prioritize service-auth and redacted entitlement responses before signed artifacts.
