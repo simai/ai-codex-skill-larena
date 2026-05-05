@@ -207,3 +207,54 @@ Update delivery should evolve in phases:
 Signed manifests are the target architecture. They do not have to be the first implementation task, but update/package schemas should not block adding them later.
 
 For the next architecture batch, prioritize service-auth and redacted entitlement responses before signed artifacts.
+
+## Service Auth Contract
+
+Use HMAC-SHA256 signed internal requests for `larena/update` -> `larena-update-registration`.
+
+Headers:
+
+- `X-Larena-Service`
+- `X-Larena-Timestamp`
+- `X-Larena-Nonce`
+- `X-Larena-Signature`
+
+Signature format:
+
+```text
+X-Larena-Signature: v1=<hex-hmac-sha256>
+```
+
+Signed payload is newline-joined:
+
+```text
+v1
+service_id
+unix_timestamp
+nonce
+HTTP_METHOD
+path_with_query
+sha256(raw_body)
+```
+
+Default policy:
+
+- service id: `larena-update`;
+- clock skew: 300 seconds;
+- replay protection: cache-backed nonce claim for at least 600 seconds;
+- update-side env: `UPSERV_REGISTRATION_SERVICE_AUTH_ENABLED`, `UPSERV_REGISTRATION_SERVICE_ID`, `UPSERV_REGISTRATION_SERVICE_SECRET`;
+- registration-side env: `REGISTRATION_SERVICE_AUTH_ENABLED`, `REGISTRATION_SERVICE_AUTH_UPDATE_ID`, `REGISTRATION_SERVICE_AUTH_UPDATE_SECRET`, `REGISTRATION_SERVICE_AUTH_UPDATE_PREVIOUS_SECRET`, `REGISTRATION_SERVICE_AUTH_ALLOWED_SKEW_SECONDS`, `REGISTRATION_SERVICE_AUTH_REPLAY_CACHE_TTL_SECONDS`.
+
+Safe rollout for already-running servers:
+
+1. deploy both code changes with enforcement disabled;
+2. configure the same long random secret on update and registration;
+3. enable update-side signing first;
+4. verify existing entitlement/coupon/license calls still work;
+5. enable registration-side enforcement;
+6. verify unsigned direct registration calls return `401`;
+7. rollback by disabling registration-side enforcement first.
+
+Do not replace this with a public static token in query params or body. Do not expose registration directly to customer sites even when service-auth exists.
+
+For secret rotation, temporarily configure registration with the new secret as current and the old secret as `REGISTRATION_SERVICE_AUTH_UPDATE_PREVIOUS_SECRET`, switch the update server to the new secret, verify signed calls, then remove the previous secret.
