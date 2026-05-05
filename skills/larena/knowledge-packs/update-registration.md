@@ -136,9 +136,21 @@ Legacy Bitrix `/api/v1/update` is a cold-cache risk because it can synchronously
 - client timeout: `499` from nginx while the update server may still be warming aggregate archives;
 - warmed-cache success: repeat request returns `200` quickly and the update admin pages load.
 
-Do not treat a single admin page HTTP `200` as full update-flow proof when nginx shows `502`/`499` for `/api/v1/update`. Check update-server access/error logs and PHP-FPM logs, then repeat after cache warm-up or run a dedicated prewarm command when available. The target hardening direction is a packaged prewarm/background/cache-observability flow, not relying on an operator to warm archives manually.
+Do not treat a single admin page HTTP `200` as full update-flow proof when nginx shows `502`/`499` for `/api/v1/update`. Check update-server access/error logs and PHP-FPM logs, then repeat after cache warm-up or run the dedicated prewarm command when available. The target hardening direction is a packaged prewarm/background/cache-observability flow, not relying on an operator to warm archives manually.
+
+For `larena/update` versions that include the API v1 aggregate prewarm command, use it before broad Bitrix update checks or releases:
+
+```bash
+sudo -u simai php artisan simai:update:api-v1-aggregate-prewarm --version-type=release --strict
+```
+
+The latest JSON report defaults to `storage/app/upserv/monitoring/api-v1-aggregate-prewarm-latest.json`. A clean warmed-cache report should have `failed_count=0` and `missing_source_count=0`; after a full prewarm, a repeat run should mostly report aggregates as `existing`.
 
 Do not compute checksums for every large generated archive synchronously inside the update feed request. Either precompute/cache archive checksums out of the request path, or emit checksums only below a configured size threshold and treat checksum fields as optional for large archives. Always keep `size` available for disk/preflight checks.
+
+Signed manifest rollout for the current legacy Bitrix v1 client must stay in `diagnostic` until artifact semantics are aligned. Current `/api/v2/manifest` describes stored distribution artifacts, while legacy `/api/v1/update` returns generated aggregate zip files. A diagnostic download can therefore log `Downloaded module is missing from signed update manifest` even when the download itself succeeds. Do not enable Bitrix `SIGNED_MANIFEST_MODE=enforce` for this flow until either aggregate artifacts are included in the signed manifest or the Bitrix client moves to a v2 artifact-level download contract.
+
+When enabling Bitrix client diagnostic mode on a test stand, do not leave `ENABLE_LOGS=Y` unless the page rendering is being specifically debugged: the current `simai_update.php` verbose tab can dump the full update context and exhaust memory on large feeds.
 
 Archive corruption tests must cover nested archives, not only the top-level aggregate zip. A valid aggregate zip can still contain a corrupt `<version>.zip`; update clients should fail the download/unpack step controlled, preserve the detailed error in operation state, and avoid printing duplicate concatenated `ERR_...` responses.
 
