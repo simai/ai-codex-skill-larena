@@ -388,3 +388,26 @@ For Bitrix diagnostic rollout, a real legacy download is accepted only when clie
 - `artifact_compatibility=bitrix-api-v1`.
 
 Do not enable `SIGNED_MANIFEST_MODE=enforce` for legacy Bitrix clients until aggregate artifacts are present in the signed manifest and the diagnostic period has no mismatch/failure signals.
+
+## Artifact-Level Update API V2 Direction
+
+Larena update client should be v2-first and artifact-level from the beginning. Do not design new Larena update flows around legacy aggregate ZIPs.
+
+Strategic flow:
+
+```text
+preview -> plan -> operation -> per-step download token -> artifact verification -> step execution -> resume/rollback
+```
+
+Reasons:
+
+- every downloaded artifact is independently verified by size, SHA-256 and signature metadata;
+- server resolves dependencies, channel, edition, entitlement and route into a clear machine-readable plan;
+- client can resume from the last safe step instead of restarting an opaque aggregate ZIP;
+- diagnostics point to an exact package/version/step;
+- update server does not need to build many source-version to target-version aggregate combinations;
+- AI agents can inspect plans and capabilities safely without arbitrary download or install behavior.
+
+Legacy aggregate artifacts remain a compatibility adapter for existing Bitrix `/api/v1/update` clients only. They should be secured, prewarmed and monitored, but not treated as the target architecture for Larena.
+
+Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especially `docs/roadmap/artifact-level-v2-update-flow.md`.
