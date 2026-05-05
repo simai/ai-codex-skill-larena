@@ -243,7 +243,15 @@ Signed manifests are the target architecture. Use Ed25519-style public verificat
 
 A manifest artifact is eligible only when the distribution row has `archive_integrity_status=ready`, non-empty `archive_size_bytes` and a 64-character lowercase SHA-256. Clients must verify the manifest signature first, then downloaded archive size and SHA-256 before installation.
 
-For the next architecture batch, implement the server-side signed manifest generator in `larena/update`, then add client verification to Larena/Bitrix update clients.
+Current implementation baseline:
+
+- `larena/update` exposes `GET /api/v2/manifest`.
+- `larena/update` provides `simai:update:manifest:generate` and legacy `simai:upserv:manifest:generate`.
+- Manifest signing is config-gated with `UPSERV_SIGNED_MANIFEST_ENABLED`, `UPSERV_SIGNED_MANIFEST_KEY_ID`, `UPSERV_SIGNED_MANIFEST_PRIVATE_KEY_BASE64` and optional public key config.
+- Unsigned diagnostic generation is allowed only through explicit `--allow-unsigned` command mode.
+- Bitrix update module has a reusable `SIMAI\Main\Update\Manifest\ManifestVerifier` seed and `scripts/smoke_manifest_verifier.php`; it is not yet wired into the real `/api/v1/update` install flow.
+
+For the next architecture batch, prepare production key management/rotation and then wire manifest verification into the real update clients behind a staged feature flag.
 
 ## Service Auth Contract
 
