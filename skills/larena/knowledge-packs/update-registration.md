@@ -247,11 +247,14 @@ Current implementation baseline:
 
 - `larena/update` exposes `GET /api/v2/manifest`.
 - `larena/update` provides `simai:update:manifest:generate` and legacy `simai:upserv:manifest:generate`.
+- `larena/update` provides `simai:update:manifest:keygen` and legacy `simai:upserv:manifest:keygen` for Ed25519 keypair generation; the command prints secrets for operator placement, but never stores them in git.
 - Manifest signing is config-gated with `UPSERV_SIGNED_MANIFEST_ENABLED`, `UPSERV_SIGNED_MANIFEST_KEY_ID`, `UPSERV_SIGNED_MANIFEST_PRIVATE_KEY_BASE64` and optional public key config.
 - Unsigned diagnostic generation is allowed only through explicit `--allow-unsigned` command mode.
-- Bitrix update module has a reusable `SIMAI\Main\Update\Manifest\ManifestVerifier` seed and `scripts/smoke_manifest_verifier.php`; it is not yet wired into the real `/api/v1/update` install flow.
+- Private Ed25519 keys belong only in the update-server `.env`/secret store. Rotate by publishing the new public key to clients before switching server `key_id`; keep old public keys for the rollback/update window.
+- Bitrix update module has reusable `SIMAI\Main\Update\Manifest\ManifestVerifier`, feature-flagged `SIMAI\Main\Update\Manifest\ManifestClient`, and `scripts/smoke_manifest_verifier.php`.
+- Bitrix `SIGNED_MANIFEST_MODE` must default to `off`; use `diagnostic` first to log manifest/signature/archive mismatches without blocking, then `enforce` to block installation before unpacking when verification fails.
 
-For the next architecture batch, prepare production key management/rotation and then wire manifest verification into the real update clients behind a staged feature flag.
+For the next architecture batch, run production update-server migration/backfill/audit, configure signed-manifest keys with server signing disabled, smoke `public-core`, enable `UPSERV_SIGNED_MANIFEST_ENABLED=true`, and only then move Bitrix clients from `diagnostic` to `enforce`.
 
 ## Service Auth Contract
 
