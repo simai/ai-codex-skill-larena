@@ -13,6 +13,7 @@ Before any activity logic, load and obey:
 - [kernel/platform-scope.md](./kernel/platform-scope.md)
 - [kernel/non-negotiables.md](./kernel/non-negotiables.md)
 - [kernel/output-contract.md](./kernel/output-contract.md)
+- [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)
 
 Use existing legacy/developer materials in `knowledge/`, `modules/`, `checklists/`, `examples/`, and `templates/` as detailed references only after routing selects the relevant surface.
 
