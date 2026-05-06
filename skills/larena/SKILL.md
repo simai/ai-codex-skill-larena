@@ -26,10 +26,11 @@ Follow this sequence for substantial Larena tasks:
 4. Load only selected specialist profiles and knowledge packs referenced by those profiles.
 5. For modular admin, settings/storage/props/layout UI, install/update UI, registration/licensing screens, Docara UI, or package admin screens, read [knowledge-packs/ux-implementation-contract.md](./knowledge-packs/ux-implementation-contract.md) and use `$ux` screen spec or UX handoff as the interface contract.
 6. For public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara bridge, structured data, documentation/product pages, or SEO Contract implementation, treat `$seo` as the contract owner. Implement the SEO Contract through Larena-native routes, storage, views, middleware, packages, or Docara bridge surfaces and return changed routes/templates/config for `$seo` review and `$tester` acceptance. If the SEO Contract conflicts with Larena constraints, report a blocker to `$seo`; do not silently rewrite SEO decisions.
-7. Apply the baseline Larena contracts from kernel and knowledge packs.
-8. For non-trivial work, collect compact specialist assessments before finalizing.
-9. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
-10. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
+7. For substantial documentation, docs maps, screenshots, user/developer/API guides, or documentation audits, use `$docs` as the technical-writing owner. Keep `$larena` responsible for Larena facts, package contracts, runtime constraints, and Docara product specifics.
+8. Apply the baseline Larena contracts from kernel and knowledge packs.
+9. For non-trivial work, collect compact specialist assessments before finalizing.
+10. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
+11. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
 
 Do not load every reference file. Keep `SKILL.md` lean and use progressive disclosure.
 
@@ -81,7 +82,7 @@ Default specialist roles:
 - `docara-product`: Docara Core/Admin as first product proof and acceptance scenario.
 - `qa-validation`: tests, smoke, install checks, browser checks, release gates.
 - `ops-runtime`: hosting, queues, cron, Laravel runtime, update-server environments, deploy diagnostics.
-- `documentation-learning`: user/developer docs, Docara docs, skill knowledge promotion.
+- `documentation-learning`: Larena facts, Docara docs context, and skill knowledge promotion; coordinate substantial writing method with `$docs`.
 - `security-permissions`: auth/access/2FA, secrets, tokens, license checks, unsafe method execution boundaries.
 
 Load specialist files only when selected:

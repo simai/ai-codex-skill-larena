@@ -1,6 +1,6 @@
 # Documentation Learning
 
-Owns developer/user documentation, Larena knowledge promotion, Docara docs and skill maintenance.
+Owns Larena knowledge promotion, Larena documentation facts, Docara docs context, and skill maintenance.
 
 ## Load When
 
@@ -15,6 +15,7 @@ Owns developer/user documentation, Larena knowledge promotion, Docara docs and s
 
 ## Gatekeeper Rules
 
+- Use `$docs` for substantial documentation architecture, staged writing, audience journeys, screenshots, user/developer/API guides, and content-quality gates.
 - Keep raw inputs in project `source/`, curated reusable rules in skill knowledge.
 - Do not promote secrets or one-off project facts into the skill.
 - Split user docs and developer docs when promoting to product documentation.

@@ -5,6 +5,7 @@
   "required_specialists": ["documentation-learning"],
   "optional_specialists": ["platform-architect", "docara-product", "qa-validation"],
   "knowledge_packs": ["product-architecture"],
+  "companion_skills": ["docs"],
   "required_gates": ["audience split", "source vs stable docs", "secret-free"],
-  "required_outputs": ["updated docs/knowledge", "scope", "verification"]
+  "required_outputs": ["updated docs/knowledge", "docs coordination decision", "scope", "verification"]
 }
