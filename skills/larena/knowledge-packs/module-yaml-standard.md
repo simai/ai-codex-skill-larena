@@ -19,6 +19,14 @@ composer run validate:packages
 
 Default validator mode is warning-only. Use `--strict` only when warnings should fail CI/release gates.
 
+For P0 platform package reviews and release candidates, use contract mode with explicit package paths:
+
+```bash
+php artisan larena:validate-packages --contract --strict --path=/path/to/larena-setting
+```
+
+Contract mode checks capabilities, owned data, endpoint session modes, declared rate limits, documentation paths, concept alignment, audit events, rollback notes, health checks, external-network policy and operational risks. Until every installed `vendor/larena/*` release contains expanded manifests, do not treat a full default `--contract --strict` scan of the starter app as the baseline gate; target the package repositories being reviewed or released.
+
 ## Purpose
 
 `module.yaml` is the canonical Larena package/service manifest. It must make a package understandable by:
@@ -168,6 +176,7 @@ Before calling a P0 package ready, verify:
 - every important capability is declared;
 - owned tables/config/storage are explicit;
 - endpoints have session mode and permission metadata;
+- endpoint rate limits are declared under `rate_limits`;
 - stateful admin/UI routes are not presented as background, AI or external integration APIs;
 - audit, rollback and health-check expectations are written down;
 - gaps are tracked as blockers or follow-up decisions rather than hidden in chat.
@@ -223,13 +232,14 @@ For each package:
 
 1. Read `composer.json`, current `module.yaml`, README/SPEC/docs, commands, routes and service provider.
 2. Run `php artisan larena:validate-packages --path=/path/to/package`.
-3. Preserve existing valid manifest fields.
-4. Add missing governance fields.
-5. For P0 packages, add or update `docs/developer/concept-alignment.md`.
-6. Resolve safe Composer/manifest mismatches.
-7. Do not change runtime behavior only to satisfy the manifest.
-8. Update package docs/SPEC/CHANGELOG when the manifest changes release behavior or developer contract.
-9. Re-run validator and record unresolved product questions.
+3. For P0/package-release checks, also run `php artisan larena:validate-packages --contract --strict --path=/path/to/package`.
+4. Preserve existing valid manifest fields.
+5. Add missing governance fields.
+6. For P0 packages, add or update `docs/developer/concept-alignment.md`.
+7. Resolve safe Composer/manifest mismatches.
+8. Do not change runtime behavior only to satisfy the manifest.
+9. Update package docs/SPEC/CHANGELOG when the manifest changes release behavior or developer contract.
+10. Re-run validator and record unresolved product questions.
 
 ## Current Known Drift
 
