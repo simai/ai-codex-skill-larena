@@ -27,6 +27,7 @@
 - Added the current signed manifest implementation baseline for `larena/update` and the Bitrix update-client verifier seed.
 - Added signed manifest rollout guidance: Ed25519 keygen/rotation, private-key storage, Bitrix `SIGNED_MANIFEST_MODE=off|diagnostic|enforce`, and staged `public-core` rollout before enforcement.
 - Added concept-alignment governance guidance: Larena package repositories must pass repository/docs baseline and shared SIMAI/SF5/Larena concept audit before new package functionality is added.
+- Added platform subsystem contract guidance for P0 packages: `module.yaml` should declare capabilities, owned data, endpoint session modes, permissions, audit, rollback, health checks and operational risks alongside `docs/developer/concept-alignment.md`.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.

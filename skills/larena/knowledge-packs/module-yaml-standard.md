@@ -44,6 +44,8 @@ Keep the useful current vocabulary:
 
 Add governance/discovery fields gradually:
 
+- `capabilities`
+- `owned_data`
 - `edition`
 - `product_layer`
 - `license`
@@ -60,6 +62,12 @@ Add governance/discovery fields gradually:
 - `support`
 - `update`
 - `rollback`
+
+For P0 platform subsystems, `capabilities` and `owned_data` should be treated as first-class contract fields even while the machine schema remains permissive.
+
+`capabilities` should explain what the package contributes as reusable platform building blocks, not only which Laravel files it installs.
+
+`owned_data` should declare the tables, config files, storage areas, value identities and scope models owned by the package. This prevents future packages from silently inventing parallel settings, access, props, storage or API models.
 
 ## Required Identity Fields
 
@@ -146,6 +154,26 @@ Working Docara boundary:
 
 Do not silently change license, paid/free status, public/private distribution, or update channel without a product decision.
 
+## Platform Subsystem Contract Rule
+
+For core/P0 packages such as settings, access, props, admin, REST and future jobs/agents, standardization must produce two layers:
+
+1. implementation layer: current Laravel code, migrations, routes, services, commands and views;
+2. contract layer: package role, owned data, capabilities, permissions, session/API policy, jobs/events, health checks, docs and known operational risks.
+
+The contract layer belongs in `module.yaml` plus `docs/developer/concept-alignment.md`.
+
+Before calling a P0 package ready, verify:
+
+- every important capability is declared;
+- owned tables/config/storage are explicit;
+- endpoints have session mode and permission metadata;
+- stateful admin/UI routes are not presented as background, AI or external integration APIs;
+- audit, rollback and health-check expectations are written down;
+- gaps are tracked as blockers or follow-up decisions rather than hidden in chat.
+
+Example: `larena/setting` owns `sf_setting`, `sf_setting_value` and category JSON schema files. Its current UI/admin endpoints are `stateful`; future background/API/AI consumers need a separate resolver/facade/API contract, not direct reuse of `/settings/*` routes.
+
 ## API Safety Rule
 
 If a package exposes API behavior, declare it under `api_operations`.
@@ -197,10 +225,11 @@ For each package:
 2. Run `php artisan larena:validate-packages --path=/path/to/package`.
 3. Preserve existing valid manifest fields.
 4. Add missing governance fields.
-5. Resolve safe Composer/manifest mismatches.
-6. Do not change runtime behavior only to satisfy the manifest.
-7. Update package docs/SPEC/CHANGELOG when the manifest changes release behavior or developer contract.
-8. Re-run validator and record unresolved product questions.
+5. For P0 packages, add or update `docs/developer/concept-alignment.md`.
+6. Resolve safe Composer/manifest mismatches.
+7. Do not change runtime behavior only to satisfy the manifest.
+8. Update package docs/SPEC/CHANGELOG when the manifest changes release behavior or developer contract.
+9. Re-run validator and record unresolved product questions.
 
 ## Current Known Drift
 
