@@ -37,6 +37,29 @@
 3. `vendor/bin/phpunit packages/<module>/tests`
 4. `vendor/bin/phpunit --testsuite=packages` при интеграционном риске
 
+## Package-local PHPUnit harness
+
+Для отдельных `larena/*` package-репозиториев тесты должны запускаться из самого пакета, а не только из starter-приложения.
+
+Минимальный стандарт:
+
+- `phpunit.xml` в корне пакета;
+- `composer.json` содержит `require-dev` для `phpunit/phpunit`, `orchestra/testbench` и тестовых Larena-интеграций;
+- `composer.json` содержит `autoload-dev` для `Simai\\<Package>\\Tests\\`;
+- если пакетные тесты зависят от приватных Larena-пакетов, добавь VCS repositories для этих пакетов или документированный shared-vendor fallback;
+- `tests/bootstrap.php` может подключать локальный `vendor/autoload.php` или shared starter `vendor/autoload.php`, но должен грузить локальный `src/` и `tests/` из package checkout;
+- тестовые stubs/fixtures должны жить под `tests/Fixtures/` и не зависеть от приложения пользователя;
+- `.gitignore` должен исключать `vendor/`, `.phpunit.cache/` и `composer.lock`, если lock-файл не является осознанной частью package workflow.
+
+Проверочный минимум перед коммитом:
+
+```bash
+composer validate --no-check-publish
+find src config database routes resources tests -name '*.php' -print0 | xargs -0 -n1 php -l
+vendor/bin/phpunit
+php artisan larena:validate-packages --path=/path/to/package --strict
+```
+
 ## Обязательные Swagger-проверки (`rest` / `rest_doc`)
 - `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
 - `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerEndpointsTest.php`
