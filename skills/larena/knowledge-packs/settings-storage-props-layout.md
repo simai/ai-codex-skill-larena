@@ -40,11 +40,12 @@ Current `larena/props` is a file-based property type/template package, not the f
 When inspecting or extending `larena/props`, require an explicit safety gate before functional growth:
 
 - do not treat submitted translation/template content as safe executable code;
-- replace or gate `eval()`-style parsing;
-- restrict template save paths to approved roots;
-- harden ZIP import with canonical path checks and extension allowlists;
+- custom translation textarea parsing must stay structured and non-executing; JSON arrays are the current safe baseline;
+- template save and preview paths must be restricted to approved property template roots for the selected property;
+- ZIP import must use canonical path checks, extension/path allowlists and per-entry size limits;
 - protect admin routes with explicit `larena/access` operations, not only generic `auth`;
 - add audit/rollback for executable Blade template edits;
+- document any remaining trusted-admin Blade execution as an operational risk rather than exposing it to public/background/API/AI flows;
 - keep SitePack mapping separate until property schema and entity-bound values are accepted.
 
 ## Storage
