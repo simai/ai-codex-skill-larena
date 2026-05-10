@@ -32,6 +32,7 @@
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
 - Added package-installer guidance that official packages must resolve resources through package-relative paths instead of assuming `base_path("vendor/larena/<package>")`.
+- Added settings/storage/props guidance to evolve legacy `category + code` settings through a tested compatibility resolver/explain layer before destructive schema migrations.
 - Added routing and decision-policy rules for package diagnostics, entry install readiness, update/registration, SitePack, Docara, REST/API, docs, runtime and release-readiness work.
 
 ### Changed

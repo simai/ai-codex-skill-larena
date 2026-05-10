@@ -17,6 +17,16 @@ Reference direction from Bitrix `simai.main`:
 
 Larena question: evolve `larena/setting` toward this model or split lower-level platform settings package.
 
+When moving an existing `category + code` settings implementation toward SF5 Settings DNA, do not start with a destructive schema rewrite. First add a compatibility layer:
+
+- value object for `namespace + key` identity mapped to the current legacy code;
+- value object for context that exposes DNA fields while preserving current storage fields;
+- resolver service that returns direct/default/resolved/missing metadata;
+- explain output with candidate layers and unsupported layers called out explicitly;
+- tests against the current legacy tables so future migrations preserve behavior.
+
+Only after this layer is stable should migrations add persisted `namespace`, `key`, `level`, `scope_id`, role/all-users layers, schema packs, history, pending and SitePack/config-KV import/export.
+
 ## Universal Properties
 
 Bitrix `simai.property` is a reference for reusable property controls in view/edit/filter contexts.
