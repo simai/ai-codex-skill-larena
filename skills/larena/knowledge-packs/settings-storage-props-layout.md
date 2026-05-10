@@ -49,6 +49,13 @@ After additive persistence, introduce runtime schema storage through explicit pu
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Only after runtime schema publication is verified should history, pending and SitePack/config-KV import/export be implemented.
 
+The first settings history/audit baseline now exists in `larena/setting`:
+
+- `sf_setting_history` is append-only value history for `SettingService` writes and deletes;
+- `SettingAuditService` records old/new value, namespace/key, context, actor/source metadata and operation metadata when the history table exists;
+- this is a value-level audit baseline, not the final workflow layer;
+- pending apply/reject, schema-change audit, SitePack/config-KV export/import and AI-safe review flows remain separate future layers.
+
 ## Universal Properties
 
 Bitrix `simai.property` is a reference for reusable property controls in view/edit/filter contexts.
