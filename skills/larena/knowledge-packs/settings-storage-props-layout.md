@@ -38,11 +38,14 @@ After this layer is stable, the next safe migration step is additive canonical p
 After additive persistence, introduce runtime schema storage through explicit publication, not through hidden UI reads:
 
 - add schema-pack and schema-definition runtime tables;
-- publish existing `config/settings/*.json` categories with an explicit command such as `php artisan setting:schema-publish --all`;
+- treat package-level `settings.schema-pack.json` as the canonical package contract for runtime schema publication;
+- require schema packs to declare `schema_version`, pack identity/version, install/update semantics, rollback notes, UI binding, and machine-readable definitions with `namespace`, `key`, legacy mapping, type, default, levels, presentation, validation/options, and migration hints;
+- publish the canonical schema pack with `php artisan setting:schema-publish --all` when the file is available;
+- keep explicit publication of legacy `config/settings/*.json` categories available only as a compatibility path, for example through `php artisan setting:schema-publish --all --legacy-categories` or a direct category command;
 - keep a `--dry-run` mode for install/update diagnostics;
 - make settings forms prefer runtime schema definitions when present;
 - keep legacy JSON materialization only as compatibility fallback for unpublished categories;
-- document remaining gaps separately: final `settings.schema-pack.json`, history, pending changes, audit, and SitePack/config-KV import/export.
+- document remaining gaps separately: history, pending changes, audit, SitePack/config-KV import/export, and package-to-package schema-pack discovery/install policy.
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Only after runtime schema publication is verified should history, pending and SitePack/config-KV import/export be implemented.
 
