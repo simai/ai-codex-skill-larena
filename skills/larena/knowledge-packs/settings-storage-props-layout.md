@@ -25,7 +25,17 @@ When moving an existing `category + code` settings implementation toward SF5 Set
 - explain output with candidate layers and unsupported layers called out explicitly;
 - tests against the current legacy tables so future migrations preserve behavior.
 
-Only after this layer is stable should migrations add persisted `namespace`, `key`, `level`, `scope_id`, role/all-users layers, schema packs, history, pending and SitePack/config-KV import/export.
+After this layer is stable, the next safe migration step is additive canonical persistence:
+
+- add nullable `namespace` and `key` columns to definition and value tables;
+- add nullable `level` and `scope_id` columns to value tables;
+- backfill legacy rows as `simai.settings.legacy + code`;
+- backfill legacy context into `level + scope_id` without dropping old columns;
+- make the resolver prefer canonical `namespace/key + level/scope_id` values while falling back to legacy columns;
+- support `all_users` as `level = all_users, scope_id = null`;
+- support role values as `level = role, scope_id = role_id`.
+
+Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Only after additive persistence is verified should schema packs, runtime schema storage, history, pending and SitePack/config-KV import/export be implemented.
 
 ## Universal Properties
 
