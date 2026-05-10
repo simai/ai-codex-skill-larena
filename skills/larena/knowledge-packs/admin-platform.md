@@ -68,6 +68,8 @@ Example slots:
 - Host projects and product packages must not edit or copy `vendor/larena/admin` source. Extensions go through typed contracts, project config/routes, or separate Composer packages.
 - Long-running admin operations should use `AdminBatch`, queues or commands with progress/failure diagnostics.
 - Route ownership, plugin health and admin smoke commands are release gates for packages that contribute admin routes/UI.
+- Admin packages must publish every asset referenced by shared layouts. Even harmless missing `/simai/admin/*` assets, such as a favicon, create browser noise and can mask real admin errors during smoke checks.
+- Current favicon baseline is `/simai/admin/images/favicon.ico`; do not reference `/simai/admin/images/favicon.png` unless the package ships that file.
 
 ## Current Core Package Gaps To Watch
 
