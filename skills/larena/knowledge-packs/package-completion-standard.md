@@ -55,7 +55,7 @@ Check these layers before calling a package complete:
 12. **Security/access/session safety**: auth, permissions, session modes, CSRF/tokens, rate limits, audit, network access and queues.
 13. **Install/update/rollback**: idempotent install path, migrations, config, seed/demo policy, update steps and rollback limits.
 14. **Roadmap/known gaps**: ready state, postponed work, blockers and future decisions.
-15. **AI development contract**: read-first docs, safe read-only operations, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
+15. **AI development contract**: read-first docs, MCP tools/resources if exposed, safe read-only operations, effective user/service/capability context, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
 16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
 
 ## Completion Levels
@@ -117,7 +117,9 @@ docs/developer/ai-contract.md
 It should define:
 
 - read-first documents;
+- MCP tools/resources if exposed;
 - safe read-only operations;
+- effective user, service account or capability-token context;
 - write operations requiring human approval;
 - forbidden operations;
 - required neighbor package checks;
@@ -125,6 +127,8 @@ It should define:
 - audit and risk notes.
 
 Be conservative by default. AI agents should not infer permission to run destructive migrations, mutate licenses, change update delivery, call external services, expose APIs or alter security boundaries unless the package contract and current task explicitly allow it.
+
+If a package exposes MCP tools/resources, execution must be scoped to the effective Larena user, service account or capability token that authorized the MCP session. MCP must not silently grant broader access than that context has through normal Larena UI/API. Elevated service tools must be separate declared service/capability modes with explicit permission, audit and approval policy.
 
 ## Package Status Card Rule
 
@@ -185,6 +189,9 @@ Status card:
 
 AI contract:
 - present/missing/not applicable
+
+MCP exposure:
+- none / declared / unsafe / unknown
 ```
 
 Do not hide missing artifacts behind vague phrases such as "needs docs" or "needs tests". Name the exact missing file, manifest field, scenario or gate.

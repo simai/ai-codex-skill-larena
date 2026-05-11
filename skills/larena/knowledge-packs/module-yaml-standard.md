@@ -58,6 +58,7 @@ Add governance/discovery fields gradually:
 
 - `capabilities`
 - `owned_data`
+- `ai.mcp`
 - `edition`
 - `product_layer`
 - `license`
@@ -194,6 +195,24 @@ If a package exposes API behavior, declare it under `api_operations`.
 Public operations require explicit operation metadata, permission/access model, and audit/risk controls where needed.
 
 Dynamic class/method runners must not become arbitrary public APIs without allowlist, ACL and audit controls.
+
+## AI / MCP Exposure Rule
+
+Packages should not start separate MCP servers by default. MCP transport belongs to the central Larena MCP gateway; packages publish tool/resource metadata and provider classes.
+
+When a package exposes MCP behavior, require:
+
+- declared `ai.mcp.resources` / `ai.mcp.tools` or equivalent provider metadata;
+- `enabled_by_default` policy;
+- tool/resource `permission`;
+- risk level;
+- read/write/proposal mode;
+- timeout and rate-limit policy;
+- audit behavior;
+- approval policy for risky writes;
+- effective user/service/capability context.
+
+MCP execution must be scoped to the effective Larena user, service account or capability token that authorized the MCP session. MCP tools must not bypass normal permissions, tenant/site context, audit rules or package rate limits. Elevated service behavior must be a separately declared service/capability mode.
 
 ## Health Check Rule
 
