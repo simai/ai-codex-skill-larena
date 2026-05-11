@@ -62,7 +62,15 @@ The first settings pending-review baseline now exists in `larena/setting`:
 - `apply` writes through `SettingService`, so normal value history is also recorded in `sf_setting_history`;
 - SitePack/config-KV imports and AI-generated settings changes should stage proposals through the pending layer first instead of writing directly to runtime values.
 
-Schema-change audit, SitePack/config-KV export/import implementation, package-to-package schema-pack discovery/install policy and resolver overlay of pending values remain separate future layers.
+The first config-KV settings transport baseline now exists in `larena/setting`:
+
+- `SettingConfigKvTransport` exports and imports `larena.settings.config-kv` payloads;
+- import supports dry-run/report mode and creates pending changes through `SettingPendingService`;
+- unchanged values are skipped by default;
+- command entrypoint: `php artisan setting:config-kv export|import <path>`;
+- this is the package-local settings transport baseline; SitePack adapter mapping should wrap this format rather than write settings values directly.
+
+Schema-change audit, SitePack adapter mapping for settings config-KV artifacts, package-to-package schema-pack discovery/install policy and resolver overlay of pending values remain separate future layers.
 
 ## Universal Properties
 
