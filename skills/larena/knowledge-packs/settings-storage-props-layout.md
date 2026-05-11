@@ -78,6 +78,8 @@ The first settings pending-review baseline now exists in `larena/setting`:
 - `/admin/settings/pending` provides the first stateful admin/API review surface for listing pending changes and applying or rejecting them;
 - the pending review routes are admin/session routes protected by settings view/edit access, not sessionless background endpoints;
 - SitePack/config-KV imports and AI-generated settings changes should stage proposals through the pending layer first instead of writing directly to runtime values.
+- pending review UI baseline includes status/action/source/level filters, side-by-side current/proposed value comparison and bulk apply/reject for selected pending rows;
+- bulk pending actions must process only rows that are still in `pending` status and must remain stateful admin actions, not background/sessionless endpoints.
 
 The first config-KV settings transport baseline now exists in `larena/setting`:
 
