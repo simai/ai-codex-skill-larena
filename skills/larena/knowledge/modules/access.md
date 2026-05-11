@@ -14,12 +14,13 @@
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
 - L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
 - Installed-site HTTP and visual browser smoke по `larena.test` прошёл для main admin access pages. Browser Use в текущей сессии был недоступен, поэтому визуальный smoke выполнен через CLI Playwright fallback.
-- Package-local `access:doctor` реализован и проверен на `larena.test`: 35 checks, 0 warnings. Команда read-only, не выводит секреты и проверяет config, tables, middleware, routes, contracts и bypass-token safety.
+- Package-local `access:doctor` реализован и проверен на `larena.test`: 36 checks, 0 warnings после token-scope migration. Команда read-only, не выводит секреты и проверяет config, tables, token-scope storage, middleware, routes, contracts и bypass-token safety.
+- Token-scope storage baseline реализован: `sf_access_api_key.scopes`, `AccessTokenScopePolicy`, config-gated middleware enforcement через `ACCESS_TOKEN_SCOPE_ENFORCEMENT`. Enforcement выключен по умолчанию для совместимости.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
-- До полноценной Larena Access DNA не хватает runtime token-scope storage, audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
+- До полноценной Larena Access DNA не хватает audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
-- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`.
+- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`.
 - Decision-layer: `AccessValue`, `AccessContext`, `AccessDecision`.
 - Grants/context baseline: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
 - Security/operations baseline: `AccessTokenScope`, `AccessAuditEvent`.
@@ -48,8 +49,9 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
-2. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
+1. Позже отдельно внедрять audit dispatcher and rate-limit wiring.
+2. Добавить admin/API UI для назначения scopes API-ключам до включения enforcement на реальных установках.
+3. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
 
 Не начинать с переименования `sf_access_*` таблиц или крупных миграций. Следующий слой должен закрывать security/operations, а runtime resolver registry и новое grant storage делать только после RFC.
 
@@ -57,7 +59,7 @@
 - Разнобой operation-кодов между конфигом и кодом.
 - Утечки доступа из-за обхода middleware.
 - Неправильная обработка bypass token и impersonation.
-- API keys без scopes/audit/rate limits дают слишком широкий контур для внешних клиентов и AI/MCP.
+- API keys без назначенных scopes/audit/rate limits дают слишком широкий контур для внешних клиентов и AI/MCP. Не включать broad MCP/REST/AI-write до назначения scopes и включения enforcement.
 - Root/bypass policy без тестов может создать неявный супердоступ.
 
 ## Обязательные проверки
@@ -65,6 +67,7 @@
 - Проверки `access.entity` для `store/update/destroy/status`.
 - Проверка корректного поведения токенов и срока действия ключей.
 - `php artisan access:doctor` после install/update пакета; нормальный baseline: exit code `0`, `PASS`, no secrets, JSON mode пригоден для CI.
+- Проверка token-scope enforcement: missing/wrong scope -> `403 scope_denied`, matching scope -> request continues to normal access check.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
