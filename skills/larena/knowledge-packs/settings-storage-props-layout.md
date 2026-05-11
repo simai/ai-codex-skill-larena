@@ -1,6 +1,6 @@
 # Settings Storage Props Layout
 
-Larena should align with Bitrix/SF5 concepts while staying Laravel-native.
+Larena should define native Larena settings/storage/props/layout contracts while preserving useful migration references from Bitrix and older SIMAI implementations.
 
 ## Settings
 
@@ -17,7 +17,7 @@ Reference direction from Bitrix `simai.main`:
 
 Larena question: evolve `larena/setting` toward this model or split lower-level platform settings package.
 
-When moving an existing `category + code` settings implementation toward SF5 Settings DNA, do not start with a destructive schema rewrite. First add a compatibility layer:
+When moving an existing `category + code` settings implementation toward Larena Settings DNA, do not start with a destructive schema rewrite. First add a compatibility layer:
 
 - value object for `namespace + key` identity mapped to the current legacy code;
 - value object for context that exposes DNA fields while preserving current storage fields;

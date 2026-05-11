@@ -46,6 +46,10 @@ Registration server is not a public surface; update server is the public/control
 
 SitePack is platform-neutral data transport. Larena should use an adapter/package for import/export, not change the core standard for Larena-only needs.
 
-## SF5 And Bitrix Alignment
+## Larena And Migration References
 
-Larena should preserve shared concepts with Bitrix/SF5 where useful, but implementation remains Laravel-native.
+Larena is the canonical product/platform identity for backend packages, access, settings, props, storage, REST, admin and update flows.
+
+`SF5` is an internal/historical label and remains useful mainly as a frontend/UI analogy or compatibility reference. Do not name new Larena backend contracts after SF5.
+
+Bitrix and older SIMAI implementations may provide migration references and adapter targets. They should not define Larena's package identity, runtime architecture or public product naming.

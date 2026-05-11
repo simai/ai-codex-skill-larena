@@ -46,10 +46,10 @@ Check these layers before calling a package complete:
 3. **Composer contract**: canonical PHP dependency graph, provider discovery, autoload, license and safe scripts.
 4. **Package manifest**: `module.yaml` identity, product layer, dependencies, installs, endpoints, permissions, settings, jobs, health, audit, rollback and risks.
 5. **Structured capability contract**: capabilities, owned data, consumed services, extension points and package interactions.
-6. **Package DNA**: why the package exists, universal SIMAI/SF5/Larena principles, boundaries and forbidden anti-patterns.
+6. **Package DNA**: why the package exists, Larena canonical principles, migration references, boundaries and forbidden anti-patterns.
 7. **Architecture docs**: components, data model, lifecycle, extension points, security, operations and integration flows.
 8. **User/developer docs**: usage, install, config, commands, API, admin behavior, permissions, update/rollback and troubleshooting.
-9. **Concept alignment**: shared SIMAI/SF5/Larena model, Bitrix/SF5 references, gaps, standard decisions and blockers.
+9. **Concept alignment**: Larena canonical model, Bitrix/older-SIMAI migration references, gaps, standard decisions and blockers.
 10. **Demonstrator**: acceptance surface that shows real public/admin/API/integration behavior and role/permission states.
 11. **Tests/smoke/health**: automated or documented proof that the package is alive.
 12. **Security/access/session safety**: auth, permissions, session modes, CSRF/tokens, rate limits, audit, network access and queues.
@@ -86,7 +86,7 @@ If it cannot pass yet, record exact exceptions and blockers.
 
 ### L3: DNA Aligned
 
-Package is aligned with Larena/SF5/Bitrix direction.
+Package is aligned with Larena direction and documented migration references.
 
 Minimum: package DNA, architecture doc, concept alignment doc, known gaps, future decisions and no unresolved blocker that makes further development unsafe.
 

@@ -1,6 +1,6 @@
 # Product Architecture
 
-Larena is the Laravel product branch of SIMAI Framework 5.
+Larena is the Laravel CMS and application platform of the SIMAI ecosystem.
 
 ## Strategic Reading
 
@@ -16,7 +16,7 @@ Larena should become a vertically integrated CMS/platform:
 - settings/storage/props/layout;
 - update and registration infrastructure;
 - SitePack data transport;
-- SF5 UI and smart components;
+- Larena UI/frontend integration, including SF5 UI and smart components where they are the chosen frontend reference;
 - Docara and future products;
 - AI-assisted development and diagnostics.
 
@@ -84,7 +84,7 @@ License bias:
 - Reason from general to specific: product role -> strategic direction -> platform boundaries -> shared concepts -> architecture -> package implementation -> code action.
 - Shared conceptual specs plus platform adapters are preferred over a premature universal runtime across Bitrix and Laravel.
 - Product direction should be checked against code, but current implementation gaps do not automatically invalidate the direction.
-- Before new package functionality, complete concept alignment for that package: identify the shared SIMAI/SF5/Larena concept, matching Bitrix/SF5 references where they exist, Laravel-specific implementation details, gaps, risks and standard decisions.
+- Before new package functionality, complete concept alignment for that package: identify the canonical Larena concept, matching Bitrix or older SIMAI migration references where they exist, Laravel-specific implementation details, gaps, risks and standard decisions.
 - First public path must work without update server.
 - Use SF5 as the frontend analogy for modular composition: small prepared primitives compose into richer units, while the runtime handles loading/caching/configuration without forcing ordinary hosting to run complex build infrastructure.
 - Backend/platform modules should strive for the same Lego-like quality through manifests, docs, API contracts, service boundaries, install/update contracts and tests.
@@ -94,10 +94,10 @@ For current repository cleanup, use the two-stage model documented in `simai/lar
 1. Repository/documentation baseline.
 2. Concept alignment audit in `docs/developer/concept-alignment.md` before functional growth.
 
-Technical decisions should explicitly state which product-level goal they serve: easier self-install, safer updates, Bitrix/SF5 migration continuity, better admin UX, SitePack portability, Docara product readiness, or third-party developer ecosystem.
+Technical decisions should explicitly state which product-level goal they serve: easier self-install, safer updates, migration continuity from Bitrix/older SIMAI systems, better admin UX, SitePack portability, Docara product readiness, or third-party developer ecosystem.
 
 World-popularity framing:
 
-- Do not compete with WordPress only as "a nicer Laravel CMS"; win by combining accessibility, update safety, modular product packaging, SF5/UI consistency, SitePack portability and AI-agent-ready manifests/docs/APIs.
+- Do not compete with WordPress only as "a nicer Laravel CMS"; win by combining accessibility, update safety, modular product packaging, coherent UI/frontend integration, SitePack portability and AI-agent-ready manifests/docs/APIs.
 - First win narrow wedges where Larena has structural advantage: Docara/documentation systems, Bitrix-to-Larena migration, organization portals, regulated/structured sites, and AI-assisted modular assembly for agencies/developers.
 - Treat install friction, weak free edition, delayed update-server trust path, unclear package standards and confusing admin UX as strategic risks, not small implementation details.

@@ -26,7 +26,7 @@
 - Added update artifact trust guidance: stored distribution archives require `archive_size_bytes` / `archive_sha256` baseline before publication, and signed manifests should use public-key verification with client-side size/SHA-256 checks.
 - Added the current signed manifest implementation baseline for `larena/update` and the Bitrix update-client verifier seed.
 - Added signed manifest rollout guidance: Ed25519 keygen/rotation, private-key storage, Bitrix `SIGNED_MANIFEST_MODE=off|diagnostic|enforce`, and staged `public-core` rollout before enforcement.
-- Added concept-alignment governance guidance: Larena package repositories must pass repository/docs baseline and shared SIMAI/SF5/Larena concept audit before new package functionality is added.
+- Added concept-alignment governance guidance: Larena package repositories must pass repository/docs baseline and Larena canonical concept audit, with Bitrix/older-SIMAI migration references where useful, before new package functionality is added.
 - Added platform subsystem contract guidance for P0 packages: `module.yaml` should declare capabilities, owned data, endpoint session modes, permissions, audit, rollback, health checks and operational risks alongside `docs/developer/concept-alignment.md`.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
@@ -49,6 +49,7 @@
 - Moved old root-level knowledge, modules, checklists, examples and templates into `skills/larena/` so the repository root can stay reserved for service metadata, `source/`, docs and CI.
 - Updated `$larena` to treat `docs/developer/module-yaml-schema.md` and `docs/developer/schemas/module.schema.json` in `simai/larena` as the first `module.yaml` schema baseline.
 - Updated `$larena` to use committed Larena governance anchors in `simai/larena`: product DNA, package contract, release gates and ADR 0001.
+- Updated Larena positioning so backend/package DNA uses Larena as the canonical identity; `SF5` remains only a historical/frontend reference or migration compatibility term.
 
 ### Verification
 

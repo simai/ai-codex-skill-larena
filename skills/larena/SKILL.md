@@ -1,6 +1,6 @@
 ---
 name: larena
-description: Build, diagnose, document, and evolve Larena, the SIMAI Laravel CMS/platform branch of SF5. Use for Larena application and larena/* package work, modular admin, installer/update flows, registration/licensing integration, SitePack bridge, Docara product proof, REST/API safety, settings/storage/props/layout alignment with Bitrix/SF5, release readiness, QA, and repository knowledge capture.
+description: Build, diagnose, document, and evolve Larena, the SIMAI Laravel CMS/application platform. Use for Larena application and larena/* package work, modular admin, installer/update flows, registration/licensing integration, SitePack bridge, Docara product proof, REST/API safety, settings/storage/props/layout alignment, migration references from Bitrix/older SIMAI systems, release readiness, QA, and repository knowledge capture.
 ---
 
 # Larena
@@ -21,7 +21,7 @@ Use existing legacy/developer materials in `knowledge/`, `modules/`, `checklists
 
 Follow this sequence for substantial Larena tasks:
 
-1. Identify the target surface: entry app, Composer package, update server, registration server, SitePack bridge, Docara product, SF5 integration, docs, runtime/ops, or QA.
+1. Identify the target surface: entry app, Composer package, update server, registration server, SitePack bridge, Docara product, Larena UI/frontend integration, docs, runtime/ops, or QA.
 2. Identify the primary activity from [activities/activity-registry.json](./activities/activity-registry.json).
 3. Select the smallest sufficient specialist set using [rules/routing.md](./rules/routing.md).
 4. Load only selected specialist profiles and knowledge packs referenced by those profiles.
@@ -47,7 +47,7 @@ When new repeatable project experience should improve this skill, apply [rules/l
 - `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement checks.
 - `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.
 - `Docara`: likely first product-level proof that Larena is a usable CMS platform.
-- `SF5`: frontend/runtime standard and compatibility target with Bitrix-side SF5 concepts.
+- `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.
 
 ## Default Activities
 
@@ -72,7 +72,7 @@ If no activity matches, create a temporary activity with `activity_id`, `title`,
 
 Default specialist roles:
 
-- `platform-architect`: Larena/SF5 platform boundaries, package graph, compatibility with Bitrix concepts.
+- `platform-architect`: Larena platform boundaries, package graph, and compatibility/migration references from Bitrix or older SIMAI systems.
 - `package-installer`: Composer packages, service providers, `simai:install`, migrations, module metadata, install/update contracts.
 - `modular-admin`: admin kernel, extension points, slots, contributions, CRUD, UI contracts.
 - `update-registration`: update server, registration server, licensing, channels, product delivery.

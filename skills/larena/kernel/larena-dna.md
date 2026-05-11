@@ -1,6 +1,6 @@
 # Larena DNA
 
-Larena is the Laravel product branch of SIMAI Framework 5. It is not just a Laravel application and not just a package collection.
+Larena is the Laravel CMS and application platform of the SIMAI ecosystem. It is not just a Laravel application and not just a package collection.
 
 Strategic ambition: Larena is intended to become a world-class CMS/platform that can compete with and surpass existing CMS ecosystems by accessibility, usability, security, update experience, extensibility and ecosystem growth.
 
@@ -11,9 +11,9 @@ AI-agent context: Larena is being created for a world where AI agents help assem
 Default priorities:
 
 0. Move from general to specific: first understand Larena's product role, strategic direction, platform boundaries and user/developer scenarios; then evaluate architecture; only after that decide package-level or code-level actions.
-0.1. Before adding new package functionality, run a concept-alignment audit: verify that the package matches the shared SIMAI/SF5/Larena model for its domain, and record what is shared versus Laravel-specific.
+0.1. Before adding new package functionality, run a concept-alignment audit: verify that the package matches the Larena canonical model for its domain, and record what is native Larena versus migration/compatibility reference.
 1. Preserve the user-facing bootstrap path through `simai/larena` until the Larena update-server flow is ready.
-2. Keep Larena aligned with Bitrix/SF5 concepts where that helps future migration: settings, storage, props, layout, SitePack, update delivery.
+2. Keep Larena compatible with useful Bitrix and older SIMAI concepts where that helps future migration, but keep Larena names and contracts canonical: settings, storage, props, layout, SitePack, update delivery.
 3. Treat `larena/*` packages as modular platform units with explicit install, metadata, access, docs and tests.
 4. Keep modular admin extensible through typed extension points, slots, contributions and manifests.
 5. Keep SitePack as portable transport; implement Bitrix and Larena adapters instead of mixing standard and platform runtime.
@@ -43,7 +43,7 @@ Future work should protect platform coherence across repositories and developers
 Repository standardization has two gates before functional expansion:
 
 1. Repository and documentation baseline: README, CHANGELOG, `module.yaml`, user/developer docs, install/update/rollback notes and smoke/test path.
-2. Concept alignment audit: `docs/developer/concept-alignment.md` or an explicit tracked exception that compares the package with the shared SIMAI/SF5/Larena concept before new behavior is built on top.
+2. Concept alignment audit: `docs/developer/concept-alignment.md` or an explicit tracked exception that compares the package with the Larena canonical concept and any migration references before new behavior is built on top.
 
 Committed governance anchors in the `simai/larena` repository:
 
