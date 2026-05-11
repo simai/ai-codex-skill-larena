@@ -53,7 +53,9 @@ The first settings history/audit baseline now exists in `larena/setting`:
 
 - `sf_setting_history` is append-only value history for `SettingService` writes and deletes;
 - `SettingAuditService` records old/new value, namespace/key, context, actor/source metadata and operation metadata when the history table exists;
-- this is a value-level audit baseline, not the final workflow layer.
+- `sf_setting_schema_history` is append-only schema-pack install/update history for `SettingSchemaRegistry` publication;
+- `SettingSchemaAuditService` records schema pack and legacy category schema install/update events with old/new snapshots, source path, format and definitions count;
+- this is a settings value/schema audit baseline, not the final workflow layer.
 
 The first settings pending-review baseline now exists in `larena/setting`:
 
