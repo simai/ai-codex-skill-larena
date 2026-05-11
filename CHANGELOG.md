@@ -36,6 +36,7 @@
 - Added `larena/access` token rate-limit guidance: `AccessRateLimitPolicy` wires `access.token` to Laravel `RateLimiter` through config-gated named profiles and sanitized `access.token.rate_limited` audit events.
 - Added `larena/access` durable audit sink and API-key scope assignment guidance: `sf_access_audit_log`, `ACCESS_AUDIT_SINK`, sanitized database payloads, CRUD `scopes` metadata and masked-key plus `hashed_key` storage.
 - Added `larena/access` scoped grant storage guidance: RFC 0001, `sf_access_grant`, `AccessScopedGrantStore`, rollout flag `ACCESS_SCOPED_GRANTS_ENABLED`, legacy fallback, scoped deny precedence and `access:doctor` 46-check baseline.
+- Added `larena/access` cache and SitePack grant mapping guidance: `AccessCache` versioned invalidation hooks, `AccessSitePackMapper` config-KV namespace `larena.access.grants`, dry-run/manual/private import policy and `access:doctor` 48-check baseline.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
