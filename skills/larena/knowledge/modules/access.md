@@ -11,12 +11,14 @@
 - Текущая реализация полезна как compatibility layer: access profiles, operations, operation values, user/group bindings, middleware, API keys.
 - Первый explainable decision-layer реализован: `AccessValue`, `AccessContext`, `AccessDecision`, `AccessControl::decide()` и `AccessChecker::decide()`.
 - Grants/context baseline реализован без миграций: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
-- До полноценной Larena Access DNA не хватает token scopes, audit, rate limits, runtime resolver registry, scoped grant storage and cache invalidation.
+- Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
+- До полноценной Larena Access DNA не хватает runtime token-scope storage, audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
 - Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`.
 - Decision-layer: `AccessValue`, `AccessContext`, `AccessDecision`.
 - Grants/context baseline: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
+- Security/operations baseline: `AccessTokenScope`, `AccessAuditEvent`.
 - Middleware: `access`, `access.token`, `access.entity`.
 - Контракт проверки entity-прав: `EntityAbilityChecker`.
 - Конфиг токенов/обходов: `config/auth_tokens.php`.
@@ -31,6 +33,7 @@
 - Новый функционал должен идти через Larena Access DNA, а не через SF5-брендинг.
 - `hasAccess()` остается compatibility boolean API; новый код должен использовать `AccessChecker::decide()` там, где нужна объяснимость.
 - Для нового кода `AccessContext` должен передавать actor type, package, resource, scope и source, если эти данные доступны.
+- Bypass token не должен проходить без явного `ACCESS_BYPASS_USER_ID > 0`; bypass не является публичным API credential.
 
 ## Архитектурные правила интеграции
 1. При добавлении нового модуля сначала опиши операции в `config/simai_<module>.php`.
@@ -40,10 +43,10 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Подготовить token scopes и audit RFC до REST/MCP/AI exposure.
-2. Описать root/bypass production policy и добавить негативные тесты.
-3. Добавить rate-limit policy для access-sensitive endpoints.
-4. Добавить cache invalidation hooks для grants, operations и group membership.
+1. Сделать L4 demonstrator scenario для admin/API/decision explain flows.
+2. Провести browser smoke на установленном Larena site.
+3. Опционально добавить package-local `access:doctor` command.
+4. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
 
 Не начинать с переименования `sf_access_*` таблиц или крупных миграций. Следующий слой должен закрывать security/operations, а runtime resolver registry и новое grant storage делать только после RFC.
 
