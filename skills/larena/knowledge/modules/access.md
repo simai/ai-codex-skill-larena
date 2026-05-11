@@ -14,14 +14,15 @@
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
 - L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
 - Installed-site HTTP and visual browser smoke по `larena.test` прошёл для main admin access pages. Browser Use в текущей сессии был недоступен, поэтому визуальный smoke выполнен через CLI Playwright fallback.
-- Package-local `access:doctor` реализован и проверен на `larena.test`: 36 checks, 0 warnings после token-scope migration. Команда read-only, не выводит секреты и проверяет config, tables, token-scope storage, middleware, routes, contracts и bypass-token safety.
+- Package-local `access:doctor` реализован и проверен на `larena.test`: 38 checks, 0 warnings после token-scope и rate-limit baseline. Команда read-only, не выводит секреты и проверяет config, tables, token-scope storage, rate-limit profiles, middleware, routes, contracts и bypass-token safety.
 - Token-scope storage baseline реализован: `sf_access_api_key.scopes`, `AccessTokenScopePolicy`, config-gated middleware enforcement через `ACCESS_TOKEN_SCOPE_ENFORCEMENT`. Enforcement выключен по умолчанию для совместимости.
 - Audit dispatcher baseline реализован: `AccessAuditDispatcher` emits `AccessAuditRecorded` Laravel events for token middleware decisions; payload sanitation strips raw tokens, authorization headers, hashed keys, passwords and secrets. Durable audit storage ещё не реализовано.
+- Token rate-limit baseline реализован: `AccessRateLimitPolicy` wires `access.token` to Laravel `RateLimiter`, config-gated through `ACCESS_TOKEN_RATE_LIMITS_ENABLED`, with named profiles (`admin-default`, `admin-sensitive`, `api-sensitive`, `tool-sensitive`, `internal-service`). Limit exceeded returns `429 rate_limited` with `Retry-After` and emits sanitized `access.token.rate_limited`.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
-- До полноценной Larena Access DNA не хватает durable audit storage, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
+- До полноценной Larena Access DNA не хватает durable audit storage, admin/API scope assignment UI, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
-- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`.
+- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`, `AccessRateLimitPolicy`.
 - Events: `AccessAuditRecorded`.
 - Decision-layer: `AccessValue`, `AccessContext`, `AccessDecision`.
 - Grants/context baseline: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
@@ -51,7 +52,7 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Позже отдельно внедрять durable audit storage and rate-limit wiring.
+1. Позже отдельно внедрять durable audit storage или configurable audit sink.
 2. Добавить admin/API UI для назначения scopes API-ключам до включения enforcement на реальных установках.
 3. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
 
@@ -61,7 +62,7 @@
 - Разнобой operation-кодов между конфигом и кодом.
 - Утечки доступа из-за обхода middleware.
 - Неправильная обработка bypass token и impersonation.
-- API keys без назначенных scopes/audit/rate limits дают слишком широкий контур для внешних клиентов и AI/MCP. Не включать broad MCP/REST/AI-write до назначения scopes и включения enforcement.
+- API keys без назначенных scopes/enforcement/audit/rate-limit rollout дают слишком широкий контур для внешних клиентов и AI/MCP. Не включать broad MCP/REST/AI-write до назначения scopes, включения enforcement и smoke-проверки rate-limit профилей.
 - Root/bypass policy без тестов может создать неявный супердоступ.
 
 ## Обязательные проверки
@@ -71,6 +72,7 @@
 - `php artisan access:doctor` после install/update пакета; нормальный baseline: exit code `0`, `PASS`, no secrets, JSON mode пригоден для CI.
 - Проверка token-scope enforcement: missing/wrong scope -> `403 scope_denied`, matching scope -> request continues to normal access check.
 - Проверка audit dispatcher: token middleware decisions dispatch `AccessAuditRecorded` without raw token or hashed key in payload.
+- Проверка token rate limits: when `ACCESS_TOKEN_RATE_LIMITS_ENABLED=true`, excessive token requests return `429 rate_limited`, include `Retry-After`, and dispatch `access.token.rate_limited` without raw token or hashed key in payload.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
