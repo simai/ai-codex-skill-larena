@@ -42,6 +42,9 @@ The first resolver-first read API baseline now exists in `larena/setting`:
 - convenience methods include `getNamespaceKey()`, `getCategoryCode()`, `explainNamespaceKey()`, `setting_resolved()` and `setting_explain()`;
 - the settings JSON read endpoint can return additive `resolved` metadata next to the legacy scalar `value`;
 - `get()` remains acceptable for simple template reads and legacy scalar compatibility.
+- pending overlays are explicit: `resolveWithPending()` / `explainWithPending()` and namespace/category variants show review proposals under `pending`, while normal `resolve*()` / `explain*()` keep committed effective values only;
+- the `value` field in pending preview still means committed effective value; pending rows are review/diagnostic data and must not be treated as applied runtime state;
+- use `setting_explain_pending()` or service `explainWithPending()` for admin/AI/REST diagnostics that need to preview pending proposals.
 
 After additive persistence, introduce runtime schema storage through explicit publication, not through hidden UI reads:
 
@@ -55,7 +58,7 @@ After additive persistence, introduce runtime schema storage through explicit pu
 - keep legacy JSON materialization only as compatibility fallback for unpublished categories;
 - discover installed package schema packs explicitly with `php artisan setting:schema-publish --discover --dry-run` and then `php artisan setting:schema-publish --discover`;
 - never auto-apply package schema packs during web requests, form rendering, Laravel package discovery, or AI-agent context gathering;
-- document remaining gaps separately: dependency/conflict policy for schema-pack discovery and resolver overlay of pending values.
+- document remaining gaps separately: dependency/conflict policy for schema-pack discovery and richer schema-pack install policy.
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Runtime schema publication, value history and pending review already exist as baselines; new import/export workflows should build on them instead of bypassing them.
 
@@ -102,7 +105,7 @@ The first package-to-package schema-pack discovery baseline now exists in `laren
 - install/update flows should run dry-run first, review the report, then explicitly publish accepted schema packs;
 - discovery is a package install policy baseline, not a hidden runtime side effect.
 
-Richer schema-pack dependency/conflict policy and resolver overlay of pending values remain separate future layers.
+Richer schema-pack dependency/conflict policy remains a separate future layer. Pending overlay preview already exists as an explicit read mode and should stay opt-in.
 
 ## Universal Properties
 
