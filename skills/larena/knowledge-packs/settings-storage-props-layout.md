@@ -104,8 +104,10 @@ The first package-to-package schema-pack discovery baseline now exists in `laren
 - `setting:schema-publish --discover` publishes discovered packs through the same runtime schema registry and schema-change audit path as direct schema-pack publication;
 - install/update flows should run dry-run first, review the report, then explicitly publish accepted schema packs;
 - discovery is a package install policy baseline, not a hidden runtime side effect.
+- schema-pack policy v2 now reports required dependencies, duplicate `namespace + key` definitions, cross-pack definition ownership conflicts, definitions outside `pack.namespace_prefix`, and version downgrade warnings;
+- real schema-pack publication must be blocked when policy errors are present; warnings are review diagnostics.
 
-Richer schema-pack dependency/conflict policy remains a separate future layer. Pending overlay preview already exists as an explicit read mode and should stay opt-in.
+Richer schema-pack dependency ordering and marketplace/update-server install policy remain separate future layers. Pending overlay preview already exists as an explicit read mode and should stay opt-in.
 
 ## Universal Properties
 
