@@ -12,6 +12,7 @@
 - Первый explainable decision-layer реализован: `AccessValue`, `AccessContext`, `AccessDecision`, `AccessControl::decide()` и `AccessChecker::decide()`.
 - Grants/context baseline реализован без миграций: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
+- L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
 - До полноценной Larena Access DNA не хватает runtime token-scope storage, audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
@@ -43,10 +44,9 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Сделать L4 demonstrator scenario для admin/API/decision explain flows.
-2. Провести browser smoke на установленном Larena site.
-3. Опционально добавить package-local `access:doctor` command.
-4. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
+1. Провести browser smoke на установленном Larena site по `docs/developer/demonstrator.md`.
+2. Опционально добавить package-local `access:doctor` command.
+3. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
 
 Не начинать с переименования `sf_access_*` таблиц или крупных миграций. Следующий слой должен закрывать security/operations, а runtime resolver registry и новое grant storage делать только после RFC.
 
