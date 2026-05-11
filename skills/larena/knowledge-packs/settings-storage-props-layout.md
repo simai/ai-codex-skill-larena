@@ -45,16 +45,24 @@ After additive persistence, introduce runtime schema storage through explicit pu
 - keep a `--dry-run` mode for install/update diagnostics;
 - make settings forms prefer runtime schema definitions when present;
 - keep legacy JSON materialization only as compatibility fallback for unpublished categories;
-- document remaining gaps separately: history, pending changes, audit, SitePack/config-KV import/export, and package-to-package schema-pack discovery/install policy.
+- document remaining gaps separately: schema-change audit, SitePack/config-KV import/export, package-to-package schema-pack discovery/install policy, and resolver overlay of pending values.
 
-Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Only after runtime schema publication is verified should history, pending and SitePack/config-KV import/export be implemented.
+Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Runtime schema publication, value history and pending review already exist as baselines; new import/export workflows should build on them instead of bypassing them.
 
 The first settings history/audit baseline now exists in `larena/setting`:
 
 - `sf_setting_history` is append-only value history for `SettingService` writes and deletes;
 - `SettingAuditService` records old/new value, namespace/key, context, actor/source metadata and operation metadata when the history table exists;
-- this is a value-level audit baseline, not the final workflow layer;
-- pending apply/reject, schema-change audit, SitePack/config-KV export/import and AI-safe review flows remain separate future layers.
+- this is a value-level audit baseline, not the final workflow layer.
+
+The first settings pending-review baseline now exists in `larena/setting`:
+
+- `sf_setting_pending_changes` stores proposed settings changes with status `pending`, `applied` or `rejected`;
+- `SettingPendingService` supports `proposeSet`, `proposeDelete`, legacy propose, `apply` and `reject`;
+- `apply` writes through `SettingService`, so normal value history is also recorded in `sf_setting_history`;
+- SitePack/config-KV imports and AI-generated settings changes should stage proposals through the pending layer first instead of writing directly to runtime values.
+
+Schema-change audit, SitePack/config-KV export/import implementation, package-to-package schema-pack discovery/install policy and resolver overlay of pending values remain separate future layers.
 
 ## Universal Properties
 
