@@ -16,11 +16,13 @@
 - Installed-site HTTP and visual browser smoke по `larena.test` прошёл для main admin access pages. Browser Use в текущей сессии был недоступен, поэтому визуальный smoke выполнен через CLI Playwright fallback.
 - Package-local `access:doctor` реализован и проверен на `larena.test`: 36 checks, 0 warnings после token-scope migration. Команда read-only, не выводит секреты и проверяет config, tables, token-scope storage, middleware, routes, contracts и bypass-token safety.
 - Token-scope storage baseline реализован: `sf_access_api_key.scopes`, `AccessTokenScopePolicy`, config-gated middleware enforcement через `ACCESS_TOKEN_SCOPE_ENFORCEMENT`. Enforcement выключен по умолчанию для совместимости.
+- Audit dispatcher baseline реализован: `AccessAuditDispatcher` emits `AccessAuditRecorded` Laravel events for token middleware decisions; payload sanitation strips raw tokens, authorization headers, hashed keys, passwords and secrets. Durable audit storage ещё не реализовано.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
-- До полноценной Larena Access DNA не хватает audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
+- До полноценной Larena Access DNA не хватает durable audit storage, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
-- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`.
+- Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`.
+- Events: `AccessAuditRecorded`.
 - Decision-layer: `AccessValue`, `AccessContext`, `AccessDecision`.
 - Grants/context baseline: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
 - Security/operations baseline: `AccessTokenScope`, `AccessAuditEvent`.
@@ -49,7 +51,7 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Позже отдельно внедрять audit dispatcher and rate-limit wiring.
+1. Позже отдельно внедрять durable audit storage and rate-limit wiring.
 2. Добавить admin/API UI для назначения scopes API-ключам до включения enforcement на реальных установках.
 3. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
 
@@ -68,6 +70,7 @@
 - Проверка корректного поведения токенов и срока действия ключей.
 - `php artisan access:doctor` после install/update пакета; нормальный baseline: exit code `0`, `PASS`, no secrets, JSON mode пригоден для CI.
 - Проверка token-scope enforcement: missing/wrong scope -> `403 scope_denied`, matching scope -> request continues to normal access check.
+- Проверка audit dispatcher: token middleware decisions dispatch `AccessAuditRecorded` without raw token or hashed key in payload.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
