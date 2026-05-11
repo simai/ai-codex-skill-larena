@@ -60,6 +60,8 @@ The first settings pending-review baseline now exists in `larena/setting`:
 - `sf_setting_pending_changes` stores proposed settings changes with status `pending`, `applied` or `rejected`;
 - `SettingPendingService` supports `proposeSet`, `proposeDelete`, legacy propose, `apply` and `reject`;
 - `apply` writes through `SettingService`, so normal value history is also recorded in `sf_setting_history`;
+- `/admin/settings/pending` provides the first stateful admin/API review surface for listing pending changes and applying or rejecting them;
+- the pending review routes are admin/session routes protected by settings view/edit access, not sessionless background endpoints;
 - SitePack/config-KV imports and AI-generated settings changes should stage proposals through the pending layer first instead of writing directly to runtime values.
 
 The first config-KV settings transport baseline now exists in `larena/setting`:
