@@ -55,6 +55,8 @@ Check these layers before calling a package complete:
 12. **Security/access/session safety**: auth, permissions, session modes, CSRF/tokens, rate limits, audit, network access and queues.
 13. **Install/update/rollback**: idempotent install path, migrations, config, seed/demo policy, update steps and rollback limits.
 14. **Roadmap/known gaps**: ready state, postponed work, blockers and future decisions.
+15. **AI development contract**: read-first docs, safe read-only operations, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
+16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
 
 ## Completion Levels
 
@@ -88,6 +90,8 @@ Package is aligned with Larena/SF5/Bitrix direction.
 
 Minimum: package DNA, architecture doc, concept alignment doc, known gaps, future decisions and no unresolved blocker that makes further development unsafe.
 
+For platform primitives, also require an AI development contract or a recorded exception.
+
 ### L4: Demonstration Ready
 
 Package has an acceptance surface.
@@ -98,7 +102,43 @@ Minimum: demonstrator or documented exception, admin/public/API scenarios where 
 
 Package is ready for distribution.
 
-Minimum: L1-L4 complete, version/changelog/release notes, install/update/rollback verified, license/product layer finalized, update artifacts/checksums/signatures when applicable, security/release gates passed and support policy clear.
+Minimum: L1-L4 complete, package status card updated, version/changelog/release notes, install/update/rollback verified, license/product layer finalized, update artifacts/checksums/signatures when applicable, security/release gates passed and support policy clear.
+
+## AI Development Contract Rule
+
+The AI development contract prevents agents from treating Larena packages as ordinary Laravel code without platform context.
+
+Recommended location:
+
+```text
+docs/developer/ai-contract.md
+```
+
+It should define:
+
+- read-first documents;
+- safe read-only operations;
+- write operations requiring human approval;
+- forbidden operations;
+- required neighbor package checks;
+- required smoke checks;
+- audit and risk notes.
+
+Be conservative by default. AI agents should not infer permission to run destructive migrations, mutate licenses, change update delivery, call external services, expose APIs or alter security boundaries unless the package contract and current task explicitly allow it.
+
+## Package Status Card Rule
+
+The package status card is a short orientation passport, not a replacement for detailed docs.
+
+Recommended location:
+
+```text
+docs/developer/package-status.md
+```
+
+When present, it should include current completion level, checked date, product layer, ready items, missing items, blockers, nearest batch, related packages, key docs and verification state.
+
+Use it to quickly answer "where is this package now and what should be done next?"
 
 ## Demonstrator Rule
 
@@ -139,6 +179,12 @@ Nearest useful batch:
 
 Verification for next level:
 - ...
+
+Status card:
+- present/missing/stale
+
+AI contract:
+- present/missing/not applicable
 ```
 
 Do not hide missing artifacts behind vague phrases such as "needs docs" or "needs tests". Name the exact missing file, manifest field, scenario or gate.
