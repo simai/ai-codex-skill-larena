@@ -47,7 +47,7 @@ After additive persistence, introduce runtime schema storage through explicit pu
 - keep legacy JSON materialization only as compatibility fallback for unpublished categories;
 - discover installed package schema packs explicitly with `php artisan setting:schema-publish --discover --dry-run` and then `php artisan setting:schema-publish --discover`;
 - never auto-apply package schema packs during web requests, form rendering, Laravel package discovery, or AI-agent context gathering;
-- document remaining gaps separately: dependency/conflict policy for schema-pack discovery, SitePack/config-KV import/export, and resolver overlay of pending values.
+- document remaining gaps separately: dependency/conflict policy for schema-pack discovery and resolver overlay of pending values.
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Runtime schema publication, value history and pending review already exist as baselines; new import/export workflows should build on them instead of bypassing them.
 
@@ -74,7 +74,17 @@ The first config-KV settings transport baseline now exists in `larena/setting`:
 - import supports dry-run/report mode and creates pending changes through `SettingPendingService`;
 - unchanged values are skipped by default;
 - command entrypoint: `php artisan setting:config-kv export|import <path>`;
-- this is the package-local settings transport baseline; SitePack adapter mapping should wrap this format rather than write settings values directly.
+- this is the package-local settings transport baseline; SitePack mapping must wrap this format rather than write settings values directly.
+
+The first SitePack settings adapter baseline now exists in `larena/setting`:
+
+- `SettingSitePackAdapter` maps settings config-KV to SitePack `config-only` packages;
+- command entrypoint: `php artisan setting:sitepack export|import <package-dir>`;
+- export writes `sitepack.manifest.json`, `sitepack.catalog.json` and `artifacts/config/kv.ndjson`;
+- the artifact media type is `application/vnd.sitepack.config-kv+ndjson`;
+- Larena-specific context is stored in the optional `larena` field while standard SitePack fields keep `scope`, `namespace`, `key`, `value`, `sensitivity` and `applyPolicy`;
+- import converts SitePack config entries back into `larena.settings.config-kv` and stages pending changes;
+- entries with `applyPolicy=never` are skipped by default, because secrets and non-portable values must not be applied automatically.
 
 The first package-to-package schema-pack discovery baseline now exists in `larena/setting`:
 
@@ -84,7 +94,7 @@ The first package-to-package schema-pack discovery baseline now exists in `laren
 - install/update flows should run dry-run first, review the report, then explicitly publish accepted schema packs;
 - discovery is a package install policy baseline, not a hidden runtime side effect.
 
-SitePack adapter mapping for settings config-KV artifacts, richer schema-pack dependency/conflict policy and resolver overlay of pending values remain separate future layers.
+Richer schema-pack dependency/conflict policy and resolver overlay of pending values remain separate future layers.
 
 ## Universal Properties
 
