@@ -35,6 +35,14 @@ After this layer is stable, the next safe migration step is additive canonical p
 - support `all_users` as `level = all_users, scope_id = null`;
 - support role values as `level = role, scope_id = role_id`.
 
+The first resolver-first read API baseline now exists in `larena/setting`:
+
+- `SettingService::get()` keeps the legacy scalar signature but reads through `SettingResolver`;
+- new package code should prefer `resolve*()` / `explain*()` whenever it needs direct/default/missing metadata, source layer, candidates, diagnostics, REST, SitePack, AI-agent context, migrations or health checks;
+- convenience methods include `getNamespaceKey()`, `getCategoryCode()`, `explainNamespaceKey()`, `setting_resolved()` and `setting_explain()`;
+- the settings JSON read endpoint can return additive `resolved` metadata next to the legacy scalar `value`;
+- `get()` remains acceptable for simple template reads and legacy scalar compatibility.
+
 After additive persistence, introduce runtime schema storage through explicit publication, not through hidden UI reads:
 
 - add schema-pack and schema-definition runtime tables;
