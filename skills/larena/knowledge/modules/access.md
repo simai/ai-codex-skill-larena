@@ -13,6 +13,7 @@
 - Grants/context baseline реализован без миграций: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
 - L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
+- Installed-site HTTP smoke по `larena.test` прошёл для main admin access pages; визуальный browser evidence ещё нужен, если Browser Use доступен.
 - До полноценной Larena Access DNA не хватает runtime token-scope storage, audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
@@ -44,7 +45,7 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Провести browser smoke на установленном Larena site по `docs/developer/demonstrator.md`.
+1. Провести визуальный browser smoke на установленном Larena site по `docs/developer/demonstrator.md`, когда Browser Use доступен.
 2. Опционально добавить package-local `access:doctor` command.
 3. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
 
