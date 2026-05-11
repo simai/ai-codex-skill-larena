@@ -45,7 +45,9 @@ After additive persistence, introduce runtime schema storage through explicit pu
 - keep a `--dry-run` mode for install/update diagnostics;
 - make settings forms prefer runtime schema definitions when present;
 - keep legacy JSON materialization only as compatibility fallback for unpublished categories;
-- document remaining gaps separately: schema-change audit, SitePack/config-KV import/export, package-to-package schema-pack discovery/install policy, and resolver overlay of pending values.
+- discover installed package schema packs explicitly with `php artisan setting:schema-publish --discover --dry-run` and then `php artisan setting:schema-publish --discover`;
+- never auto-apply package schema packs during web requests, form rendering, Laravel package discovery, or AI-agent context gathering;
+- document remaining gaps separately: dependency/conflict policy for schema-pack discovery, SitePack/config-KV import/export, and resolver overlay of pending values.
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Runtime schema publication, value history and pending review already exist as baselines; new import/export workflows should build on them instead of bypassing them.
 
@@ -74,7 +76,15 @@ The first config-KV settings transport baseline now exists in `larena/setting`:
 - command entrypoint: `php artisan setting:config-kv export|import <path>`;
 - this is the package-local settings transport baseline; SitePack adapter mapping should wrap this format rather than write settings values directly.
 
-Schema-change audit, SitePack adapter mapping for settings config-KV artifacts, package-to-package schema-pack discovery/install policy and resolver overlay of pending values remain separate future layers.
+The first package-to-package schema-pack discovery baseline now exists in `larena/setting`:
+
+- installed Composer packages may ship root-level `settings.schema-pack.json`;
+- `setting:schema-publish --discover --dry-run` scans `vendor/*/*/settings.schema-pack.json` and reports publishable packs without writing runtime schema;
+- `setting:schema-publish --discover` publishes discovered packs through the same runtime schema registry and schema-change audit path as direct schema-pack publication;
+- install/update flows should run dry-run first, review the report, then explicitly publish accepted schema packs;
+- discovery is a package install policy baseline, not a hidden runtime side effect.
+
+SitePack adapter mapping for settings config-KV artifacts, richer schema-pack dependency/conflict policy and resolver overlay of pending values remain separate future layers.
 
 ## Universal Properties
 
