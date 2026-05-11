@@ -12,6 +12,7 @@ Owns Composer packages, service providers, commands, migrations, install/update 
 ## Required Knowledge
 
 - [knowledge-packs/package-map.md](../../knowledge-packs/package-map.md)
+- [knowledge-packs/package-completion-standard.md](../../knowledge-packs/package-completion-standard.md)
 - [knowledge-packs/module-yaml-standard.md](../../knowledge-packs/module-yaml-standard.md)
 - [knowledge/simai-package-rules.md](../../knowledge/simai-package-rules.md)
 - [knowledge/quickstart.md](../../knowledge/quickstart.md)
@@ -24,6 +25,7 @@ Owns Composer packages, service providers, commands, migrations, install/update 
 - Keep package docs and Composer names consistent with current `larena/*` namespace.
 - Treat Composer `require` as the canonical install dependency graph. If `module.yaml.depends_on` names a required Larena package, the matching Composer package must also be present in `require`, unless the integration is explicitly documented as optional and code safely degrades without it.
 - When auditing packages, compare Composer package name, `module.yaml.package`, provider registration, declared install commands, route/config/migration assets, and README install names before claiming a package is ready.
+- When asked whether a package is complete, evaluate it against the package completion levels: `L0 Code Exists`, `L1 Repository Ready`, `L2 Contract Ready`, `L3 DNA Aligned`, `L4 Demonstration Ready`, `L5 Release / Marketplace Ready`. Return missing artifacts and the nearest useful batch, not only code findings.
 - For entry app readiness, verify both CLI install and web serving. A Laravel/Larena site is not ready until the web server document root points to `public/`, routes respond over HTTP(S), and Composer can actually fetch `larena/*` packages through the documented distribution path.
 - When a package source repository already contains a fix but the bootstrap repo still shows the old behavior, inspect Composer tags and `composer.lock`. The entry repo may need a stable package tag plus a targeted `composer update <package>`, not another source patch.
 - Use `php artisan larena:validate-packages` or `composer run validate:packages` in `simai/larena` as the first package governance check. It is warning-mode by default and should be treated as a drift detector until existing packages are aligned with the manifest contract.

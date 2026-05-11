@@ -37,6 +37,7 @@
 - Added settings/storage/props guidance for explicit pending overlay preview: normal resolver reads remain committed-only, while `resolveWithPending()` / `explainWithPending()` expose review proposals for admin, AI and diagnostics.
 - Added settings/storage/props guidance for schema-pack policy v2: dry-run/publish reports dependencies, conflicts, namespace-prefix issues and version downgrade warnings, while publication blocks policy errors.
 - Added settings/storage/props guidance for pending review UI baseline: filters, side-by-side current/proposed comparison and stateful bulk apply/reject for pending rows.
+- Added package completion standard guidance so `$larena` audits packages by readiness levels `L0`-`L5` and reports missing artifacts, blockers, nearest useful batch and next-level verification.
 - Added local Larena vhost guidance: ServBay/Caddy/nginx/Apache document roots must point to Laravel `public/`, and ServBay UI changes can overwrite generated Caddyfile fixes.
 - Added routing and decision-policy rules for package diagnostics, entry install readiness, update/registration, SitePack, Docara, REST/API, docs, runtime and release-readiness work.
 

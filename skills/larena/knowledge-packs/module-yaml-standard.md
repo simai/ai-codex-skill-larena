@@ -2,6 +2,8 @@
 
 Use this pack when work touches `module.yaml`, Composer package metadata, package release readiness, update-server package discovery, package docs, package validators, or AI-agent-readable package manifests.
 
+For full package completion, combine this pack with [package-completion-standard.md](./package-completion-standard.md). `module.yaml` is the machine-readable manifest layer, but a package is not complete until repository shape, DNA, architecture, documentation, demonstrator, tests, security, install/update/rollback and roadmap artifacts are also accounted for.
+
 ## Canonical Source
 
 The current first committed schema baseline lives in `simai/larena`:

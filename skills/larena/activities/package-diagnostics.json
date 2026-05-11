@@ -4,7 +4,7 @@
   "triggers": ["diagnose package", "audit larena package", "does package match architecture"],
   "required_specialists": ["platform-architect", "package-installer", "qa-validation"],
   "optional_specialists": ["security-permissions", "modular-admin", "rest-api", "data-settings-props"],
-  "knowledge_packs": ["product-architecture", "package-map"],
+  "knowledge_packs": ["product-architecture", "package-map", "package-completion-standard"],
   "required_gates": ["static package inspection", "available tests or documented verification limits"],
   "required_outputs": ["findings", "implementation gaps", "verification", "next actions"]
 }
