@@ -13,8 +13,9 @@
 - Grants/context baseline реализован без миграций: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
 - L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
-- Installed-site HTTP smoke по `larena.test` прошёл для main admin access pages; визуальный browser evidence ещё нужен, если Browser Use доступен.
+- Installed-site HTTP and visual browser smoke по `larena.test` прошёл для main admin access pages. Browser Use в текущей сессии был недоступен, поэтому визуальный smoke выполнен через CLI Playwright fallback.
 - Package-local `access:doctor` реализован и проверен на `larena.test`: 35 checks, 0 warnings. Команда read-only, не выводит секреты и проверяет config, tables, middleware, routes, contracts и bypass-token safety.
+- Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
 - До полноценной Larena Access DNA не хватает runtime token-scope storage, audit dispatcher, rate-limit wiring, runtime resolver registry, scoped grant storage and cache invalidation.
 
 ## Ключевые точки
@@ -47,8 +48,8 @@
 5. При изменении модели доступа обновляй `SPEC.md`, `CHANGELOG.md` и `Access Matrix`.
 
 ## Ближайший безопасный батч
-1. Провести визуальный browser smoke на установленном Larena site по `docs/developer/demonstrator.md`, когда Browser Use доступен.
-2. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
+1. Позже отдельно внедрять runtime token-scope storage, audit dispatcher and rate-limit wiring.
+2. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
 
 Не начинать с переименования `sf_access_*` таблиц или крупных миграций. Следующий слой должен закрывать security/operations, а runtime resolver registry и новое grant storage делать только после RFC.
 
@@ -64,5 +65,6 @@
 - Проверки `access.entity` для `store/update/destroy/status`.
 - Проверка корректного поведения токенов и срока действия ключей.
 - `php artisan access:doctor` после install/update пакета; нормальный baseline: exit code `0`, `PASS`, no secrets, JSON mode пригоден для CI.
+- Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.

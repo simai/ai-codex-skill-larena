@@ -30,6 +30,7 @@
 - Added platform subsystem contract guidance for P0 packages: `module.yaml` should declare capabilities, owned data, endpoint session modes, permissions, audit, rollback, health checks and operational risks alongside `docs/developer/concept-alignment.md`.
 - Added current `larena/access` DNA compliance guidance: status is `L4 partial`; decision-layer, grants/context, security/operations and demonstrator baselines are implemented, installed-site HTTP smoke passed on `larena.test`, and visual browser evidence remains the next package-completion step.
 - Added `larena/access` runtime doctor guidance: `php artisan access:doctor` is the package-local read-only diagnostics gate for config, tables, middleware, routes, contracts and bypass-token safety.
+- Added `larena/access` visual smoke guidance and noted the remaining legacy update/upserv asset URL cleanup found during local browser verification.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
