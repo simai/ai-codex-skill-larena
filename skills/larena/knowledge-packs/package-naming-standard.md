@@ -6,14 +6,14 @@ Use this pack when creating, auditing, renaming or documenting official Larena p
 
 The canonical project document lives in `simai/larena`:
 
-- `docs/developer/package-naming-standard.md`
+- `docs/developer/standards/package-naming-standard.md`
 
 Related documents:
 
-- `docs/developer/package-contract.md`
-- `docs/developer/package-completion-standard.md`
-- `docs/developer/module-yaml-schema.md`
-- `docs/developer/release-gates.md`
+- `docs/developer/standards/package-contract.md`
+- `docs/developer/standards/package-completion-standard.md`
+- `docs/developer/standards/module-yaml-schema.md`
+- `docs/developer/standards/release-gates.md`
 
 ## Core Rule
 

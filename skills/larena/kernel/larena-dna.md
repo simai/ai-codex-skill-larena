@@ -48,6 +48,6 @@ Repository standardization has two gates before functional expansion:
 Committed governance anchors in the `simai/larena` repository:
 
 - `docs/product/larena-dna.md`
-- `docs/developer/package-contract.md`
-- `docs/developer/release-gates.md`
+- `docs/developer/standards/package-contract.md`
+- `docs/developer/standards/release-gates.md`
 - `docs/developer/adr/0001-product-dna.md`

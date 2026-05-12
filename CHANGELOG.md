@@ -67,8 +67,9 @@
 
 ### Changed
 
+- Updated Larena standards path guidance: canonical package standards now live under `docs/developer/standards/`; old direct developer-doc paths are compatibility stubs only.
 - Moved old root-level knowledge, modules, checklists, examples and templates into `skills/larena/` so the repository root can stay reserved for service metadata, `source/`, docs and CI.
-- Updated `$larena` to treat `docs/developer/module-yaml-schema.md` and `docs/developer/schemas/module.schema.json` in `simai/larena` as the first `module.yaml` schema baseline.
+- Updated `$larena` to treat `docs/developer/standards/module-yaml-schema.md` and `docs/developer/schemas/module.schema.json` in `simai/larena` as the first `module.yaml` schema baseline.
 - Updated `$larena` to use committed Larena governance anchors in `simai/larena`: product DNA, package contract, release gates and ADR 0001.
 - Updated Larena positioning so backend/package DNA uses Larena as the canonical identity; `SF5` remains only a historical/frontend reference or migration compatibility term.
 

@@ -7,7 +7,7 @@ Use this pack when work touches link preview, URL unfurling, attachment preview,
 In `simai/larena`:
 
 - `docs/developer/rfc/0002-session-safe-background-enrichment.md`
-- `docs/developer/module-yaml-schema.md`
+- `docs/developer/standards/module-yaml-schema.md`
 - `docs/developer/schemas/module.schema.json`
 
 ## Threat Class

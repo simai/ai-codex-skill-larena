@@ -6,18 +6,18 @@ Use this pack when auditing, standardizing, releasing or planning work for any L
 
 The canonical project document lives in `simai/larena`:
 
-- `docs/developer/package-completion-standard.md`
+- `docs/developer/standards/package-completion-standard.md`
 
 Related documents:
 
-- `docs/developer/package-contract.md`
-- `docs/developer/module-yaml-schema.md`
+- `docs/developer/standards/package-contract.md`
+- `docs/developer/standards/module-yaml-schema.md`
 - `docs/developer/standards/README.md`
 - `docs/developer/standards/package-demonstrator-standard.md`
 - `docs/developer/standards/ai-demonstrator-testing-standard.md`
 - `docs/developer/standards/package-dependency-impact-standard.md`
 - `docs/developer/package-graph/README.md`
-- `docs/developer/release-gates.md`
+- `docs/developer/standards/release-gates.md`
 - `docs/developer/repository-standardization-plan.md`
 - `docs/developer/dna/`
 

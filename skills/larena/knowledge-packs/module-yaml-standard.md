@@ -8,7 +8,7 @@ For full package completion, combine this pack with [package-completion-standard
 
 The current first committed schema baseline lives in `simai/larena`:
 
-- `docs/developer/module-yaml-schema.md`
+- `docs/developer/standards/module-yaml-schema.md`
 - `docs/developer/schemas/module.schema.json`
 - `docs/developer/examples/module-yaml/`
 
