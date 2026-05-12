@@ -200,6 +200,19 @@ docs/developer/standards/package-dependency-impact-standard.md
 
 A new package is not fully Larena-compatible until it is woven into the package graph or has a documented exception. This is especially important for third-party packages because upstream packages cannot know every future consumer.
 
+Current first-party baseline entries in `simai/larena` cover:
+
+- `larena/access`;
+- `larena/admin`;
+- `larena/auth`;
+- `larena/rest`;
+- `larena/setting`;
+- `larena/props`;
+- `larena/docara-core`;
+- `larena/docara-admin`.
+
+When working on these packages, check the graph entry together with the package-local `module.yaml`. `module.yaml` explains what is inside the package; the package graph explains what other packages and smoke checks are affected when its contracts change.
+
 ## Practical Output Template
 
 When asked whether a package is complete, answer in this shape:

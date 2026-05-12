@@ -40,6 +40,7 @@
 - Expanded `larena/access` integration-hardening guidance: SitePack config-KV now covers operations, profiles and scoped grants; sessionless API-token and custom virtual-target resolver smoke tests are part of the package baseline.
 - Updated `larena/access` status to L4-ready baseline with `AccessVirtualTargetCatalog`, `access:resolver-catalog`, `/admin/access-explain`, rollout smoke evidence and 57-check `access:doctor` guidance.
 - Added package standards guidance for central Package Graph entries and package demonstrator compliance as L4 readiness requirements.
+- Updated package graph guidance with the first central baseline entries for `larena/access`, `larena/admin`, `larena/auth`, `larena/rest`, `larena/setting`, `larena/props`, `larena/docara-core` and `larena/docara-admin`.
 - Added `larena/access` admin UX guidance: scoped grant CRUD at `/admin/access-grants`, read-only operator audit review at `/admin/access-audit-log`, guarded CRUD configs and `access:doctor` 52-check baseline.
 - Added `larena/access` rollout policy guidance: `AccessPackPolicy`, `AccessRolloutPolicy`, `access:rollout-policy`, installed-route `access:api-smoke`, 54-check doctor baseline and sessionless API evidence on `larena.test`.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
