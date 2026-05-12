@@ -215,6 +215,9 @@ Current first-party baseline entries in `simai/larena` cover:
 - `larena/filesystem`;
 - `larena/lang`;
 - `larena/two-fa`.
+- `larena/mcp`;
+- `larena/rest_doc`;
+- planned placeholder `larena/storage`.
 
 When working on these packages, check the graph entry together with the package-local `module.yaml`. `module.yaml` explains what is inside the package; the package graph explains what other packages and smoke checks are affected when its contracts change.
 
@@ -235,6 +238,14 @@ Validate graph entries before relying on the matrix:
 ```bash
 composer package-graph:validate
 ```
+
+Baseline package repositories should also have a package-local status card:
+
+```text
+docs/developer/package-status.md
+```
+
+The status card is intentionally short: it records current level, ready/missing items, nearest batch, related packages, key docs and verification state. Do not use it as a replacement for DNA, architecture, demonstrator or smoke evidence.
 
 ## Practical Output Template
 
