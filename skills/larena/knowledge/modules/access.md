@@ -14,7 +14,7 @@
 - Security/operations baseline реализован: `AccessTokenScope`, `AccessAuditEvent`, policy docs, negative tests for missing token and unsafe bypass config.
 - L4 demonstrator baseline описан: decision explain, missing grant, group grant, token safety, installed admin/API smoke.
 - Installed-site HTTP and visual browser smoke по `larena.test` прошёл для main admin access pages. Browser Use в текущей сессии был недоступен, поэтому визуальный smoke выполнен через CLI Playwright fallback.
-- Package-local `access:doctor` реализован и проверен на `larena.test`: 48 checks, 0 warnings после token-scope, rate-limit, durable-audit, scoped-grant, cache и SitePack baseline. Команда read-only, не выводит секреты и проверяет config, tables, token-scope/scoped-grant/audit storage, rate-limit profiles, cache/SitePack services, middleware, routes, contracts и bypass-token safety.
+- Package-local `access:doctor` реализован и проверен на `larena.test`: 52 checks, 0 warnings после token-scope, rate-limit, durable-audit, scoped-grant, cache, SitePack и admin UX baseline. Команда read-only, не выводит секреты и проверяет config, tables, token-scope/scoped-grant/audit storage, rate-limit profiles, cache/SitePack services, middleware, routes, contracts, admin CRUD configs и bypass-token safety.
 - Token-scope storage baseline реализован: `sf_access_api_key.scopes`, `AccessTokenScopePolicy`, config-gated middleware enforcement через `ACCESS_TOKEN_SCOPE_ENFORCEMENT`. Enforcement выключен по умолчанию для совместимости.
 - API-key scope assignment baseline реализован: `ApiKeyEntityConfig` exposes `scopes` as form/filter/writable CRUD metadata; generic CRUD stores masked `key` plus Laravel `hashed_key`, and runtime validation still accepts legacy SHA-256 hashes for compatibility.
 - Audit dispatcher baseline реализован: `AccessAuditDispatcher` emits `AccessAuditRecorded` Laravel events for token middleware decisions; payload sanitation strips raw tokens, authorization headers, hashed keys, passwords and secrets.
@@ -25,8 +25,10 @@
 - Access SitePack baseline реализован: `AccessSitePackMapper` exports/imports operations (`larena.access.operations`), profiles (`larena.access.profiles`) and scoped grants (`larena.access.grants`) as config-KV. Imports are dry-run capable, `applyPolicy=manual`, and profiles bind operations by stable operation code instead of local database ids.
 - Sessionless API-token smoke реализован: normal `access.token` API-key flow does not start a web session; bypass-token flow remains special/internal and requires explicit `ACCESS_BYPASS_USER_ID > 0`.
 - Custom resolver smoke реализован: `AccessGrantResolverRegistry` can register package-defined resolvers for virtual targets such as `participant`; production resolver catalog remains future work.
+- Scoped grant admin UX baseline реализован: `/admin/access-grants`, `AccessGrantEntityConfig`, guarded CRUD/status actions via `access.view_grants`, `access.create_grants`, `access.edit_grants`, `access.delete_grants`. This is an operator baseline, not yet a production rollout wizard.
+- Operator audit review baseline реализован: `/admin/access-audit-log`, `AccessAuditLogEntityConfig`, read-only CRUD over sanitized `sf_access_audit_log` rows via `access.view_audit_logs`.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
-- До полноценной Larena Access DNA не хватает scoped grant admin UX, operator audit UI, installed-route API smoke, marketplace/update-server access-pack install policy and production virtual-target resolver catalog.
+- До полноценной Larena Access DNA не хватает production rollout policy, installed-route API smoke, marketplace/update-server access-pack install policy, production virtual-target resolver catalog and dedicated explain-view.
 
 ## Ключевые точки
 - Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`, `AccessCache`, `AccessRateLimitPolicy`, `AccessScopedGrantStore`, `AccessSitePackMapper`, `AccessGrantResolverRegistry`, `ApiKeyManager`.
@@ -38,6 +40,7 @@
 - Security/operations baseline: `AccessTokenScope`, `AccessAuditEvent`.
 - Middleware: `access`, `access.token`, `access.entity`.
 - Контракт проверки entity-прав: `EntityAbilityChecker`.
+- Admin CRUD configs: `AccessGrantEntityConfig`, `AccessAuditLogEntityConfig`.
 - Runtime diagnostics: `php artisan access:doctor`, `php artisan access:doctor --json`.
 - Конфиг токенов/обходов: `config/auth_tokens.php`.
 - Источник операций/уровней для модулей: `config/simai_<module>.php`.
@@ -62,9 +65,10 @@
 
 ## Ближайший безопасный батч
 1. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
-2. Добавить operator audit review UI и scoped grant admin UX, когда `larena/admin` CRUD patterns стабилизируются.
-3. Добавить marketplace/update-server install policy для access packs.
+2. Добавить marketplace/update-server install policy для access packs.
+3. Добавить production rollout profiles для token scopes, rate limits и scoped grants.
 4. Добавить installed-route API smoke и production virtual-target resolver catalog.
+5. Позже добавить dedicated explain-view: почему конкретный actor может или не может выполнить операцию.
 
 Не начинать с переименования `sf_access_*` таблиц. Scoped grants are additive and rollout-disabled by default; production enablement requires migration smoke, backup and rollback notes.
 
@@ -90,6 +94,7 @@
 - Проверка SitePack access pack: `AccessSitePackMapper` should export operations, profiles and scoped grants as config-KV namespaces `larena.access.operations`, `larena.access.profiles`, `larena.access.grants`; imports should support dry-run reporting before apply.
 - Проверка sessionless API-token: normal `access.token` API-key flow should not start a web session.
 - Проверка custom resolver: package-defined `AccessGrantTargetResolver` should match virtual targets only when both target and resource policy match.
-- Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
+- Проверка admin UX baseline: `/admin/access-grants` route and `AccessGrantEntityConfig` must be guarded by view/create/edit/delete permissions; `/admin/access-audit-log` and `AccessAuditLogEntityConfig` must be read-only and guarded by `access.view_audit_logs`.
+- Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/access-grants`, `/admin/access-audit-log`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.

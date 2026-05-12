@@ -38,6 +38,7 @@
 - Added `larena/access` scoped grant storage guidance: RFC 0001, `sf_access_grant`, `AccessScopedGrantStore`, rollout flag `ACCESS_SCOPED_GRANTS_ENABLED`, legacy fallback, scoped deny precedence and `access:doctor` 46-check baseline.
 - Added `larena/access` cache and SitePack grant mapping guidance: `AccessCache` versioned invalidation hooks, `AccessSitePackMapper` config-KV namespace `larena.access.grants`, dry-run/manual/private import policy and `access:doctor` 48-check baseline.
 - Expanded `larena/access` integration-hardening guidance: SitePack config-KV now covers operations, profiles and scoped grants; sessionless API-token and custom virtual-target resolver smoke tests are part of the package baseline.
+- Added `larena/access` admin UX guidance: scoped grant CRUD at `/admin/access-grants`, read-only operator audit review at `/admin/access-audit-log`, guarded CRUD configs and `access:doctor` 52-check baseline.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
 - Added package-installer guidance to check Composer tags and bootstrap `composer.lock` when a package source fix is present but the entry repository still installs old behavior.
 - Added package-installer guidance for `composer.json`, `module.yaml`, install/update contracts and the `simai/larena` package validator.
