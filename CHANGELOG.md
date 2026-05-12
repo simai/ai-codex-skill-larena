@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added package-installer guidance to run `migrate --force` and idempotent `simai:install` after updating installed `larena/*` packages before browser smoke, so runtime access/menu metadata stays synced with package config.
+
 ### Added
 
 - Added `$docs` coordination rules so `$larena` keeps ownership of Larena
