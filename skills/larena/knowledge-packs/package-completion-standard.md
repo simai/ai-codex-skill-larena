@@ -106,6 +106,8 @@ Minimum: demonstrator or documented exception, admin/public/API scenarios where 
 
 Also require a package graph entry or documented exception. The demonstrator must map at least one important package graph edge to an executable or manual check.
 
+Do not raise a package to L4 from installed-site smoke alone. L4 requires package DNA or an accepted exception, an explicit audit against Larena Product DNA and package DNA, current architecture/contract docs, demonstrator coverage and smoke evidence that follows the AI demonstrator testing standard.
+
 ### L5: Release / Marketplace Ready
 
 Package is ready for distribution.
@@ -275,12 +277,18 @@ Current first-priority demonstrator contracts and installed-site evidence exist 
 - `larena/rest`;
 - `larena/rest_doc`.
 
-Treat them as L4 package-readiness references, with these notes:
+Treat them as preparation evidence, not as L4 readiness by itself. These packages still require package DNA and explicit package-standard audit before any L4 claim:
 
 - `larena/admin`: installed-site admin smoke passed after fail-closed admin access defaults and `admin.access` coverage for legacy update-server admin routes.
-- `larena/auth`: installed-site auth smoke passed; ordinary registered users are denied admin access, but the registration redirect to `/admin` remains an L4+ UX improvement.
-- `larena/rest`: installed-site sessionless API smoke passed; add a dedicated allowed-token `200` fixture as L4+ hardening.
+- `larena/auth`: installed-site auth smoke passed; ordinary registered users are denied admin access, but the registration redirect to `/admin` remains backlog.
+- `larena/rest`: installed-site sessionless API smoke passed; add a dedicated allowed-token `200` fixture during the real package audit.
 - `larena/rest_doc`: installed-site Swagger safety smoke passed; public placeholder has empty paths and generated spec is token-protected.
+
+Current DNA-baseline packages that were worked through and still need re-audit under the updated rules:
+
+- `larena/setting`;
+- `larena/access`;
+- `larena/mcp`.
 
 ## Practical Output Template
 
