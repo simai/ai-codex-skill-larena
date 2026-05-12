@@ -58,6 +58,7 @@
 - Added settings/storage/props guidance for pending review UI baseline: filters, side-by-side current/proposed comparison and stateful bulk apply/reject for pending rows.
 - Added package completion standard guidance so `$larena` audits packages by readiness levels `L0`-`L5` and reports missing artifacts, blockers, nearest useful batch and next-level verification.
 - Extended package completion guidance with AI development contract and package status card checks for safer AI-assisted package work.
+- Added AI demonstrator testing guidance: package checks must build a test matrix against DNA, `module.yaml`, package graph, security/session rules and runtime evidence; missing package DNA is marked `not_ready` instead of guessed.
 - Added package naming standard guidance: official Larena technical package identifiers use singular module/domain keys by default, while public/UI titles may use natural English plural forms.
 - Added AI/MCP exposure guidance: packages publish MCP tools/resources for the central gateway and execution must be scoped to the effective user, service account or capability token.
 - Added local Larena vhost guidance: ServBay/Caddy/nginx/Apache document roots must point to Laravel `public/`, and ServBay UI changes can overwrite generated Caddyfile fixes.

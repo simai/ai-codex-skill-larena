@@ -14,6 +14,7 @@ Related documents:
 - `docs/developer/module-yaml-schema.md`
 - `docs/developer/standards/README.md`
 - `docs/developer/standards/package-demonstrator-standard.md`
+- `docs/developer/standards/ai-demonstrator-testing-standard.md`
 - `docs/developer/standards/package-dependency-impact-standard.md`
 - `docs/developer/package-graph/README.md`
 - `docs/developer/release-gates.md`
@@ -174,6 +175,14 @@ Use the project demonstrator standard:
 ```text
 docs/developer/standards/package-demonstrator-standard.md
 ```
+
+When AI agents test a demonstrator, also use:
+
+```text
+docs/developer/standards/ai-demonstrator-testing-standard.md
+```
+
+The AI check must build an explicit matrix from Larena Product DNA, package DNA when available, `module.yaml`, package status, architecture docs, package graph entry, security/session rules and runtime evidence. If package DNA is missing, do not invent intent and do not claim DNA compliance; mark the DNA-specific layer as `not_ready` and test only the general Larena/package contract. Evidence must record inputs read, commands/routes checked, verdicts, security/session notes, test data cleanup and remaining blockers.
 
 ## Package Graph Rule
 
