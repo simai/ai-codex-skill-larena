@@ -22,9 +22,11 @@
 - Token rate-limit baseline реализован: `AccessRateLimitPolicy` wires `access.token` to Laravel `RateLimiter`, config-gated through `ACCESS_TOKEN_RATE_LIMITS_ENABLED`, with named profiles (`admin-default`, `admin-sensitive`, `api-sensitive`, `tool-sensitive`, `internal-service`). Limit exceeded returns `429 rate_limited` with `Retry-After` and emits sanitized `access.token.rate_limited`.
 - Scoped grant storage baseline реализован через RFC 0001: `sf_access_grant`, `AccessGrant`, `AccessScopedGrantStore`, `AccessGrantResolverRegistry`, `ResolvedScopedGrant`, `ACCESS_SCOPED_GRANTS_ENABLED=false` by default. When enabled, `AccessControl::decide()` checks scoped grants before legacy user/group fallback and explains `details.grant.source=scoped_grant`.
 - Access cache baseline реализован: `AccessCache` uses versioned cache keys for `hasAccess()` and `isUserInGroup()` compatibility helpers. Eloquent hooks invalidate cache versions on access profile, operation, user group, user and scoped grant save/delete. Direct SQL writes and low-level pivot-table changes still require explicit `AccessCache::invalidateAll()`, `invalidateUser()` or `invalidateGroup()`.
-- Scoped-grant SitePack baseline реализован: `AccessSitePackMapper` exports/imports scoped grants as config-KV namespace `larena.access.grants`, sensitivity `private`, `applyPolicy=manual`, with dry-run import reporting. It covers scoped grants only; access-profile and operation-bundle SitePack mapping remain future work.
+- Access SitePack baseline реализован: `AccessSitePackMapper` exports/imports operations (`larena.access.operations`), profiles (`larena.access.profiles`) and scoped grants (`larena.access.grants`) as config-KV. Imports are dry-run capable, `applyPolicy=manual`, and profiles bind operations by stable operation code instead of local database ids.
+- Sessionless API-token smoke реализован: normal `access.token` API-key flow does not start a web session; bypass-token flow remains special/internal and requires explicit `ACCESS_BYPASS_USER_ID > 0`.
+- Custom resolver smoke реализован: `AccessGrantResolverRegistry` can register package-defined resolvers for virtual targets such as `participant`; production resolver catalog remains future work.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
-- До полноценной Larena Access DNA не хватает scoped grant admin UX, access-profile/operation-bundle SitePack mapping, custom virtual-target resolvers, sessionless API tests and operator audit UI.
+- До полноценной Larena Access DNA не хватает scoped grant admin UX, operator audit UI, installed-route API smoke, marketplace/update-server access-pack install policy and production virtual-target resolver catalog.
 
 ## Ключевые точки
 - Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`, `AccessCache`, `AccessRateLimitPolicy`, `AccessScopedGrantStore`, `AccessSitePackMapper`, `AccessGrantResolverRegistry`, `ApiKeyManager`.
@@ -61,8 +63,8 @@
 ## Ближайший безопасный батч
 1. Для update/upserv отдельно почистить legacy asset URLs, найденные visual smoke.
 2. Добавить operator audit review UI и scoped grant admin UX, когда `larena/admin` CRUD patterns стабилизируются.
-3. Добавить SitePack mapping для access profiles и operation bundles.
-4. Добавить sessionless API tests для token routes и custom virtual-target resolver smoke.
+3. Добавить marketplace/update-server install policy для access packs.
+4. Добавить installed-route API smoke и production virtual-target resolver catalog.
 
 Не начинать с переименования `sf_access_*` таблиц. Scoped grants are additive and rollout-disabled by default; production enablement requires migration smoke, backup and rollback notes.
 
@@ -85,7 +87,9 @@
 - Проверка token rate limits: when `ACCESS_TOKEN_RATE_LIMITS_ENABLED=true`, excessive token requests return `429 rate_limited`, include `Retry-After`, and dispatch `access.token.rate_limited` without raw token or hashed key in payload.
 - Проверка scoped grants: after migration, `php artisan access:doctor` should see `sf_access_grant`; with `ACCESS_SCOPED_GRANTS_ENABLED=true`, temporary owner/user grant should resolve through `AccessChecker::decide()` with `details.grant.source=scoped_grant`; with the flag off, legacy fallback behavior must remain unchanged.
 - Проверка access cache: saving/deleting scoped grants, access profiles, operations, groups and users should bump the corresponding `AccessCache` version; direct SQL/pivot writes require explicit invalidation.
-- Проверка SitePack grants: `AccessSitePackMapper` should export scoped grants as config-KV namespace `larena.access.grants`, `applyPolicy=manual`, and imports should support dry-run reporting before apply.
+- Проверка SitePack access pack: `AccessSitePackMapper` should export operations, profiles and scoped grants as config-KV namespaces `larena.access.operations`, `larena.access.profiles`, `larena.access.grants`; imports should support dry-run reporting before apply.
+- Проверка sessionless API-token: normal `access.token` API-key flow should not start a web session.
+- Проверка custom resolver: package-defined `AccessGrantTargetResolver` should match virtual targets only when both target and resource policy match.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
