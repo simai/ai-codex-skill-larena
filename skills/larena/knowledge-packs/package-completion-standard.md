@@ -259,14 +259,19 @@ Use the central gaps report to decide which package-local demonstrator/status-ca
 docs/developer/package-graph/generated/package-local-gaps.md
 ```
 
-Current first-priority demonstrator contracts exist for:
+Current first-priority demonstrator contracts and installed-site evidence exist for:
 
 - `larena/admin`;
 - `larena/auth`;
 - `larena/rest`;
 - `larena/rest_doc`.
 
-Treat them as `L4 partial` until installed-site/browser/API execution evidence is recorded in package-local `docs/developer/smoke-evidence/`.
+Treat them as L4 package-readiness references, with these notes:
+
+- `larena/admin`: installed-site admin smoke passed after fail-closed admin access defaults and `admin.access` coverage for legacy update-server admin routes.
+- `larena/auth`: installed-site auth smoke passed; ordinary registered users are denied admin access, but the registration redirect to `/admin` remains an L4+ UX improvement.
+- `larena/rest`: installed-site sessionless API smoke passed; add a dedicated allowed-token `200` fixture as L4+ hardening.
+- `larena/rest_doc`: installed-site Swagger safety smoke passed; public placeholder has empty paths and generated spec is token-protected.
 
 ## Practical Output Template
 

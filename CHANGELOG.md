@@ -44,7 +44,7 @@
 - Updated package graph guidance with the remaining baseline entries for `larena/update`, `larena/update-registration`, `larena/filesystem`, `larena/lang` and `larena/two-fa`, plus the generated impact-matrix and graph-validation commands.
 - Updated package graph guidance with `larena/mcp`, `larena/rest_doc`, planned `larena/storage` and the package-local status card expectation.
 - Updated package graph guidance with strict graph-to-`module.yaml` validation and the central package-local gaps report.
-- Added package-completion guidance that `larena/admin`, `larena/auth`, `larena/rest` and `larena/rest_doc` now have demonstrator contracts but still need execution evidence before full L4 readiness.
+- Added package-completion guidance that `larena/admin`, `larena/auth`, `larena/rest` and `larena/rest_doc` now have installed-site demonstrator evidence and are L4 package-readiness references with tracked L4+ notes.
 - Added `larena/access` admin UX guidance: scoped grant CRUD at `/admin/access-grants`, read-only operator audit review at `/admin/access-audit-log`, guarded CRUD configs and `access:doctor` 52-check baseline.
 - Added `larena/access` rollout policy guidance: `AccessPackPolicy`, `AccessRolloutPolicy`, `access:rollout-policy`, installed-route `access:api-smoke`, 54-check doctor baseline and sessionless API evidence on `larena.test`.
 - Clarified repository roles: `simai/larena` is the free starter bootstrap/distribution entry, `larena-*` repositories are package/code source of truth, and monorepo/workspace is development-only.
