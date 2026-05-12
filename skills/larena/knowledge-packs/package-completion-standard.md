@@ -89,6 +89,15 @@ Check these layers before calling a package complete:
 
 ## Completion Levels
 
+Current Larena package-standardization target is `L4 Demonstration Ready`.
+
+Treat `L5 Release / Marketplace Ready` as a deferred gate until the Laravel
+update-server/distribution standard exists for module artifacts, package data
+packing, delivery channels, signatures/checksums, update plans and rollback
+policy. Do not block L4 standardization work on L5, and do not claim L5 for
+ordinary packages unless a separate release architecture decision explicitly
+opens that gate.
+
 ### L0: Code Exists
 
 Code exists and may work locally, but completion artifacts are missing or unreliable. Do not treat the package as platform-ready.
@@ -134,6 +143,8 @@ Do not raise a package to L4 from installed-site smoke alone. L4 requires packag
 ### L5: Release / Marketplace Ready
 
 Package is ready for distribution.
+
+Status: deferred gate for the current Larena standardization phase.
 
 Minimum: L1-L4 complete, package status card updated, version/changelog/release notes, install/update/rollback verified, license/product layer finalized, update artifacts/checksums/signatures when applicable, security/release gates passed and support policy clear.
 
