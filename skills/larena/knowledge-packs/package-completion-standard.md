@@ -12,6 +12,10 @@ Related documents:
 
 - `docs/developer/package-contract.md`
 - `docs/developer/module-yaml-schema.md`
+- `docs/developer/standards/README.md`
+- `docs/developer/standards/package-demonstrator-standard.md`
+- `docs/developer/standards/package-dependency-impact-standard.md`
+- `docs/developer/package-graph/README.md`
 - `docs/developer/release-gates.md`
 - `docs/developer/repository-standardization-plan.md`
 - `docs/developer/dna/`
@@ -46,6 +50,7 @@ Check these layers before calling a package complete:
 3. **Composer contract**: canonical PHP dependency graph, provider discovery, autoload, license and safe scripts.
 4. **Package manifest**: `module.yaml` identity, product layer, dependencies, installs, endpoints, permissions, settings, jobs, health, audit, rollback and risks.
 5. **Structured capability contract**: capabilities, owned data, consumed services, extension points and package interactions.
+5.1. **Package graph entry**: central graph entry in `docs/developer/package-graph/packages/<package-key>.yaml`, with provides/consumes/edges/impact rules and required checks.
 6. **Package DNA**: why the package exists, Larena canonical principles, migration references, boundaries and forbidden anti-patterns.
 7. **Architecture docs**: components, data model, lifecycle, extension points, security, operations and integration flows.
 8. **User/developer docs**: usage, install, config, commands, API, admin behavior, permissions, update/rollback and troubleshooting.
@@ -97,6 +102,8 @@ For platform primitives, also require an AI development contract or a recorded e
 Package has an acceptance surface.
 
 Minimum: demonstrator or documented exception, admin/public/API scenarios where applicable, role/permission scenarios, smoke instructions and clear mapping to docs/DNA/contract.
+
+Also require a package graph entry or documented exception. The demonstrator must map at least one important package graph edge to an executable or manual check.
 
 ### L5: Release / Marketplace Ready
 
@@ -162,6 +169,37 @@ The demonstrator should show happy path, denied/empty/error states, permissions,
 
 Demo behavior must be safe by default and must not expose production-sensitive features without explicit config and permission.
 
+Use the project demonstrator standard:
+
+```text
+docs/developer/standards/package-demonstrator-standard.md
+```
+
+## Package Graph Rule
+
+Use the central Package Graph for cross-package impact tracking:
+
+```text
+docs/developer/package-graph/packages/<package-key>.yaml
+```
+
+The graph entry should declare:
+
+- what the package provides;
+- what it consumes;
+- explicit graph edges;
+- high-risk contracts;
+- impact rules;
+- required cross-package smoke checks.
+
+Use the project dependency/impact standard:
+
+```text
+docs/developer/standards/package-dependency-impact-standard.md
+```
+
+A new package is not fully Larena-compatible until it is woven into the package graph or has a documented exception. This is especially important for third-party packages because upstream packages cannot know every future consumer.
+
 ## Practical Output Template
 
 When asked whether a package is complete, answer in this shape:
@@ -192,6 +230,12 @@ AI contract:
 
 MCP exposure:
 - none / declared / unsafe / unknown
+
+Package graph:
+- present/missing/exception/stale
+
+Demonstrator:
+- present/missing/exception/stale
 ```
 
 Do not hide missing artifacts behind vague phrases such as "needs docs" or "needs tests". Name the exact missing file, manifest field, scenario or gate.
