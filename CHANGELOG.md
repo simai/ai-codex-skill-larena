@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added package-installer guidance to run `migrate --force` and idempotent `simai:install` after updating installed `larena/*` packages before browser smoke, so runtime access/menu metadata stays synced with package config.
+- Added package-completion audit guidance that rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files; stale rollback claims block `L4`.
 
 ### Added
 
