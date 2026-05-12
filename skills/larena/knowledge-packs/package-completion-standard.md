@@ -210,8 +210,31 @@ Current first-party baseline entries in `simai/larena` cover:
 - `larena/props`;
 - `larena/docara-core`;
 - `larena/docara-admin`.
+- `larena/update`;
+- `larena/update-registration`;
+- `larena/filesystem`;
+- `larena/lang`;
+- `larena/two-fa`.
 
 When working on these packages, check the graph entry together with the package-local `module.yaml`. `module.yaml` explains what is inside the package; the package graph explains what other packages and smoke checks are affected when its contracts change.
+
+The human-readable impact matrix is generated from the graph entries:
+
+```bash
+php scripts/generate-package-impact-matrix.php
+```
+
+or:
+
+```bash
+composer package-graph:generate
+```
+
+Validate graph entries before relying on the matrix:
+
+```bash
+composer package-graph:validate
+```
 
 ## Practical Output Template
 
