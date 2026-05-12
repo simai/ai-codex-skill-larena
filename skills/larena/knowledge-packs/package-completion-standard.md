@@ -42,6 +42,29 @@ When auditing a package, always return:
 4. nearest useful batch;
 5. checks that prove the next level.
 
+If the user asks in Russian or English to "check a package against the standard",
+"audit the package by standard", "проверь пакет на стандарт", or similar, treat it
+as a full package-completion audit request. Do not answer with a short opinion.
+
+The audit must read the package repository and the central Larena standards, then
+produce a structured verdict with:
+
+1. package identity and repository path;
+2. current level `L0`-`L5` and why it is not higher;
+3. artifact compliance matrix for all required layers;
+4. DNA alignment verdict and missing package-DNA items;
+5. `module.yaml` / machine-readable contract gaps;
+6. package graph and cross-package impact gaps;
+7. demonstrator and smoke evidence status;
+8. security/access/session/API/MCP risks;
+9. documentation, changelog, install/update/rollback gaps;
+10. exact commands or browser/API checks that were run or could not run;
+11. nearest useful batch to raise the package one level;
+12. remaining work grouped into required versus future improvements.
+
+Do not claim `L4` or `L5` from code quality or installed-site smoke alone.
+Completion levels require the standard artifacts and evidence listed below.
+
 ## Required Artifact Layers
 
 Check these layers before calling a package complete:

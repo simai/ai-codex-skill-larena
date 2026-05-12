@@ -64,6 +64,7 @@
 - Added AI/MCP exposure guidance: packages publish MCP tools/resources for the central gateway and execution must be scoped to the effective user, service account or capability token.
 - Added local Larena vhost guidance: ServBay/Caddy/nginx/Apache document roots must point to Laravel `public/`, and ServBay UI changes can overwrite generated Caddyfile fixes.
 - Added routing and decision-policy rules for package diagnostics, entry install readiness, update/registration, SitePack, Docara, REST/API, docs, runtime and release-readiness work.
+- Added explicit package-standard audit routing: requests like "проверь пакет на стандарт" now trigger full package-completion audit with L0-L5 verdict, artifact matrix, DNA/contract gaps, verification evidence and nearest next batch.
 
 ### Changed
 
