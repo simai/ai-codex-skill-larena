@@ -239,6 +239,12 @@ Validate graph entries before relying on the matrix:
 composer package-graph:validate
 ```
 
+Use strict validation when graph entries must be checked against package-local `module.yaml`:
+
+```bash
+composer package-graph:validate:strict
+```
+
 Baseline package repositories should also have a package-local status card:
 
 ```text
@@ -246,6 +252,12 @@ docs/developer/package-status.md
 ```
 
 The status card is intentionally short: it records current level, ready/missing items, nearest batch, related packages, key docs and verification state. Do not use it as a replacement for DNA, architecture, demonstrator or smoke evidence.
+
+Use the central gaps report to decide which package-local demonstrator/status-card work should happen next:
+
+```text
+docs/developer/package-graph/generated/package-local-gaps.md
+```
 
 ## Practical Output Template
 
