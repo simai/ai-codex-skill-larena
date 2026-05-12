@@ -259,6 +259,15 @@ Use the central gaps report to decide which package-local demonstrator/status-ca
 docs/developer/package-graph/generated/package-local-gaps.md
 ```
 
+Current first-priority demonstrator contracts exist for:
+
+- `larena/admin`;
+- `larena/auth`;
+- `larena/rest`;
+- `larena/rest_doc`.
+
+Treat them as `L4 partial` until installed-site/browser/API execution evidence is recorded in package-local `docs/developer/smoke-evidence/`.
+
 ## Practical Output Template
 
 When asked whether a package is complete, answer in this shape:
