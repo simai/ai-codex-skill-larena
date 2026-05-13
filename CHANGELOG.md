@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Updated package naming guidance so `larena/property` is the only active universal properties identity; old `larena/props`, `larena-props` and `simai/props` are historical only and must not be reintroduced as compatibility aliases without a real production need.
+
 - Updated package naming guidance for universal properties: canonical identity is `larena/property`, while `larena/props`, `larena-props` and `simai/props` are compatibility surfaces after the completed initial migration.
 - Updated `larena/admin` knowledge with the 2026-05-13 deep audit refresh: L4 remains valid, development debug logs are gated through `AdminDevelopmentLogger`, and active compatibility surfaces are tracked in the central legacy registry.
 - Updated MCP package audit guidance with the 2026-05-13 `larena/mcp` L4 verdict, installed-site caveat for `larena.test`, explicit `larena/access` API-key compatibility tracking and `simai/mcp` alias policy.

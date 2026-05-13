@@ -67,9 +67,9 @@ Current universal properties decision:
 - repository: `larena-property`;
 - module key: `property`;
 - human title: `Larena Properties`;
-- old `larena/props`, repository `larena-props` and older `simai/props` are compatibility surfaces after the completed initial Composer/starter/package-graph migration.
+- old `larena/props`, repository `larena-props` and older `simai/props` are historical references only after the completed no-legacy cleanup.
 
-Do not create new package contracts, architecture direction or user-facing docs under `props` except when documenting legacy compatibility.
+Do not create new package contracts, architecture direction or user-facing docs under `props` except when documenting historical context.
 
 ## Rename Rule
 
@@ -77,7 +77,7 @@ Do not rename a stable package only for grammar.
 
 Package rename requires an ADR or architecture note plus migration plan:
 
-- Composer alias/replace/provide strategy where applicable;
+- Composer alias/replace/provide strategy only when there is a real production compatibility requirement;
 - update-server compatibility plan;
 - `module.yaml` migration notes;
 - docs, README and release notes;
@@ -96,4 +96,4 @@ When auditing package naming, report:
 4. whether a proposed rename is grammar-only or has a real platform/product reason;
 5. what migration artifacts are required before a rename can be approved.
 
-For universal properties, report `larena/property` as canonical and `larena/props` / `simai/props` as compatibility aliases. Future audits should verify package metadata, starter dependency, package graph and update-server metadata do not regress to `props` as canonical identity.
+For universal properties, report `larena/property` as canonical and `larena/props` / `simai/props` as removed historical identities. Future audits should verify package metadata, starter dependency, package graph and update-server metadata do not regress to `props` as canonical identity or reintroduce compatibility aliases without an explicit production need.
