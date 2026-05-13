@@ -19,6 +19,8 @@ Related documents:
 - `docs/developer/standards/ai-demonstrator-testing-standard.md`
 - `docs/developer/standards/package-dependency-impact-standard.md`
 - `docs/developer/standards/code-quality-legacy-logging-standard.md`
+- `docs/developer/standards/legacy-registry-standard.md`
+- `docs/developer/legacy/registry.json`
 - `docs/developer/package-graph/README.md`
 - `docs/developer/standards/release-gates.md`
 - `docs/developer/repository-standardization-plan.md`
@@ -67,6 +69,7 @@ produce a structured verdict with:
 8. security/access/session/API/MCP risks;
 9. documentation, changelog, install/update/rollback gaps;
 10. code quality, legacy/fallback, package logging and duplicated semantic logic findings;
+10.1. central legacy registry entries for active compatibility, dangerous legacy and historical legacy;
 11. exact commands or browser/API checks that were run or could not run;
 12. nearest useful batch to raise the package one level;
 13. remaining work grouped into required versus future improvements.
@@ -102,6 +105,14 @@ Check these layers before calling a package complete:
 Rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files. Stale claims such as "the package owns no database tables" block an `L4` verdict when migrations or owned data already exist.
 
 Package audits must apply the code quality, legacy and logging standard. Silent fallback, read-path mutations, noisy development logs in `laravel.log`, and repeated platform-contract logic are not acceptable as unnoticed background debt.
+
+Active compatibility, dangerous legacy and historical legacy must be recorded in the central Larena legacy registry:
+
+```text
+docs/developer/legacy/registry.json
+```
+
+Do not rely on chat memory or scattered audit notes for compatibility layers that must be migrated later.
 
 ## Completion Levels
 
