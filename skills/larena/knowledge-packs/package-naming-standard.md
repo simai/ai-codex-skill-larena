@@ -63,11 +63,11 @@ Plural or non-singular keys are acceptable only when they are the established te
 
 Current universal properties decision:
 
-- canonical target identity: `larena/property`;
-- repository target: `larena-property`;
+- canonical identity: `larena/property`;
+- repository: `larena-property`;
 - module key: `property`;
 - human title: `Larena Properties`;
-- current `larena/props`, repository `larena-props` and older `simai/props` are compatibility surfaces until the dedicated migration batch is completed.
+- old `larena/props`, repository `larena-props` and older `simai/props` are compatibility surfaces after the completed initial Composer/starter/package-graph migration.
 
 Do not create new package contracts, architecture direction or user-facing docs under `props` except when documenting legacy compatibility.
 
@@ -96,4 +96,4 @@ When auditing package naming, report:
 4. whether a proposed rename is grammar-only or has a real platform/product reason;
 5. what migration artifacts are required before a rename can be approved.
 
-For universal properties, report `larena/property` as the canonical target and `larena/props` as transitional compatibility unless the repository has already completed the Composer/starter/update-server migration.
+For universal properties, report `larena/property` as canonical and `larena/props` / `simai/props` as compatibility aliases. Future audits should verify package metadata, starter dependency, package graph and update-server metadata do not regress to `props` as canonical identity.

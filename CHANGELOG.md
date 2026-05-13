@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Added package naming guidance for universal properties: canonical target identity is `larena/property`, while `larena/props`, `larena-props` and `simai/props` are transitional compatibility surfaces until the dedicated migration batch.
+- Updated package naming guidance for universal properties: canonical identity is `larena/property`, while `larena/props`, `larena-props` and `simai/props` are compatibility surfaces after the completed initial migration.
 - Updated `larena/admin` knowledge with the 2026-05-13 deep audit refresh: L4 remains valid, development debug logs are gated through `AdminDevelopmentLogger`, and active compatibility surfaces are tracked in the central legacy registry.
 - Updated MCP package audit guidance with the 2026-05-13 `larena/mcp` L4 verdict, installed-site caveat for `larena.test`, explicit `larena/access` API-key compatibility tracking and `simai/mcp` alias policy.
 - Added package-installer guidance to run `migrate --force` and idempotent `simai:install` after updating installed `larena/*` packages before browser smoke, so runtime access/menu metadata stays synced with package config.
