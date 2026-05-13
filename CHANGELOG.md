@@ -8,6 +8,7 @@
 - Added package-completion guidance for the code quality, legacy and logging standard: classify fallback/legacy, gate development logs, use package channels where needed and flag duplicated semantic logic.
 - Updated `larena/access` package knowledge with the 2026-05-13 deep audit result, L4 verdict, legacy cleanup and remaining non-blocking rollout/downstream conditions.
 - Added legacy-registry guidance to package-completion knowledge: active compatibility, dangerous legacy and historical legacy must be tracked in `docs/developer/legacy/registry.json`.
+- Added current `larena/setting` legacy-registry record names for category/code identity, scalar `SettingService::get()` compatibility and legacy JSON schema publication.
 - Added `larena/setting` cleanup guidance: helper/UI reads should use `SettingValueLookup`, audit/pending actor-source metadata should use `SettingActorResolver`, and pending payloads should use `SettingPendingSerializer`.
 - Added package deep-audit guidance: requests to check a package against the standard must run the batch methodology, not only bulk validators.
 

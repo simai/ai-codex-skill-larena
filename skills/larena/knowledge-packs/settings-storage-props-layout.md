@@ -63,6 +63,12 @@ After additive persistence, introduce runtime schema storage through explicit pu
 
 Do not remove legacy `code`, `area_id`, `page_id`, `user_id` until installed projects, admin forms, import/export and tests have moved to the canonical model. Runtime schema publication, value history and pending review already exist as baselines; new import/export workflows should build on them instead of bypassing them.
 
+Current active compatibility records for `larena/setting` are tracked in the central Larena legacy registry:
+
+- `setting.category_code_identity`;
+- `setting.service_get_scalar_api`;
+- `setting.legacy_json_schema_publication`.
+
 The first settings history/audit baseline now exists in `larena/setting`:
 
 - `sf_setting_history` is append-only value history for `SettingService` writes and deletes;
