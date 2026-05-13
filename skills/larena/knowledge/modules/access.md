@@ -8,6 +8,8 @@
 - Completion level: `L4 ready for current package-completion baseline`.
 - Каноническая ДНК: `simai/larena/docs/developer/dna/access-dna.md`.
 - Пакетные документы: `docs/developer/dna/access-dna.md`, `docs/developer/access-dna-compliance.md`, `docs/developer/architecture.md`, `docs/developer/ai-contract.md`, `docs/developer/package-status.md`.
+- 2026-05-13 повторный deep audit по новой package-audit methodology пройден: `docs/developer/package-standard-audit-2026-05-13.md`.
+- Legacy cleanup выполнен: удалены dead root helper files `test.back` и `update_lang_keys.sh`, убран unguarded `access.entity` debug log из `AccessMiddleware`, очищены stale TODO/Upserv comments в контроллерах/CRUD metadata.
 - Текущая реализация полезна как compatibility layer: access profiles, operations, operation values, user/group bindings, middleware, API keys.
 - Первый explainable decision-layer реализован: `AccessValue`, `AccessContext`, `AccessDecision`, `AccessControl::decide()` и `AccessChecker::decide()`.
 - Grants/context baseline реализован без миграций: `AccessActorType`, `AccessScope`, `AccessResource`, `AccessGrantTarget`, `AccessGrantTargetResolver`.
@@ -34,6 +36,7 @@
 - Operator explain-view реализован: `/admin/access-explain` is a read-only admin screen that lets an operator select user, operation, owner/resource/scope/package context and see `allowed/denied`, reason and audit-safe `AccessDecision::explain()` JSON.
 - Visual smoke note: access pages render, but legacy update/upserv asset URLs under `/vendor/larena/upserv/public/...` return 404. Это не блокер `larena/access`, но должно уйти в update/upserv cleanup batch.
 - До следующего уровня развития Larena Access остаются downstream package-specific resolver smoke for packages that introduce custom virtual targets, production operator approval notes for strict rollout profiles and optional richer resource-oriented explain UX. Legacy update/upserv asset 404 is a separate update/upserv cleanup task, not an access blocker.
+- Текущий verdict после cleanup: `L4 approved_with_conditions`; conditions относятся к downstream resolver smoke, deployment-specific production rollout evidence и deferred L5, а не к текущему L4.
 
 ## Ключевые точки
 - Сервисы: `AccessChecker`, `AccessManagement`, `AccessControl`, `AccessTokenScopePolicy`, `AccessAuditDispatcher`, `AccessCache`, `AccessRateLimitPolicy`, `AccessScopedGrantStore`, `AccessSitePackMapper`, `AccessPackPolicy`, `AccessRolloutPolicy`, `AccessGrantResolverRegistry`, `AccessVirtualTargetCatalog`, `ApiKeyManager`.
@@ -105,6 +108,7 @@
 - Проверка installed-route API smoke: `php artisan access:api-smoke --url=<local-larena-url> --json` should pass with missing-token `401`, disposable-token `200` or allowed `403`, no `Set-Cookie`, cleanup done and no raw token output.
 - Проверка custom resolver: package-defined `AccessGrantTargetResolver` should match virtual targets only when both target and resource policy match.
 - Проверка admin UX baseline: `/admin/access-grants` route and `AccessGrantEntityConfig` must be guarded by view/create/edit/delete permissions; `/admin/access-audit-log` and `AccessAuditLogEntityConfig` must be read-only and guarded by `access.view_audit_logs`.
+- Проверка legacy/logging hygiene: package root must not contain dead helper drafts such as old `test.back` / local migration shell scripts; runtime middleware must not write unguarded development debug logs into shared `laravel.log`.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/access-grants`, `/admin/access-audit-log`, `/admin/access-explain`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
 - `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
