@@ -16,6 +16,7 @@ Related documents:
 - `docs/developer/standards/package-demonstrator-standard.md`
 - `docs/developer/standards/ai-demonstrator-testing-standard.md`
 - `docs/developer/standards/package-dependency-impact-standard.md`
+- `docs/developer/standards/code-quality-legacy-logging-standard.md`
 - `docs/developer/package-graph/README.md`
 - `docs/developer/standards/release-gates.md`
 - `docs/developer/repository-standardization-plan.md`
@@ -58,9 +59,10 @@ produce a structured verdict with:
 7. demonstrator and smoke evidence status;
 8. security/access/session/API/MCP risks;
 9. documentation, changelog, install/update/rollback gaps;
-10. exact commands or browser/API checks that were run or could not run;
-11. nearest useful batch to raise the package one level;
-12. remaining work grouped into required versus future improvements.
+10. code quality, legacy/fallback, package logging and duplicated semantic logic findings;
+11. exact commands or browser/API checks that were run or could not run;
+12. nearest useful batch to raise the package one level;
+13. remaining work grouped into required versus future improvements.
 
 Do not claim `L4` or `L5` from code quality or installed-site smoke alone.
 Completion levels require the standard artifacts and evidence listed below.
@@ -86,8 +88,11 @@ Check these layers before calling a package complete:
 14. **Roadmap/known gaps**: ready state, postponed work, blockers and future decisions.
 15. **AI development contract**: read-first docs, MCP tools/resources if exposed, safe read-only operations, effective user/service/capability context, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
 16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
+17. **Code quality / legacy / logging review**: classify legacy as dangerous, active compatibility, dead or historical; document fallback; gate development logs; prefer package log channels; and record duplicated semantic logic cleanup items.
 
 Rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files. Stale claims such as "the package owns no database tables" block an `L4` verdict when migrations or owned data already exist.
+
+Package audits must apply the code quality, legacy and logging standard. Silent fallback, read-path mutations, noisy development logs in `laravel.log`, and repeated platform-contract logic are not acceptable as unnoticed background debt.
 
 ## Completion Levels
 
@@ -141,6 +146,8 @@ Minimum: demonstrator or documented exception, admin/public/API scenarios where 
 Also require a package graph entry or documented exception. The demonstrator must map at least one important package graph edge to an executable or manual check.
 
 Do not raise a package to L4 from installed-site smoke alone. L4 requires package DNA or an accepted exception, an explicit audit against Larena Product DNA and package DNA, current architecture/contract docs, demonstrator coverage and smoke evidence that follows the AI demonstrator testing standard.
+
+When a package has known legacy/fallback-heavy areas, L4 audit must record which legacy is dangerous, active compatibility, dead or historical. Dangerous legacy that affects the demonstrator or canonical package DNA blocks L4 until fixed or isolated behind an explicit compatibility adapter.
 
 ### L5: Release / Marketplace Ready
 
