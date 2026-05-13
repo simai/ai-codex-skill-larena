@@ -15,7 +15,12 @@
   "required_specialists": ["platform-architect", "package-installer", "qa-validation"],
   "optional_specialists": ["security-permissions", "modular-admin", "rest-api", "data-settings-props"],
   "knowledge_packs": ["product-architecture", "package-map", "package-completion-standard"],
-  "required_gates": ["static package inspection", "available tests or documented verification limits"],
+  "required_gates": [
+    "fast gate validators are not enough for L4/L5",
+    "deep audit batches from package-audit-methodology",
+    "static package inspection",
+    "available tests or documented verification limits"
+  ],
   "required_outputs": [
     "current L0-L5 completion level",
     "artifact compliance matrix",

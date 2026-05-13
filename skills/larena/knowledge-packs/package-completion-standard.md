@@ -10,6 +10,8 @@ The canonical project document lives in `simai/larena`:
 
 Related documents:
 
+- `docs/developer/standards/package-audit-methodology.md`
+- `docs/developer/package-audit-template.md`
 - `docs/developer/standards/package-contract.md`
 - `docs/developer/standards/module-yaml-schema.md`
 - `docs/developer/standards/README.md`
@@ -45,7 +47,12 @@ When auditing a package, always return:
 
 If the user asks in Russian or English to "check a package against the standard",
 "audit the package by standard", "проверь пакет на стандарт", or similar, treat it
-as a full package-completion audit request. Do not answer with a short opinion.
+as a full package-completion audit request. Do not answer with a short opinion and do not rely on a single bulk validator pass.
+
+Use two layers:
+
+1. **Fast Gate** for quick automated checks across packages: Composer, `module.yaml`, package graph, required docs presence and basic smoke.
+2. **Deep Package Audit** for one package at a time: execute the batch methodology from `docs/developer/standards/package-audit-methodology.md`.
 
 The audit must read the package repository and the central Larena standards, then
 produce a structured verdict with:
@@ -66,6 +73,8 @@ produce a structured verdict with:
 
 Do not claim `L4` or `L5` from code quality or installed-site smoke alone.
 Completion levels require the standard artifacts and evidence listed below.
+
+For deep audits, use the report template from `docs/developer/package-audit-template.md` and store package-local reports as `docs/developer/package-standard-audit-YYYY-MM-DD.md` unless the repository has a more specific convention.
 
 ## Required Artifact Layers
 
