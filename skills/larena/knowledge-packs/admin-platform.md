@@ -79,6 +79,8 @@ Example slots:
 - Route ownership, plugin health and admin smoke commands are release gates for packages that contribute admin routes/UI.
 - Admin packages must publish every asset referenced by shared layouts. Even harmless missing `/simai/admin/*` assets, such as a favicon, create browser noise and can mask real admin errors during smoke checks.
 - Current favicon baseline is `/simai/admin/images/favicon.ico`; do not reference `/simai/admin/images/favicon.png` unless the package ships that file.
+- Development/debug logs in admin CRUD, validators or renderers must be gated by package config and should use a package-specific channel. The current baseline is `AdminDevelopmentLogger` with `simai_admin.development_logs.*`, disabled by default.
+- Treat `simai/admin`, `Simai\Admin`, `simai_admin`, `/simai/admin`, legacy plugin API, access code aliases and the fail-open bootstrap switch as explicit compatibility surfaces. They must be tracked in `docs/developer/legacy/registry.json` and not removed during routine L4 standardization.
 
 ## Current Core Package Gaps To Watch
 

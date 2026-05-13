@@ -27,6 +27,7 @@
 - Несовместимость route names для batch/UI действий.
 - Production defaults requiring review: `SIMAI_ADMIN_ACCESS_FAIL_OPEN`, `SIMAI_ADMIN_DEMO_ENABLED`, plugin boot error policy.
 - Historical docs/examples may still use `simai/admin` naming.
+- Deep audit 2026-05-13: current package status is L4-ready with conditions; development debug logs must go through `AdminDevelopmentLogger` and active compatibility surfaces are registered centrally.
 
 ## Обязательные проверки
 - `vendor/bin/phpunit packages/admin/tests`
@@ -36,3 +37,4 @@
 - In starter: `php artisan simai:admin:plugins:health --strict`
 - In starter: `php artisan simai:admin:smoke --strict-plugins`
 - In starter: `php artisan simai:admin:e2e:smoke --strict-plugins`
+- Source audit: verify no ungated `Log::debug` remains outside `AdminDevelopmentLogger`.
