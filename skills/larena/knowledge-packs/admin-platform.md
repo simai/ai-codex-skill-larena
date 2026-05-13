@@ -2,6 +2,15 @@
 
 Target model: `Admin Kernel + Module Extensions`.
 
+Canonical DNA:
+
+- `simai/larena/docs/developer/dna/admin-dna.md`
+- `simai/larena/docs/developer/dna/layout-dna.md`
+
+`larena/admin` is the object-based admin interface platform, not a collection of hardcoded Blade screens. Packages extend it through governed areas, slots, contributions, renderers, context and manifest metadata.
+
+Future `larena/layout` shares the same composition philosophy but owns public/content page composition: pages, sections, atomic blocks, data providers, renderers and editor schemas. The admin may host the layout editor, but the page/layout model must remain a separate package domain.
+
 ## Core Terms
 
 - Package: Composer package.
