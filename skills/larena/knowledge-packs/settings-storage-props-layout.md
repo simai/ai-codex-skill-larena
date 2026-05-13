@@ -138,9 +138,11 @@ Observed types include:
 
 Larena should separate property storage, UI render/edit/filter contracts and CRUD integration.
 
-Current `larena/props` is a file-based property type/template package, not the final universal property value model. It ships JSON definitions, translations and Blade templates and exposes admin template editing/import/export.
+Current `larena/property` is a file-based property type/template package, not the final universal property value model. Historical `larena/props` / `simai/props` aliases were removed before production adoption and must not be used as active package identities.
 
-When inspecting or extending `larena/props`, require an explicit safety gate before functional growth:
+After the 2026-05-13 deep audit, treat `larena/property` as `L3` until the package has executed demonstrator evidence. It has canonical package identity, `module.yaml`, architecture/demonstrator/roadmap docs and a package audit report, but it still needs `property:doctor` or equivalent tests, explicit `larena/access` route policy, smoke evidence, baseline property schema/render model and audit/rollback for template/import writes before L4.
+
+When inspecting or extending `larena/property`, require an explicit safety gate before functional growth:
 
 - do not treat submitted translation/template content as safe executable code;
 - custom translation textarea parsing must stay structured and non-executing; JSON arrays are the current safe baseline;
