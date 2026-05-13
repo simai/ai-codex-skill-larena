@@ -4,7 +4,7 @@ Owns settings, storage, universal properties, page/layout data and cross-platfor
 
 ## Load When
 
-- task touches `larena/setting`, `larena/props`, storage, filesystem metadata, page constructor data, import/export formats or Bitrix/SF5 data model alignment.
+- task touches `larena/setting`, `larena/property`, storage, filesystem metadata, page constructor data, import/export formats or Bitrix/SF5 data model alignment.
 
 ## Required Knowledge
 

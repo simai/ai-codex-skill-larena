@@ -140,7 +140,9 @@ Larena should separate property storage, UI render/edit/filter contracts and CRU
 
 Current `larena/property` is a file-based property type/template package, not the final universal property value model. Historical `larena/props` / `simai/props` aliases were removed before production adoption and must not be used as active package identities.
 
-After the 2026-05-13 deep audit, treat `larena/property` as `L3` until the package has executed demonstrator evidence. It has canonical package identity, `module.yaml`, architecture/demonstrator/roadmap docs and a package audit report, but it still needs `property:doctor` or equivalent tests, explicit `larena/access` route policy, smoke evidence, baseline property schema/render model and audit/rollback for template/import writes before L4.
+After the 2026-05-13 L4 batch, treat `larena/property` as `L4 Demonstration Ready` for its current file-backed definition/rendering/admin boundary. It has canonical package identity, `module.yaml`, architecture/demonstrator/roadmap docs, a package audit report, `property:doctor`, explicit `property.access:<operation>` route policy and installed-site smoke evidence.
+
+Do not overclaim `larena/property` as the final universal property platform yet. Entity-bound property value storage, SitePack property profile, deeper render/import tests and production-grade template write audit/rollback remain post-L4 roadmap items.
 
 When inspecting or extending `larena/property`, require an explicit safety gate before functional growth:
 
@@ -148,7 +150,8 @@ When inspecting or extending `larena/property`, require an explicit safety gate 
 - custom translation textarea parsing must stay structured and non-executing; JSON arrays are the current safe baseline;
 - template save and preview paths must be restricted to approved property template roots for the selected property;
 - ZIP import must use canonical path checks, extension/path allowlists and per-entry size limits;
-- protect admin routes with explicit `larena/access` operations, not only generic `auth`;
+- protect admin routes with explicit `property.access:<operation>` operations, not only generic `auth`;
+- run `php artisan property:doctor --json` on the installed Larena app after package changes;
 - add audit/rollback for executable Blade template edits;
 - document any remaining trusted-admin Blade execution as an operational risk rather than exposing it to public/background/API/AI flows;
 - keep SitePack mapping separate until property schema and entity-bound values are accepted.

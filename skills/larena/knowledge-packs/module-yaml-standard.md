@@ -29,7 +29,7 @@ php artisan larena:validate-packages --contract --strict --path=/path/to/larena-
 
 Contract mode checks capabilities, owned data, endpoint session modes, declared rate limits, documentation paths, concept alignment, audit events, rollback notes, health checks, external-network policy and operational risks. Until every installed `vendor/larena/*` release contains expanded manifests, do not treat a full default `--contract --strict` scan of the starter app as the baseline gate; target the package repositories being reviewed or released.
 
-As of the first full local alignment pass, the 14 local Larena repositories can be checked together by passing explicit paths for `larena-setting`, `larena-filesystem`, `larena-access`, `larena-auth`, `larena-2fa`, `larena-rest`, `larena-rest-doc`, `larena-props`, `larena-admin`, `larena-lang`, `larena-docara-core`, `larena-docara-admin`, `larena-update`, and `larena-update-registration`.
+As of the first full local alignment pass, the 14 local Larena repositories can be checked together by passing explicit paths for `larena-setting`, `larena-filesystem`, `larena-access`, `larena-auth`, `larena-2fa`, `larena-rest`, `larena-rest-doc`, `larena-property`, `larena-admin`, `larena-lang`, `larena-docara-core`, `larena-docara-admin`, `larena-update`, and `larena-update-registration`.
 
 ## Purpose
 
