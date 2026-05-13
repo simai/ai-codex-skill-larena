@@ -203,6 +203,14 @@ Be conservative by default. AI agents should not infer permission to run destruc
 
 If a package exposes MCP tools/resources, execution must be scoped to the effective Larena user, service account or capability token that authorized the MCP session. MCP must not silently grant broader access than that context has through normal Larena UI/API. Elevated service tools must be separate declared service/capability modes with explicit permission, audit and approval policy.
 
+Current `larena/mcp` baseline from the 2026-05-13 deep audit:
+
+- `larena/mcp` is `L4 Demonstration Ready` as a package and controlled local stdio pilot;
+- broad HTTP/SSE/OAuth exposure remains a future product decision, not an L4 requirement;
+- `larena.test` must not be claimed as MCP-enabled until the package is installed there and `mcp:*` commands pass from that runtime;
+- active `larena/access` API-key compatibility must stay explicit, disabled by default and registered as `mcp.access_api_key_compatibility` in `docs/developer/legacy/registry.json`;
+- `simai/mcp` is only a low-risk Composer compatibility alias; do not create new Larena docs or package identity under that name.
+
 ## Package Status Card Rule
 
 The package status card is a short orientation passport, not a replacement for detailed docs.
