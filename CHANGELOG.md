@@ -6,6 +6,7 @@
 - Added package-completion audit guidance that rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files; stale rollback claims block `L4`.
 - Added admin-platform guidance for synchronized Admin/Layout DNA: `larena/admin` owns object-based admin UI composition, while future `larena/layout` owns public page composition.
 - Added package-completion guidance for the code quality, legacy and logging standard: classify fallback/legacy, gate development logs, use package channels where needed and flag duplicated semantic logic.
+- Added `larena/setting` cleanup guidance: helper/UI reads should use `SettingValueLookup`, audit/pending actor-source metadata should use `SettingActorResolver`, and pending payloads should use `SettingPendingSerializer`.
 
 ### Added
 

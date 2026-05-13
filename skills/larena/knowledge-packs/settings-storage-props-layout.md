@@ -40,6 +40,7 @@ The first resolver-first read API baseline now exists in `larena/setting`:
 - `SettingService::get()` keeps the legacy scalar signature but reads through `SettingResolver`;
 - new package code should prefer `resolve*()` / `explain*()` whenever it needs direct/default/missing metadata, source layer, candidates, diagnostics, REST, SitePack, AI-agent context, migrations or health checks;
 - convenience methods include `getNamespaceKey()`, `getCategoryCode()`, `explainNamespaceKey()`, `setting_resolved()` and `setting_explain()`;
+- helper/UI read paths should use the shared `SettingValueLookup` and resolver-first reads instead of local raw `sf_setting.code` / `sf_setting_value` lookups;
 - the settings JSON read endpoint can return additive `resolved` metadata next to the legacy scalar `value`;
 - `get()` remains acceptable for simple template reads and legacy scalar compatibility.
 - pending overlays are explicit: `resolveWithPending()` / `explainWithPending()` and namespace/category variants show review proposals under `pending`, while normal `resolve*()` / `explain*()` keep committed effective values only;
@@ -68,6 +69,7 @@ The first settings history/audit baseline now exists in `larena/setting`:
 - `SettingAuditService` records old/new value, namespace/key, context, actor/source metadata and operation metadata when the history table exists;
 - `sf_setting_schema_history` is append-only schema-pack install/update history for `SettingSchemaRegistry` publication;
 - `SettingSchemaAuditService` records schema pack and legacy category schema install/update events with old/new snapshots, source path, format and definitions count;
+- `SettingActorResolver` is the shared actor/source resolver for value audit, schema audit and pending changes; do not duplicate auth/session probing in separate services;
 - this is a settings value/schema audit baseline, not the final workflow layer.
 
 The first settings pending-review baseline now exists in `larena/setting`:
@@ -79,6 +81,7 @@ The first settings pending-review baseline now exists in `larena/setting`:
 - the pending review routes are admin/session routes protected by settings view/edit access, not sessionless background endpoints;
 - SitePack/config-KV imports and AI-generated settings changes should stage proposals through the pending layer first instead of writing directly to runtime values.
 - pending review UI baseline includes status/action/source/level filters, side-by-side current/proposed value comparison and bulk apply/reject for selected pending rows;
+- pending admin/API output and resolver pending overlays should use `SettingPendingSerializer`, so list and preview payloads do not drift;
 - bulk pending actions must process only rows that are still in `pending` status and must remain stateful admin actions, not background/sessionless endpoints.
 
 The first config-KV settings transport baseline now exists in `larena/setting`:
