@@ -30,6 +30,8 @@ It is a core platform package, not a product-specific AI translation engine or l
 - Source contains `LangImportCommand`, `LangExportCommand` and `EnhancedWatchTranslationsCommand`, but they are not currently registered by `SLangProvider`.
 - `LangImportCommand` and `LangExportCommand` currently have empty typed handlers and must not be advertised as usable release commands until implemented and registered.
 - The package globally replaces Laravel's translation loader, so boot-order regression coverage is required before production hardening.
+- Installed admin smoke 2026-05-14 found and fixed active legacy coupling to removed `larena/admin` API: `TranslationController` must not call `AdminController::simaiView()` or `AdminController::getData()`. Use package-owned views or canonical admin contracts instead.
+- `larena/lang` demo provider baseline: `Simai\Lang\Support\Demo\LangAdminDemoProvider` exposes `lang.recipe.translations.index`; installed starter smoke should verify both registry membership and `/admin/translations` authenticated 200.
 
 ## Invariants
 
@@ -63,4 +65,11 @@ Use the Larena entry app to verify installed behavior:
 /Applications/ServBay/bin/php artisan route:list --path=api/v1/regional-settings
 /Applications/ServBay/bin/php artisan list | rg "lang:|simai:install-lang"
 /Applications/ServBay/bin/php artisan lang:report --format=json
+```
+
+When checking admin compatibility after `larena/admin` changes, also run:
+
+```bash
+/Applications/ServBay/bin/php artisan simai:admin:smoke --strict-plugins
+/Applications/ServBay/bin/php artisan simai:admin:e2e:smoke --strict-plugins
 ```

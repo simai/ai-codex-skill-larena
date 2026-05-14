@@ -33,6 +33,7 @@
 - Deep audit 2026-05-13: current package status is L4-ready with conditions; development debug logs must go through `AdminDevelopmentLogger` and active compatibility surfaces are registered centrally.
 - External demo provider baseline 2026-05-14: `larena/access`, `larena/lang` and `larena/docara-admin` own their demo providers, and the admin external provider discovery suite should run without missing-provider skips when those repositories are present.
 - Duplicate-layer cleanup 2026-05-14: old `Services\DataTableService`, `Services\FilterManager`, `Services\ViewManager`, `Services\Response`, `Services\Breadcrumbs`, `Services\Invoker` and `InvokeMethodJob` were removed. The canonical admin path is `QueryApplier`/`Support\FilterManager` for query/filter/sort, `SimaiResponder`/`Support\Response`/`Support\ViewManager` for UI response, `SimaiResponder` for breadcrumbs, and `RunAdminBatchPayloadJob` for batch execution.
+- Queueable bulk actions are RFC-only as of 2026-05-14: use `larena-admin/docs/developer/rfc/0002-queueable-bulk-actions.md` before implementing real async bulk execution; keep fake async rejected.
 
 ## Обязательные проверки
 - `vendor/bin/phpunit packages/admin/tests`
@@ -44,4 +45,5 @@
 - In starter: `php artisan simai:admin:e2e:smoke --strict-plugins`
 - Source audit: verify no ungated `Log::debug` remains outside `AdminDevelopmentLogger`.
 - Package workspace check: run `ExternalModuleDemoProviderDiscoveryTest` with sibling package repositories available to verify package-owned demo provider discovery.
+- Installed starter check: verify the demo provider registry and authenticated routes for owning package recipes; provider discovery alone is not enough if the target package route still calls removed admin legacy APIs.
 - Duplicate-responsibility audit: route/controller/service/job scan must not find old reachable admin CRUD/DataTable/ViewManager/Response/Breadcrumbs/Invoker layers.
