@@ -14,7 +14,7 @@
   ],
   "required_specialists": ["platform-architect", "package-installer", "qa-validation"],
   "optional_specialists": ["security-permissions", "modular-admin", "rest-api", "data-settings-props"],
-  "knowledge_packs": ["product-architecture", "package-map", "package-completion-standard"],
+  "knowledge_packs": ["product-architecture", "package-map", "package-completion-standard", "legacy-detection-patterns"],
   "required_gates": [
     "fast gate validators are not enough for L4/L5",
     "deep audit batches from package-audit-methodology",
