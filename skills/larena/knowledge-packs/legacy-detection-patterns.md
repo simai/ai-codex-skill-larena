@@ -14,6 +14,7 @@ Common weak spots:
 - accepting compatibility fallback without checking fail-open behavior;
 - checking path traversal but not broader public source disclosure;
 - accepting `async` labels without verifying queue/job isolation.
+- searching for duplicated lines but missing duplicated responsibilities, where old and new stacks implement the same behavior through different class names.
 
 ## Required Legacy Probes
 
@@ -59,6 +60,20 @@ Flag:
 - route names from removed surfaces;
 - stale views referenced by active controllers;
 - public utility routes with broad file access.
+
+### Duplicate Responsibility Layers
+
+Search for old and new stacks that own the same domain responsibility.
+
+Useful probes:
+
+- active controllers that still inject `Services/*` while the package has newer `Support/*`, `Crud/*` or `Query/*` contracts;
+- parallel filter/sort/search pipelines;
+- multiple response abstractions with the same public name but different payload semantics;
+- duplicate breadcrumb/menu/navigation builders;
+- generic method invocation jobs that bypass the current batch/job payload contract.
+
+Treat runtime-reachable duplicate layers as active legacy even when the code does not use old package names.
 
 ### Parameter Collapse
 
