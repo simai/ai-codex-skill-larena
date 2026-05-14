@@ -75,11 +75,13 @@ Example slots:
 - Raw HTML is not a normal extension mechanism.
 - Admin core must not hardwire paid/free product logic.
 - Host projects and product packages must not edit or copy `vendor/larena/admin` source. Extensions go through typed contracts, project config/routes, or separate Composer packages.
-- Long-running admin operations should use `AdminBatch`, queues or commands with progress/failure diagnostics.
+- Long-running admin operations should use `AdminBatch`, queues or commands with progress/failure diagnostics. Never treat a `202 Accepted`, `batch_id` or `async: true` label as proof of isolation: verify that heavy work is dispatched to a real queue/job and not executed inside the web request.
+- Generic admin bulk actions are bounded sync by default. If `async: true` is present without a real queue/job payload, the package should fail closed or require an explicit `sync=true` fallback; it must not silently run fake async in the HTTP request.
 - Route ownership, plugin health and admin smoke commands are release gates for packages that contribute admin routes/UI.
 - Admin packages must publish every asset referenced by shared layouts. Even harmless missing `/simai/admin/*` assets, such as a favicon, create browser noise and can mask real admin errors during smoke checks.
 - Current favicon baseline is `/simai/admin/images/favicon.ico`; do not reference `/simai/admin/images/favicon.png` unless the package ships that file.
 - Development/debug logs in admin CRUD, validators or renderers must be gated by package config and should use a package-specific channel. The current baseline is `AdminDevelopmentLogger` with `simai_admin.development_logs.*`, disabled by default.
+- Package-local admin tests should use a stable bootstrap/harness that resolves sibling Larena packages by workspace root and known naming aliases such as `larena-2fa` for `two-fa`; avoid one-off temporary bootstrap files as the only path to full-suite execution.
 - Treat `simai/admin`, `Simai\Admin`, `simai_admin`, `/simai/admin`, legacy plugin API, access code aliases and the fail-open bootstrap switch as explicit compatibility surfaces. They must be tracked in `docs/developer/legacy/registry.json` and not removed during routine L4 standardization.
 
 ## Current Core Package Gaps To Watch

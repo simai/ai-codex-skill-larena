@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated admin-platform guidance after `larena/admin` fake-async remediation: generic bulk actions are bounded sync by default, `async=true` must require real queue/job isolation, and package-local full-suite tests should use a stable workspace-aware bootstrap instead of temporary one-off files.
 - Updated package naming guidance so `larena/property` is the only active universal properties identity; old `larena/props`, `larena-props` and `simai/props` are historical only and must not be reintroduced as compatibility aliases without a real production need.
 
 - Updated package naming guidance for universal properties: canonical identity is `larena/property`, while `larena/props`, `larena-props` and `simai/props` are compatibility surfaces after the completed initial migration.
