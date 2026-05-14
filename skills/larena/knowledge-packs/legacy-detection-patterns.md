@@ -72,8 +72,12 @@ Useful probes:
 - multiple response abstractions with the same public name but different payload semantics;
 - duplicate breadcrumb/menu/navigation builders;
 - generic method invocation jobs that bypass the current batch/job payload contract.
+- parallel description/scaffold contracts where one class family only converts back into the canonical contract, for example `*Resource` wrappers around an `EntityConfig` model;
+- generators, tests and docs that preserve the duplicate layer even after runtime code has moved to the canonical contract.
 
 Treat runtime-reachable duplicate layers as active legacy even when the code does not use old package names.
+
+If a package has no live external consumers yet, prefer removing the duplicate contract immediately instead of adding a long deprecation tail. Keep only the canonical contract in routes, generators, docs and tests.
 
 ### Parameter Collapse
 
