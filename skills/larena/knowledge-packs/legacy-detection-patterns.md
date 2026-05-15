@@ -65,6 +65,15 @@ Flag:
 
 Search for old and new stacks that own the same domain responsibility.
 
+Before deciding that a package is L4-ready, build a compact responsibility map:
+
+- responsibility name;
+- canonical owner class/service/manifest/doc;
+- alternate owners or adapters;
+- route/controller/command/test/doc entry points;
+- runtime reachability;
+- whether the duplicate is intentional compatibility or accidental architecture drift.
+
 Useful probes:
 
 - active controllers that still inject `Services/*` while the package has newer `Support/*`, `Crud/*` or `Query/*` contracts;
@@ -74,10 +83,23 @@ Useful probes:
 - generic method invocation jobs that bypass the current batch/job payload contract.
 - parallel description/scaffold contracts where one class family only converts back into the canonical contract, for example `*Resource` wrappers around an `EntityConfig` model;
 - generators, tests and docs that preserve the duplicate layer even after runtime code has moved to the canonical contract.
+- route defaults that advertise one contract while runtime code uses another, for example `responder` route defaults ignored by CRUD actions;
+- async and sync transports that assemble the same query/source independently, for example lookup endpoints and server-side option builders;
+- package-local bootstrapping of contracts owned by another package, for example a feature package registering admin route macros itself;
+- middleware paths that infer the same permission/entity operation independently before delegating to the same checker;
+- thin aliases or wrappers with the same basename as the real model/manager/service, unless explicitly documented as compatibility.
 
 Treat runtime-reachable duplicate layers as active legacy even when the code does not use old package names.
 
 If a package has no live external consumers yet, prefer removing the duplicate contract immediately instead of adding a long deprecation tail. Keep only the canonical contract in routes, generators, docs and tests.
+
+When a duplicate layer is found, choose one of three outcomes:
+
+1. remove now when there are no live consumers;
+2. collapse to the canonical owner and keep transport/output adapters thin;
+3. record as compatibility with owner, risk, removal condition and tests.
+
+Do not accept a package as fully L4-ready when a duplicate layer affects core runtime behavior such as query semantics, responder selection, access checks, install/update flow, settings resolution, REST execution, or data import/export.
 
 ### Parameter Collapse
 

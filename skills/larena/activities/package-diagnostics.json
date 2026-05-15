@@ -18,6 +18,7 @@
   "required_gates": [
     "fast gate validators are not enough for L4/L5",
     "deep audit batches from package-audit-methodology",
+    "duplicate-responsibility and canonical-owner probes from legacy-detection-patterns",
     "static package inspection",
     "available tests or documented verification limits"
   ],
