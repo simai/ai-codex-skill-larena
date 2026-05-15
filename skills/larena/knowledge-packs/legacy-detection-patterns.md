@@ -15,6 +15,7 @@ Common weak spots:
 - checking path traversal but not broader public source disclosure;
 - accepting `async` labels without verifying queue/job isolation.
 - searching for duplicated lines but missing duplicated responsibilities, where old and new stacks implement the same behavior through different class names.
+- checking controllers/services but not package template IDs, asset publication paths and generated placeholder files.
 
 ## Required Legacy Probes
 
@@ -60,6 +61,31 @@ Flag:
 - route names from removed surfaces;
 - stale views referenced by active controllers;
 - public utility routes with broad file access.
+- routes that point to non-existent controller methods; do not accept route URI presence as proof that an action is live.
+
+### Template And Asset Contract Drift
+
+For packages that ship Blade templates, field templates, themes, UI components or public assets, build a template/asset contract map:
+
+- definition/config template identifier;
+- expected Blade view name;
+- actual file path;
+- allowed path segment format;
+- asset source path;
+- publish target;
+- runtime URL helper.
+
+Flag:
+
+- dotted template IDs such as `sf4.button` when the filesystem or editor policy accepts only path-safe segments such as `sf4-button`;
+- empty Blade files that exist only to satisfy an old path but contain no implementation;
+- duplicate template directories for the same visual theme, for example both `sf4.button` and `sf4-button`;
+- view definitions that use a non-canonical namespace or old package identity after a package rename;
+- asset helpers that generate one public URL while the service provider publishes another path;
+- templates that call asset helpers for files that do not exist in the package source;
+- stale `public/vendor/<old-package>` trees kept in the package after the canonical asset source moved to `resources/assets`.
+
+Treat template/asset drift as active legacy when it can break admin editors, demonstrators, browser smoke, package publication or update-server packaging. If there are no live external consumers, normalize identifiers and paths now instead of preserving empty compatibility placeholders.
 
 ### Duplicate Responsibility Layers
 
