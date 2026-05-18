@@ -22,6 +22,8 @@ Do not reduce access to "user has permission". Larena must support users, API cl
 
 Every package must declare stable package-scoped operations. Operations are atomic capabilities, not UI buttons or raw routes.
 
+Do not auto-generate permissions from every PHP method. Methods are implementation details. Access operations must represent stable protected actions that matter to users, admins, REST, MCP, audit or security policy.
+
 Examples:
 
 - `docara.page.view`
@@ -30,6 +32,24 @@ Examples:
 - `admin.resource.delete`
 
 Operations should be machine-readable, versioned through package metadata, installable/updateable by package lifecycle, and deny-by-default when unknown.
+
+Create operations for:
+
+- admin actions that read, change, delete, publish or export protected data;
+- REST operations and MCP tools;
+- public/account actions touching protected data;
+- commands/jobs that can be triggered by a user, service, API client or AI agent;
+- package methods that expose files, settings, users, tokens, licenses or security state;
+- actions with their own risk level, audit policy, rate limit or token constraint.
+
+Do not create operations for:
+
+- private/internal helper methods;
+- DTOs, mappers, normalizers or formatters;
+- validation helpers without independent data access;
+- view/render helpers without protected data access;
+- service methods that only implement part of an already checked operation;
+- low-level repository methods that must always be called through a checked service/action.
 
 ## Access Levels And Presets
 
