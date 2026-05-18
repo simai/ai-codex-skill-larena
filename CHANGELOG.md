@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Added Larena access-platform knowledge after reviewing legacy access materials: audits and architecture work must check package operation registries, access levels/presets, operation value types, virtual targets, resource ownership, query-scope filtering, install bootstrap, cache invalidation and safe token narrowing.
+- Added SF5 `/simai` and `/simai.data` layer mapping guidance for Larena:
+  preserve the system-library/project-overlay DNA through Laravel-native
+  package resources, storage, registries and adapters instead of copying the
+  Bitrix filesystem literally.
 - Updated legacy detection guidance after the 2026-05-18 developer audit: package audits must check source-of-truth drift, trusted runtime surfaces, canonical scope/context loss, fail-open/plugin compatibility and API-token actor principal compatibility.
 - Added installed demo-provider smoke guidance for `larena/admin`, `larena/lang` and `larena/docara-admin`: provider discovery must be paired with authenticated target-route smoke, and package routes must not depend on removed admin legacy APIs such as `AdminController::simaiView()`.
 - Updated admin-platform guidance after `larena/admin` fake-async remediation: generic bulk actions are bounded sync by default, `async=true` must require real queue/job isolation, and package-local full-suite tests should use a stable workspace-aware bootstrap instead of temporary one-off files.

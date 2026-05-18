@@ -11,6 +11,7 @@ Owns auth, access, 2FA, tokens, license checks, admin guards, secret handling an
 - [kernel/non-negotiables.md](../../kernel/non-negotiables.md)
 - [knowledge/access-control.md](../../knowledge/access-control.md)
 - [knowledge/auth-authorization.md](../../knowledge/auth-authorization.md)
+- [knowledge-packs/access-platform.md](../../knowledge-packs/access-platform.md)
 - [knowledge-packs/session-safe-background-enrichment.md](../../knowledge-packs/session-safe-background-enrichment.md)
 - [checklists/access-checklist.md](../../checklists/access-checklist.md)
 

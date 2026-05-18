@@ -48,6 +48,7 @@ When new repeatable project experience should improve this skill, apply [rules/l
 - `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.
 - `Docara`: likely first product-level proof that Larena is a usable CMS platform.
 - `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.
+- SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-native package resources, storage, database registries and adapters. Read [knowledge-packs/sf5-simai-layer-dna.md](./knowledge-packs/sf5-simai-layer-dna.md) for cross-platform mapping.
 
 ## Default Activities
 
