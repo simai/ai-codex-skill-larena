@@ -29,6 +29,7 @@ Check for:
 - boolean compatibility APIs used inside new explainable/typed flows.
 - package editors that read from one source but save to another source;
 - UI forms that expose only legacy context fields while the runtime already has canonical context fields;
+- form-save code that guesses canonical keys by partial string matching instead of a schema/form field map;
 - executable template/runtime editing surfaces that are treated as ordinary CRUD.
 
 ### Source-Of-Truth Drift
@@ -45,6 +46,8 @@ Flag:
 - import/export serializes a different model than the runtime resolver uses;
 - views call `file_get_contents`, scan package directories, or infer filesystem
   paths instead of using a package service/registry;
+- controllers own path allowlists, template discovery or file writes directly
+  instead of delegating to one package repository/registry service;
 - old JSON category/config workflows remain reachable after a schema-pack or
   resolver layer exists.
 
@@ -103,6 +106,9 @@ Check:
 - route parameters survive into authorization;
 - fallback does not return allowed/neutral when resolver input is missing;
 - config switches cannot silently disable access/session/API safety in normal mode.
+- high-risk escape hatches such as fail-open access require a secondary
+  explicit allow flag or install/development profile, not only one production
+  env variable;
 - plugin compatibility fallback cannot load unversioned or unbounded plugins by
   default;
 - fail-open env flags are limited to install/development profiles and are
@@ -142,6 +148,10 @@ Temporary user-compatible principals may exist only as a documented adapter for
 Laravel/Auth or old ownership checks. The canonical decision path must use the
 native actor context and record the remaining compatibility in the legacy
 registry.
+
+When a user-compatible principal remains, require a config-gated migration path
+that can reject group-only API keys and force assigned real users or native
+actor grants before broad REST/MCP/AI exposure.
 
 ### Route/Controller Drift
 
