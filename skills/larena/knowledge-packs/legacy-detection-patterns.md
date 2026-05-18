@@ -153,6 +153,26 @@ When a user-compatible principal remains, require a config-gated migration path
 that can reject group-only API keys and force assigned real users or native
 actor grants before broad REST/MCP/AI exposure.
 
+### Auth Defaults And Session Policy
+
+For auth packages, do not treat a working login form as enough.
+
+Flag:
+
+- public registration enabled by default;
+- registration that redirects ordinary users into admin paths by default;
+- session timeout values hardcoded in middleware instead of config/env;
+- route docs that promise one timeout while code uses another value;
+- login/register/profile routes without throttle or lockout policy;
+- installer commands that keep dead helpers capable of rewriting host app files,
+  `.env`, stubs or user models even when they are not called today;
+- admin bootstrap commands that provide default passwords or make copy-paste
+  production credentials easy.
+
+Auth hardening requires safe default config, explicit product/runtime opt-in for
+self-registration, stateful-only route declarations, fresh installed-site smoke,
+and a remaining audit/password/recovery roadmap before L4 approval.
+
 ### Route/Controller Drift
 
 Build route-to-controller inventory for the package.
