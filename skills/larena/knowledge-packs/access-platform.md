@@ -87,6 +87,48 @@ Provider rules:
 
 Do not treat platform administrator as automatic content bypass. Separate platform administration, content access and audited break-glass/root policy.
 
+Minimum provider contract:
+
+- `code`;
+- target types;
+- enabled/disabled policy;
+- selector schema/search;
+- runtime resolver;
+- cache dependencies;
+- audit-safe explain fields;
+- allow/deny smoke scenarios.
+
+Missing or disabled providers must deny safely and explain the inactive grant instead of failing open.
+
+## Manifest And Starter Contracts
+
+Package `module.yaml` or referenced package manifest should declare:
+
+- `access.version`;
+- `operation_namespace`;
+- operations with `code`, `title`, `value_type`, `allowed_values`, `risk`, `audit`, token scope and optional `query_scope`;
+- access levels with operation values;
+- presets;
+- required/optional target providers;
+- safe default bindings with reason and risk.
+
+Starter baseline should avoid creating group chaos. Prefer virtual targets:
+
+- `guest`;
+- `authenticated`;
+- `owner`;
+- `system_admin`;
+- `break_glass_root`.
+
+Recommended starter presets:
+
+- `system.admin`;
+- `content.editor`;
+- `integration.read_only`;
+- `ai.safe`.
+
+Default bindings must be visible in install reports. Write/delete/admin permissions should not be granted broadly by default.
+
 ## Operation Value Types
 
 Access is not always boolean. Check for these values and require package docs/tests when they appear:
@@ -111,6 +153,14 @@ Packages that protect records/entities must expose ownership data through a stab
 - participants/editors when needed.
 
 For list pages and APIs, a simple `allowed/denied` decision is not enough when the user can see only "own" or group-scoped records. The package must use `AccessQueryScope` or an equivalent access-approved filter instead of inventing ad hoc query conditions.
+
+`AccessQueryScope` checks must cover:
+
+- list/search/export endpoints;
+- SQL/query-builder filtering where possible;
+- explain output with applied constraints;
+- deny or package-approved resolver when safe filtering cannot be built;
+- no AI/MCP broad fetch followed by ad hoc self-filtering.
 
 ## Install Bootstrap
 
@@ -146,10 +196,13 @@ Security-relevant access changes and denials should emit audit events through th
 When auditing an access-related package, verify:
 
 - operations are declared and stable;
+- `module.yaml` access metadata exists or has an accepted exception;
 - access levels/presets are not hidden in settings;
 - unknown operations deny safely;
+- target providers are enabled only when installed/profile-supported;
 - token constraints narrow access and never silently expand it;
 - package data filtering is access-aware for `own`/group scenarios;
+- list/search/export flows have `AccessQueryScope` or an explicit denial policy;
 - virtual targets have resolvers and smoke tests;
 - admin/explain output does not reveal secrets;
 - SitePack/export-import does not depend on raw table dumps.

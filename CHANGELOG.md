@@ -4,6 +4,7 @@
 
 - Added Larena access-platform knowledge after reviewing legacy access materials: audits and architecture work must check package operation registries, access levels/presets, operation value types, virtual targets, resource ownership, query-scope filtering, install bootstrap, cache invalidation and safe token narrowing. Access operations must be explicitly declared stable package capabilities, not auto-generated permissions for every PHP method.
 - Extended Larena access-platform knowledge with pluggable `AccessTargetProvider` guidance for users, user groups, organization units, employees, social/work groups, virtual roles, API clients, services and AI agents; platform admin is not an automatic content-access bypass.
+- Extended Larena access-platform knowledge with concrete audit expectations for `module.yaml` access metadata, provider contracts, starter presets and `AccessQueryScope` coverage for list/search/export flows.
 - Added SF5 `/simai` and `/simai.data` layer mapping guidance for Larena:
   preserve the system-library/project-overlay DNA through Laravel-native
   package resources, storage, registries and adapters instead of copying the
