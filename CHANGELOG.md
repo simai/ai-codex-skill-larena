@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Updated legacy detection guidance after the 2026-05-18 developer audit: package audits must check source-of-truth drift, trusted runtime surfaces, canonical scope/context loss, fail-open/plugin compatibility and API-token actor principal compatibility.
 - Added installed demo-provider smoke guidance for `larena/admin`, `larena/lang` and `larena/docara-admin`: provider discovery must be paired with authenticated target-route smoke, and package routes must not depend on removed admin legacy APIs such as `AdminController::simaiView()`.
 - Updated admin-platform guidance after `larena/admin` fake-async remediation: generic bulk actions are bounded sync by default, `async=true` must require real queue/job isolation, and package-local full-suite tests should use a stable workspace-aware bootstrap instead of temporary one-off files.
 - Updated package naming guidance so `larena/property` is the only active universal properties identity; old `larena/props`, `larena-props` and `simai/props` are historical only and must not be reintroduced as compatibility aliases without a real production need.
