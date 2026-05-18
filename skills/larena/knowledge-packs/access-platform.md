@@ -64,6 +64,29 @@ Do not confuse:
 
 Presets are UX-level shortcuts over one or more access levels, such as `read-only`, `content-editor`, `package-admin`, `integration-read-only`, or `AI safe`.
 
+## Target Providers
+
+Do not hardcode Bitrix24-style recipient categories into `larena/access`. Larena should cover those scenarios through pluggable `AccessTargetProvider` implementations.
+
+Baseline provider categories:
+
+- `user`: concrete users;
+- `user_group`: classic manually managed user groups;
+- `virtual_role`: `guest`, `authenticated`, `owner`, `admin`;
+- `organization`: organization units and unit trees;
+- `employee`: employees and employees in units;
+- `social_group`: social/workgroup membership if such package exists;
+- `api_service`: services, API clients, API keys and AI agents.
+
+Provider rules:
+
+- show a provider in admin UI only when enabled and supported by installed packages/profile;
+- every provider must expose target types, runtime resolver, cache dependencies and audit-safe explain fields;
+- tree targets such as `organization_unit_tree` mean selected unit plus descendants;
+- ordinary websites may have no organization/employee/social providers.
+
+Do not treat platform administrator as automatic content bypass. Separate platform administration, content access and audited break-glass/root policy.
+
 ## Operation Value Types
 
 Access is not always boolean. Check for these values and require package docs/tests when they appear:
