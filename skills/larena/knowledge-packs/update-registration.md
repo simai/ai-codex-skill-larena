@@ -477,6 +477,7 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 - `update-client-engine-contract.md`;
 - `release-pipeline-signing-contract.md`;
 - `update-server-catalog-data-model-contract.md`;
+- `update-operator-admin-ux-contract.md`;
 - `larena-update-package-tz.md`.
 
 Use `larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
@@ -488,6 +489,8 @@ Use `update-client-engine-contract.md` as the baseline for Larena-side installat
 Use `release-pipeline-signing-contract.md` as the baseline for source-to-artifact publication. The release pipeline must build from fixed clean source identity, validate package/manifests, generate immutable artifact metadata, require size/SHA-256/detached signatures, keep private signing keys outside normal update-server runtime, publish only after gates pass, and support normal lifecycle operations: publish, withdraw and revoke.
 
 Use `update-server-catalog-data-model-contract.md` as the baseline for update server catalog ownership. `larena/update` may own product/package/bundle/release/artifact/channel/route/plan/mirror/server-operation catalog data and redacted entitlement references, but raw customers, licenses, subscriptions, trials, coupons and site-binding truth stay in `larena-update-registration`; local execution state stays in the update client.
+
+Use `update-operator-admin-ux-contract.md` as the baseline for update-server operator interfaces. Admin surfaces should be table-first, explainable and audit-safe: show catalog hierarchy, lifecycle state, publish gates, artifact trust, rollout, mirrors, operation reports, redacted entitlement decisions and diagnostics; separate routine actions from destructive publish/withdraw/revoke/rollout/key actions; never expose raw secrets, private signing keys, raw tokens or raw registration/customer data.
 
 ## Multi-Region Update Distribution
 
