@@ -468,6 +468,16 @@ Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especia
 - `docs/architecture/universal-update-platform.md`;
 - `docs/roadmap/artifact-level-v2-update-flow.md`.
 
+In the Larena architecture repository, the current canonical Update Platform v2 docs live in `/Users/rim/Documents/GitHub/larena/docs/developer/update/`:
+
+- `update-platform-v2-architecture.md`;
+- `update-platform-v2-domain-model.md`;
+- `update-api-v2-contract.md`;
+- `update-package-manifest-contract.md`;
+- `larena-update-package-tz.md`.
+
+Use `larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
+
 ## Multi-Region Update Distribution
 
 Treat regional delivery as an update-platform concern, not as a package-local licensing check.
