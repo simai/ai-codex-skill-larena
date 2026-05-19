@@ -474,11 +474,14 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 - `update-platform-v2-domain-model.md`;
 - `update-api-v2-contract.md`;
 - `update-package-manifest-contract.md`;
+- `update-client-engine-contract.md`;
 - `larena-update-package-tz.md`.
 
 Use `larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
 
 Use `larena-update-registration-package-tz.md` as the package-level audit baseline for `larena-update-registration`. Treat it as the private registration/entitlement authority: customers, licenses, subscriptions, trials, coupons, site/installation bindings, entitlement decisions, signed entitlement snapshots, revocations, service-auth, redaction and regional/legal segment policy. It must not expose public client-site APIs, deliver artifacts, build update plans, or leak raw customer/license/coupon/payment data through `larena/update`.
+
+Use `update-client-engine-contract.md` as the baseline for Larena-side installation/update execution. The local client must be shared-hosting-safe, v2-first and fail-closed: it requests preview/plan/operation from update server, downloads only step-authorized artifacts, verifies size/SHA-256/signature/trust/compatibility locally, executes only declared handlers, stores resumable operation state, creates backups for risky steps, reports redacted status, and never calls registration server directly.
 
 ## Multi-Region Update Distribution
 
