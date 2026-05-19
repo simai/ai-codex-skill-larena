@@ -476,11 +476,13 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 - `update-package-manifest-contract.md`;
 - `update-client-engine-contract.md`;
 - `core-update-client-boundary-decision.md`;
+- `larena-update-client-package-tz.md`;
 - `release-pipeline-signing-contract.md`;
 - `update-server-catalog-data-model-contract.md`;
 - `update-operator-admin-ux-contract.md`;
 - `private-registration-api-hardening-contract.md`;
 - `update-platform-v2-integration-review.md`;
+- `update-platform-v2-team-handoff.md`;
 - `larena-update-package-tz.md`.
 
 Related canonical docs outside the update folder:
@@ -495,6 +497,8 @@ Use `update-client-engine-contract.md` as the baseline for Larena-side installat
 
 Use `core-update-client-boundary-decision.md` to keep `larena/core` thin. Core owns platform truth, package registry, dependency graph, compatibility matrix, doctor, managed/protected area policy and update preflight. Future `larena/update-client` owns API v2 client, local operation store, artifact download/verification, trust-store maintenance, backup/recovery, step execution and reporting. Do not merge update execution into core.
 
+Use `larena-update-client-package-tz.md` as the package-level baseline for the future local update client. Treat it as the customer-site install/update engine package: preview/plan flow, API v2 client, local operation store, artifact verification, trust store, backup/recovery, step execution, reporting and doctor checks. It must not own package registry truth, entitlement truth, update catalog, release signing, registration calls or admin shell rendering.
+
 Use `release-pipeline-signing-contract.md` as the baseline for source-to-artifact publication. The release pipeline must build from fixed clean source identity, validate package/manifests, generate immutable artifact metadata, require size/SHA-256/detached signatures, keep private signing keys outside normal update-server runtime, publish only after gates pass, and support normal lifecycle operations: publish, withdraw and revoke.
 
 Use `update-server-catalog-data-model-contract.md` as the baseline for update server catalog ownership. `larena/update` may own product/package/bundle/release/artifact/channel/route/plan/mirror/server-operation catalog data and redacted entitlement references, but raw customers, licenses, subscriptions, trials, coupons and site-binding truth stay in `larena-update-registration`; local execution state stays in the update client.
@@ -506,6 +510,8 @@ Use `private-registration-api-hardening-contract.md` as the baseline for closed-
 Use `update-platform-v2-integration-review.md` as the current cross-package consistency verdict. Treat the update/registration TZ layer as approved for documentation-phase review, not as permission to implement. Before coding, prepare gap analysis against the contracts and keep unresolved decisions such as update-client/core split, table names, signing-service implementation, audit baseline, admin framework details, region/legal policy and legacy Bitrix v1 aggregate policy out of implementation until accepted.
 
 Use `audit-implementation-baseline.md` before designing runtime update/registration/licensing/admin logs. Update/registration flows must emit common `AuditEvent` records through the audit baseline or a compatible temporary adapter; do not create package-local security/action log systems, do not store raw entitlement/customer/license/coupon payloads, and keep `correlation_id` across update-server and registration calls when possible.
+
+Use `update-platform-v2-team-handoff.md` when preparing developer review or resuming this layer in another thread. It summarizes reading order, accepted decisions, non-implementation boundaries, remaining decisions and recommended gap-analysis sequence.
 
 ## Multi-Region Update Distribution
 
