@@ -478,6 +478,8 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 
 Use `larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
 
+Use `larena-update-registration-package-tz.md` as the package-level audit baseline for `larena-update-registration`. Treat it as the private registration/entitlement authority: customers, licenses, subscriptions, trials, coupons, site/installation bindings, entitlement decisions, signed entitlement snapshots, revocations, service-auth, redaction and regional/legal segment policy. It must not expose public client-site APIs, deliver artifacts, build update plans, or leak raw customer/license/coupon/payment data through `larena/update`.
+
 ## Multi-Region Update Distribution
 
 Treat regional delivery as an update-platform concern, not as a package-local licensing check.
