@@ -213,6 +213,31 @@ Core/minimum CMS should be free/open. Paid products and solution layers should b
 
 Docara is currently treated as a paid product direction with a free documentation runtime/viewer layer. Do not classify the whole Docara surface as free merely because `docara-core` exists; keep professional editing, governance, revisions, import/sync, SitePack workflows, AI-assisted documentation, advanced search/branding, support and commercial updates in paid Docara Admin/Pro unless product strategy later changes.
 
+## Licensing Platform Direction
+
+Use `larena/licensing` as the canonical local runtime package name for Larena licensing. Treat licensing as a capability/entitlement platform, not as scattered package-local `pro` flags.
+
+Canonical project docs live in `simai/larena`:
+
+- `docs/developer/licensing/README.md`;
+- `docs/developer/licensing/licensing-platform-tz.md`;
+- `docs/developer/licensing/capability-contract.md`;
+- `docs/developer/licensing/entitlement-lifecycle.md`;
+- `docs/developer/licensing/trial-entitlements-and-abuse-prevention.md`;
+- `docs/developer/licensing/package-and-bundle-licensing.md`;
+- `docs/developer/licensing/admin-licensing-ux.md`.
+
+Core rules:
+
+- packages declare capabilities in package contracts and ask `CapabilityGate`; they must not implement independent licensing checks;
+- capability availability is not an access grant;
+- trial is a separate entitlement mode, not a temporary free license;
+- ordinary trial denies export, bulk export, API export and SitePack export by default;
+- development mode is explicit and never bypasses commercial/trial restrictions;
+- local development may use mocks, demo data, UI preview, contract tests and demonstrators, but not real paid cloud resources or production usage without entitlement;
+- paid/subscription expiration must be policy-based through `ExpirationPolicy`, not globally hardcoded;
+- customer sites use signed entitlement snapshots from `larena/update`; they must not call `larena-update-registration` directly.
+
 ## Monetization And Channel Rules
 
 Do not make the update server a purely paid feature. Larena adoption depends on a safe, simple update path for free users too.
@@ -432,3 +457,36 @@ Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especia
 
 - `docs/architecture/universal-update-platform.md`;
 - `docs/roadmap/artifact-level-v2-update-flow.md`.
+
+## Multi-Region Update Distribution
+
+Treat regional delivery as an update-platform concern, not as a package-local licensing check.
+
+Canonical Larena project doc:
+
+- `/Users/rim/Documents/GitHub/larena/docs/developer/update/multi-region-distribution-rfc.md`.
+
+Core rule:
+
+```text
+Build once, sign once, distribute many times, entitle regionally.
+```
+
+Separate these layers:
+
+- global artifact registry: package identity, versions, artifacts, size/SHA-256, signed manifests, compatibility, channels and capability metadata without customer PII;
+- regional entitlement authority: customer, license, trial, subscription, legal entity, billing provider and entitlement truth for a region;
+- artifact mirrors: regional/global file delivery without license decisions and without customer PII;
+- local client runtime: verifies signed entitlement snapshot, manifest, artifact size and SHA-256.
+
+Do not design one global customer/license/PII database by default. Do not duplicate package builds per region unless the artifact content itself is region-specific. Artifact mirrors must not decide whether a customer has rights; they only deliver signed artifacts allowed by update plans.
+
+Region selection must be explicit and explainable. Prefer license/entitlement region, customer-selected activation region, legal entity/billing region and admin-configured update endpoint. Treat IP geolocation only as a diagnostic hint, not as the source of truth.
+
+For future signed entitlement snapshots and update plans, include regional diagnostics such as `region`, `legal_entity`, `billing_provider`, `entitlement_authority`, allowed mirrors, allowed channels and data-residency policy. Keep registration private:
+
+```text
+Customer site -> regional update endpoint -> regional registration/entitlement authority
+```
+
+When discussing laws or regional data residency, state that architecture must be legal-review ready but is not itself a legal opinion.

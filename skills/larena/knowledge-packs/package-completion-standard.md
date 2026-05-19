@@ -12,6 +12,8 @@ Related documents:
 
 - `docs/developer/standards/package-audit-methodology.md`
 - `docs/developer/package-audit-template.md`
+- `docs/developer/package-architecture/README.md`
+- `docs/developer/package-architecture/package-tz-map.md`
 - `docs/developer/standards/package-contract.md`
 - `docs/developer/standards/module-yaml-schema.md`
 - `docs/developer/standards/README.md`
@@ -50,6 +52,16 @@ When auditing a package, always return:
 If the user asks in Russian or English to "check a package against the standard",
 "audit the package by standard", "проверь пакет на стандарт", or similar, treat it
 as a full package-completion audit request. Do not answer with a short opinion and do not rely on a single bulk validator pass.
+
+Before starting a large implementation, cleanup or standardization batch for a package, check `docs/developer/package-architecture/package-tz-map.md`.
+
+Allowed next actions depend on the package TZ status:
+
+- `ready-for-audit`: run deep package audit or implementation gap work against the documented package TZ/DNA.
+- `needs-consolidation`: first create or consolidate the package TZ; do not start broad code cleanup from scattered docs.
+- `needs-tz`: write package TZ before implementation, except urgent security/bug fixes.
+- `future-package`: do not demand L4 or package-local artifacts until the repository/package exists.
+- `absorbed/deprecated`: move useful behavior into the target package and stop treating the package as an independent long-term surface.
 
 Use two layers:
 
@@ -101,6 +113,8 @@ Check these layers before calling a package complete:
 15. **AI development contract**: read-first docs, MCP tools/resources if exposed, safe read-only operations, effective user/service/capability context, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
 16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
 17. **Code quality / legacy / logging review**: classify legacy as dangerous, active compatibility, dead or historical; document fallback; gate development logs; prefer package log channels; and record duplicated semantic logic cleanup items.
+
+When a package has paid, trial, enterprise, cloud, export, AI, MCP, API, bundle or marketplace behavior, its structured capability contract must follow the Larena licensing docs in `simai/larena/docs/developer/licensing/`. Package-local `pro` flags, local trial dates, hidden paid UI without backend enforcement, or direct calls to registration server are package-standard findings. The package should declare capabilities and use the future `larena/licensing` / `CapabilityGate` layer.
 
 Rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files. Stale claims such as "the package owns no database tables" block an `L4` verdict when migrations or owned data already exist.
 
