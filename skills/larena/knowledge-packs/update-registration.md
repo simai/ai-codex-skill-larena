@@ -479,6 +479,7 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 - `update-server-catalog-data-model-contract.md`;
 - `update-operator-admin-ux-contract.md`;
 - `private-registration-api-hardening-contract.md`;
+- `update-platform-v2-integration-review.md`;
 - `larena-update-package-tz.md`.
 
 Use `larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
@@ -494,6 +495,8 @@ Use `update-server-catalog-data-model-contract.md` as the baseline for update se
 Use `update-operator-admin-ux-contract.md` as the baseline for update-server operator interfaces. Admin surfaces should be table-first, explainable and audit-safe: show catalog hierarchy, lifecycle state, publish gates, artifact trust, rollout, mirrors, operation reports, redacted entitlement decisions and diagnostics; separate routine actions from destructive publish/withdraw/revoke/rollout/key actions; never expose raw secrets, private signing keys, raw tokens or raw registration/customer data.
 
 Use `private-registration-api-hardening-contract.md` as the baseline for closed-contour update-to-registration calls. Private registration endpoints must use service-auth, scoped service identity, replay protection, idempotency for mutations, DTO-only responses, redaction at registration and update-server boundaries, signed entitlement snapshots, controlled errors, rate limits and audit. Customer sites, AI tools and partner packages must never call registration directly.
+
+Use `update-platform-v2-integration-review.md` as the current cross-package consistency verdict. Treat the update/registration TZ layer as approved for documentation-phase review, not as permission to implement. Before coding, prepare gap analysis against the contracts and keep unresolved decisions such as update-client/core split, table names, signing-service implementation, audit baseline, admin framework details, region/legal policy and legacy Bitrix v1 aggregate policy out of implementation until accepted.
 
 ## Multi-Region Update Distribution
 
