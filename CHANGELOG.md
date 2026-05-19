@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added Larena update-domain boundary guidance: keep `update.simai.ru`,
+  `update.simai.io`, and `ru.update.simai.io` roles separate in docs, clients,
+  rollout plans, smoke evidence, and legal/commercial segment planning.
 - Added Larena access-platform knowledge after reviewing legacy access materials: audits and architecture work must check package operation registries, access levels/presets, operation value types, virtual targets, resource ownership, query-scope filtering, install bootstrap, cache invalidation and safe token narrowing. Access operations must be explicitly declared stable package capabilities, not auto-generated permissions for every PHP method.
 - Extended Larena access-platform knowledge with pluggable `AccessTargetProvider` guidance for users, user groups, organization units, employees, social/work groups, virtual roles, API clients, services and AI agents; platform admin is not an automatic content-access bypass.
 - Extended Larena access-platform knowledge with concrete audit expectations for `module.yaml` access metadata, provider contracts, starter presets and `AccessQueryScope` coverage for list/search/export flows.

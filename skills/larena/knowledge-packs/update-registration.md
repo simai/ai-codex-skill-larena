@@ -31,6 +31,16 @@ Current registration code still has legacy API routes and an authorization TODO 
 
 Key V2 direction is valid: keep public key format stable while storing fingerprint, cipher, mask, last4, version and migration timestamp. Use dry-run migration before writes and do not commit real keys, coupon values, ciphers, raw responses or customer data.
 
+## Update Domain Boundary
+
+Keep platform/runtime domains explicit:
+
+- `update.simai.ru` is the current update server for Bitrix products and legacy Bitrix update-client flows.
+- `update.simai.io` is the planned global Larena/update platform hub and interface for partners/developers.
+- `ru.update.simai.io` is the planned Russia legal/commercial segment update server for Larena distribution.
+
+Shared update-platform code and standards are allowed, but do not mix these domains in docs, clients, rollout plans or smoke evidence. Larena clients should not default to `update.simai.ru`, and Bitrix legacy aggregate API behavior must not become the target Larena update flow. Segment endpoints should be based on legal/commercial operating segments, not necessarily one endpoint per country.
+
 ## Canonical Alias Migration Rule
 
 Do not mass-rename legacy update-server internals in one patch. Use alias-first migration:
