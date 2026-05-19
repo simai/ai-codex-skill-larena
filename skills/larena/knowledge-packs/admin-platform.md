@@ -9,6 +9,14 @@ Canonical DNA:
 
 `larena/admin` is the object-based admin interface platform, not a collection of hardcoded Blade screens. Packages extend it through governed areas, slots, contributions, renderers, context and manifest metadata.
 
+Contract rule:
+
+- `module.yaml.admin` is a package summary/link layer.
+- Simple packages may declare a small menu/page summary in `module.yaml.admin`.
+- Complex package UI should use `admin.yaml` as the source contract for areas, slots, contributions, renderers, actions and diagnostics.
+- Security Admin UX is a specialized security/runtime surface that uses the common admin contribution model; it is not a separate generic admin generator.
+- Third-party packages must extend admin through `larena/admin` contributions, never by editing admin shell/templates directly.
+
 Future `larena/layout` shares the same composition philosophy but owns public/content page composition: pages, sections, atomic blocks, data providers, renderers and editor schemas. The admin may host the layout editor, but the page/layout model must remain a separate package domain.
 
 ## Core Terms

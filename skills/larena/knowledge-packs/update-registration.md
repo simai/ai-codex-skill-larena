@@ -400,7 +400,7 @@ Registration service-auth should also bound trusted internal traffic:
 - `REGISTRATION_SERVICE_AUTH_AUDIT_SUCCESS_READS=false`
 - `REGISTRATION_SERVICE_AUTH_AUDIT_SUCCESS_MUTATIONS=true`
 
-Failures, bad signatures, replay attempts and rate-limit blocks should be logged as warnings without secrets. Successful mutations should be logged as info. Successful reads should be opt-in to avoid log noise. This log audit is the first boundary and does not replace later DB-backed entitlement audit events.
+Failures, bad signatures, replay attempts and rate-limit blocks should be logged as warnings without secrets. Successful mutations should be logged as info. Successful reads should be opt-in to avoid log noise. This log audit is the first boundary and does not replace later DB-backed entitlement audit events. Prefer routing these records through the future `audit.yaml` event contract with recommended sinks/channels such as `larena.update` or `larena.licensing`, instead of package-local ad hoc log files.
 
 ## Signed Manifest Runtime Publishing
 

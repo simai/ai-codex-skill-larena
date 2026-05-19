@@ -84,10 +84,11 @@ For P0 platform subsystems, `capabilities` and `owned_data` should be treated as
 
 For official Larena packages, `module.yaml` summarizes and links operation contracts but must not replace them:
 
+- if the package has complex admin contributions, it should ship `admin.yaml`;
 - if the package has REST/API operations, it must ship `api.yaml`;
 - if the package has access operations, it must ship `access.yaml`;
 - if the package writes audit events, it must ship `audit.yaml`;
-- `module.yaml.permissions`, `module.yaml.api_operations` and `module.yaml.audit` remain summary/reference fields.
+- `module.yaml.admin`, `module.yaml.permissions`, `module.yaml.api_operations` and `module.yaml.audit` remain summary/reference fields.
 
 ## Required Identity Fields
 
