@@ -82,6 +82,13 @@ For P0 platform subsystems, `capabilities` and `owned_data` should be treated as
 
 `owned_data` should declare the tables, config files, storage areas, value identities and scope models owned by the package. This prevents future packages from silently inventing parallel settings, access, props, storage or API models.
 
+For official Larena packages, `module.yaml` summarizes and links operation contracts but must not replace them:
+
+- if the package has REST/API operations, it must ship `api.yaml`;
+- if the package has access operations, it must ship `access.yaml`;
+- if the package writes audit events, it must ship `audit.yaml`;
+- `module.yaml.permissions`, `module.yaml.api_operations` and `module.yaml.audit` remain summary/reference fields.
+
 ## Required Identity Fields
 
 Every official package should declare:
@@ -190,7 +197,8 @@ Example: `larena/setting` owns `sf_setting`, `sf_setting_value` and category JSO
 
 ## API Safety Rule
 
-If a package exposes API behavior, declare it under `api_operations`.
+If a package exposes API behavior, declare the operation source contract in `api.yaml`.
+Use `module.yaml.api_operations` only as summary/link metadata for validators and package overview.
 
 Public operations require explicit operation metadata, permission/access model, and audit/risk controls where needed.
 

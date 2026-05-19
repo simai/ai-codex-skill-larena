@@ -131,7 +131,14 @@ Default bindings must be visible in install reports. Write/delete/admin permissi
 
 ## `access.yaml` And API Operation Link
 
-For new Larena package architecture, prefer an explicit package-local `access.yaml` for non-trivial packages and link REST/API operations to access operations by stable operation key.
+For official Larena packages, an explicit package-local `access.yaml` is mandatory whenever the package declares at least one access operation. Link REST/API operations to access operations by stable operation key.
+
+Rule:
+
+```text
+no access operations -> access.yaml is not required
+one or more access operations -> access.yaml is required
+```
 
 Do not collapse REST and access into one ambiguous file:
 

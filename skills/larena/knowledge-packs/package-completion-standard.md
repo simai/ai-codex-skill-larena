@@ -114,6 +114,14 @@ Check these layers before calling a package complete:
 16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
 17. **Code quality / legacy / logging review**: classify legacy as dangerous, active compatibility, dead or historical; document fallback; gate development logs; prefer package log channels; and record duplicated semantic logic cleanup items.
 
+`module.yaml` summarizes package contracts, but it must not replace
+operation-level contract files. If the package declares one or more REST/API
+operations, require a separate `api.yaml`. If it declares one or more access
+operations, require a separate `access.yaml`. If it writes one or more audit
+events, require a separate `audit.yaml`. Treat `module.yaml.permissions`,
+`module.yaml.api_operations` and `module.yaml.audit` as summary/reference fields
+for audits, not as the canonical source of truth.
+
 When a package has paid, trial, enterprise, cloud, export, AI, MCP, API, bundle or marketplace behavior, its structured capability contract must follow the Larena licensing docs in `simai/larena/docs/developer/licensing/`. Package-local `pro` flags, local trial dates, hidden paid UI without backend enforcement, or direct calls to registration server are package-standard findings. The package should declare capabilities and use the future `larena/licensing` / `CapabilityGate` layer.
 
 Rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files. Stale claims such as "the package owns no database tables" block an `L4` verdict when migrations or owned data already exist.

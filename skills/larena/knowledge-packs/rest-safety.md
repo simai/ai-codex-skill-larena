@@ -37,8 +37,11 @@ api.yaml
 access.yaml
 ```
 
+- no REST/API operations -> `api.yaml` is not required;
+- one or more REST/API operations -> `api.yaml` is required;
 - `api.yaml` is the source for public/internal API operation metadata: route, params, handler, auth mode, execution policy, response, rate limit, cache/queue/audit policy.
 - `access.yaml` is the source for permission semantics: operation key, resource, access values, target providers, resolver/query scope and explain behavior.
+- `module.yaml.api_operations` may summarize or link to API contracts, but must not be the source of truth.
 - REST operation keys and access operation keys should be linked and often identical, for example `docara.page.update`, but REST and access contracts must stay conceptually separate.
 
 For list/search/export, access must return or require an access-aware query scope. Do not allow a broad REST query followed by ad hoc filtering in the controller, AI tool or client.
