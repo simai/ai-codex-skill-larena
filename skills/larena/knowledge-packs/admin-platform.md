@@ -84,6 +84,38 @@ Example slots:
 - Package-local admin tests should use a stable bootstrap/harness that resolves sibling Larena packages by workspace root and known naming aliases such as `larena-2fa` for `two-fa`; avoid one-off temporary bootstrap files as the only path to full-suite execution.
 - Treat `simai/admin`, `Simai\Admin`, `simai_admin`, `/simai/admin`, legacy plugin API, access code aliases and the fail-open bootstrap switch as explicit compatibility surfaces. They must be tracked in `docs/developer/legacy/registry.json` and not removed during routine L4 standardization.
 
+## Security Admin UX
+
+When designing or auditing admin surfaces for `auth`, `access`, `audit`, `rest`, `mcp`, settings/security policy, update/licensing capabilities or package exposure, use the Security Admin UX contract from `simai/larena/docs/developer/admin/security-admin-ux-tz.md`.
+
+Security UI must not expose the operator to a raw table of hundreds of scopes as the primary model. The first UX layer should be:
+
+```text
+EntryObject / access target
+  -> package
+  -> profile or preset
+  -> operation overrides only when needed
+  -> effective preview
+  -> explain
+  -> audit trail
+```
+
+Security admin actions must follow the runtime lifecycle:
+
+```text
+admin intent
+  -> contribution/action metadata
+  -> auth EntryObject
+  -> token/session/channel constraints
+  -> access operation check
+  -> safety warning/fresh auth if needed
+  -> backend action
+  -> audit event
+  -> explain/result state
+```
+
+Do not treat hidden UI as a security boundary. Every security write action must repeat backend permission checks and produce audit where required.
+
 ## Current Core Package Gaps To Watch
 
 - Final package contribution manifest is not yet fully connected to `module.yaml` capability metadata.

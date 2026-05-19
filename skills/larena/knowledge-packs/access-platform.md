@@ -129,6 +129,25 @@ Recommended starter presets:
 
 Default bindings must be visible in install reports. Write/delete/admin permissions should not be granted broadly by default.
 
+## `access.yaml` And API Operation Link
+
+For new Larena package architecture, prefer an explicit package-local `access.yaml` for non-trivial packages and link REST/API operations to access operations by stable operation key.
+
+Do not collapse REST and access into one ambiguous file:
+
+- `api.yaml` describes external route, params, handler, auth mode, execution policy and response;
+- `access.yaml` describes protected business operation, resource, allowed values, target providers, resolver/query scope and audit/explain behavior;
+- `module.yaml` summarizes capabilities and references package contracts.
+
+Example relation:
+
+```text
+api.yaml:    docara.page.update -> POST /api/v1/docara/pages/{page_id} -> PageService@update
+access.yaml: docara.page.update -> docara.page resource -> yes/own/own_group -> PageAccessResolver
+```
+
+Treat `module.class.method` as an internal/dev-runner implementation address, not as the source of access truth. Runtime registries may cache/sync `api.yaml` and `access.yaml`, but package contracts remain rebuildable source-of-truth. Unknown or unsynced access operations must deny by default.
+
 ## Operation Value Types
 
 Access is not always boolean. Check for these values and require package docs/tests when they appear:

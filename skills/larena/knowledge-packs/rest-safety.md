@@ -25,6 +25,24 @@ Unsafe direction:
 
 - arbitrary public method runner in production.
 
+## API Operation Contract
+
+When designing Larena REST/API, use operation contracts rather than exposing PHP methods directly.
+
+Preferred package-local structure:
+
+```text
+module.yaml
+api.yaml
+access.yaml
+```
+
+- `api.yaml` is the source for public/internal API operation metadata: route, params, handler, auth mode, execution policy, response, rate limit, cache/queue/audit policy.
+- `access.yaml` is the source for permission semantics: operation key, resource, access values, target providers, resolver/query scope and explain behavior.
+- REST operation keys and access operation keys should be linked and often identical, for example `docara.page.update`, but REST and access contracts must stay conceptually separate.
+
+For list/search/export, access must return or require an access-aware query scope. Do not allow a broad REST query followed by ad hoc filtering in the controller, AI tool or client.
+
 ## Swagger/OpenAPI
 
 Swagger should be token-aware and ACL-aware:
