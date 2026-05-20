@@ -14,12 +14,14 @@ Owns Larena platform boundaries, package graph, SF5/Bitrix compatibility, and pr
 - [kernel/larena-dna.md](../../kernel/larena-dna.md)
 - [kernel/platform-scope.md](../../kernel/platform-scope.md)
 - [knowledge-packs/product-architecture.md](../../knowledge-packs/product-architecture.md)
+- [knowledge-packs/core-platform.md](../../knowledge-packs/core-platform.md)
 - [knowledge-packs/ai-agent-service-architecture.md](../../knowledge-packs/ai-agent-service-architecture.md)
 - [knowledge-packs/package-map.md](../../knowledge-packs/package-map.md)
 
 ## Gatekeeper Rules
 
 - Keep `simai/larena` as bootstrap app, not as a hidden monorepo replacement.
+- Keep future `larena/core` thin: registry, graph, compatibility, doctor, preflight and machine reports; not auth/access/admin/settings/rest/audit/licensing/update execution.
 - Treat package implementation gaps as diagnostics before changing product direction.
 - Preserve Laravel-native implementation while aligning shared concepts with Bitrix/SF5.
 - Reject designs that require the unfinished update server for the current public install path.
