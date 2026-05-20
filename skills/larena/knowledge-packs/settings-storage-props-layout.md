@@ -17,6 +17,23 @@ Reference direction from Bitrix `simai.main`:
 
 Larena question: evolve `larena/setting` toward this model or split lower-level platform settings package.
 
+Canonical central package TZ now lives at `/Users/rim/Documents/GitHub/larena/docs/developer/setting/setting-package-tz.md`.
+
+Use it as the audit baseline for `larena/setting`. Treat the package as the Larena configuration layer: schema packs, runtime schema registry, `namespace + key`, `site_id + level + scope_id`, resolver/explain, pending review, config-KV and SitePack config-only adapter. Do not let settings become generic business-data storage, file storage, property storage, REST gateway, MCP write surface, licensing truth or update-server install policy.
+
+When reviewing `larena/setting`, check its links to:
+
+- `larena/core` for registry/doctor/preflight status;
+- `larena/auth` for EntryObject/actor identity;
+- `larena/access` for settings operations;
+- `larena/admin` for operator UX;
+- `larena/property` for typed controls only, not value ownership;
+- `larena/audit` for future normalized audit events;
+- `larena/rest` and `larena/mcp` for governed API/tool exposure;
+- `larena/licensing` for capabilities, without local pro flags;
+- `larena/lang` for schema labels/messages;
+- SitePack/update for config transport and schema-pack delivery.
+
 When moving an existing `category + code` settings implementation toward Larena Settings DNA, do not start with a destructive schema rewrite. First add a compatibility layer:
 
 - value object for `namespace + key` identity mapped to the current legacy code;
@@ -139,6 +156,24 @@ Observed types include:
 Larena should separate property storage, UI render/edit/filter contracts and CRUD integration.
 
 Current `larena/property` is a file-based property type/template package, not the final universal property value model. Historical `larena/props` / `simai/props` aliases were removed before production adoption and must not be used as active package identities.
+
+Canonical central package TZ now lives at `/Users/rim/Documents/GitHub/larena/docs/developer/property/property-package-tz.md`.
+
+Use it as the audit baseline for `larena/property`. Treat the package as the typed field/property contract layer: property types, definitions, host binding, value lifecycle, render model, modes/surfaces, provider bindings, template policy, import/export shape and property demonstrator. Do not overclaim the current implementation as the final entity-bound value subsystem until `larena/storage`, `larena/filesystem`, provider registry and SitePack property profile are designed and implemented.
+
+When reviewing `larena/property`, check its links to:
+
+- `larena/core` for package registry/doctor status;
+- `larena/setting` for using property controls in settings UI without owning settings values;
+- `larena/admin` for shell/contributions and operator UX;
+- `larena/access` for property operations;
+- `larena/audit` for definition/value/template/import/export events;
+- `larena/filesystem` for file/blob references;
+- `larena/storage` for entity-bound records;
+- `larena/rest` and `larena/mcp` for safe DTO/tool exposure;
+- `larena/licensing` for advanced property packs/capabilities;
+- `larena/lang` for labels/options/messages;
+- SitePack/update for portable property profiles and package delivery.
 
 After the 2026-05-13 L4 batch, treat `larena/property` as `L4 Demonstration Ready` for its current file-backed definition/rendering/admin boundary. It has canonical package identity, `module.yaml`, architecture/demonstrator/roadmap docs, a package audit report, `property:doctor`, explicit `property.access:<operation>` route policy and installed-site smoke evidence.
 
