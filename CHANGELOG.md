@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added Larena/Laravel `client-*` repository guidance: customer project
+  repositories use `project/files/` as the application-root mirror,
+  `project/migrations/` for one-off backfill/repair operations, `deploy/` for
+  backup/deploy/smoke/rollback, and ignored `source/` for raw working material.
 - Added Larena update-domain boundary guidance: keep `update.simai.ru`,
   `update.simai.io`, and `ru.update.simai.io` roles separate in docs, clients,
   rollout plans, smoke evidence, and legal/commercial segment planning.

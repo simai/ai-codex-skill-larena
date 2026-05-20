@@ -12,6 +12,11 @@
 2. Определи проверки и тесты (сначала таргетно, затем шире при необходимости).
 3. Зафиксируй список `Do Not Touch`.
 4. Зафиксируй риски и путь rollback.
+5. Если это клиентская доработка в `client-*` репозитории, используй стандарт
+   `/Users/rim/Documents/GitHub/ai-codex-skill-teamlead/docs/client-project-repository-standard.md`:
+   `project/files/` зеркалит корень Larena/Laravel приложения, `project/migrations/`
+   хранит одноразовые backfill/repair операции, `deploy/` хранит backup/deploy/
+   smoke/rollback, а `source/` остается ignored рабочим слоем.
 
 ## Порядок выполнения
 1. Прочитай текущее поведение в коде и `SPEC.md`.

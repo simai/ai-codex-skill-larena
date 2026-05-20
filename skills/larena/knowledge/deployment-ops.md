@@ -64,3 +64,27 @@ tools/release_module.sh \
 
 ## Минимальный релизный чеклист
 - Используй `checklists/release-checklist.md`.
+
+## Клиентские репозитории `client-*`
+
+Когда Larena/Laravel доработка выполняется в клиентском репозитории `client-*`,
+это проектная поставка, а не выпуск reusable package по умолчанию. Используй
+общий стандарт:
+
+`/Users/rim/Documents/GitHub/ai-codex-skill-teamlead/docs/client-project-repository-standard.md`
+
+Правила:
+
+- `project/files/` зеркалит корень приложения: `app/`, `routes/`,
+  `resources/`, `config/`, `database/migrations/`, если эти файлы являются
+  частью поставки;
+- `project/migrations/` хранит одноразовые backfill/repair скрипты и операции,
+  которые не должны становиться частью обычного Laravel migration lifecycle;
+- `deploy/` хранит inventory, backup, deploy, smoke, rollback, cache clear,
+  `composer dump-autoload`, frontend build/sync и artisan-команды;
+- `docs/` фиксирует архитектуру, deploy, rollback, operations и handoff;
+- `source/` остается ignored для intake, evidence, logs, raw client materials и
+  временных отчетов.
+
+Если проектная доработка стала reusable package, вынеси core в отдельный
+пакетный репозиторий, а в `client-*` оставь adapter/config/migrations/deploy.
