@@ -21,6 +21,14 @@ Canonical central package TZ now lives at `/Users/rim/Documents/GitHub/larena/do
 
 Use it as the audit baseline for `larena/setting`. Treat the package as the Larena configuration layer: schema packs, runtime schema registry, `namespace + key`, `site_id + level + scope_id`, resolver/explain, pending review, config-KV and SitePack config-only adapter. Do not let settings become generic business-data storage, file storage, property storage, REST gateway, MCP write surface, licensing truth or update-server install policy.
 
+When reviewing setting schema, keep definition, renderer and value separate:
+
+- package-local schema packs are the source of truth for setting definitions;
+- runtime values never define which settings exist;
+- settings forms render fields through `larena/property` universal property contracts;
+- labels, help texts, option titles and validation messages resolve through `larena/lang`;
+- form rendering must not create, mutate or infer schema definitions from existing values.
+
 When reviewing `larena/setting`, check its links to:
 
 - `larena/core` for registry/doctor/preflight status;
