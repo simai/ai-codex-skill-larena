@@ -35,6 +35,15 @@ Also keep runtime settings separate from bootstrap configuration:
 - examples include database connection, app key, environment/debug mode, early cache/session/log drivers, emergency/safe-mode flags and protected runtime paths;
 - `larena/setting` may expose read-only diagnostics for bootstrap config after boot, but must not own these values.
 
+When schema-pack details matter, use the central contract:
+
+- `/Users/rim/Documents/GitHub/larena/docs/developer/setting/schema-pack-contract.md`;
+- `/Users/rim/Documents/GitHub/larena/docs/developer/schemas/settings-schema-pack.schema.json`.
+
+For future implementation, validate package-local `settings.schema-pack.json`
+against the JSON Schema, then run schema-publish dry-run. Treat this as an
+implementation contract, not just documentation.
+
 When reviewing `larena/setting`, check its links to:
 
 - `larena/core` for registry/doctor/preflight status;
