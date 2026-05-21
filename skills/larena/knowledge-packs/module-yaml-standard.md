@@ -29,6 +29,29 @@ php artisan larena:validate-packages --contract --strict --path=/path/to/larena-
 
 Contract mode checks capabilities, owned data, endpoint session modes, declared rate limits, documentation paths, concept alignment, audit events, rollback notes, health checks, external-network policy and operational risks. Until every installed `vendor/larena/*` release contains expanded manifests, do not treat a full default `--contract --strict` scan of the starter app as the baseline gate; target the package repositories being reviewed or released.
 
+Capability review is now a required planning layer before implementing or standardizing packages with commercial impact. Use the central docs in `simai/larena`:
+
+- `docs/developer/licensing/capability-review-plan.md`;
+- `docs/developer/licensing/capability-registry.yaml`;
+- `docs/developer/licensing/capability-registry.md`;
+- `docs/developer/licensing/capability-contract.md`.
+- `docs/developer/licensing/capabilities-yaml-contract.md`.
+
+If a feature may later become paid, free, trial-only, limited, region/customer-specific, bundle-specific or disabled, the package should declare a stable capability key early, even if the first release makes that feature free. Update/registration can change policy without package code changes only for declared capabilities that are actually enforced through `CapabilityGate`.
+
+Do not accept local `pro` flags, package-specific trial dates, or admin settings that unlock commercial capabilities. Package code should ask `larena/licensing` through `CapabilityGate`; entitlement truth comes from signed update/registration snapshots.
+
+For official Larena system/product packages, prefer package-local `capabilities.yaml` for detailed capability declarations and keep `module.yaml` as summary/link metadata:
+
+```yaml
+contracts:
+  capabilities: capabilities.yaml
+```
+
+Inline `module.yaml.capabilities` is acceptable only for small early drafts. During package audits, require `capabilities.yaml` when the package exposes export, cloud, AI, MCP, API, admin write, update delivery, trial, bundle or paid surfaces.
+
+The first machine-readable schema baseline for package-local capabilities lives in `simai/larena/docs/developer/schemas/capabilities.schema.json`. When auditing examples or package manifests, at minimum check JSON/YAML syntax and then apply the future validator gates from `docs/developer/licensing/capability-validator-gates.md`.
+
 As of the first full local alignment pass, the 14 local Larena repositories can be checked together by passing explicit paths for `larena-setting`, `larena-filesystem`, `larena-access`, `larena-auth`, `larena-2fa`, `larena-rest`, `larena-rest-doc`, `larena-property`, `larena-admin`, `larena-lang`, `larena-docara-core`, `larena-docara-admin`, `larena-update`, and `larena-update-registration`.
 
 ## Purpose
@@ -187,6 +210,10 @@ The contract layer belongs in `module.yaml` plus `docs/developer/concept-alignme
 Before calling a P0 package ready, verify:
 
 - every important capability is declared;
+- every potentially monetized/limited capability has a stable key in `capabilities.yaml` or `module.yaml.capabilities`;
+- service/controller/admin/API/MCP/command paths call `CapabilityGate` where the capability applies;
+- fallback behavior is explicit for locked/limited capabilities;
+- trial/export/cloud/AI/API/MCP capabilities declare restrictions and audit expectations;
 - owned tables/config/storage are explicit;
 - endpoints have session mode and permission metadata;
 - endpoint rate limits are declared under `rate_limits`;

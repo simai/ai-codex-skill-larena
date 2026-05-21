@@ -193,7 +193,23 @@ When inspecting or extending `larena/property`, require an explicit safety gate 
 
 ## Storage
 
-Storage 2.0 reference:
+For Larena, treat `storage` as a Larena-native universal dynamic data storage layer. It stores arbitrary dynamic structured data through explicit storage structures, typed property bindings, access-aware queries and SitePack import/export.
+
+Terminology:
+
+- In user-facing and Russian developer docs prefer "storage structure" / "структура хранилища" or "описание хранилища".
+- Use `schema` only for machine-readable contracts such as `storage.schema.yaml`.
+- Avoid "constructor" unless it clearly means the admin UI for creating/configuring storage structures.
+
+Bitrix `simai.storage` is a reference and migration source, not the Larena runtime blueprint. Compatibility with Bitrix means data transport through SitePack:
+
+```text
+Bitrix source adapter -> SitePack storage profile -> Larena storage import
+```
+
+Do not copy Bitrix admin UI, `D/R/W` rights, table naming, module installer mechanics, or per-storage generated tables as mandatory Larena baseline.
+
+Storage 2.0 reference ideas worth preserving:
 
 - storage registry metadata, not arbitrary user-data table;
 - stable `code`;
@@ -204,6 +220,18 @@ Storage 2.0 reference:
 - logging flag;
 - `settings_json`;
 - audit fields.
+
+History/revisions are an optional capability, not a mandatory baseline for every storage. Public/private is not a storage type; visibility is decided by access policy, publication state and target surface.
+
+When reviewing or drafting `larena/storage`, require these checks from the Storage TZ:
+
+- explicit storage lifecycle: draft, validate, dry-run, publish/apply, active, change proposal, dry-run impact, background migration/apply, archive/disable;
+- heavy operations must be dry-run/preflight first and then background jobs with progress, verification, report and audit event;
+- formal Filter/Sort DSL with type-aware allowed operators, no arbitrary SQL and seek/cursor pagination;
+- query planner must be explainable and choose between canonical values, typed indexes, detached/index tables, projections and search adapters;
+- admin UX must expose consequences, progress, query/access explain and health diagnostics, not low-level database controls;
+- acceptance must cover value shapes, localization, file references, access-filtered lists/counts, cursor pagination, projection fallback and import dry-run/idempotency;
+- delivery must be phased: R1 Core, R2 workflow data, R3 sensitive data, R4 search, R5 optimization tooling, R6 advanced admin/enterprise.
 
 Compare with Larena filesystem/assets and SitePack SHA-256 blob conventions.
 
