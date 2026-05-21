@@ -29,6 +29,12 @@ When reviewing setting schema, keep definition, renderer and value separate:
 - labels, help texts, option titles and validation messages resolve through `larena/lang`;
 - form rendering must not create, mutate or infer schema definitions from existing values.
 
+Also keep runtime settings separate from bootstrap configuration:
+
+- values required before the settings database can be read belong to Laravel/Core bootstrap config;
+- examples include database connection, app key, environment/debug mode, early cache/session/log drivers, emergency/safe-mode flags and protected runtime paths;
+- `larena/setting` may expose read-only diagnostics for bootstrap config after boot, but must not own these values.
+
 When reviewing `larena/setting`, check its links to:
 
 - `larena/core` for registry/doctor/preflight status;
