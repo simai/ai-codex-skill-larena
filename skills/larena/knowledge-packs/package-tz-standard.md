@@ -2,6 +2,14 @@
 
 Use this knowledge pack when a user asks to prepare, audit, improve or compare Larena package TZ documents.
 
+Larena Package TZ is a Larena-specific profile of the universal SIMAI TZ Standard owned by `$dev`:
+
+```text
+/Users/rim/Documents/GitHub/ai-codex-skill-dev/skills/dev/rules/tz-standard.md
+```
+
+Use the universal standard for T0-T5 maturity, implementation-readiness discipline and AI implementation gates. Use this Larena profile for package graph, Larena contracts and repository validators.
+
 Canonical project standard:
 
 ```text
