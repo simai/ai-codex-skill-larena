@@ -1,6 +1,6 @@
 ---
 name: larena
-description: Build, diagnose, document, and evolve Larena, the SIMAI Laravel CMS/application platform. Use for Larena application and larena/* package work, modular admin, installer/update flows, registration/licensing integration, SitePack bridge, Docara product proof, REST/API safety, settings/storage/props/layout alignment, migration references from Bitrix/older SIMAI systems, release readiness, QA, and repository knowledge capture.
+description: Build, diagnose, document, and evolve Larena, the SIMAI Laravel CMS/application platform. Use for Larena application and larena/* package work, modular admin, installer/update flows, registration/licensing integration, SitePack bridge, Docara product proof, REST/API safety, settings/storage/props/layout/search alignment, migration references from Bitrix/older SIMAI systems, release readiness, QA, and repository knowledge capture.
 ---
 
 # Larena
@@ -169,6 +169,7 @@ Use old developer-authored materials when selected by routing:
 - General package rules: [knowledge/simai-package-rules.md](./knowledge/simai-package-rules.md)
 - Current package manifest standard: [knowledge-packs/module-yaml-standard.md](./knowledge-packs/module-yaml-standard.md)
 - Core platform baseline: [knowledge-packs/core-platform.md](./knowledge-packs/core-platform.md)
+- Search platform baseline: [knowledge-packs/search-platform.md](./knowledge-packs/search-platform.md)
 - Package naming standard: [knowledge-packs/package-naming-standard.md](./knowledge-packs/package-naming-standard.md)
 - Package completion/readiness standard: [knowledge-packs/package-completion-standard.md](./knowledge-packs/package-completion-standard.md)
 - Package TZ standard: [knowledge-packs/package-tz-standard.md](./knowledge-packs/package-tz-standard.md)

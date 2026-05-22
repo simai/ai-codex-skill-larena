@@ -1,14 +1,15 @@
 # Data Settings Props
 
-Owns settings, storage, universal properties, page/layout data and cross-platform data semantics.
+Owns settings, storage, universal properties, search/indexing, page/layout data and cross-platform data semantics.
 
 ## Load When
 
-- task touches `larena/setting`, `larena/property`, storage, filesystem metadata, page constructor data, import/export formats or Bitrix/SF5 data model alignment.
+- task touches `larena/setting`, `larena/property`, storage, filesystem metadata, search/indexing, page constructor data, import/export formats or Bitrix/SF5 data model alignment.
 
 ## Required Knowledge
 
 - [knowledge-packs/settings-storage-props-layout.md](../../knowledge-packs/settings-storage-props-layout.md)
+- [knowledge-packs/search-platform.md](../../knowledge-packs/search-platform.md)
 - [knowledge/modules/access.md](../../knowledge/modules/access.md)
 
 ## Gatekeeper Rules
@@ -17,3 +18,4 @@ Owns settings, storage, universal properties, page/layout data and cross-platfor
 - Prefer scoped settings with schema/value/history/pending path where product needs it.
 - Preserve stable codes/identifiers for export/import and update packages.
 - Consider element-level ACL, encryption and logging for storage-like entities.
+- Treat search as access-aware, locale-aware and bounded; do not let search become client-side filtering over broad datasets.
