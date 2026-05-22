@@ -42,6 +42,8 @@ Cross-package feature adoption:
 /Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/README.md
 /Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
 composer feature-graph:validate
+composer feature-graph:gaps
+php scripts/list-package-feature-gaps.php --package=larena/<name>
 ```
 
 ## Core Rule
@@ -131,6 +133,18 @@ Feature graph is required when a feature spans several packages, for example:
 
 A package TZ can be structurally strong but still not ready for implementation if its required feature graph adoption is `needs_design`, `needs_mapping` or `partially_described` for a critical feature.
 
+For package-specific audits, include:
+
+```bash
+php scripts/list-package-feature-gaps.php --package=larena/<name>
+```
+
+T4 gate:
+
+```text
+A package cannot be promoted to T4 if it has an unresolved required critical feature adoption with status needs_design or needs_mapping, unless the package TZ explicitly documents a safe deferral that does not affect the implementation target.
+```
+
 ## Validation Rule
 
 When the user asks whether a package TZ is ready, do not rely only on manual reading.
@@ -140,7 +154,8 @@ Use the validation layers in this order:
 1. `composer package-graph:validate` to verify package graph metadata and readiness block shape.
 2. `composer package-tz:validate` to verify linked Markdown TZ document evidence.
 3. For a package-specific review, run `php scripts/validate-package-tz.php --package=larena/<name> --verbose`.
-4. For promotion to `T4`, run `composer package-tz:validate:strict` or package-specific strict validation and resolve warnings.
+4. Run `php scripts/list-package-feature-gaps.php --package=larena/<name>` to inspect cross-package feature obligations.
+5. For promotion to `T4`, run `composer package-tz:validate:strict` or package-specific strict validation and resolve warnings.
 
 Normal TZ validation is a review/report mode. Warnings mean the graph claims a readiness state that the linked Markdown document does not clearly evidence. The correct fix is one of:
 

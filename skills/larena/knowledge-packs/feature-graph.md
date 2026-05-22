@@ -21,6 +21,8 @@ Validation and generation:
 ```text
 composer feature-graph:validate
 composer feature-graph:generate
+composer feature-graph:gaps
+php scripts/list-package-feature-gaps.php --package=larena/<name>
 composer package-graph:generate
 composer package-graph:validate
 ```
@@ -47,8 +49,15 @@ When the user asks to check a package against Larena standards, include feature 
 
 1. Find feature entries where `adoption.package` equals the package under review.
 2. Check `role`, `status`, `required`, `operations` and `next`.
-3. Treat `needs_design`, `needs_mapping` and `partially_described` as active gaps unless explicitly deferred.
-4. Do not mark a package as implementation-ready if a required critical feature adoption is still unresolved.
+3. Run `php scripts/list-package-feature-gaps.php --package=larena/<name>` and include the output in the audit report.
+4. Treat `needs_design`, `needs_mapping` and `partially_described` as active gaps unless explicitly deferred.
+5. Do not mark a package as implementation-ready if a required critical feature adoption is still unresolved.
+
+T4 gate:
+
+```text
+A package cannot be promoted to T4 if it has an unresolved required critical feature adoption with status needs_design or needs_mapping, unless the package TZ explicitly documents a safe deferral that does not affect the implementation target.
+```
 
 ## Implementation Rule
 
@@ -59,5 +68,6 @@ When designing a new package TZ or updating an existing package TZ:
 - keep low-level package internals out of feature graph;
 - regenerate `feature-graph/generated/*`;
 - run `composer feature-graph:validate`.
+- run `php scripts/list-package-feature-gaps.php --package=larena/<name>` when preparing a package audit or T4 review.
 
 Feature graph is a planning and consistency layer, not a replacement for package-local `module.yaml`, `api.yaml`, `access.yaml`, `audit.yaml`, `capabilities.yaml` or package TZ documents.
