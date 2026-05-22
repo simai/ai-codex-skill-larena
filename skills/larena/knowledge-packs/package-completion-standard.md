@@ -113,6 +113,7 @@ Check these layers before calling a package complete:
 15. **AI development contract**: read-first docs, MCP tools/resources if exposed, safe read-only operations, effective user/service/capability context, write operations requiring approval, forbidden operations, neighbor package checks, required smoke checks and audit/risk notes.
 16. **Package status card**: short `docs/developer/package-status.md` passport with current `L0`-`L5`, ready/missing/blockers, nearest batch, related packages, key docs and verification state.
 17. **Code quality / legacy / logging review**: classify legacy as dangerous, active compatibility, dead or historical; document fallback; gate development logs; prefer package log channels; and record duplicated semantic logic cleanup items.
+18. **Licensing/capability graph contract**: if the package exposes Free/Pro/Enterprise, trial, paid adapter, paid export, bundle, cloud, AI/MCP, marketplace or update-server-sensitive behavior, record the machine-readable licensing model in the central package graph and verify it against the package TZ.
 
 `module.yaml` summarizes package contracts, but it must not replace
 operation-level contract files. If the package declares one or more REST/API
@@ -123,6 +124,8 @@ events, require a separate `audit.yaml`. Treat `module.yaml.permissions`,
 for audits, not as the canonical source of truth.
 
 When a package has paid, trial, enterprise, cloud, export, AI, MCP, API, bundle or marketplace behavior, its structured capability contract must follow the Larena licensing docs in `simai/larena/docs/developer/licensing/`. Package-local `pro` flags, local trial dates, hidden paid UI without backend enforcement, or direct calls to registration server are package-standard findings. The package should declare capabilities and use the future `larena/licensing` / `CapabilityGate` layer.
+
+For package-standard audits, do not stop at prose licensing notes. Check whether the package graph entry has a `licensing` block when package capabilities differ by tier or trial mode. This block is the machine-readable architecture contract for Free/Pro/Enterprise/trial consistency; it is not a price list and not legal license text.
 
 Rollback notes must match `module.yaml` `owned_data`, migrations, persistent storage and config files. Stale claims such as "the package owns no database tables" block an `L4` verdict when migrations or owned data already exist.
 
@@ -291,6 +294,9 @@ The graph entry should declare:
 
 - what the package provides;
 - what it consumes;
+- TZ status and primary package TZ/DNA documents;
+- cross-cutting contract coverage such as cache, audit, access, licensing, filesystem and link;
+- package-level licensing/capability model by tier when behavior differs between Free, Pro, Enterprise or trial mode;
 - explicit graph edges;
 - high-risk contracts;
 - impact rules;
@@ -306,29 +312,45 @@ A new package is not fully Larena-compatible until it is woven into the package 
 
 Current first-party baseline entries in `simai/larena` cover:
 
+- `larena/core`;
 - `larena/access`;
+- `larena/audit`;
 - `larena/admin`;
 - `larena/auth`;
 - `larena/rest`;
 - `larena/setting`;
-- `larena/props`;
+- `larena/property`;
 - `larena/docara-core`;
-- `larena/docara-admin`.
+- `larena/docara-admin`;
 - `larena/update`;
 - `larena/update-registration`;
 - `larena/filesystem`;
 - `larena/lang`;
-- `larena/two-fa`.
+- `larena/licensing`;
+- `larena/link`;
+- `larena/two-fa`;
 - `larena/mcp`;
 - `larena/rest_doc`;
 - planned placeholder `larena/storage`.
 
 When working on these packages, check the graph entry together with the package-local `module.yaml`. `module.yaml` explains what is inside the package; the package graph explains what other packages and smoke checks are affected when its contracts change.
 
-The human-readable impact matrix is generated from the graph entries:
+Use the generated platform map before answering broad questions such as "how are packages connected", "where is cache/audit/access described", "what package owns this contract", or "what else must be updated":
+
+```text
+docs/developer/package-graph/generated/platform-package-map.md
+docs/developer/package-graph/generated/platform-package-map.json
+```
+
+The generated map is the first-glance cross-package architecture view. It is not a replacement for package TZ/DNA, but it prevents relying on chat memory for package links.
+
+When the generated platform map contains `Licensing Contract Coverage`, use it to catch inconsistent package planning. Example finding: one package exposes cloud storage only in Pro, but a dependent package assumes cloud storage exists in Free Core. Such mismatches must be fixed in package TZ, package graph, or licensing capability definitions before claiming L4/L5 consistency.
+
+The human-readable impact matrix and platform map are generated from the graph entries:
 
 ```bash
 php scripts/generate-package-impact-matrix.php
+php scripts/generate-platform-package-map.php
 ```
 
 or:
