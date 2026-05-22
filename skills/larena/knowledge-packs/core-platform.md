@@ -10,6 +10,7 @@ Canonical documentation lives in `/Users/rim/Documents/GitHub/larena/docs/develo
 - `core-machine-contracts.md`;
 - `core-doctor-baseline.md`;
 - `core-registry-lifecycle.md`;
+- `core-operation-runtime.md`;
 - `core-integration-review.md`;
 - `core-team-handoff.md`.
 
@@ -25,6 +26,7 @@ It owns:
 - installed package registry;
 - package dependency graph;
 - contract registry orchestration;
+- shared Operation Runtime / Execution Pipeline contract;
 - `larena:doctor` runner;
 - package doctor check registration;
 - update preflight decision;
@@ -40,12 +42,50 @@ It must not own:
 - localization data;
 - property rendering;
 - storage records;
-- REST/MCP execution;
+- REST/MCP/admin transport-specific execution engines;
 - audit storage/sinks;
 - licensing truth;
 - update server catalog/delivery;
 - local update execution;
 - product logic such as Docara.
+
+## Operation Runtime
+
+`larena/core` owns the shared `OperationRuntime` contract for governed platform operations.
+
+REST, MCP, admin UI, CLI commands and queue workers must not each invent their own access, licensing, audit, queue, cache and result/error pipeline. They adapt to the same core runtime when executing a meaningful governed operation.
+
+Canonical flow:
+
+```text
+caller / transport
+  -> OperationRuntime
+  -> operation definition
+  -> EntryObject/channel context
+  -> validation
+  -> access decision
+  -> capability/quota decision
+  -> rate limit
+  -> cache/idempotency where allowed
+  -> sync/queue decision
+  -> transaction policy
+  -> audit lifecycle
+  -> package handler
+  -> normalized result/error
+```
+
+Core owns the engine, metadata shape, pipeline order and result envelope.
+
+Feature packages own handlers and business logic.
+
+Transport boundaries:
+
+- `larena/rest` maps HTTP/API operations to OperationRuntime;
+- `larena/mcp` maps allowlisted AI tools to OperationRuntime;
+- `larena/admin` maps operator actions to OperationRuntime;
+- queue/CLI may use OperationRuntime when executing governed platform operations.
+
+Do not implement a separate REST/MCP/admin execution engine for package actions.
 
 ## Laravel Policy
 
