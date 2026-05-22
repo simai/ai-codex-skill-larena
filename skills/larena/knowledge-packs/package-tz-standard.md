@@ -36,6 +36,14 @@ composer package-tz:validate
 composer package-tz:validate:strict
 ```
 
+Cross-package feature adoption:
+
+```text
+/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/README.md
+/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
+composer feature-graph:validate
+```
+
 ## Core Rule
 
 Do not treat a package TZ as implementation-ready just because a document exists.
@@ -62,6 +70,7 @@ When auditing a package TZ, check:
 - data ownership;
 - lifecycle;
 - package-local contracts: `module.yaml`, `api.yaml`, `access.yaml`, `audit.yaml`, `capabilities.yaml`;
+- required feature graph adoption for cross-package mechanisms;
 - implementation contract;
 - invariants;
 - negative requirements;
@@ -100,6 +109,27 @@ Each official package graph entry should have a `tz` block:
 ```
 
 Use `tz.maturity`, `tz.readiness`, `tz.blockers` and `tz.next_step` as the quick machine-readable view before deciding whether a package TZ can drive implementation.
+
+## Feature Graph Rule
+
+For cross-package mechanisms, also check:
+
+```text
+/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
+```
+
+Feature graph is required when a feature spans several packages, for example:
+
+- core operation runtime;
+- cache;
+- access query scope;
+- audit event flow;
+- licensing capabilities;
+- search indexing;
+- storage profiles;
+- SitePack import/export.
+
+A package TZ can be structurally strong but still not ready for implementation if its required feature graph adoption is `needs_design`, `needs_mapping` or `partially_described` for a critical feature.
 
 ## Validation Rule
 
