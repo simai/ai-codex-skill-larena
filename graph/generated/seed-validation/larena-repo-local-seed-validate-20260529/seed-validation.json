@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "seed-validation.larena-repo-local-seed-validate-20260529",
+  "created_at": "2026-05-29T12:10:33.746797+00:00",
+  "operation_id": "graph.seed-validate",
+  "status": "success",
+  "seed_ref": "graph/source/growgraph/seeds/larena-repo-local-seed-20260529.json",
+  "target_graph_id": "skill.larena.growgraph",
+  "target_profile": "profile.skill_graph",
+  "target_mode": "pilot",
+  "canonical_state_ref": "sha256:574a07a9bad2c2bed7c639883202a37cdf60752f7c6f4bfdd3c3326bfdca9de2",
+  "warnings": [],
+  "blockers": [],
+  "next_actions": [
+    "run graph seed-preview"
+  ],
+  "canonical_write_allowed": false
+}

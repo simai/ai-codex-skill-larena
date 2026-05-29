@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "ai-codex-skill-larena.graph",
+  "title": "ai-codex-skill-larena Graph",
+  "graph_type": "skill",
+  "owner": "larena",
+  "source_of_truth": "graph/specs",
+  "dna_path": "graph/dna",
+  "schemas_path": "graph/schemas",
+  "generated_path": "graph/generated",
+  "source_path": "graph/source",
+  "federation": {
+    "can_export": true,
+    "can_import": true,
+    "parent_graph": null,
+    "child_graphs": []
+  },
+  "evolution": {
+    "current_iteration": 1,
+    "migration_status": "growgraph_companion"
+  },
+  "graph_runtime": {
+    "graph_required": false,
+    "fallback_policy": "raw_source_allowed_with_gap_record",
+    "context_required_before_raw_source": false,
+    "guard_command": "graph guard"
+  }
+}

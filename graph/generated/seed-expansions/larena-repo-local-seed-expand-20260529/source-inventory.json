@@ -1,0 +1,75 @@
+{
+  "source_inventory": [
+    {
+      "source_ref": "skills/larena/SKILL.md",
+      "bytes_read": 13554,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/decision-policy.md",
+      "bytes_read": 1231,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/learning.md",
+      "bytes_read": 831,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/routing.md",
+      "bytes_read": 1810,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/skill-mesh-balance.md",
+      "bytes_read": 1893,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/activity-registry.json",
+      "bytes_read": 314,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/admin-platform.json",
+      "bytes_read": 587,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/docara-product.json",
+      "bytes_read": 579,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/documentation.json",
+      "bytes_read": 566,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/entry-install-readiness.json",
+      "bytes_read": 590,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/new-package.json",
+      "bytes_read": 596,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/ops-runtime.json",
+      "bytes_read": 561,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/package-diagnostics.json",
+      "bytes_read": 1354,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/release-readiness.json",
+      "bytes_read": 576,
+      "truncated": false
+    }
+  ],
+  "warnings": []
+}

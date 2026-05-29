@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0.0",
+  "graph_id": "growgraph.skill-larena",
+  "exported_at": "2026-05-29T12:11:09.247069+00:00",
+  "freshness_hash": "sha256:febec6b187973ec2e4aa5ed0829920341c81d71dd59587f66f4d86920ab913ae",
+  "manifest": {
+    "graph_id": "growgraph.skill-larena",
+    "title": "GrowGraph federation export for skill:larena",
+    "graph_type": "growgraph_skill_pilot",
+    "owner": "larena",
+    "source_of_truth": "generated_growgraph_pilot_artifacts",
+    "audience": "federation",
+    "canonical_write_allowed": false
+  },
+  "graph_contracts": [
+    {
+      "name": "growgraph-adoption-report",
+      "schema_ref": "schemas/core/growgraph-adoption-report.schema.json"
+    },
+    {
+      "name": "semantic-preservation-verdict",
+      "schema_ref": "schemas/core/semantic-preservation-verdict.schema.json"
+    },
+    {
+      "name": "effectiveness-report",
+      "schema_ref": "schemas/core/effectiveness-report.schema.json"
+    },
+    {
+      "name": "control-dashboard",
+      "schema_ref": "schemas/core/control-dashboard.schema.json"
+    },
+    {
+      "name": "graph-embryo",
+      "schema_ref": "schemas/core/graph-embryo.schema.json"
+    }
+  ],
+  "object_index_summary": {
+    "object_count": 36,
+    "total_object_count": 36,
+    "kinds": {
+      "capability": 8,
+      "knowledge": 15,
+      "package": 7,
+      "policy": 4,
+      "skill": 2
+    },
+    "excluded_by_policy_count": 0
+  },
+  "relation_endpoint_summary": {
+    "relation_count": 33,
+    "relation_types": {
+      "relates_to": 9,
+      "source_related_to": 24
+    },
+    "top_endpoints": [
+      {
+        "object_id": "object.larena.994c243d",
+        "degree": 28
+      },
+      {
+        "object_id": "object.skill-mesh-balance.20a52bfd",
+        "degree": 3
+      },
+      {
+        "object_id": "object.core-operating-model.1315be0d",
+        "degree": 2
+      },
+      {
+        "object_id": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "degree": 2
+      },
+      {
+        "object_id": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "degree": 2
+      },
+      {
+        "object_id": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "degree": 2
+      },
+      {
+        "object_id": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "degree": 2
+      },
+      {
+        "object_id": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "degree": 2
+      },
+      {
+        "object_id": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "degree": 2
+      },
+      {
+        "object_id": "object.routing.7d15dd1b",
+        "degree": 2
+      },
+      {
+        "object_id": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "degree": 2
+      },
+      {
+        "object_id": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "degree": 2
+      },
+      {
+        "object_id": "object.assessment-format.b787631b",
+        "degree": 1
+      },
+      {
+        "object_id": "object.baseline-verification.8983aa32",
+        "degree": 1
+      },
+      {
+        "object_id": "object.companion-contracts.8181dfe2",
+        "degree": 1
+      },
+      {
+        "object_id": "object.conflict-rule.0b37ea46",
+        "degree": 1
+      },
+      {
+        "object_id": "object.coordinator-rules.df8902ef",
+        "degree": 1
+      },
+      {
+        "object_id": "object.default-activities.b0b4737e",
+        "degree": 1
+      },
+      {
+        "object_id": "object.does-not-own.9533744f",
+        "degree": 1
+      },
+      {
+        "object_id": "object.handoff.09496b01",
+        "degree": 1
+      },
+      {
+        "object_id": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "degree": 1
+      },
+      {
+        "object_id": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+        "degree": 1
+      },
+      {
+        "object_id": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "degree": 1
+      },
+      {
+        "object_id": "object.legacy-reference-map.b952a5d8",
+        "degree": 1
+      },
+      {
+        "object_id": "object.platform-scope-matrix.e8e4e22a",
+        "degree": 1
+      }
+    ]
+  },
+  "readiness_summary": {
+    "adoption_level": 7,
+    "adoption_level_name": "effectiveness_checked",
+    "grs_score": 80,
+    "semantic_verdict": "pass_with_notes",
+    "effectiveness_verdict": "improved"
+  },
+  "evidence_status_summary": {
+    "candidate": 36
+  },
+  "unresolved_links": [],
+  "migration_status": "federation_ready",
+  "compatibility": {
+    "kernel_version": "0.1.1",
+    "schema_version": "1.0.0",
+    "operation_model_version": "0.1.0",
+    "runtime_contract_version": "0.1.1",
+    "consumer_minimum_protocol": "1.0.0"
+  },
+  "growgraph_adoption": {
+    "target_ref": "skill:larena",
+    "owner_skill": "larena",
+    "adoption_level": 7,
+    "adoption_level_name": "effectiveness_checked",
+    "semantic_verdict": "pass_with_notes",
+    "effectiveness_verdict": "improved",
+    "source_refs": [
+      "graph/generated/growgraph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/growgraph-adoption-report.json",
+      "graph/generated/control-dashboards/larena-repo-local-control-dashboard-20260529/control-dashboard.json",
+      "graph/generated/growgraph/semantic-preservation/larena-repo-local-semantic-review-20260529/semantic-preservation-verdict.json",
+      "graph/generated/growgraph/effectiveness-reports/larena-repo-local-effectiveness-20260529/effectiveness-report.json",
+      "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json"
+    ]
+  },
+  "privacy_filter": {
+    "audience": "federation",
+    "include_private": false
+  },
+  "next_actions": [
+    "update adoption report with federation export",
+    "review AGENTS.md and hooks integration before GGA9"
+  ],
+  "canonical_write_allowed": false
+}

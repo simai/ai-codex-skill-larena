@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "id": "projection-view.graph-embryo-larena-repo-local-seed-expand-20260529.seed-summary",
+  "created_at": "2026-05-29T12:10:33.899191+00:00",
+  "operation_id": "graph.projection-view",
+  "view_type": "seed_summary",
+  "source_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+  "title": "Seed summary for skill.larena.growgraph",
+  "sections": [
+    {
+      "title": "Seed",
+      "items": [
+        "purpose: Start a controlled GrowGraph pilot for the SIMAI larena skill without changing canonical skill behavior.",
+        "target_profile: profile.skill_graph",
+        "target_mode: pilot"
+      ]
+    },
+    {
+      "title": "Quality summary",
+      "items": [
+        "objects: 36",
+        "relations: 33",
+        "sources: 14",
+        "average confidence: 0.543",
+        "confidence bands: high=0, medium=28, low=8",
+        "duplicates merged: 0"
+      ]
+    },
+    {
+      "title": "Candidate groups",
+      "items": [
+        "kind.knowledge - knowledge (15 candidates)",
+        "kind.capability - capability (8 candidates)",
+        "kind.package - package (7 candidates)",
+        "kind.policy - policy (4 candidates)",
+        "kind.skill - skill (2 candidates)",
+        "source.skills-larena-skill-md - skills/larena/SKILL.md (27 candidates)",
+        "source.skills-larena-rules-skill-mesh-balance-md - skills/larena/rules/skill-mesh-balance.md (4 candidates)",
+        "source.skills-larena-rules-routing-md - skills/larena/rules/routing.md (3 candidates)",
+        "source.skills-larena-rules-decision-policy-md - skills/larena/rules/decision-policy.md (1 candidates)",
+        "source.skills-larena-rules-learning-md - skills/larena/rules/learning.md (1 candidates)"
+      ]
+    },
+    {
+      "title": "Candidate objects",
+      "items": [
+        "object.larena.994c243d - Larena",
+        "object.core-operating-model.1315be0d - Core Operating Model",
+        "object.platform-scope-matrix.e8e4e22a - Platform Scope Matrix",
+        "object.default-activities.b0b4737e - Default Activities",
+        "object.specialists.e87135c5 - Specialists",
+        "object.coordinator-rules.df8902ef - Coordinator Rules",
+        "object.assessment-format.b787631b - Assessment Format",
+        "object.baseline-verification.8983aa32 - Baseline Verification",
+        "object.legacy-reference-map.b952a5d8 - Legacy Reference Map",
+        "object.decision-policy.f946f2b8 - Decision Policy",
+        "object.learning.1016fcb2 - Learning",
+        "object.routing.7d15dd1b - Routing",
+        "object.work-type-routing.a7cc5884 - Work Type Routing",
+        "object.conflict-rule.0b37ea46 - Conflict Rule",
+        "object.skill-mesh-balance.20a52bfd - Skill Mesh Balance",
+        "object.does-not-own.9533744f - Does Not Own",
+        "object.companion-contracts.8181dfe2 - Companion Contracts",
+        "object.handoff.09496b01 - Handoff",
+        "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff - [kernel/larena-dna.md](./kernel/larena-dna.md)",
+        "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9 - [kernel/platform-scope.md](./kernel/platform-scope.md)",
+        "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01 - [kernel/non-negotiables.md](./kernel/non-negotiables.md)",
+        "object.kernel-output-contract-md-kernel-output-contract-md.59c37139 - [kernel/output-contract.md](./kernel/output-contract.md)",
+        "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145 - [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)",
+        "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c - `simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before La",
+        "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c - `larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, m",
+        "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e - Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution m",
+        "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3 - `larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server",
+        "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2 - `larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under ",
+        "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4 - `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement che",
+        "object.sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific.477a1598 - `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.",
+        "object.docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform.9070a71f - `Docara`: likely first product-level proof that Larena is a usable CMS platform.",
+        "object.sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity.dcec0e10 - `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Lar",
+        "object.sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping.1cc07d99 - SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-",
+        "object.activities-package-diagnostics-json-activities-package-diagnostics-json.13bb195c - [activities/package-diagnostics.json](./activities/package-diagnostics.json)",
+        "object.activities-entry-install-readiness-json-activities-entry-install-readiness-json.29b5913c - [activities/entry-install-readiness.json](./activities/entry-install-readiness.json)",
+        "object.activities-new-package-json-activities-new-package-json.12c244ac - [activities/new-package.json](./activities/new-package.json)"
+      ]
+    },
+    {
+      "title": "Candidate relations",
+      "items": [
+        "object.larena.994c243d --relates_to--> object.core-operating-model.1315be0d",
+        "object.larena.994c243d --relates_to--> object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "object.larena.994c243d --relates_to--> object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "object.larena.994c243d --relates_to--> object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "object.larena.994c243d --relates_to--> object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "object.larena.994c243d --relates_to--> object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "object.larena.994c243d --relates_to--> object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "object.larena.994c243d --relates_to--> object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "object.larena.994c243d --relates_to--> object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "object.larena.994c243d --source_related_to--> object.core-operating-model.1315be0d",
+        "object.larena.994c243d --source_related_to--> object.platform-scope-matrix.e8e4e22a",
+        "object.larena.994c243d --source_related_to--> object.default-activities.b0b4737e",
+        "object.larena.994c243d --source_related_to--> object.specialists.e87135c5",
+        "object.larena.994c243d --source_related_to--> object.coordinator-rules.df8902ef",
+        "object.larena.994c243d --source_related_to--> object.assessment-format.b787631b",
+        "object.larena.994c243d --source_related_to--> object.baseline-verification.8983aa32",
+        "object.larena.994c243d --source_related_to--> object.legacy-reference-map.b952a5d8",
+        "object.larena.994c243d --source_related_to--> object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "object.larena.994c243d --source_related_to--> object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "object.larena.994c243d --source_related_to--> object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "object.larena.994c243d --source_related_to--> object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "object.larena.994c243d --source_related_to--> object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "object.larena.994c243d --source_related_to--> object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "object.larena.994c243d --source_related_to--> object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "object.larena.994c243d --source_related_to--> object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "object.larena.994c243d --source_related_to--> object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "object.larena.994c243d --source_related_to--> object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "object.larena.994c243d --source_related_to--> object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+        "object.skill-mesh-balance.20a52bfd --source_related_to--> object.does-not-own.9533744f",
+        "object.skill-mesh-balance.20a52bfd --source_related_to--> object.companion-contracts.8181dfe2",
+        "object.skill-mesh-balance.20a52bfd --source_related_to--> object.handoff.09496b01",
+        "object.routing.7d15dd1b --source_related_to--> object.work-type-routing.a7cc5884",
+        "object.routing.7d15dd1b --source_related_to--> object.conflict-rule.0b37ea46"
+      ]
+    },
+    {
+      "title": "Duplicate candidates",
+      "items": []
+    },
+    {
+      "title": "Source inventory",
+      "items": [
+        "skills/larena/SKILL.md (13554 bytes, truncated=False)",
+        "skills/larena/rules/decision-policy.md (1231 bytes, truncated=False)",
+        "skills/larena/rules/learning.md (831 bytes, truncated=False)",
+        "skills/larena/rules/routing.md (1810 bytes, truncated=False)",
+        "skills/larena/rules/skill-mesh-balance.md (1893 bytes, truncated=False)",
+        "skills/larena/activities/activity-registry.json (314 bytes, truncated=False)",
+        "skills/larena/activities/admin-platform.json (587 bytes, truncated=False)",
+        "skills/larena/activities/docara-product.json (579 bytes, truncated=False)",
+        "skills/larena/activities/documentation.json (566 bytes, truncated=False)",
+        "skills/larena/activities/entry-install-readiness.json (590 bytes, truncated=False)",
+        "skills/larena/activities/new-package.json (596 bytes, truncated=False)",
+        "skills/larena/activities/ops-runtime.json (561 bytes, truncated=False)"
+      ]
+    },
+    {
+      "title": "Review questions",
+      "items": [
+        "Which candidates have a real lifecycle, owner, relation or future usage?",
+        "Which candidates should be merged, renamed or rejected before canonical acceptance?",
+        "Does the parent graph DNA need to be updated before accepting these candidates?",
+        "Are confidence signals sufficient, or should a domain skill review semantic meaning?"
+      ]
+    }
+  ],
+  "next_actions": [
+    "review candidate objects and relations",
+    "adjust seed if purpose, source boundaries or growth rules are wrong",
+    "create a proposal before any canonical write"
+  ],
+  "canonical_write_allowed": false,
+  "canonical_state_ref": "sha256:574a07a9bad2c2bed7c639883202a37cdf60752f7c6f4bfdd3c3326bfdca9de2"
+}

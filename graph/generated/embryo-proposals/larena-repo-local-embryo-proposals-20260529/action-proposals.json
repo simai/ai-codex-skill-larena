@@ -1,0 +1,1964 @@
+{
+  "schema_version": "1.0.0",
+  "id": "action-proposals.larena-repo-local-embryo-proposals-20260529",
+  "created_at": "2026-05-29T12:10:34.046806+00:00",
+  "operation_id": "graph.loop-propose-actions",
+  "signal_queue_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+  "source_operation_id": "graph.embryo-proposals",
+  "source_embryo_id": "graph-embryo.larena-repo-local-seed-expand-20260529",
+  "source_embryo_operation_id": "graph.seed-expand",
+  "canonical_state_ref": "sha256:574a07a9bad2c2bed7c639883202a37cdf60752f7c6f4bfdd3c3326bfdca9de2",
+  "summary": {
+    "candidate_object_count": 36,
+    "candidate_relation_count": 33,
+    "duplicate_group_count": 0,
+    "action_count": 69,
+    "min_accept_confidence": 0.55,
+    "action_type_counts": {
+      "accept_candidate_object": 13,
+      "reject_weak_source_relation": 24,
+      "request_domain_review": 32
+    }
+  },
+  "actions": [
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d",
+      "source_signal_id": "embryo.object.object-larena-994c243d",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.larena.994c243d",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Larena` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.larena.994c243d",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Larena",
+        "summary": "Candidate object extracted from source heading: Larena",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-core-operating-model-1315be0d",
+      "source_signal_id": "embryo.object.object-core-operating-model-1315be0d",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.core-operating-model.1315be0d",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Core Operating Model` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.core-operating-model.1315be0d",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Core Operating Model",
+        "summary": "Candidate object extracted from source heading: Core Operating Model",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-platform-scope-matrix-e8e4e22a",
+      "source_signal_id": "embryo.object.object-platform-scope-matrix-e8e4e22a",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.platform-scope-matrix.e8e4e22a",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Platform Scope Matrix` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.platform-scope-matrix.e8e4e22a",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Platform Scope Matrix",
+        "summary": "Candidate object extracted from source heading: Platform Scope Matrix",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-default-activities-b0b4737e",
+      "source_signal_id": "embryo.object.object-default-activities-b0b4737e",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.default-activities.b0b4737e",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Default Activities` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.default-activities.b0b4737e",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Default Activities",
+        "summary": "Candidate object extracted from source heading: Default Activities",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-specialists-e87135c5",
+      "source_signal_id": "embryo.object.object-specialists-e87135c5",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.specialists.e87135c5",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Specialists` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.specialists.e87135c5",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Specialists",
+        "summary": "Candidate object extracted from source heading: Specialists",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-coordinator-rules-df8902ef",
+      "source_signal_id": "embryo.object.object-coordinator-rules-df8902ef",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.coordinator-rules.df8902ef",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Coordinator Rules` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.coordinator-rules.df8902ef",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Coordinator Rules",
+        "summary": "Candidate object extracted from source heading: Coordinator Rules",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-assessment-format-b787631b",
+      "source_signal_id": "embryo.object.object-assessment-format-b787631b",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.assessment-format.b787631b",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Assessment Format` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.assessment-format.b787631b",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Assessment Format",
+        "summary": "Candidate object extracted from source heading: Assessment Format",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-baseline-verification-8983aa32",
+      "source_signal_id": "embryo.object.object-baseline-verification-8983aa32",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.baseline-verification.8983aa32",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Baseline Verification` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.baseline-verification.8983aa32",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Baseline Verification",
+        "summary": "Candidate object extracted from source heading: Baseline Verification",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-legacy-reference-map-b952a5d8",
+      "source_signal_id": "embryo.object.object-legacy-reference-map-b952a5d8",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.legacy-reference-map.b952a5d8",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Legacy Reference Map` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.legacy-reference-map.b952a5d8",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Legacy Reference Map",
+        "summary": "Candidate object extracted from source heading: Legacy Reference Map",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-decision-policy-f946f2b8",
+      "source_signal_id": "embryo.object.object-decision-policy-f946f2b8",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.decision-policy.f946f2b8",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `Decision Policy` into a canonical proposal after review.",
+      "confidence": 0.62,
+      "source_refs": [
+        "skills/larena/rules/decision-policy.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.decision-policy.f946f2b8",
+        "schema_version": "1.0.0",
+        "kind": "policy",
+        "title": "Decision Policy",
+        "summary": "Candidate object extracted from source heading: Decision Policy",
+        "source_refs": [
+          "skills/larena/rules/decision-policy.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-learning-1016fcb2",
+      "source_signal_id": "embryo.object.object-learning-1016fcb2",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.learning.1016fcb2",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Learning` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/learning.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.learning.1016fcb2",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Learning",
+        "summary": "Candidate object extracted from source heading: Learning",
+        "source_refs": [
+          "skills/larena/rules/learning.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-routing-7d15dd1b",
+      "source_signal_id": "embryo.object.object-routing-7d15dd1b",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.routing.7d15dd1b",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Routing` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.routing.7d15dd1b",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Routing",
+        "summary": "Candidate object extracted from source heading: Routing",
+        "source_refs": [
+          "skills/larena/rules/routing.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-work-type-routing-a7cc5884",
+      "source_signal_id": "embryo.object.object-work-type-routing-a7cc5884",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.work-type-routing.a7cc5884",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Work Type Routing` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.work-type-routing.a7cc5884",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Work Type Routing",
+        "summary": "Candidate object extracted from source heading: Work Type Routing",
+        "source_refs": [
+          "skills/larena/rules/routing.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-conflict-rule-0b37ea46",
+      "source_signal_id": "embryo.object.object-conflict-rule-0b37ea46",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.conflict-rule.0b37ea46",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `Conflict Rule` into a canonical proposal after review.",
+      "confidence": 0.62,
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.conflict-rule.0b37ea46",
+        "schema_version": "1.0.0",
+        "kind": "policy",
+        "title": "Conflict Rule",
+        "summary": "Candidate object extracted from source heading: Conflict Rule",
+        "source_refs": [
+          "skills/larena/rules/routing.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-skill-mesh-balance-20a52bfd",
+      "source_signal_id": "embryo.object.object-skill-mesh-balance-20a52bfd",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.skill-mesh-balance.20a52bfd",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `Skill Mesh Balance` into a canonical proposal after review.",
+      "confidence": 0.66,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.skill-mesh-balance.20a52bfd",
+        "schema_version": "1.0.0",
+        "kind": "skill",
+        "title": "Skill Mesh Balance",
+        "summary": "Candidate object extracted from source heading: Skill Mesh Balance",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-does-not-own-9533744f",
+      "source_signal_id": "embryo.object.object-does-not-own-9533744f",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.does-not-own.9533744f",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Does Not Own` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.does-not-own.9533744f",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Does Not Own",
+        "summary": "Candidate object extracted from source heading: Does Not Own",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-companion-contracts-8181dfe2",
+      "source_signal_id": "embryo.object.object-companion-contracts-8181dfe2",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.companion-contracts.8181dfe2",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Companion Contracts` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.companion-contracts.8181dfe2",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Companion Contracts",
+        "summary": "Candidate object extracted from source heading: Companion Contracts",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-handoff-09496b01",
+      "source_signal_id": "embryo.object.object-handoff-09496b01",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.handoff.09496b01",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `Handoff` before canonical proposal.",
+      "confidence": 0.5,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.handoff.09496b01",
+        "schema_version": "1.0.0",
+        "kind": "knowledge",
+        "title": "Handoff",
+        "summary": "Candidate object extracted from source heading: Handoff",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "source_signal_id": "embryo.object.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `[kernel/larena-dna.md](./kernel/larena-dna.md)` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "[kernel/larena-dna.md](./kernel/larena-dna.md)",
+        "summary": "Candidate capability extracted from source bullet: [kernel/larena-dna.md](./kernel/larena-dna.md)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "source_signal_id": "embryo.object.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `[kernel/platform-scope.md](./kernel/platform-scope.md)` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "[kernel/platform-scope.md](./kernel/platform-scope.md)",
+        "summary": "Candidate capability extracted from source bullet: [kernel/platform-scope.md](./kernel/platform-scope.md)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "source_signal_id": "embryo.object.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `[kernel/non-negotiables.md](./kernel/non-negotiables.md)` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "[kernel/non-negotiables.md](./kernel/non-negotiables.md)",
+        "summary": "Candidate capability extracted from source bullet: [kernel/non-negotiables.md](./kernel/non-negotiables.md)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "source_signal_id": "embryo.object.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `[kernel/output-contract.md](./kernel/output-contract.md)` into a canonical proposal after review.",
+      "confidence": 0.6,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "schema_version": "1.0.0",
+        "kind": "policy",
+        "title": "[kernel/output-contract.md](./kernel/output-contract.md)",
+        "summary": "Candidate capability extracted from source bullet: [kernel/output-contract.md](./kernel/output-contract.md)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "source_signal_id": "embryo.object.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `[rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "schema_version": "1.0.0",
+        "kind": "skill",
+        "title": "[rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)",
+        "summary": "Candidate capability extracted from source bullet: [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "source_signal_id": "embryo.object.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object ``simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before La` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "`simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before La",
+        "summary": "Candidate capability extracted from source bullet: `simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before Larena update-server bootstrap exists; it is not the full platform implementation.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "source_signal_id": "embryo.object.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object ``larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, m` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "`larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, m",
+        "summary": "Candidate capability extracted from source bullet: `larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, migrations, language files, tests, `module.yaml`, and package docs; these are the",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "source_signal_id": "embryo.object.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution m` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution m",
+        "summary": "Candidate capability extracted from source bullet: Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution model.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows-601acfd3",
+      "source_signal_id": "embryo.object.object-larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows-601acfd3",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object ``larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "`larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server",
+        "summary": "Candidate capability extracted from source bullet: `larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server flows.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name-b47e64f2",
+      "source_signal_id": "embryo.object.object-larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name-b47e64f2",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object ``larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under ` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "`larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under ",
+        "summary": "Candidate capability extracted from source bullet: `larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under this name.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks-c8a135b4",
+      "source_signal_id": "embryo.object.object-larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks-c8a135b4",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object ``larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement che` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "`larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement che",
+        "summary": "Candidate capability extracted from source bullet: `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement checks.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific-477a1598",
+      "source_signal_id": "embryo.object.object-sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific-477a1598",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific.477a1598",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object ``SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.` into a canonical proposal after review.",
+      "confidence": 0.6,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific.477a1598",
+        "schema_version": "1.0.0",
+        "kind": "policy",
+        "title": "`SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.",
+        "summary": "Candidate capability extracted from source bullet: `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform-9070a71f",
+      "source_signal_id": "embryo.object.object-docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform-9070a71f",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform.9070a71f",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object ``Docara`: likely first product-level proof that Larena is a usable CMS platform.` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform.9070a71f",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "`Docara`: likely first product-level proof that Larena is a usable CMS platform.",
+        "summary": "Candidate capability extracted from source bullet: `Docara`: likely first product-level proof that Larena is a usable CMS platform.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity-dcec0e10",
+      "source_signal_id": "embryo.object.object-sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity-dcec0e10",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity.dcec0e10",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object ``SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Lar` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity.dcec0e10",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "`SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Lar",
+        "summary": "Candidate capability extracted from source bullet: `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping-1cc07d99",
+      "source_signal_id": "embryo.object.object-sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping-1cc07d99",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping.1cc07d99",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping.1cc07d99",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-",
+        "summary": "Candidate capability extracted from source bullet: SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-native package resources, storage, database registries and adapters. Read [knowl",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-activities-package-diagnostics-json-activities-package-diagnostics-json-13bb195c",
+      "source_signal_id": "embryo.object.object-activities-package-diagnostics-json-activities-package-diagnostics-json-13bb195c",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.activities-package-diagnostics-json-activities-package-diagnostics-json.13bb195c",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `[activities/package-diagnostics.json](./activities/package-diagnostics.json)` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.activities-package-diagnostics-json-activities-package-diagnostics-json.13bb195c",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "[activities/package-diagnostics.json](./activities/package-diagnostics.json)",
+        "summary": "Candidate capability extracted from source bullet: [activities/package-diagnostics.json](./activities/package-diagnostics.json)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-activities-entry-install-readiness-json-activities-entry-install-readiness-json-29b5913c",
+      "source_signal_id": "embryo.object.object-activities-entry-install-readiness-json-activities-entry-install-readiness-json-29b5913c",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.activities-entry-install-readiness-json-activities-entry-install-readiness-json.29b5913c",
+      "candidate_type": "object",
+      "summary": "Request domain review for low-confidence candidate object `[activities/entry-install-readiness.json](./activities/entry-install-readiness.json)` before canonical proposal.",
+      "confidence": 0.48000000000000004,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.activities-entry-install-readiness-json-activities-entry-install-readiness-json.29b5913c",
+        "schema_version": "1.0.0",
+        "kind": "capability",
+        "title": "[activities/entry-install-readiness.json](./activities/entry-install-readiness.json)",
+        "summary": "Candidate capability extracted from source bullet: [activities/entry-install-readiness.json](./activities/entry-install-readiness.json)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.accept-candidate-object.object-activities-new-package-json-activities-new-package-json-12c244ac",
+      "source_signal_id": "embryo.object.object-activities-new-package-json-activities-new-package-json-12c244ac",
+      "action_type": "accept_candidate_object",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "object.activities-new-package-json-activities-new-package-json.12c244ac",
+      "candidate_type": "object",
+      "summary": "Accept source-aware candidate object `[activities/new-package.json](./activities/new-package.json)` into a canonical proposal after review.",
+      "confidence": 0.64,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_object": {
+        "id": "object.activities-new-package-json-activities-new-package-json.12c244ac",
+        "schema_version": "1.0.0",
+        "kind": "package",
+        "title": "[activities/new-package.json](./activities/new-package.json)",
+        "summary": "Candidate capability extracted from source bullet: [activities/new-package.json](./activities/new-package.json)",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "lifecycle": "candidate",
+        "readiness": "R0_candidate"
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-core-operating-model-1315be0d",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-core-operating-model-1315be0d",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.core-operating-model.1315be0d",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.core-operating-model.1315be0d`.",
+      "confidence": 0.32,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.core-operating-model.1315be0d",
+        "summary": "Low-confidence relation inferred only from nearby source order; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.32
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.kernel-output-contract-md-kernel-output-contract-md.59c37139`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.request-domain-review.object-larena-994c243d.relates-to.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.relates-to.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "action_type": "request_domain_review",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:relates_to:object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "candidate_type": "relation",
+      "summary": "Request domain review for low-confidence relation `object.larena.994c243d` --`relates_to`--> `object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e`.",
+      "confidence": 0.28,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "relates_to",
+        "to": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "summary": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.28
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-core-operating-model-1315be0d",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-core-operating-model-1315be0d",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.core-operating-model.1315be0d",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.core-operating-model.1315be0d` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.core-operating-model.1315be0d",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-platform-scope-matrix-e8e4e22a",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-platform-scope-matrix-e8e4e22a",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.platform-scope-matrix.e8e4e22a",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.platform-scope-matrix.e8e4e22a` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.platform-scope-matrix.e8e4e22a",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-default-activities-b0b4737e",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-default-activities-b0b4737e",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.default-activities.b0b4737e",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.default-activities.b0b4737e` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.default-activities.b0b4737e",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-specialists-e87135c5",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-specialists-e87135c5",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.specialists.e87135c5",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.specialists.e87135c5` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.specialists.e87135c5",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-coordinator-rules-df8902ef",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-coordinator-rules-df8902ef",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.coordinator-rules.df8902ef",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.coordinator-rules.df8902ef` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.coordinator-rules.df8902ef",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-assessment-format-b787631b",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-assessment-format-b787631b",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.assessment-format.b787631b",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.assessment-format.b787631b` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.assessment-format.b787631b",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-baseline-verification-8983aa32",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-baseline-verification-8983aa32",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.baseline-verification.8983aa32",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.baseline-verification.8983aa32` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.baseline-verification.8983aa32",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-legacy-reference-map-b952a5d8",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-legacy-reference-map-b952a5d8",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.legacy-reference-map.b952a5d8",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.legacy-reference-map.b952a5d8` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.legacy-reference-map.b952a5d8",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-kernel-larena-dna-md-kernel-larena-dna-md-7789b7ff",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-kernel-platform-scope-md-kernel-platform-scope-md-2eb713c9",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-kernel-non-negotiables-md-kernel-non-negotiables-md-adb46f01",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-kernel-output-contract-md-kernel-output-contract-md-59c37139",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.kernel-output-contract-md-kernel-output-contract-md.59c37139` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-rules-skill-mesh-balance-md-rules-skill-mesh-balance-md-43cbe145",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation-9b80982c",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code-4cebb67c",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model-f1d4f52e",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows-601acfd3",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows-601acfd3",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name-b47e64f2",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name-b47e64f2",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-larena-994c243d.source-related-to.object-larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks-c8a135b4",
+      "source_signal_id": "embryo.relation.object-larena-994c243d.source-related-to.object-larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks-c8a135b4",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.larena.994c243d:source_related_to:object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.larena.994c243d` --`source_related_to`--> `object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.larena.994c243d",
+        "type": "source_related_to",
+        "to": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+        "source_refs": [
+          "skills/larena/SKILL.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-does-not-own-9533744f",
+      "source_signal_id": "embryo.relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-does-not-own-9533744f",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.skill-mesh-balance.20a52bfd:source_related_to:object.does-not-own.9533744f",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.skill-mesh-balance.20a52bfd` --`source_related_to`--> `object.does-not-own.9533744f` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.skill-mesh-balance.20a52bfd",
+        "type": "source_related_to",
+        "to": "object.does-not-own.9533744f",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-companion-contracts-8181dfe2",
+      "source_signal_id": "embryo.relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-companion-contracts-8181dfe2",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.skill-mesh-balance.20a52bfd:source_related_to:object.companion-contracts.8181dfe2",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.skill-mesh-balance.20a52bfd` --`source_related_to`--> `object.companion-contracts.8181dfe2` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.skill-mesh-balance.20a52bfd",
+        "type": "source_related_to",
+        "to": "object.companion-contracts.8181dfe2",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-handoff-09496b01",
+      "source_signal_id": "embryo.relation.object-skill-mesh-balance-20a52bfd.source-related-to.object-handoff-09496b01",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.skill-mesh-balance.20a52bfd:source_related_to:object.handoff.09496b01",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.skill-mesh-balance.20a52bfd` --`source_related_to`--> `object.handoff.09496b01` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.skill-mesh-balance.20a52bfd",
+        "type": "source_related_to",
+        "to": "object.handoff.09496b01",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+        "source_refs": [
+          "skills/larena/rules/skill-mesh-balance.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-routing-7d15dd1b.source-related-to.object-work-type-routing-a7cc5884",
+      "source_signal_id": "embryo.relation.object-routing-7d15dd1b.source-related-to.object-work-type-routing-a7cc5884",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.routing.7d15dd1b:source_related_to:object.work-type-routing.a7cc5884",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.routing.7d15dd1b` --`source_related_to`--> `object.work-type-routing.a7cc5884` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.routing.7d15dd1b",
+        "type": "source_related_to",
+        "to": "object.work-type-routing.a7cc5884",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/rules/routing.md.",
+        "source_refs": [
+          "skills/larena/rules/routing.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    },
+    {
+      "action_id": "action.embryo.reject-weak-source-relation.object-routing-7d15dd1b.source-related-to.object-conflict-rule-0b37ea46",
+      "source_signal_id": "embryo.relation.object-routing-7d15dd1b.source-related-to.object-conflict-rule-0b37ea46",
+      "action_type": "reject_weak_source_relation",
+      "status": "proposed",
+      "requires_approval": true,
+      "safe_default": "no_execute",
+      "target_ref": "relation:object.routing.7d15dd1b:source_related_to:object.conflict-rule.0b37ea46",
+      "candidate_type": "relation",
+      "summary": "Reject weak source-group relation `object.routing.7d15dd1b` --`source_related_to`--> `object.conflict-rule.0b37ea46` unless a reviewer replaces it with an explicit typed domain relation.",
+      "confidence": 0.45,
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "source_embryo_ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json",
+      "suggested_canonical_relation": {
+        "from": "object.routing.7d15dd1b",
+        "type": "source_related_to",
+        "to": "object.conflict-rule.0b37ea46",
+        "summary": "Candidates appear in the same seed expansion source group: skills/larena/rules/routing.md.",
+        "source_refs": [
+          "skills/larena/rules/routing.md"
+        ],
+        "confidence": 0.45
+      },
+      "canonical_write_allowed": false
+    }
+  ],
+  "warnings": [],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "auto_execute_allowed": false
+}

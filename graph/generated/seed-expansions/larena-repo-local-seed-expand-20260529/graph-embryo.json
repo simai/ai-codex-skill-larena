@@ -1,0 +1,1210 @@
+{
+  "schema_version": "1.0.0",
+  "id": "graph-embryo.larena-repo-local-seed-expand-20260529",
+  "created_at": "2026-05-29T12:10:33.898666+00:00",
+  "operation_id": "graph.seed-expand",
+  "seed_ref": "graph/source/growgraph/seeds/larena-repo-local-seed-20260529.json",
+  "target_graph_id": "skill.larena.growgraph",
+  "target_profile": "profile.skill_graph",
+  "target_mode": "pilot",
+  "canonical_state_ref": "sha256:574a07a9bad2c2bed7c639883202a37cdf60752f7c6f4bfdd3c3326bfdca9de2",
+  "candidate_objects": [
+    {
+      "id": "object.larena.994c243d",
+      "kind": "knowledge",
+      "title": "Larena",
+      "reason": "Candidate object extracted from source heading: Larena",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.core-operating-model.1315be0d",
+      "kind": "knowledge",
+      "title": "Core Operating Model",
+      "reason": "Candidate object extracted from source heading: Core Operating Model",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.platform-scope-matrix.e8e4e22a",
+      "kind": "knowledge",
+      "title": "Platform Scope Matrix",
+      "reason": "Candidate object extracted from source heading: Platform Scope Matrix",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.default-activities.b0b4737e",
+      "kind": "knowledge",
+      "title": "Default Activities",
+      "reason": "Candidate object extracted from source heading: Default Activities",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.specialists.e87135c5",
+      "kind": "knowledge",
+      "title": "Specialists",
+      "reason": "Candidate object extracted from source heading: Specialists",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.coordinator-rules.df8902ef",
+      "kind": "knowledge",
+      "title": "Coordinator Rules",
+      "reason": "Candidate object extracted from source heading: Coordinator Rules",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.assessment-format.b787631b",
+      "kind": "knowledge",
+      "title": "Assessment Format",
+      "reason": "Candidate object extracted from source heading: Assessment Format",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.baseline-verification.8983aa32",
+      "kind": "knowledge",
+      "title": "Baseline Verification",
+      "reason": "Candidate object extracted from source heading: Baseline Verification",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.legacy-reference-map.b952a5d8",
+      "kind": "knowledge",
+      "title": "Legacy Reference Map",
+      "reason": "Candidate object extracted from source heading: Legacy Reference Map",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.decision-policy.f946f2b8",
+      "kind": "policy",
+      "title": "Decision Policy",
+      "reason": "Candidate object extracted from source heading: Decision Policy",
+      "source_refs": [
+        "skills/larena/rules/decision-policy.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.62,
+      "confidence_signals": [
+        "heading",
+        "policy-keyword"
+      ]
+    },
+    {
+      "id": "object.learning.1016fcb2",
+      "kind": "knowledge",
+      "title": "Learning",
+      "reason": "Candidate object extracted from source heading: Learning",
+      "source_refs": [
+        "skills/larena/rules/learning.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.routing.7d15dd1b",
+      "kind": "knowledge",
+      "title": "Routing",
+      "reason": "Candidate object extracted from source heading: Routing",
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.work-type-routing.a7cc5884",
+      "kind": "knowledge",
+      "title": "Work Type Routing",
+      "reason": "Candidate object extracted from source heading: Work Type Routing",
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.conflict-rule.0b37ea46",
+      "kind": "policy",
+      "title": "Conflict Rule",
+      "reason": "Candidate object extracted from source heading: Conflict Rule",
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.62,
+      "confidence_signals": [
+        "heading",
+        "policy-keyword"
+      ]
+    },
+    {
+      "id": "object.skill-mesh-balance.20a52bfd",
+      "kind": "skill",
+      "title": "Skill Mesh Balance",
+      "reason": "Candidate object extracted from source heading: Skill Mesh Balance",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.66,
+      "confidence_signals": [
+        "heading",
+        "domain-unit-keyword"
+      ]
+    },
+    {
+      "id": "object.does-not-own.9533744f",
+      "kind": "knowledge",
+      "title": "Does Not Own",
+      "reason": "Candidate object extracted from source heading: Does Not Own",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.companion-contracts.8181dfe2",
+      "kind": "knowledge",
+      "title": "Companion Contracts",
+      "reason": "Candidate object extracted from source heading: Companion Contracts",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.handoff.09496b01",
+      "kind": "knowledge",
+      "title": "Handoff",
+      "reason": "Candidate object extracted from source heading: Handoff",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.5,
+      "confidence_signals": [
+        "heading"
+      ]
+    },
+    {
+      "id": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "kind": "capability",
+      "title": "[kernel/larena-dna.md](./kernel/larena-dna.md)",
+      "reason": "Candidate capability extracted from source bullet: [kernel/larena-dna.md](./kernel/larena-dna.md)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "kind": "capability",
+      "title": "[kernel/platform-scope.md](./kernel/platform-scope.md)",
+      "reason": "Candidate capability extracted from source bullet: [kernel/platform-scope.md](./kernel/platform-scope.md)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "kind": "capability",
+      "title": "[kernel/non-negotiables.md](./kernel/non-negotiables.md)",
+      "reason": "Candidate capability extracted from source bullet: [kernel/non-negotiables.md](./kernel/non-negotiables.md)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "kind": "policy",
+      "title": "[kernel/output-contract.md](./kernel/output-contract.md)",
+      "reason": "Candidate capability extracted from source bullet: [kernel/output-contract.md](./kernel/output-contract.md)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.6,
+      "confidence_signals": [
+        "bullet",
+        "policy-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "kind": "skill",
+      "title": "[rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)",
+      "reason": "Candidate capability extracted from source bullet: [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "kind": "capability",
+      "title": "`simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before La",
+      "reason": "Candidate capability extracted from source bullet: `simai/larena` entry app: bootstrap/distribution repository for the free starter set that must install and run before Larena update-server bootstrap exists; it is not the full platform implementation.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "kind": "package",
+      "title": "`larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, m",
+      "reason": "Candidate capability extracted from source bullet: `larena-*` repositories / `larena/*` Composer packages: modular CMS/platform packages with provider, config, commands, migrations, language files, tests, `module.yaml`, and package docs; these are the",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "kind": "package",
+      "title": "Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution m",
+      "reason": "Candidate capability extracted from source bullet: Development monorepo/workspace: technical cross-package development surface only, not the customer-facing distribution model.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+      "kind": "capability",
+      "title": "`larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server",
+      "reason": "Candidate capability extracted from source bullet: `larena-update`: canonical update server that stores installers/updates and coordinates developer/server and user/server flows.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+      "kind": "package",
+      "title": "`larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under ",
+      "reason": "Candidate capability extracted from source bullet: `larena-upserv`: legacy alias/historical naming for the update server; do not create new package identity or docs under this name.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+      "kind": "capability",
+      "title": "`larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement che",
+      "reason": "Candidate capability extracted from source bullet: `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement checks.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific.477a1598",
+      "kind": "policy",
+      "title": "`SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.",
+      "reason": "Candidate capability extracted from source bullet: `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.6,
+      "confidence_signals": [
+        "bullet",
+        "policy-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform.9070a71f",
+      "kind": "capability",
+      "title": "`Docara`: likely first product-level proof that Larena is a usable CMS platform.",
+      "reason": "Candidate capability extracted from source bullet: `Docara`: likely first product-level proof that Larena is a usable CMS platform.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity.dcec0e10",
+      "kind": "package",
+      "title": "`SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Lar",
+      "reason": "Candidate capability extracted from source bullet: `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping.1cc07d99",
+      "kind": "package",
+      "title": "SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-",
+      "reason": "Candidate capability extracted from source bullet: SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-native package resources, storage, database registries and adapters. Read [knowl",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.activities-package-diagnostics-json-activities-package-diagnostics-json.13bb195c",
+      "kind": "package",
+      "title": "[activities/package-diagnostics.json](./activities/package-diagnostics.json)",
+      "reason": "Candidate capability extracted from source bullet: [activities/package-diagnostics.json](./activities/package-diagnostics.json)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.activities-entry-install-readiness-json-activities-entry-install-readiness-json.29b5913c",
+      "kind": "capability",
+      "title": "[activities/entry-install-readiness.json](./activities/entry-install-readiness.json)",
+      "reason": "Candidate capability extracted from source bullet: [activities/entry-install-readiness.json](./activities/entry-install-readiness.json)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.48000000000000004,
+      "confidence_signals": [
+        "bullet",
+        "literal-ref"
+      ]
+    },
+    {
+      "id": "object.activities-new-package-json-activities-new-package-json.12c244ac",
+      "kind": "package",
+      "title": "[activities/new-package.json](./activities/new-package.json)",
+      "reason": "Candidate capability extracted from source bullet: [activities/new-package.json](./activities/new-package.json)",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "readiness": "R0_candidate",
+      "lifecycle": "candidate",
+      "confidence": 0.64,
+      "confidence_signals": [
+        "bullet",
+        "domain-unit-keyword",
+        "literal-ref"
+      ]
+    }
+  ],
+  "candidate_relations": [
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.core-operating-model.1315be0d",
+      "reason": "Low-confidence relation inferred only from nearby source order; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.32
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "relates_to",
+      "to": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "reason": "Weak relation inferred from heading-to-bullet context and relation keywords; review before accepting.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.28
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.core-operating-model.1315be0d",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.platform-scope-matrix.e8e4e22a",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.default-activities.b0b4737e",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.specialists.e87135c5",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.coordinator-rules.df8902ef",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.assessment-format.b787631b",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.baseline-verification.8983aa32",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.legacy-reference-map.b952a5d8",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.larena.994c243d",
+      "type": "source_related_to",
+      "to": "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/SKILL.md.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.does-not-own.9533744f",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.companion-contracts.8181dfe2",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.skill-mesh-balance.20a52bfd",
+      "type": "source_related_to",
+      "to": "object.handoff.09496b01",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/rules/skill-mesh-balance.md.",
+      "source_refs": [
+        "skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.routing.7d15dd1b",
+      "type": "source_related_to",
+      "to": "object.work-type-routing.a7cc5884",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/rules/routing.md.",
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "from": "object.routing.7d15dd1b",
+      "type": "source_related_to",
+      "to": "object.conflict-rule.0b37ea46",
+      "reason": "Candidates appear in the same seed expansion source group: skills/larena/rules/routing.md.",
+      "source_refs": [
+        "skills/larena/rules/routing.md"
+      ],
+      "confidence": 0.45
+    }
+  ],
+  "quality_summary": {
+    "candidate_object_count": 36,
+    "candidate_relation_count": 33,
+    "source_file_count": 14,
+    "by_kind": {
+      "capability": 8,
+      "knowledge": 15,
+      "package": 7,
+      "policy": 4,
+      "skill": 2
+    },
+    "top_sources": {
+      "skills/larena/SKILL.md": 27,
+      "skills/larena/rules/skill-mesh-balance.md": 4,
+      "skills/larena/rules/routing.md": 3,
+      "skills/larena/rules/decision-policy.md": 1,
+      "skills/larena/rules/learning.md": 1
+    },
+    "average_confidence": 0.543,
+    "high_confidence_count": 0,
+    "medium_confidence_count": 28,
+    "low_confidence_count": 8,
+    "duplicate_candidate_count": 0,
+    "duplicate_group_count": 0,
+    "review_group_count": 10
+  },
+  "review_groups": [
+    {
+      "group_id": "kind.knowledge",
+      "group_type": "kind",
+      "title": "knowledge",
+      "candidate_count": 15,
+      "candidate_ids": [
+        "object.larena.994c243d",
+        "object.core-operating-model.1315be0d",
+        "object.platform-scope-matrix.e8e4e22a",
+        "object.default-activities.b0b4737e",
+        "object.specialists.e87135c5",
+        "object.coordinator-rules.df8902ef",
+        "object.assessment-format.b787631b",
+        "object.baseline-verification.8983aa32",
+        "object.legacy-reference-map.b952a5d8",
+        "object.learning.1016fcb2",
+        "object.routing.7d15dd1b",
+        "object.work-type-routing.a7cc5884",
+        "object.does-not-own.9533744f",
+        "object.companion-contracts.8181dfe2",
+        "object.handoff.09496b01"
+      ]
+    },
+    {
+      "group_id": "kind.capability",
+      "group_type": "kind",
+      "title": "capability",
+      "candidate_count": 8,
+      "candidate_ids": [
+        "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4",
+        "object.docara-likely-first-product-level-proof-that-larena-is-a-usable-cms-platform.9070a71f",
+        "object.activities-entry-install-readiness-json-activities-entry-install-readiness-json.29b5913c"
+      ]
+    },
+    {
+      "group_id": "kind.package",
+      "group_type": "kind",
+      "title": "package",
+      "candidate_count": 7,
+      "candidate_ids": [
+        "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "object.sf5-historical-internal-label-and-frontend-ui-reference-where-useful-larena-backend-package-contracts-should-use-larena-names-as-the-canonical-identity.dcec0e10",
+        "object.sf5-simai-and-simai-data-layer-dna-preserve-the-system-library-overlay-meaning-but-implement-it-through-laravel-native-package-resources-storage-database-registries-and-adapters-read-knowledge-packs-sf5-simai-layer-dna-md-knowledge-packs-sf5-simai-layer-dna-md-for-cross-platform-mapping.1cc07d99",
+        "object.activities-package-diagnostics-json-activities-package-diagnostics-json.13bb195c",
+        "object.activities-new-package-json-activities-new-package-json.12c244ac"
+      ]
+    },
+    {
+      "group_id": "kind.policy",
+      "group_type": "kind",
+      "title": "policy",
+      "candidate_count": 4,
+      "candidate_ids": [
+        "object.decision-policy.f946f2b8",
+        "object.conflict-rule.0b37ea46",
+        "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "object.sitepack-portable-data-transport-standard-between-bitrix-and-larena-keep-adapters-platform-specific.477a1598"
+      ]
+    },
+    {
+      "group_id": "kind.skill",
+      "group_type": "kind",
+      "title": "skill",
+      "candidate_count": 2,
+      "candidate_ids": [
+        "object.skill-mesh-balance.20a52bfd",
+        "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145"
+      ]
+    },
+    {
+      "group_id": "source.skills-larena-skill-md",
+      "group_type": "source",
+      "title": "skills/larena/SKILL.md",
+      "candidate_count": 27,
+      "candidate_ids": [
+        "object.larena.994c243d",
+        "object.core-operating-model.1315be0d",
+        "object.platform-scope-matrix.e8e4e22a",
+        "object.default-activities.b0b4737e",
+        "object.specialists.e87135c5",
+        "object.coordinator-rules.df8902ef",
+        "object.assessment-format.b787631b",
+        "object.baseline-verification.8983aa32",
+        "object.legacy-reference-map.b952a5d8",
+        "object.kernel-larena-dna-md-kernel-larena-dna-md.7789b7ff",
+        "object.kernel-platform-scope-md-kernel-platform-scope-md.2eb713c9",
+        "object.kernel-non-negotiables-md-kernel-non-negotiables-md.adb46f01",
+        "object.kernel-output-contract-md-kernel-output-contract-md.59c37139",
+        "object.rules-skill-mesh-balance-md-rules-skill-mesh-balance-md.43cbe145",
+        "object.simai-larena-entry-app-bootstrap-distribution-repository-for-the-free-starter-set-that-must-install-and-run-before-larena-update-server-bootstrap-exists-it-is-not-the-full-platform-implementation.9b80982c",
+        "object.larena-repositories-larena-composer-packages-modular-cms-platform-packages-with-provider-config-commands-migrations-language-files-tests-module-yaml-and-package-docs-these-are-the-primary-source-of-larena-platform-code.4cebb67c",
+        "object.development-monorepo-workspace-technical-cross-package-development-surface-only-not-the-customer-facing-distribution-model.f1d4f52e",
+        "object.larena-update-canonical-update-server-that-stores-installers-updates-and-coordinates-developer-server-and-user-server-flows.601acfd3",
+        "object.larena-upserv-legacy-alias-historical-naming-for-the-update-server-do-not-create-new-package-identity-or-docs-under-this-name.b47e64f2",
+        "object.larena-update-registration-closed-contour-registration-licensing-server-used-by-the-update-server-for-entitlement-checks.c8a135b4"
+      ]
+    },
+    {
+      "group_id": "source.skills-larena-rules-skill-mesh-balance-md",
+      "group_type": "source",
+      "title": "skills/larena/rules/skill-mesh-balance.md",
+      "candidate_count": 4,
+      "candidate_ids": [
+        "object.skill-mesh-balance.20a52bfd",
+        "object.does-not-own.9533744f",
+        "object.companion-contracts.8181dfe2",
+        "object.handoff.09496b01"
+      ]
+    },
+    {
+      "group_id": "source.skills-larena-rules-routing-md",
+      "group_type": "source",
+      "title": "skills/larena/rules/routing.md",
+      "candidate_count": 3,
+      "candidate_ids": [
+        "object.routing.7d15dd1b",
+        "object.work-type-routing.a7cc5884",
+        "object.conflict-rule.0b37ea46"
+      ]
+    },
+    {
+      "group_id": "source.skills-larena-rules-decision-policy-md",
+      "group_type": "source",
+      "title": "skills/larena/rules/decision-policy.md",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "object.decision-policy.f946f2b8"
+      ]
+    },
+    {
+      "group_id": "source.skills-larena-rules-learning-md",
+      "group_type": "source",
+      "title": "skills/larena/rules/learning.md",
+      "candidate_count": 1,
+      "candidate_ids": [
+        "object.learning.1016fcb2"
+      ]
+    }
+  ],
+  "duplicate_candidates": [],
+  "uncertain_items": [],
+  "missing_evidence": [
+    "candidates are source-aware but still require semantic review before canonical write",
+    "source-group relations are weak signals and must be accepted, rejected or replaced by explicit domain relations"
+  ],
+  "review_questions": [
+    "Which candidates have a real lifecycle, owner, relation or future usage?",
+    "Which candidates should be merged, renamed or rejected before canonical acceptance?",
+    "Does the parent graph DNA need to be updated before accepting these candidates?",
+    "Are confidence signals sufficient, or should a domain skill review semantic meaning?"
+  ],
+  "source_inventory": [
+    {
+      "source_ref": "skills/larena/SKILL.md",
+      "bytes_read": 13554,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/decision-policy.md",
+      "bytes_read": 1231,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/learning.md",
+      "bytes_read": 831,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/routing.md",
+      "bytes_read": 1810,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/rules/skill-mesh-balance.md",
+      "bytes_read": 1893,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/activity-registry.json",
+      "bytes_read": 314,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/admin-platform.json",
+      "bytes_read": 587,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/docara-product.json",
+      "bytes_read": 579,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/documentation.json",
+      "bytes_read": 566,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/entry-install-readiness.json",
+      "bytes_read": 590,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/new-package.json",
+      "bytes_read": 596,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/ops-runtime.json",
+      "bytes_read": 561,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/package-diagnostics.json",
+      "bytes_read": 1354,
+      "truncated": false
+    },
+    {
+      "source_ref": "skills/larena/activities/release-readiness.json",
+      "bytes_read": 576,
+      "truncated": false
+    }
+  ],
+  "dna_candidates": [
+    {
+      "candidate_id": "dna.graph-purpose-and-evolution-vector.6a54bed2",
+      "candidate_type": "dna",
+      "proposed_kind": "knowledge",
+      "proposed_subtype": "dna-candidate",
+      "title": "Graph purpose and evolution vector",
+      "summary": "Candidate DNA should be reviewed from extracted source themes before canonical graph DNA is changed.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/rules/decision-policy.md",
+        "skills/larena/rules/learning.md",
+        "skills/larena/rules/routing.md",
+        "skills/larena/rules/skill-mesh-balance.md",
+        "skills/larena/activities/activity-registry.json",
+        "skills/larena/activities/admin-platform.json",
+        "skills/larena/activities/docara-product.json",
+        "skills/larena/activities/documentation.json",
+        "skills/larena/activities/entry-install-readiness.json",
+        "skills/larena/activities/new-package.json",
+        "skills/larena/activities/ops-runtime.json",
+        "skills/larena/activities/package-diagnostics.json",
+        "skills/larena/activities/release-readiness.json"
+      ],
+      "confidence": 0.45,
+      "evidence_status": "extracted_by_ai",
+      "review_status": "pending",
+      "review_action": null,
+      "review_notes": [
+        "Generated as a placeholder DNA candidate because source material produced object candidates."
+      ]
+    }
+  ],
+  "projection_view_refs": [
+    "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/projection-view.json"
+  ],
+  "canonical_write_allowed": false
+}

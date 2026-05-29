@@ -2,7 +2,7 @@
 .env
 .env.*
 !.env.example
-source/
+/source/
 output/
 *.bak
 *.bak_*

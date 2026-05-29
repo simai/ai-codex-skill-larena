@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "ai-codex-skill-larena.graph",
+  "title": "ai-codex-skill-larena Graph DNA",
+  "purpose": "Define and evolve the repo-local GrowGraph companion layer for ai-codex-skill-larena.",
+  "parent_dna_ref": null,
+  "evolution_vector": "Keep Larena platform boundaries, package contracts, update flows, SitePack bridge, Docara proof and release gates explicit without moving domain ownership out of the Larena skill.",
+  "non_negotiable_principles": [
+    "Larena owns Larena platform meaning and package boundaries.",
+    "Generated graph artifacts are advisory until canonical migration is accepted.",
+    "Companion skills keep their own domains.",
+    "Graph evidence must preserve source boundaries and avoid secrets."
+  ],
+  "allowed_entity_families": [
+    "skill",
+    "capability",
+    "policy",
+    "activity",
+    "specialist",
+    "knowledge_pack",
+    "quality_gate",
+    "federation_export",
+    "metric"
+  ],
+  "success_criteria": [
+    "Larena context can be routed through compact graph artifacts.",
+    "Semantic preservation is checked before claiming adoption.",
+    "Effectiveness is measured against raw-source-only work.",
+    "Federation integration can validate the repo-local companion layer."
+  ]
+}
