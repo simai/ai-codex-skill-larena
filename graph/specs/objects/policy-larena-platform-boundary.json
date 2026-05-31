@@ -1,0 +1,25 @@
+{
+  "id": "policy.larena.platform-boundary",
+  "schema_version": "1.0.0",
+  "kind": "policy",
+  "subtype": "skill_policy",
+  "title": "Larena platform boundary policy",
+  "summary": "Keep Larena package/platform facts in owner skill, preserve SitePack as transport, keep update/registration security explicit and coordinate UX/SEO/docs/tester gates.",
+  "owner": "larena",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.9,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/kernel/platform-scope.md",
+    "skills/larena/kernel/non-negotiables.md"
+  ],
+  "tags": [
+    "skill",
+    "larena",
+    "policy",
+    "growgraph-gga10"
+  ]
+}

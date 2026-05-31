@@ -1,0 +1,19 @@
+{
+  "id": "relation.larena.core-depends-on-larena.platform-boundary",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "skill.larena.core",
+  "to": "policy.larena.platform-boundary",
+  "relation_type": "depends_on",
+  "status": "active",
+  "confidence": 0.9,
+  "evidence_status": "asserted_by_human",
+  "impact": "larena graph-first context must preserve Larena platform boundary policy.",
+  "owner": "larena",
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/kernel/platform-scope.md",
+    "skills/larena/kernel/non-negotiables.md"
+  ],
+  "weight": 0.9
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "relation.larena.core-depends-on-larena.platform-boundary",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "policy.larena.platform-boundary",
+    "relation_type": "depends_on",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena graph-first context must preserve Larena platform boundary policy.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/kernel/platform-scope.md",
+      "skills/larena/kernel/non-negotiables.md"
+    ],
+    "weight": 0.9
+  },
+  {
+    "id": "relation.larena.core-implements-admin-platform",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.admin-platform",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Admin platform.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/admin-platform.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-docara-product",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.docara-product",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Docara product proof.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/docara-product.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-entry-install-readiness",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.entry-install-readiness",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Entry install readiness.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/entry-install-readiness.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-new-package",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.new-package",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through New package.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/new-package.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-ops-runtime",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.ops-runtime",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through OPS runtime.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/ops-runtime.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-package-diagnostics",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.package-diagnostics",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Package diagnostics.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/package-diagnostics.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-release-readiness",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.release-readiness",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Release readiness.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/release-readiness.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-rest-api",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.rest-api",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through REST API.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/rest-api.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-settings-storage-props-layout",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.settings-storage-props-layout",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Settings storage props layout.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/settings-storage-props-layout.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-sitepack-bridge",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.sitepack-bridge",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through SitePack bridge.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/sitepack-bridge.json"
+    ],
+    "weight": 0.8
+  },
+  {
+    "id": "relation.larena.core-implements-update-registration",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "skill.larena.core",
+    "to": "capability.larena.update-registration",
+    "relation_type": "implements",
+    "status": "active",
+    "confidence": 0.9,
+    "evidence_status": "asserted_by_human",
+    "impact": "larena tasks in this area should route through Update registration.",
+    "owner": "larena",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/update-registration.json"
+    ],
+    "weight": 0.8
+  }
+]

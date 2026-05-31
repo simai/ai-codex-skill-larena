@@ -1,0 +1,23 @@
+{
+  "id": "skill.larena.core",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "skill_core",
+  "title": "larena Skill Core Contract",
+  "summary": "Coordinates Larena Laravel CMS/platform work across entry app, packages, admin, update/registration, SitePack, Docara, REST, settings/storage/props/layout, release and runtime.",
+  "owner": "larena",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.9,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/larena/SKILL.md"
+  ],
+  "tags": [
+    "skill",
+    "larena",
+    "core",
+    "growgraph-gga10"
+  ]
+}

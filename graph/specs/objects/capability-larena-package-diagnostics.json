@@ -1,0 +1,24 @@
+{
+  "id": "capability.larena.package-diagnostics",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "skill_capability",
+  "title": "Package diagnostics",
+  "summary": "Diagnose Larena packages, providers, migrations, module metadata and readiness.",
+  "owner": "larena",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.9,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/activities/package-diagnostics.json"
+  ],
+  "tags": [
+    "skill",
+    "larena",
+    "capability",
+    "growgraph-gga10"
+  ]
+}

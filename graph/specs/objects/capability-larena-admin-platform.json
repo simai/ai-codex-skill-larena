@@ -1,0 +1,24 @@
+{
+  "id": "capability.larena.admin-platform",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "skill_capability",
+  "title": "Admin platform",
+  "summary": "Coordinate modular admin, CRUD, slots, settings and UI contracts.",
+  "owner": "larena",
+  "lifecycle": "active",
+  "readiness": "pilot",
+  "confidence": 0.9,
+  "confidence_method": "human_asserted_from_skill_contract",
+  "evidence_status": "asserted_by_human",
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/activities/admin-platform.json"
+  ],
+  "tags": [
+    "skill",
+    "larena",
+    "capability",
+    "growgraph-gga10"
+  ]
+}

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "capability.larena.admin-platform",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Admin platform",
+    "summary": "Coordinate modular admin, CRUD, slots, settings and UI contracts.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/admin-platform.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.docara-product",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Docara product proof",
+    "summary": "Use Docara as first product proof and acceptance scenario.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/docara-product.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.entry-install-readiness",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Entry install readiness",
+    "summary": "Check starter entry app install/run baseline and bootstrap constraints.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/entry-install-readiness.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.new-package",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "New package",
+    "summary": "Plan and scaffold Larena package contracts and package docs.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/new-package.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.ops-runtime",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "OPS runtime",
+    "summary": "Coordinate hosting, queues, cron, Laravel runtime and update-server environments.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/ops-runtime.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.package-diagnostics",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Package diagnostics",
+    "summary": "Diagnose Larena packages, providers, migrations, module metadata and readiness.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/package-diagnostics.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.release-readiness",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Release readiness",
+    "summary": "Gate package/platform release readiness and QA evidence.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/release-readiness.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.rest-api",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "REST API",
+    "summary": "Coordinate REST Runner, OpenAPI, unsafe method boundaries and ACL checks.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/rest-api.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.settings-storage-props-layout",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Settings storage props layout",
+    "summary": "Map settings, storage, universal props, layout and content data models.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/settings-storage-props-layout.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.sitepack-bridge",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "SitePack bridge",
+    "summary": "Keep SitePack portable transport separate from platform adapters.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/sitepack-bridge.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "capability.larena.update-registration",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_capability",
+    "title": "Update registration",
+    "summary": "Handle update server, registration/licensing and delivery channels.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/activities/update-registration.json"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "capability",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "skill.larena.core",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "skill_core",
+    "title": "larena Skill Core Contract",
+    "summary": "Coordinates Larena Laravel CMS/platform work across entry app, packages, admin, update/registration, SitePack, Docara, REST, settings/storage/props/layout, release and runtime.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "core",
+      "growgraph-gga10"
+    ]
+  },
+  {
+    "id": "policy.larena.platform-boundary",
+    "schema_version": "1.0.0",
+    "kind": "policy",
+    "subtype": "skill_policy",
+    "title": "Larena platform boundary policy",
+    "summary": "Keep Larena package/platform facts in owner skill, preserve SitePack as transport, keep update/registration security explicit and coordinate UX/SEO/docs/tester gates.",
+    "owner": "larena",
+    "lifecycle": "active",
+    "readiness": "pilot",
+    "confidence": 0.9,
+    "confidence_method": "human_asserted_from_skill_contract",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "skills/larena/SKILL.md",
+      "skills/larena/kernel/platform-scope.md",
+      "skills/larena/kernel/non-negotiables.md"
+    ],
+    "tags": [
+      "skill",
+      "larena",
+      "policy",
+      "growgraph-gga10"
+    ]
+  }
+]

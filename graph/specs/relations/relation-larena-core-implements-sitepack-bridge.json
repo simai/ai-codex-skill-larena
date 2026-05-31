@@ -1,0 +1,18 @@
+{
+  "id": "relation.larena.core-implements-sitepack-bridge",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "skill.larena.core",
+  "to": "capability.larena.sitepack-bridge",
+  "relation_type": "implements",
+  "status": "active",
+  "confidence": 0.9,
+  "evidence_status": "asserted_by_human",
+  "impact": "larena tasks in this area should route through SitePack bridge.",
+  "owner": "larena",
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/activities/sitepack-bridge.json"
+  ],
+  "weight": 0.8
+}
