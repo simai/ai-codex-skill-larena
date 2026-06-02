@@ -161,6 +161,74 @@ When auditing a package TZ, check:
 - AI implementation hints;
 - migration, rollback and deprecation.
 
+## Graph-Human TZ Feedback Loop For Larena Packages
+
+Use the universal `$graph` Graph-Human TZ Feedback Loop when a Larena package
+has valid graph specs but the human-readable TZ needs a deeper semantic pass.
+
+Canonical source of truth remains:
+
+```text
+/Users/rim/Documents/GitHub/larena-specs/specs/packages/<package>/
+/Users/rim/Documents/GitHub/larena-specs/graph/specs/
+```
+
+Human-readable package TZ documents are review/projection artifacts. They can
+reveal gaps, but they do not become canonical until accepted findings are
+written back into package specs, feature specs, relations, adoption records or
+standards.
+
+Use this sequence:
+
+```text
+extract package graph context
+-> write full human-readable package TZ
+-> identify semantic gaps
+-> classify findings
+-> promote important findings to canonical graph specs
+-> regenerate package projections and reports
+-> validate schema, graph, adoption and readiness
+```
+
+Promote only findings that improve Larena implementation safety or package
+coordination:
+
+- missing cross-package relations;
+- missing feature adoption records;
+- missing package owner boundaries;
+- missing lifecycle states or state-machine transitions;
+- missing access/audit/licensing/secret/runtime constraints;
+- missing acceptance, verification or negative requirements;
+- important generated projection gaps.
+
+Do not promote noise:
+
+- illustrative examples that do not change a contract;
+- exact table names, batch sizes, numeric scheduling weights or UI copy unless
+  the package profile makes them canonical;
+- implementation preferences that belong in the implementation-planning gate;
+- duplicate relations already covered by existing package contracts.
+
+For every Larena package feedback cycle, create a report under:
+
+```text
+/Users/rim/Documents/GitHub/larena-specs/docs/text-tz-sync/experiments/<package>/
+```
+
+and update a workflow file under:
+
+```text
+/Users/rim/Documents/GitHub/larena-specs/source/workflow/
+```
+
+The cycle is complete only when:
+
+- graph specs validate;
+- feature adoption is complete for the affected relations;
+- readiness dashboard remains clean;
+- generated package projection is refreshed;
+- rejected or deferred findings have explicit reasons.
+
 ## AI Implementation Gate
 
 Do not start a major implementation batch for a package below `T4` unless the batch is explicitly discovery/prototype work.
