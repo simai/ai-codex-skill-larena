@@ -172,6 +172,7 @@ Use old developer-authored materials when selected by routing:
 
 - General package rules: [knowledge/simai-package-rules.md](./knowledge/simai-package-rules.md)
 - Current package manifest standard: [knowledge-packs/module-yaml-standard.md](./knowledge-packs/module-yaml-standard.md)
+- Package repository structure standard: [knowledge-packs/package-repository-structure.md](./knowledge-packs/package-repository-structure.md)
 - Core platform baseline: [knowledge-packs/core-platform.md](./knowledge-packs/core-platform.md)
 - Search platform baseline: [knowledge-packs/search-platform.md](./knowledge-packs/search-platform.md)
 - Package naming standard: [knowledge-packs/package-naming-standard.md](./knowledge-packs/package-naming-standard.md)

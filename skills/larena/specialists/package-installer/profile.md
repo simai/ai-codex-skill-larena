@@ -13,6 +13,7 @@ Owns Composer packages, service providers, commands, migrations, install/update 
 
 - [knowledge-packs/package-map.md](../../knowledge-packs/package-map.md)
 - [knowledge-packs/package-completion-standard.md](../../knowledge-packs/package-completion-standard.md)
+- [knowledge-packs/package-repository-structure.md](../../knowledge-packs/package-repository-structure.md)
 - [knowledge-packs/module-yaml-standard.md](../../knowledge-packs/module-yaml-standard.md)
 - [knowledge/simai-package-rules.md](../../knowledge/simai-package-rules.md)
 - [knowledge/quickstart.md](../../knowledge/quickstart.md)
