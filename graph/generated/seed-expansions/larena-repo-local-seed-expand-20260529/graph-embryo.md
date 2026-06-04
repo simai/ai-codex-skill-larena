@@ -1,7 +1,7 @@
 # Graph Embryo graph-embryo.larena-repo-local-seed-expand-20260529
 
-- Seed: `graph/source/growgraph/seeds/larena-repo-local-seed-20260529.json`
-- Target graph: `skill.larena.growgraph`
+- Seed: `graph/source/mirai-graph/seeds/larena-repo-local-seed-20260529.json`
+- Target graph: `skill.larena.mirai_graph`
 - Target profile: `profile.skill_graph`
 - Target mode: `pilot`
 - Candidate objects: `36`

@@ -20,7 +20,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -44,7 +44,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -68,7 +68,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -92,7 +92,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -116,7 +116,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -140,7 +140,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -164,7 +164,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -188,7 +188,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -212,7 +212,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -236,7 +236,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -260,7 +260,7 @@
       "skill",
       "larena",
       "capability",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -283,7 +283,7 @@
       "skill",
       "larena",
       "core",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   },
   {
@@ -308,7 +308,7 @@
       "skill",
       "larena",
       "policy",
-      "growgraph-gga10"
+      "mirai-graph-gga10"
     ]
   }
 ]

@@ -1,8 +1,8 @@
 # Graph Seed Validation seed-validation.larena-repo-local-seed-validate-20260529
 
-- Seed: `graph/source/growgraph/seeds/larena-repo-local-seed-20260529.json`
+- Seed: `graph/source/mirai-graph/seeds/larena-repo-local-seed-20260529.json`
 - Status: `success`
-- Target graph: `skill.larena.growgraph`
+- Target graph: `skill.larena.mirai_graph`
 - Target profile: `profile.skill_graph`
 - Target mode: `pilot`
 

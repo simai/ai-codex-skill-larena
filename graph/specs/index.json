@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "graph_id": "ai-codex-skill-larena.graph",
   "title": "ai-codex-skill-larena Graph",
-  "description": "Minimal canonical index for the repo-local GrowGraph companion layer. Generated adoption artifacts remain the active evidence source until a full graph-first source-of-truth migration is accepted.",
+  "description": "Minimal canonical index for the repo-local Mirai Graph companion layer. Generated adoption artifacts remain the active evidence source until a full graph-first source-of-truth migration is accepted.",
   "type_descriptor_files": [],
   "object_files": [
     "objects/capability-larena-admin-platform.json",

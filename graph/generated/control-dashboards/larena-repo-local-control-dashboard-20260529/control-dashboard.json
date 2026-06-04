@@ -12,9 +12,9 @@
   "seed": {
     "status": "success",
     "label": "seed",
-    "ref": "graph/source/growgraph/seeds/larena-repo-local-seed-20260529.json",
+    "ref": "graph/source/mirai-graph/seeds/larena-repo-local-seed-20260529.json",
     "operation_id": "graph-seed",
-    "id": "seed.larena-skill.growgraph-pilot.20260529",
+    "id": "seed.larena-skill.mirai-graph-pilot.20260529",
     "canonical_state_ref": null
   },
   "embryo": {
@@ -71,7 +71,7 @@
       "status": "available",
       "ref": "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/projection-view.json",
       "view_type": "seed_summary",
-      "title": "Seed summary for skill.larena.growgraph"
+      "title": "Seed summary for skill.larena.mirai_graph"
     }
   ],
   "proposal_queue": {

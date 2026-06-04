@@ -10,15 +10,15 @@ admin, installer/update flows, registration/licensing, SitePack bridge, Docara
 product proof, REST/API safety, settings/storage/props/layout/search,
 migrations, release readiness and QA.
 
-`GrowGraph` используется как companion layer для структуры, связей,
+`Mirai Graph` используется как companion layer для структуры, связей,
 adoption/readiness, semantic preservation, effectiveness и federation
 contracts. Он не заменяет `SKILL.md`, `kernel/`, `rules/`, `activities/`,
 `specialists/`, `knowledge-packs/`, `knowledge/`, `modules/`, `quality/` и
 templates.
 
-## GrowGraph Rules
+## Mirai Graph Rules
 
-- Не считать repo-local GrowGraph migration успешной только из-за валидного
+- Не считать repo-local Mirai Graph migration успешной только из-за валидного
   JSON.
 - Не переписывать `skills/larena/SKILL.md` массово из generated artifacts.
 - Generated candidates из `graph/generated/` не являются canonical truth.
@@ -33,15 +33,15 @@ templates.
 
 ## Required Gate
 
-Before claiming GrowGraph integration for this repository, run:
+Before claiming Mirai Graph integration for this repository, run:
 
 ```bash
-python3 scripts/growgraph_contract_gate.py
+python3 scripts/mirai_graph_contract_gate.py
 ```
 
 The GitHub workflow also runs this gate after ordinary repository checks.
 
-## Current Repo-Local GrowGraph Scope
+## Current Repo-Local Mirai Graph Scope
 
 Current migration scope:
 
@@ -55,11 +55,11 @@ Canonical repo-local graph root:
 graph/
 ```
 
-Current GrowGraph artifacts:
+Current Mirai Graph artifacts:
 
 ```text
-graph/source/growgraph/seeds/
-graph/generated/growgraph/
+graph/source/mirai-graph/seeds/
+graph/generated/mirai-graph/
 graph/federation/exports/
 ```
 

@@ -9,20 +9,20 @@ Runtime skill находится в:
 skills/larena/
 ```
 
-## GrowGraph
+## Mirai Graph
 
-Репозиторий содержит repo-local GrowGraph companion layer:
+Репозиторий содержит repo-local Mirai Graph companion layer:
 
 ```text
-graph/source/growgraph/      seeds, migration notes, review inputs
-graph/generated/growgraph/   adoption, semantic, effectiveness, gate reports
+graph/source/mirai-graph/      seeds, migration notes, review inputs
+graph/generated/mirai-graph/   adoption, semantic, effectiveness, gate reports
 graph/federation/exports/    bounded federation exports
 ```
 
-Проверка локального GrowGraph-контракта:
+Проверка локального Mirai Graph-контракта:
 
 ```bash
-python3 scripts/growgraph_contract_gate.py
+python3 scripts/mirai_graph_contract_gate.py
 ```
 
 ## Обслуживание

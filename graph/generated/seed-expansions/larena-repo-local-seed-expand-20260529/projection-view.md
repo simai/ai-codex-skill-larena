@@ -1,11 +1,11 @@
-# Seed summary for skill.larena.growgraph
+# Seed summary for skill.larena.mirai_graph
 
 - View type: `seed_summary`
 - Source: `graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json`
 
 ## Seed
 
-- purpose: Start a controlled GrowGraph pilot for the SIMAI larena skill without changing canonical skill behavior.
+- purpose: Start a controlled Mirai Graph pilot for the SIMAI larena skill without changing canonical skill behavior.
 - target_profile: profile.skill_graph
 - target_mode: pilot
 

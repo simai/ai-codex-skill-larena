@@ -17,7 +17,7 @@
   },
   "evolution": {
     "current_iteration": 1,
-    "migration_status": "growgraph_companion"
+    "migration_status": "mirai_graph_companion"
   },
   "graph_runtime": {
     "graph_required": false,

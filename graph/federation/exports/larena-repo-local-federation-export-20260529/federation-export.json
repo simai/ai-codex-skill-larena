@@ -1,22 +1,22 @@
 {
   "schema_version": "1.0.0",
   "protocol_version": "1.0.0",
-  "graph_id": "growgraph.skill-larena",
+  "graph_id": "mirai_graph.skill-larena",
   "exported_at": "2026-05-29T12:11:09.247069+00:00",
   "freshness_hash": "sha256:febec6b187973ec2e4aa5ed0829920341c81d71dd59587f66f4d86920ab913ae",
   "manifest": {
-    "graph_id": "growgraph.skill-larena",
-    "title": "GrowGraph federation export for skill:larena",
-    "graph_type": "growgraph_skill_pilot",
+    "graph_id": "mirai_graph.skill-larena",
+    "title": "Mirai Graph federation export for skill:larena",
+    "graph_type": "mirai_graph_skill_pilot",
     "owner": "larena",
-    "source_of_truth": "generated_growgraph_pilot_artifacts",
+    "source_of_truth": "generated_mirai_graph_pilot_artifacts",
     "audience": "federation",
     "canonical_write_allowed": false
   },
   "graph_contracts": [
     {
-      "name": "growgraph-adoption-report",
-      "schema_ref": "schemas/core/growgraph-adoption-report.schema.json"
+      "name": "mirai-graph-adoption-report",
+      "schema_ref": "schemas/core/mirai-graph-adoption-report.schema.json"
     },
     {
       "name": "semantic-preservation-verdict",
@@ -175,7 +175,7 @@
     "runtime_contract_version": "0.1.1",
     "consumer_minimum_protocol": "1.0.0"
   },
-  "growgraph_adoption": {
+  "mirai_graph_adoption": {
     "target_ref": "skill:larena",
     "owner_skill": "larena",
     "adoption_level": 7,
@@ -183,10 +183,10 @@
     "semantic_verdict": "pass_with_notes",
     "effectiveness_verdict": "improved",
     "source_refs": [
-      "graph/generated/growgraph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/growgraph-adoption-report.json",
+      "graph/generated/mirai-graph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/mirai-graph-adoption-report.json",
       "graph/generated/control-dashboards/larena-repo-local-control-dashboard-20260529/control-dashboard.json",
-      "graph/generated/growgraph/semantic-preservation/larena-repo-local-semantic-review-20260529/semantic-preservation-verdict.json",
-      "graph/generated/growgraph/effectiveness-reports/larena-repo-local-effectiveness-20260529/effectiveness-report.json",
+      "graph/generated/mirai-graph/semantic-preservation/larena-repo-local-semantic-review-20260529/semantic-preservation-verdict.json",
+      "graph/generated/mirai-graph/effectiveness-reports/larena-repo-local-effectiveness-20260529/effectiveness-report.json",
       "graph/generated/seed-expansions/larena-repo-local-seed-expand-20260529/graph-embryo.json"
     ]
   },

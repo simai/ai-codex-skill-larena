@@ -1,4 +1,4 @@
-# GrowGraph Federation Export growgraph.skill-larena
+# Mirai Graph Federation Export mirai_graph.skill-larena
 
 - Target ref: `skill:larena`
 - Adoption level: `7`
@@ -8,7 +8,7 @@
 
 ## Contract Summary
 
-- `growgraph-adoption-report`: `schemas/core/growgraph-adoption-report.schema.json`
+- `mirai-graph-adoption-report`: `schemas/core/mirai-graph-adoption-report.schema.json`
 - `semantic-preservation-verdict`: `schemas/core/semantic-preservation-verdict.schema.json`
 - `effectiveness-report`: `schemas/core/effectiveness-report.schema.json`
 - `control-dashboard`: `schemas/core/control-dashboard.schema.json`

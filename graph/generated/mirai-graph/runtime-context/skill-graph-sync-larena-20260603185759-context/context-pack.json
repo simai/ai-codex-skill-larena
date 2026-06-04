@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "request": {
+    "task": "Mirai Graph federation rename",
+    "skill": "larena",
+    "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-larena",
+    "mode": "mirai_graph_skill_runtime_context"
+  },
+  "included_objects": [
+    {
+      "object_id": "skill.larena.core",
+      "score": 0.15,
+      "reason": "core/policy baseline",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "larena Skill Core Contract",
+      "summary": "Coordinates Larena Laravel CMS/platform work across entry app, packages, admin, update/registration, SitePack, Docara, REST, settings/storage/props/layout, release and runtime.",
+      "source_refs": [
+        "skills/larena/SKILL.md"
+      ]
+    },
+    {
+      "object_id": "policy.larena.platform-boundary",
+      "score": 0.15,
+      "reason": "core/policy baseline",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Larena platform boundary policy",
+      "summary": "Keep Larena package/platform facts in owner skill, preserve SitePack as transport, keep update/registration security explicit and coordinate UX/SEO/docs/tester gates.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/kernel/platform-scope.md",
+        "skills/larena/kernel/non-negotiables.md"
+      ]
+    },
+    {
+      "object_id": "capability.larena.admin-platform",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Admin platform",
+      "summary": "Coordinate modular admin, CRUD, slots, settings and UI contracts.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/admin-platform.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.docara-product",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Docara product proof",
+      "summary": "Use Docara as first product proof and acceptance scenario.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/docara-product.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.entry-install-readiness",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Entry install readiness",
+      "summary": "Check starter entry app install/run baseline and bootstrap constraints.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/entry-install-readiness.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.new-package",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "New package",
+      "summary": "Plan and scaffold Larena package contracts and package docs.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/new-package.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.ops-runtime",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "OPS runtime",
+      "summary": "Coordinate hosting, queues, cron, Laravel runtime and update-server environments.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/ops-runtime.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.package-diagnostics",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Package diagnostics",
+      "summary": "Diagnose Larena packages, providers, migrations, module metadata and readiness.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/package-diagnostics.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.release-readiness",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Release readiness",
+      "summary": "Gate package/platform release readiness and QA evidence.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/release-readiness.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.rest-api",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "REST API",
+      "summary": "Coordinate REST Runner, OpenAPI, unsafe method boundaries and ACL checks.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/rest-api.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.settings-storage-props-layout",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "Settings storage props layout",
+      "summary": "Map settings, storage, universal props, layout and content data models.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/settings-storage-props-layout.json"
+      ]
+    },
+    {
+      "object_id": "capability.larena.sitepack-bridge",
+      "score": 0.0,
+      "reason": "low relevance fallback",
+      "confidence": 0.9,
+      "evidence_status": "asserted_by_human",
+      "title": "SitePack bridge",
+      "summary": "Keep SitePack portable transport separate from platform adapters.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/sitepack-bridge.json"
+      ]
+    }
+  ],
+  "excluded_objects": [],
+  "warnings": [],
+  "source_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/kernel/platform-scope.md",
+    "skills/larena/kernel/non-negotiables.md",
+    "skills/larena/activities/admin-platform.json",
+    "skills/larena/activities/docara-product.json",
+    "skills/larena/activities/entry-install-readiness.json",
+    "skills/larena/activities/new-package.json",
+    "skills/larena/activities/ops-runtime.json",
+    "skills/larena/activities/package-diagnostics.json",
+    "skills/larena/activities/release-readiness.json",
+    "skills/larena/activities/rest-api.json",
+    "skills/larena/activities/settings-storage-props-layout.json",
+    "skills/larena/activities/sitepack-bridge.json"
+  ],
+  "related_relations": [
+    {
+      "id": "relation.larena.core-depends-on-larena.platform-boundary",
+      "from": "skill.larena.core",
+      "to": "policy.larena.platform-boundary",
+      "relation_type": "depends_on",
+      "impact": "larena graph-first context must preserve Larena platform boundary policy.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/kernel/platform-scope.md",
+        "skills/larena/kernel/non-negotiables.md"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-admin-platform",
+      "from": "skill.larena.core",
+      "to": "capability.larena.admin-platform",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Admin platform.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/admin-platform.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-docara-product",
+      "from": "skill.larena.core",
+      "to": "capability.larena.docara-product",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Docara product proof.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/docara-product.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-entry-install-readiness",
+      "from": "skill.larena.core",
+      "to": "capability.larena.entry-install-readiness",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Entry install readiness.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/entry-install-readiness.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-new-package",
+      "from": "skill.larena.core",
+      "to": "capability.larena.new-package",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through New package.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/new-package.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-ops-runtime",
+      "from": "skill.larena.core",
+      "to": "capability.larena.ops-runtime",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through OPS runtime.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/ops-runtime.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-package-diagnostics",
+      "from": "skill.larena.core",
+      "to": "capability.larena.package-diagnostics",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Package diagnostics.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/package-diagnostics.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-release-readiness",
+      "from": "skill.larena.core",
+      "to": "capability.larena.release-readiness",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Release readiness.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/release-readiness.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-rest-api",
+      "from": "skill.larena.core",
+      "to": "capability.larena.rest-api",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through REST API.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/rest-api.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-settings-storage-props-layout",
+      "from": "skill.larena.core",
+      "to": "capability.larena.settings-storage-props-layout",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Settings storage props layout.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/settings-storage-props-layout.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-sitepack-bridge",
+      "from": "skill.larena.core",
+      "to": "capability.larena.sitepack-bridge",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through SitePack bridge.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/sitepack-bridge.json"
+      ]
+    },
+    {
+      "id": "relation.larena.core-implements-update-registration",
+      "from": "skill.larena.core",
+      "to": "capability.larena.update-registration",
+      "relation_type": "implements",
+      "impact": "larena tasks in this area should route through Update registration.",
+      "source_refs": [
+        "skills/larena/SKILL.md",
+        "skills/larena/activities/update-registration.json"
+      ]
+    }
+  ],
+  "runtime_contract": {
+    "graph_first_scope": "routing/capability/policy orientation",
+    "raw_source_authoritative": true,
+    "canonical_write_allowed": false
+  }
+}

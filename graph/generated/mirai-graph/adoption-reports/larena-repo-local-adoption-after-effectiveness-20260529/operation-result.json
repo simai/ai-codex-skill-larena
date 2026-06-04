@@ -1,0 +1,23 @@
+{
+  "operation_id": "mirai_graph.adoption-report",
+  "status": "blocked",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/mirai-graph-adoption-report.json",
+    "graph/generated/mirai-graph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/mirai-graph-adoption-report.md",
+    "graph/generated/mirai-graph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/operation-result.json"
+  ],
+  "warnings": [],
+  "blockers": [
+    "federation export is not validated"
+  ],
+  "next_suggested_operations": [
+    "create and validate federation export",
+    "do not claim federation migration until GGA8/GGA9 gates pass"
+  ],
+  "mirai_graph_adoption_report_ref": "graph/generated/mirai-graph/adoption-reports/larena-repo-local-adoption-after-effectiveness-20260529/mirai-graph-adoption-report.json",
+  "adoption_level": 7,
+  "adoption_level_name": "effectiveness_checked",
+  "canonical_write_allowed": false
+}

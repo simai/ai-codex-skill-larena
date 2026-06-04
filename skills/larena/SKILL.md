@@ -17,9 +17,31 @@ Before any activity logic, load and obey:
 
 Use existing legacy/developer materials in `knowledge/`, `modules/`, `checklists/`, `examples/`, and `templates/` as detailed references only after routing selects the relevant surface.
 
-## GrowGraph Runtime Entry
+## Mirai Graph Runtime Entry
 
-For substantial `larena` tasks, use repo-local `graph/specs` and the latest GrowGraph runtime context as the first machine-readable index for capability selection, routing, readiness, companion contracts and scenario evidence. The graph layer may choose the owner boundary, required gates, related skills and raw-source fallback path for Larena platform, Laravel packages, admin/runtime flows and product-platform judgement. Raw `larena` sources remain authoritative for detailed methodology, judgement, longform playbooks, sensitive rules, reporting format and final domain verdicts. Sensitive/runtime/security and safe-write decisions require raw-source fallback and the relevant owner gate. Platform-specific playbooks stay in the owner skill; the central graph may point to them but must not absorb them. This is GrowGraph Hybrid SOT, not graph-only runtime.
+For substantial `larena` tasks, use repo-local `graph/specs` and the latest Mirai Graph runtime context as the first machine-readable index for capability selection, routing, readiness, companion contracts and scenario evidence. The graph layer may choose the owner boundary, required gates, related skills and raw-source fallback path for Larena platform, Laravel packages, admin/runtime flows and product-platform judgement. Raw `larena` sources remain authoritative for detailed methodology, judgement, longform playbooks, sensitive rules, reporting format and final domain verdicts. Sensitive/runtime/security and safe-write decisions require raw-source fallback and the relevant owner gate. Platform-specific playbooks stay in the owner skill; the central graph may point to them but must not absorb them. This is Mirai Graph Hybrid SOT, not graph-only runtime.
+
+Larena uses Mirai Graph Technological Process Control as the domain realization
+of its development conveyor. For package work, apply the same universal
+contracts through Larena-specific DNA, package specs, launch record, allowed
+files, evidence package, graph sync proposal, review gates and runtime feedback.
+Do not start broad package coding from a markdown plan alone; require the
+process contract and Larena/package source-of-truth context.
+
+Before writing implementation code for any Larena package repository, load and
+obey [knowledge-packs/package-pre-codegen-repository-preparation.md](./knowledge-packs/package-pre-codegen-repository-preparation.md).
+Existing legacy repositories with confirmed backup should be emptied in the
+active tree and then rebuilt as clean Larena package repositories. The required
+pre-codegen work is repository preparation: package identity, specs reference,
+launch context, Composer command contract, hooks, CI, scope checker, evidence
+paths, graph-sync proposal boundary and validation before `ready_to_code`.
+Installing enforcement on top of old active code is not enough.
+
+In executable Process Control mode, Larena package work must pass the active
+state-machine transition before coding, release or acceptance claims. A package
+spec or markdown plan can prepare the human projection, but the coding batch
+starts only from launch record scope, allowed files, action-gate result and
+evidence path; recovery resumes from workflow/launch/evidence/git state.
 
 ## Core Operating Model
 
@@ -32,10 +54,12 @@ Follow this sequence for substantial Larena tasks:
 5. For modular admin, settings/storage/props/layout UI, install/update UI, registration/licensing screens, Docara UI, or package admin screens, read [knowledge-packs/ux-implementation-contract.md](./knowledge-packs/ux-implementation-contract.md) and use `$ux` screen spec or UX handoff as the interface contract.
 6. For public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara bridge, structured data, documentation/product pages, or SEO Contract implementation, treat `$seo` as the contract owner. Implement the SEO Contract through Larena-native routes, storage, views, middleware, packages, or Docara bridge surfaces and return changed routes/templates/config for `$seo` review and `$tester` acceptance. If the SEO Contract conflicts with Larena constraints, report a blocker to `$seo`; do not silently rewrite SEO decisions.
 7. For substantial documentation, docs maps, screenshots, user/developer/API guides, or documentation audits, use `$docs` as the technical-writing owner. Keep `$larena` responsible for Larena facts, package contracts, runtime constraints, and Docara product specifics.
-8. Apply the baseline Larena contracts from kernel and knowledge packs.
-9. For non-trivial work, collect compact specialist assessments before finalizing.
-10. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
-11. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
+8. For package coding, resolve the technological process contract and ensure launch record, allowed files, tests, evidence path and graph sync proposal path are known before implementation.
+9. For existing or legacy package repositories, load [knowledge-packs/package-pre-codegen-repository-preparation.md](./knowledge-packs/package-pre-codegen-repository-preparation.md) and complete clean repository preparation: empty old active content when backup is confirmed, create the Larena baseline, link specs, install command contract/hooks/CI/scope checker, validate evidence boundaries and only then allow a launch-record transition.
+10. Apply the baseline Larena contracts from kernel and knowledge packs.
+11. For non-trivial work, collect compact specialist assessments before finalizing.
+12. Run the coordinator gate from [rules/decision-policy.md](./rules/decision-policy.md).
+13. Return one practical result: patch, diagnostic verdict, architecture decision, release/readiness report, QA result, documentation update, or blocker.
 
 Do not load every reference file. Keep `SKILL.md` lean and use progressive disclosure.
 

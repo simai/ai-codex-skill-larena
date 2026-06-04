@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "graph_id": "ai-codex-skill-larena.graph",
   "title": "ai-codex-skill-larena Graph DNA",
-  "purpose": "Define and evolve the repo-local GrowGraph companion layer for ai-codex-skill-larena.",
+  "purpose": "Define and evolve the repo-local Mirai Graph companion layer for ai-codex-skill-larena.",
   "parent_dna_ref": null,
   "evolution_vector": "Keep Larena platform boundaries, package contracts, update flows, SitePack bridge, Docara proof and release gates explicit without moving domain ownership out of the Larena skill.",
   "non_negotiable_principles": [
