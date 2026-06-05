@@ -10,8 +10,27 @@ launch records, evidence, metrics, runtime/security gates and package DNA.
 ## Hierarchy
 
 ```text
-goal -> milestone -> batch -> checkpoint -> evidence -> Kaizen
+vision -> program -> goal -> milestone -> batch -> checkpoint -> evidence -> Kaizen
 ```
+
+Larena uses the universal SIMAI Goal Scale Contract from `teamlead`.
+The requested label and the execution scale must be separated:
+
+- `goal`: a user-meaningful Larena outcome, usually several milestones and
+  many batches, for example "reach developer-testable entry app preview";
+- `milestone`: a product or engineering checkpoint inside that goal, for
+  example "guarded package registry seed works and is documented";
+- `batch`: one bounded repository/spec/code/evidence slice, for example
+  "fix runtime/security smoke output and verify it";
+- `program`: a larger Larena direction, for example "Larena production launch"
+  or "package cluster implementation";
+- `vision`: long-term Larena trajectory, not directly executable.
+
+If a user asks Larena to "do the goal" but the described work is batch-sized,
+execute it only as a batch inside the current milestone/goal and keep the
+larger Larena trajectory visible. If the described work touches multiple
+package clusters, install/update/runtime, or developer preview readiness,
+escalate it to goal-scale planning before execution.
 
 ## Larena Goal Examples
 
@@ -52,6 +71,10 @@ small commits:
 - guarded runtime mutation ready;
 - release candidate.
 
+A single repository cleanup, command UX fix, registry seed hardening, or
+developer retest fix is usually a batch or milestone, not a full Larena goal,
+unless it is explicitly tied to a larger `Done When`.
+
 ## Batch Rules
 
 Larena batches must stay inside:
@@ -77,4 +100,3 @@ Ask for a human checkpoint when:
 - graph/spec update would change canonical platform behavior.
 
 Otherwise continue the next safe batch automatically.
-
