@@ -28,6 +28,13 @@ files, evidence package, graph sync proposal, review gates and runtime feedback.
 Do not start broad package coding from a markdown plan alone; require the
 process contract and Larena/package source-of-truth context.
 
+For user-level Larena goals and milestones, load
+[knowledge-packs/larena-goal-execution-profile.md](./knowledge-packs/larena-goal-execution-profile.md).
+Use the hierarchy `goal -> milestone -> batch -> checkpoint/evidence -> Kaizen`.
+If the user says `делай цель`, `делай в режиме цели`, or `доведи до результата`,
+continue safe Larena batches until the agreed `Done When`, a real blocker,
+runtime/destructive approval boundary, or planned human checkpoint.
+
 Before writing implementation code for any Larena package repository, load and
 obey [knowledge-packs/package-pre-codegen-repository-preparation.md](./knowledge-packs/package-pre-codegen-repository-preparation.md).
 Existing legacy repositories with confirmed backup should be emptied in the
