@@ -1,6 +1,6 @@
 # Larena Goal Execution Profile
 
-Use this profile when Larena work is requested as a goal, milestone, or
+Use this profile when Larena work is requested as a goal, stage/milestone, or
 autonomous multi-batch delivery.
 
 `teamlead` owns the universal goal execution standard. `larena` applies it to
@@ -13,12 +13,22 @@ launch records, evidence, metrics, runtime/security gates and package DNA.
 vision -> program -> goal -> milestone -> batch -> checkpoint -> evidence -> Kaizen
 ```
 
+Russian user-facing wording:
+
+```text
+цель -> этап -> батч -> контрольная точка и доказательства -> разбор и улучшение
+```
+
+Keep canonical English keys in process records, route output, launch records,
+validators and evidence. Use `этап` as the primary Russian word for
+`milestone`; treat `веха` only as a legacy input alias.
+
 Larena uses the universal SIMAI Goal Scale Contract from `teamlead`.
 The requested label and the execution scale must be separated:
 
 - `goal`: a user-meaningful Larena outcome, usually several milestones and
   many batches, for example "reach developer-testable entry app preview";
-- `milestone`: a product or engineering checkpoint inside that goal, for
+- `milestone`: a product or engineering stage/checkpoint inside that goal, for
   example "guarded package registry seed works and is documented";
 - `batch`: one bounded repository/spec/code/evidence slice, for example
   "fix runtime/security smoke output and verify it";
@@ -57,9 +67,9 @@ Every Larena goal must name:
 - metrics/evidence outputs;
 - human checkpoints.
 
-## Milestone Rules
+## Stage/Milestone Rules
 
-Larena milestones should map to product-meaningful control points, not only
+Larena stages/milestones should map to product-meaningful control points, not only
 small commits:
 
 - repository prepared;

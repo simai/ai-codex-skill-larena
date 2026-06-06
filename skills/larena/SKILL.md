@@ -28,9 +28,12 @@ files, evidence package, graph sync proposal, review gates and runtime feedback.
 Do not start broad package coding from a markdown plan alone; require the
 process contract and Larena/package source-of-truth context.
 
-For user-level Larena goals and milestones, load
+For user-level Larena goals and stages/milestones, load
 [knowledge-packs/larena-goal-execution-profile.md](./knowledge-packs/larena-goal-execution-profile.md).
 Use the hierarchy `goal -> milestone -> batch -> checkpoint/evidence -> Kaizen`.
+In Russian user-facing Larena replies, say `этап` for canonical `milestone`;
+keep `веха` only as a legacy user input alias. Do not rename machine-readable
+process keys, launch records or evidence fields.
 If the user says `делай цель`, `делай в режиме цели`, or `доведи до результата`,
 continue safe Larena batches until the agreed `Done When`, a real blocker,
 runtime/destructive approval boundary, or planned human checkpoint.
