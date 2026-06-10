@@ -38,6 +38,13 @@ If the user says `делай цель`, `делай в режиме цели`, o
 continue safe Larena batches until the agreed `Done When`, a real blocker,
 runtime/destructive approval boundary, or planned human checkpoint.
 
+When the user provides developer feedback, code-review findings, retest
+results, architecture notes or handoff recommendations for Larena, load and
+apply [knowledge-packs/developer-feedback-intake-protocol.md](./knowledge-packs/developer-feedback-intake-protocol.md).
+Treat feedback as review input, not canonical change: classify each finding,
+decide outcome, record impact, add recurrence prevention when accepted, and run
+the project-local feedback validator when present.
+
 Before writing implementation code for any Larena package repository, load and
 obey [knowledge-packs/package-pre-codegen-repository-preparation.md](./knowledge-packs/package-pre-codegen-repository-preparation.md).
 Existing legacy repositories with confirmed backup should be emptied in the
