@@ -10,6 +10,7 @@
 - Do not ship paid implementation code inside free packages and rely on feature flags as the primary commercial boundary.
 - Do not collapse SitePack standard and platform adapter responsibilities.
 - Do not add CDN or hardcoded external services to package runtime templates; use config/env contracts and safe fallback.
+- Keep Blade templates presentation-only: markup plus ordinary output, includes, conditionals and loops. Put CSS/JS in package asset files connected through the asset pipeline, and put data preparation, formatting, mapping, service calls, helper functions and other PHP computations in controllers, view models, presenters, components, services or package runtime classes. Inline `<style>`, `<script>`, `@php`, raw PHP functions and calculation blocks in Blade are forbidden unless recorded as a legacy exception with owner, reason, cleanup trigger and evidence.
 - Preserve localization parity for public/admin UI strings where package conventions require `ru` and `en`.
 - Prefer idempotent install/update commands and explicit rollback/migration notes.
 - Treat developer/package docs that still say `simai/*` as stale until verified against current `larena/*` package naming.
