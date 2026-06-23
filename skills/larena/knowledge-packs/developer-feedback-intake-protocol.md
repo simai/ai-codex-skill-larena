@@ -52,7 +52,9 @@ For each finding, check whether it affects:
 
 ## Recurrence Prevention
 
-For accepted findings, answer what prevents recurrence:
+Every current and applicable developer finding must have a prevention outcome,
+not only a local code outcome. Accepted findings must answer what prevents
+recurrence:
 
 - validator/test added or updated;
 - cockpit metric added or updated;
@@ -62,7 +64,9 @@ For accepted findings, answer what prevents recurrence:
 - deferred trigger recorded;
 - not required with reason.
 
-If a finding is systemic, a code patch alone is not sufficient.
+If a finding is systemic, a code patch alone is not sufficient. If prevention
+is not required, record why the finding is isolated, already covered, stale or
+not safely preventable in the current track.
 
 ## Required Artifacts
 
