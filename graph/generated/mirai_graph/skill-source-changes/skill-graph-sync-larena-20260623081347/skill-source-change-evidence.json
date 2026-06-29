@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-06-23T08:13:48.320479+00:00",
+  "skill": "larena",
+  "repo": "/Users/rim/Documents/GitHub/ai-codex-skill-larena",
+  "detector_report_ref": "/var/folders/5h/9qj7mywd5170nxnv1v7_72pc0000gn/T/tmphozq142r.json",
+  "changed_files": [
+    {
+      "path": "skills/larena/kernel/non-negotiables.md",
+      "source_path": "kernel/non-negotiables.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": ""
+    }
+  ],
+  "change_types": [
+    "methodology",
+    "routing-impact"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/larena/kernel/non-negotiables.md"
+  ],
+  "canonical_write_allowed": false
+}
