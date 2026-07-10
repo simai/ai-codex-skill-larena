@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-07-10T16:15:18.833922+00:00",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai_graph/skill-source-changes/skill-graph-sync-larena-20260710161518/skill-source-change-evidence.json",
+  "runtime_verify_ref": "graph/generated/mirai-graph/runtime-kit/skill-graph-sync-larena-20260710161518-verify/runtime-kit-verify.json",
+  "runtime_context_ref": "graph/generated/mirai-graph/runtime-context/skill-graph-sync-larena-20260710161518-context/context-pack.json",
+  "federation_change_proposal_ref": "graph/generated/mirai-graph/federation-change/skill-graph-sync-larena-20260710161518-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "sync_fingerprint": "9b2d3d590aeb98eba04efcafc8861ba210a9f9f0024b4efdb867c3d28b0a7603"
+}
