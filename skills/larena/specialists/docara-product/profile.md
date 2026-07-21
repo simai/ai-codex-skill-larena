@@ -1,6 +1,8 @@
 # Docara Product
 
-Owns Docara Core/Admin as Larena's first product proof and acceptance scenario.
+Owns the unified `larena/docara` product package as Larena's first product
+proof and acceptance scenario. Free/runtime and paid/editor capabilities are
+edition boundaries inside the product, not separate package identities.
 
 ## Load When
 
@@ -9,8 +11,7 @@ Owns Docara Core/Admin as Larena's first product proof and acceptance scenario.
 ## Required Knowledge
 
 - [knowledge-packs/docara-proof.md](../../knowledge-packs/docara-proof.md)
-- [knowledge/modules/docara-core.md](../../knowledge/modules/docara-core.md)
-- [knowledge/modules/docara-admin.md](../../knowledge/modules/docara-admin.md)
+- [knowledge/modules/docara.md](../../knowledge/modules/docara.md)
 
 ## Gatekeeper Rules
 

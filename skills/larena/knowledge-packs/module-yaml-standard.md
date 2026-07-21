@@ -52,7 +52,12 @@ Inline `module.yaml.capabilities` is acceptable only for small early drafts. Dur
 
 The first machine-readable schema baseline for package-local capabilities lives in `simai/larena/docs/developer/schemas/capabilities.schema.json`. When auditing examples or package manifests, at minimum check JSON/YAML syntax and then apply the future validator gates from `docs/developer/licensing/capability-validator-gates.md`.
 
-As of the first full local alignment pass, the 14 local Larena repositories can be checked together by passing explicit paths for `larena-setting`, `larena-filesystem`, `larena-access`, `larena-auth`, `larena-2fa`, `larena-rest`, `larena-rest-doc`, `larena-property`, `larena-admin`, `larena-lang`, `larena-docara-core`, `larena-docara-admin`, `larena-update`, and `larena-update-registration`.
+Do not maintain a second hard-coded local-repository list in the validator
+command. Resolve the current package set from the active Larena Specs registry
+and Workspace profile, then pass the exact canonical `packages/<slug>` paths.
+The 2026-07 baseline contains 42 packages; MFA belongs to `larena/auth`, and
+`larena-2fa`, split Docara packages and `larena-rest-doc` are retired package
+identities, not validation aliases.
 
 ## Purpose
 
@@ -191,10 +196,10 @@ After dependency alignment, tag the package and update the bootstrap repository 
 
 `edition`, `product_layer`, `license`, and `distribution.access` must make the package's product position explicit.
 
-Working Docara boundary:
-
-- `larena/docara-core`: free runtime/viewer direction.
-- `larena/docara-admin`: paid admin/professional direction.
+Working Docara boundary: `larena/docara` is the single package and domain
+owner. Free public-runtime capabilities and paid editor/governance capabilities
+must be expressed as edition/licensing capabilities inside that package. Do not
+recreate `larena/docara-core` or `larena/docara-admin` package identities.
 
 Do not silently change license, paid/free status, public/private distribution, or update channel without a product decision.
 

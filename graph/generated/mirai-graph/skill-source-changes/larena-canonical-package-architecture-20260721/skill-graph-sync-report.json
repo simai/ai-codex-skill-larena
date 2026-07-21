@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-07-21T22:04:01.322546+00:00",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "HEAD",
+  "base_commit": "66e7e55176ec4102847e5b71bd0bd6a6e196295c",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "531cfd1cdd0ba9dbedadc2e010f36d3731492566d019b4241c6fc191d37f89a3",
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/larena-canonical-package-architecture-20260721/skill-source-change-evidence.json",
+  "runtime_verify_ref": "graph/generated/mirai-graph/runtime-kit/larena-canonical-package-architecture-20260721-verify/runtime-kit-verify.json",
+  "runtime_context_ref": "graph/generated/mirai-graph/runtime-context/larena-canonical-package-architecture-20260721-context/context-pack.json",
+  "federation_change_proposal_ref": "repo://ai-codex-skill-graph/graph/generated/mirai-graph/federation-change/larena-canonical-package-architecture-20260721-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [
+    "repo://ai-codex-skill-graph/graph/generated/mirai-graph/specialist-promotion/larena-canonical-package-architecture-20260721-specialist-larena-docara-product/specialist-promotion-proposal.json",
+    "repo://ai-codex-skill-graph/graph/generated/mirai-graph/specialist-promotion/larena-canonical-package-architecture-20260721-specialist-larena-rest-api/specialist-promotion-proposal.json"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "sync_fingerprint": "3b78a71c8dd9ae336e6178db1522ebad01a1a82a308772a99841b1f291d8a284",
+  "task_sha256": "a8810588662b8b979ae6ffd82d4f01e37e3b86c1d57e4ee2124f19566b9aec29",
+  "task_bytes": 180
+}

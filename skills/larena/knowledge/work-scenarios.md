@@ -32,13 +32,12 @@
 - Документационная задача:
   - Загрузи `modules/documentation.md`
   - Используй шаблоны из `templates/wiki/*`
-- Релиз модуля (монорепа + выделенный репозиторий + тег):
+- Release of a canonical Workspace package into the Root distribution:
   - Загрузи `modules/release.md`
   - Загрузи `knowledge/deployment-ops.md`
-  - Используй `tools/release_module.sh`
-  - Для `docara-core` синхронизируй `packages/docara-core/resources/docs` -> `../laravel.docara-core/resources/docs`
+  - Pin the accepted package revision in Root and run the Root acceptance gate
 - Работа в конкретном пакете:
-  - Загрузи паспорт модуля из `knowledge/modules/*` (например, `admin.md`, `access.md`, `docara-core.md`)
+  - Загрузи паспорт модуля из `knowledge/modules/*` (например, `admin.md`, `access.md`, `docara.md`)
   - Проверь инварианты/риски до внесения правок
 
 ## Проектные ограничения

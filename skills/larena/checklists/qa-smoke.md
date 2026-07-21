@@ -6,7 +6,7 @@
 - [ ] Межмодульные тесты запущены при интеграционном риске (`vendor/bin/phpunit --testsuite=packages`)
 - [ ] Изменения поведения отражены в `SPEC.md` и `CHANGELOG.md`
 - [ ] Раздел `Migration Notes` добавлен (`No changes`, если неприменимо)
-- [ ] Для `rest` / `rest_doc` пройдены Swagger тесты paths/params
+- [ ] Для `larena/rest` пройдены package-owned OpenAPI tests paths/params/access
 - [ ] Нет новых внешних CDN/сторонних URL в Blade/JS/CSS
 - [ ] Для UI есть локализация минимум `ru` и `en` с паритетом ключей
 - [ ] Для новых модулей обеспечен install-flow через `simai:install`

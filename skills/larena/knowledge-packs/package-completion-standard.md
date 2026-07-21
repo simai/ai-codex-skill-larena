@@ -310,28 +310,15 @@ docs/developer/standards/package-dependency-impact-standard.md
 
 A new package is not fully Larena-compatible until it is woven into the package graph or has a documented exception. This is especially important for third-party packages because upstream packages cannot know every future consumer.
 
-Current first-party baseline entries in `simai/larena` cover:
-
-- `larena/core`;
-- `larena/access`;
-- `larena/audit`;
-- `larena/admin`;
-- `larena/auth`;
-- `larena/rest`;
-- `larena/setting`;
-- `larena/property`;
-- `larena/docara-core`;
-- `larena/docara-admin`;
-- `larena/update`;
-- `larena/update-registration`;
-- `larena/filesystem`;
-- `larena/lang`;
-- `larena/licensing`;
-- `larena/link`;
-- `larena/two-fa`;
-- `larena/mcp`;
-- `larena/rest_doc`;
-- planned placeholder `larena/storage`.
+Current first-party baseline entries must cover the exact package identities in
+the active Specs registry and Workspace profile. For the 2026-07 baseline that
+means all 42 identities summarized in `knowledge-packs/package-map.md`, with a
+separate declared runnable subset of 23. Do not infer current ownership from an
+old `simai/larena` directory list: `larena/docara` and `larena/rest` are the
+current identities, `larena/storage` is real, and MFA belongs to
+`larena/auth`. `larena/two-fa`, split Docara packages and `larena/rest_doc` may
+remain only as archive/compatibility graph nodes and must not count as current
+first-party packages.
 
 When working on these packages, check the graph entry together with the package-local `module.yaml`. `module.yaml` explains what is inside the package; the package graph explains what other packages and smoke checks are affected when its contracts change.
 
@@ -389,15 +376,16 @@ Current first-priority demonstrator contracts and installed-site evidence exist 
 
 - `larena/admin`;
 - `larena/auth`;
-- `larena/rest`;
-- `larena/rest_doc`.
+- `larena/rest`.
 
 Treat them as preparation evidence, not as L4 readiness by itself. These packages still require package DNA and explicit package-standard audit before any L4 claim:
 
 - `larena/admin`: installed-site admin smoke passed after fail-closed admin access defaults and `admin.access` coverage for legacy update-server admin routes.
 - `larena/auth`: installed-site auth smoke passed; ordinary registered users are denied admin access, but the registration redirect to `/admin` remains backlog.
-- `larena/rest`: installed-site sessionless API smoke passed; add a dedicated allowed-token `200` fixture during the real package audit.
-- `larena/rest_doc`: installed-site Swagger safety smoke passed; public placeholder has empty paths and generated spec is token-protected.
+- `larena/rest`: installed-site sessionless API and package-owned OpenAPI smoke
+  passed; add a dedicated allowed-token `200` fixture during the real package
+  audit. The retired `larena/rest_doc` identity is not a separate readiness
+  target.
 
 Current DNA-baseline packages that were worked through and still need re-audit under the updated rules:
 

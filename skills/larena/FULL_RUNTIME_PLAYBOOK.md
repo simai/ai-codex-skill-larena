@@ -126,7 +126,7 @@ Default specialist roles:
 - `sf5-integration`: SF5 UI, loader, smart components, layout/page builder contracts.
 - `rest-api`: REST Runner, OpenAPI/Swagger, method safety, ACL-aware API contracts.
 - `data-settings-props`: settings, storage, universal properties, layout/content data models.
-- `docara-product`: Docara Core/Admin as first product proof and acceptance scenario.
+- `docara-product`: unified `larena/docara` as first product proof and acceptance scenario.
 - `qa-validation`: tests, smoke, install checks, browser checks, release gates.
 - `ops-runtime`: hosting, queues, cron, Laravel runtime, update-server environments, deploy diagnostics.
 - `documentation-learning`: Larena facts, Docara docs context, and skill knowledge promotion; coordinate substantial writing method with `$docs`.
@@ -225,10 +225,10 @@ Use old developer-authored materials when selected by routing:
 - Quick start: [knowledge/quickstart.md](./knowledge/quickstart.md)
 - Admin package: [knowledge/modules/admin.md](./knowledge/modules/admin.md)
 - Access package: [knowledge/modules/access.md](./knowledge/modules/access.md)
-- REST package: [knowledge/modules/rest.md](./knowledge/modules/rest.md)
-- RestDoc package: [knowledge/modules/rest-doc.md](./knowledge/modules/rest-doc.md)
+- REST/OpenAPI package: [knowledge/modules/rest.md](./knowledge/modules/rest.md)
 - Lang package: [knowledge/modules/lang.md](./knowledge/modules/lang.md)
-- Docara Core/Admin: [knowledge/modules/docara-core.md](./knowledge/modules/docara-core.md), [knowledge/modules/docara-admin.md](./knowledge/modules/docara-admin.md)
+- Docara product: [knowledge/modules/docara.md](./knowledge/modules/docara.md). The
+  old `docara-core` and `docara-admin` passports are archive references only.
 - Work scenarios: [knowledge/work-scenarios.md](./knowledge/work-scenarios.md)
 - Checklists: [checklists/](./checklists/)
 - Artifact templates: [templates/artifacts/](./templates/artifacts/)

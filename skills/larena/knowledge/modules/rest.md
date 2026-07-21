@@ -4,8 +4,10 @@
 - REST Runner, API discovery, controlled method invocation and API capability boundary for Larena.
 
 ## Ключевые точки
-- Swagger unit-тесты: `packages/rest/tests/Unit/SwaggerDocServiceTest.php`.
-- Контракты endpoint-ов должны быть согласованы с `rest_doc`.
+- OpenAPI unit/runtime tests live under `packages/rest/tests` and must exercise
+  the same registry used for execution.
+- Endpoint and OpenAPI contracts are both owned by `larena/rest`; do not route
+  documentation work to the retired `rest_doc` identity.
 - API доступы через `access.token`/`simai/access`.
 
 ## Инварианты
@@ -21,6 +23,6 @@
 - Breaking changes без Upgrade Notes.
 
 ## Обязательные проверки
-- `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
+- `vendor/bin/phpunit packages/rest/tests`
 - Таргетные feature/unit тесты измененного API.
 - Негативные тесты `401/403` и validation errors.

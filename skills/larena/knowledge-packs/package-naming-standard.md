@@ -59,7 +59,10 @@ Use singular package keys for domain or subsystem owners:
 - `larena/rest`;
 - `larena/update`.
 
-Plural or non-singular keys are acceptable only when they are the established technical term or a product compound, for example `larena/rest-doc`, `larena/docara-core`.
+Plural or non-singular keys are acceptable only when they are an established
+technical term or current product compound in the canonical portfolio. Do not
+use retired names such as `larena/rest-doc` or `larena/docara-core` as naming
+examples.
 
 Current universal properties decision:
 

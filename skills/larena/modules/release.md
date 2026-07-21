@@ -1,37 +1,32 @@
 # Релиз модуля
 
 ## Когда использовать
-- Нужна публикация изменений пакета из монорепы в выделенный repo модуля.
-- Нужен новый tag пакета и обновление зависимости в `bitrix-update`.
+- Нужна публикация канонического `larena/*` пакета из Workspace.
+- Нужно обновить exact revision в Root distribution и согласовать Specs.
 
 ## Какие входные данные собрать
-- Имя модуля (`packages/<module>`).
-- Путь к выделенному repo (`../laravel.<module>` или явный путь).
-- Целевой tag (`x.y.z`) или правило автоинкремента.
-- Нужно ли обновлять `bitrix-update` и в каком проекте.
+- Канонический package key и checkout под `larena-workspace/packages/<slug>`.
+- Принятая package revision и целевая release/version policy.
+- Root manifest/Composer lock и связанные Specs contracts.
 
 ## Контрактная подготовка
-1. Зафиксируй scope релиза (какие пакеты входят, какие исключены).
-2. Зафиксируй `Do Not Touch` (обязательно: не включать `packages/rest`).
-3. Зафиксируй checks до публикации (lint/tests/smoke).
-4. Зафиксируй rollback (git revert + composer require на предыдущий tag).
+1. Зафиксируй scope релиза и точные package revisions.
+2. Зафиксируй `Do Not Touch` по незатронутым пакетам и runtime.
+3. Зафиксируй checks до публикации (lint/tests/integration/smoke).
+4. Зафиксируй rollback к предыдущему Root lock/manifest.
 
 ## Порядок выполнения
-1. Подготовь monorepo commit/push (исключая `packages/rest`).
-2. Синхронизируй `packages/<module>` в выделенный repo и сделай commit/push.
-3. Создай и запушь новый tag в выделенном repo.
-4. Обнови `bitrix-update` (`composer require/update`) до нового tag и зафиксируй точный вывод.
-5. Для `docara-core` синхронизируй docs:
-   - `packages/docara-core/resources/docs`
-   - `../laravel.docara-core/resources/docs`
-6. Для Docara задач синхронизируй:
-   - `docs/DOCARA_ISSUE_LOG.md`
-   - `docs/DOCARA_DEVELOPMENT_LOG.md`
+1. Validate and commit the owning package repository in Workspace.
+2. Push the accepted package revision without rewriting history.
+3. Update the Root exact revision, Composer lock and release manifest.
+4. Run the full Root acceptance matrix and preserve evidence.
+5. Update Specs only when the product contract changed.
+6. Tag/release only after explicit release scope and readiness gate.
 
 ## Что отдать в результате
-- Monorepo branch + commit hash.
-- Module repo branch + commit hash + tag.
-- Точный результат `composer require/update` в `bitrix-update`.
+- Package branch + exact commit hash and optional approved tag.
+- Root branch, lock/manifest commit and acceptance evidence.
+- Specs revision when the contract changed.
 - `Migration Notes` / `Upgrade Notes` при необходимости.
 - Обновленные Docara-логи (если релиз касается Docara).
 

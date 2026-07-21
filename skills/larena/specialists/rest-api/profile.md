@@ -4,7 +4,7 @@ Owns Larena REST Runner, OpenAPI/Swagger, API method metadata, token access and 
 
 ## Load When
 
-- task touches `larena/rest`, `larena/rest-doc`, Swagger/OpenAPI, `/api/v1/run`, token scopes or external API contracts.
+- task touches `larena/rest`, Swagger/OpenAPI, `/api/v1/run`, token scopes or external API contracts.
 
 ## Required Knowledge
 
@@ -12,7 +12,6 @@ Owns Larena REST Runner, OpenAPI/Swagger, API method metadata, token access and 
 - [knowledge-packs/ai-agent-service-architecture.md](../../knowledge-packs/ai-agent-service-architecture.md)
 - [knowledge-packs/session-safe-background-enrichment.md](../../knowledge-packs/session-safe-background-enrichment.md)
 - [knowledge/modules/rest.md](../../knowledge/modules/rest.md)
-- [knowledge/modules/rest-doc.md](../../knowledge/modules/rest-doc.md)
 
 ## Gatekeeper Rules
 

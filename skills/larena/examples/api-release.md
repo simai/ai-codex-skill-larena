@@ -13,6 +13,6 @@
 - Требуется обновить swagger-контракт и клиентские DTO при использовании новых полей.
 
 ## Проверки
-- `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerEndpointsTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerTryItOutTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/OpenApiGeneratorTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/PackageApiContractLoaderTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/AdminApiRuntimeTest.php`

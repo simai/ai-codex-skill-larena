@@ -6,7 +6,10 @@
 - Не оставляй endpoint без явной проверки доступа.
 - По умолчанию применяй принцип минимально необходимых прав.
 - Для access-задачи всегда формируй `Access Matrix` и проверяй ее тестами.
-- Для Auth/2FA задач всегда проверяй фактическое владение маршрутом `POST /login` через `php artisan route:list --path=login`: `larena/two-fa` может оборачивать или переопределять login flow, и это должно быть явной частью контракта, а не случайной коллизией маршрутов.
+- Для Auth/MFA задач всегда проверяй фактическое владение маршрутом
+  `POST /login` через `php artisan route:list --path=login`. Канонический
+  `larena/auth` владеет и первичной аутентификацией, и MFA challenge/handoff;
+  отдельный `larena/two-fa` пакет не существует и не должен появляться снова.
 
 ## Практика для Simai
 - Операции/доступы описывай в `config/simai_<module>.php`.
@@ -26,11 +29,16 @@
 - Пропуск негативных сценариев (неавторизованный/без прав).
 - Случайный bypass при кастомных middleware цепочках.
 - Расхождение route-level доступа и policy/gate условий.
-- Неявная коллизия `larena/auth` и `larena/two-fa` вокруг `POST /login`: если 2FA включена, auth smoke должен подтверждать не только наличие `/login`, но и корректный handoff к OTP challenge.
+- Неявное расхождение внутри Auth-owned login pipeline: если MFA включена,
+  auth smoke должен подтверждать не только наличие `/login`, но и корректный
+  handoff к OTP challenge, recovery и assurance state без второго владельца
+  маршрута.
 
 ## Обязательные проверки
 - Feature-тесты `401`/`403` на критичных маршрутах.
 - Проверка happy path + forbidden path для create/update/delete.
 - Проверка доступа на custom CRUD-экшены.
 - Проверка отсутствия endpoint-ов без доступа в `Access Matrix`.
-- Для stateful auth/security пакетов: `route:list --path=login`, `route:list --path=two-factor`, logout/session smoke и явная запись, кто владеет `POST /login` в текущей сборке.
+- Для stateful auth/security пакетов: `route:list --path=login`,
+  `route:list --path=two-factor`, logout/session smoke и доказательство, что
+  текущий `larena/auth` владеет полным login/MFA pipeline.

@@ -5,62 +5,37 @@
 - Делай безопасный rollout с контролируемым scope.
 - Всегда имей проверяемый rollback-план.
 
-## Вариант релизной команды (монорепа -> репозиторий модуля -> тег)
+## Canonical package promotion
 
-Используй скрипт:
-- `tools/release_module.sh`
+Larena uses three authoritative contours:
 
-Он выполняет:
-1. commit/push в монорепу в пределах релизного scope (всегда исключает `packages/rest`);
-2. синхронизацию `packages/<module>/` в выделенный репозиторий модуля (`../laravel.<module>` по умолчанию);
-3. commit/push в репозиторий модуля;
-4. создание и push тега (по умолчанию следующий patch от последнего тега);
-5. опциональное обновление `bitrix-update` до нового тега пакета.
+1. `larena-specs` for product and package contracts;
+2. `larena-workspace/packages/<slug>` for the canonical package source;
+3. Root `larena` for distribution, exact dependency revisions and acceptance.
 
-Пример (автотег от последнего):
-```bash
-tools/release_module.sh \
-  --module docara-core \
-  --mono-branch main \
-  --module-branch master \
-  --mono-commit "chore(release): docara-core monorepo sync" \
-  --module-commit "chore(release): docara-core 1.0.x" \
-  --bitrix-update-path ../bitrix-update
-```
+Do not publish by copying a Workspace package into a second top-level
+`laravel.<module>` repository. Do not route Larena releases through
+`bitrix-update`. Old commands that did so are historical evidence only.
 
-Пример (явный тег):
-```bash
-tools/release_module.sh \
-  --module docara-core \
-  --repo ../laravel.docara-core \
-  --tag 1.0.54 \
-  --bitrix-update-path ../bitrix-update \
-  --composer-package simai/docara-core
-```
+For a package promotion:
 
-## Безопасный режим
-- Перед запуском используй:
-  - `tools/release_module.sh --module <module> --dry-run`
-- Скрипт проверяет scope изменений в монорепе.
-- Если есть нерелевантные изменения, релиз блокируется.
-- Для осознанного обхода блокировки используй:
-  - `--allow-unrelated`
+1. gate and validate the package in its canonical Workspace checkout;
+2. commit and push the exact package revision without history rewrite;
+3. update Root Composer lock and release manifest to that same revision;
+4. run the full Root acceptance matrix and retain evidence;
+5. update Specs only when the product contract changed;
+6. tag or release only under an explicit release gate;
+7. keep a tested rollback to the previous Root lock/manifest.
 
-## Docara: обязательный синк документации после релиза
-
-После релиза `docara-core` синхронизируй docs в выделенном репозитории:
-- источник в монорепе: `packages/docara-core/resources/docs`
-- целевой путь: `../laravel.docara-core/resources/docs`
-
-В скрипте это делается автоматически для `--module docara-core` (`--sync-docara-docs auto`).
-Для принудительного режима используй:
-- `--sync-docara-docs yes`
+For Docara, package documentation stays in `packages/docara`; cross-package
+contracts stay in Specs. Never synchronize to retired `docara-core` or
+`docara-admin` repositories.
 
 ## Релизные данные, которые нужно зафиксировать
-- Monorepo commit hash + branch.
-- Module repo commit hash + tag.
-- Результат обновления зависимостей в `bitrix-update` (точный вывод `composer update/require`).
-- Для Docara-задач: синхронизация `docs/DOCARA_ISSUE_LOG.md` и `docs/DOCARA_DEVELOPMENT_LOG.md`.
+- Package repository commit hash and branch.
+- Root lock/manifest commit and full acceptance evidence.
+- Specs revision when the product contract changed.
+- Optional tag/release receipt and tested rollback.
 
 ## Минимальный релизный чеклист
 - Используй `checklists/release-checklist.md`.

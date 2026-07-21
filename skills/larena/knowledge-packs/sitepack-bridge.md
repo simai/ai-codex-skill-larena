@@ -57,7 +57,10 @@ When designing the Larena SitePack adapter for settings:
 - `docs/developer/docara-sitepack-acceptance.md`
 - `docs/developer/examples/sitepack/docara-docs-site/`
 
-Use this baseline when designing or reviewing `larena/sitepack`, `larena/docara-admin` import/export, or SitePack product packs for documentation.
+Use this baseline when designing or reviewing SitePack adapters,
+`larena/docara` import/export capabilities, or SitePack product packs for
+documentation. `larena/sitepack` is not a current 2026-07 package-portfolio
+member, so do not create it without an approved package proposal.
 
 Working rules:
 

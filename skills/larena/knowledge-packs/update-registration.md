@@ -221,7 +221,13 @@ Strict audit must fail when integrity columns are missing, a ready baseline is m
 
 Core/minimum CMS should be free/open. Paid products and solution layers should be delivered through update/product infrastructure later. Exact free-core key policy remains product/marketing decision.
 
-Docara is currently treated as a paid product direction with a free documentation runtime/viewer layer. Do not classify the whole Docara surface as free merely because `docara-core` exists; keep professional editing, governance, revisions, import/sync, SitePack workflows, AI-assisted documentation, advanced search/branding, support and commercial updates in paid Docara Admin/Pro unless product strategy later changes.
+Docara is currently treated as a paid product direction with a free
+documentation runtime/viewer capability tier. Do not classify the whole
+`larena/docara` surface as free: professional editing, governance, revisions,
+import/sync, SitePack workflows, AI-assisted documentation, advanced
+search/branding, support and commercial updates belong to paid capabilities
+unless product strategy later changes. This is an edition boundary inside the
+single package, not a split-package boundary.
 
 ## Licensing Platform Direction
 

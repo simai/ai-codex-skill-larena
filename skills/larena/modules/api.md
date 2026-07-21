@@ -32,8 +32,10 @@
 - Формат ошибок единообразный.
 - Аутентификация и авторизация применяются принудительно.
 
-## Swagger-проверки (`rest` / `rest_doc`)
-- `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerEndpointsTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerTryItOutTest.php`
-- Проверь генерацию `paths` и схемы аргументов для try-it-out сценариев.
+## OpenAPI checks (`larena/rest`)
+
+- `vendor/bin/phpunit packages/rest/tests/Unit/OpenApiGeneratorTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/PackageApiContractLoaderTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/AdminApiRuntimeTest.php`
+- Verify generated `paths`, request/response schemas, permission filtering and
+  the same-registry execution contract. Do not invoke retired `rest_doc` tests.

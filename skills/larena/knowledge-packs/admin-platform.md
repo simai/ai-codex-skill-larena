@@ -89,7 +89,11 @@ Example slots:
 - Admin packages must publish every asset referenced by shared layouts. Even harmless missing `/simai/admin/*` assets, such as a favicon, create browser noise and can mask real admin errors during smoke checks.
 - Current favicon baseline is `/simai/admin/images/favicon.ico`; do not reference `/simai/admin/images/favicon.png` unless the package ships that file.
 - Development/debug logs in admin CRUD, validators or renderers must be gated by package config and should use a package-specific channel. The current baseline is `AdminDevelopmentLogger` with `simai_admin.development_logs.*`, disabled by default.
-- Package-local admin tests should use a stable bootstrap/harness that resolves sibling Larena packages by workspace root and known naming aliases such as `larena-2fa` for `two-fa`; avoid one-off temporary bootstrap files as the only path to full-suite execution.
+- Package-local admin tests should use a stable bootstrap/harness that resolves
+  sibling Larena packages from the exact active Workspace profile. Do not add
+  retired naming aliases such as `larena-2fa`; MFA tests resolve canonical
+  `larena/auth`. Avoid one-off temporary bootstrap files as the only path to
+  full-suite execution.
 - Treat `simai/admin`, `Simai\Admin`, `simai_admin`, `/simai/admin`, legacy plugin API, access code aliases and the fail-open bootstrap switch as explicit compatibility surfaces. They must be tracked in `docs/developer/legacy/registry.json` and not removed during routine L4 standardization.
 
 ## Security Admin UX

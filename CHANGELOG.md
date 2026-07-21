@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Reconciled package knowledge with the canonical Larena 42/23 portfolio:
+  MFA/2FA is owned inside `larena/auth`, the retired `larena/two-fa` package is
+  archive-only, and old split Docara/REST identities are no longer presented
+  as current validation or test aliases.
 - Added Larena/Laravel `client-*` repository guidance: customer project
   repositories use `project/files/` as the application-root mirror,
   `project/migrations/` for one-off backfill/repair operations, `deploy/` for

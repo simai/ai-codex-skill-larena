@@ -10,8 +10,8 @@
 4. Сформирован `Access Matrix` и пройден `access-checklist`.
 
 ## Checks/Tests
-1. `vendor/bin/phpunit packages/docara-core/tests/Feature/*Access*Test.php`
-2. `vendor/bin/phpunit packages/docara-admin/tests/Feature/*Access*Test.php`
+1. `vendor/bin/phpunit packages/docara/tests --filter='Access|Denied|Audit'`
+2. `vendor/bin/phpunit packages/access/tests`
 3. `composer run validate:repo`
 
 ## Do Not Touch

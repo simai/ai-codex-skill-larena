@@ -14,6 +14,7 @@ Before any activity load:
 - [kernel/platform-scope.md](./kernel/platform-scope.md);
 - [kernel/non-negotiables.md](./kernel/non-negotiables.md);
 - [kernel/output-contract.md](./kernel/output-contract.md);
+- [references/canonical-package-portfolio.md](./references/canonical-package-portfolio.md);
 - [rules/skill-mesh-balance.md](./rules/skill-mesh-balance.md).
 
 ## Mirai Graph Runtime Entry
@@ -44,8 +45,10 @@ routing, platform matrix and migration reference map.
 ## Non-Negotiable Boundaries
 
 - `simai/larena` is the bootstrap entry, not the full platform source.
-- `larena/*` packages are canonical; `larena-upserv` and old SIMAI/Bitrix/SF5
-  models are compatibility or migration references only.
+- The current Specs registry and Workspace profile define the canonical
+  `larena/*` portfolio; do not reconstruct it from historical package files.
+- `larena-upserv`, split Docara packages, `rest_doc`, standalone 2FA and old
+  SIMAI/Bitrix/SF5 models are compatibility or migration references only.
 - Keep update server and closed registration/licensing server separate.
 - Keep SitePack platform-neutral and Larena adapters platform-specific.
 - Never expose arbitrary REST class/method execution without registration,

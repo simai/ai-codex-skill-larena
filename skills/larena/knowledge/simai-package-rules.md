@@ -131,7 +131,10 @@ EntityConfig правила:
 - `vendor/bin/phpunit packages/<module>/tests`
 - `vendor/bin/phpunit --testsuite=packages` при интеграционном риске
 
-Для `rest`/`rest_doc` дополнительно:
-- `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerEndpointsTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerTryItOutTest.php`
+For `larena/rest`, additionally run the package-owned OpenAPI/runtime tests:
+
+- `vendor/bin/phpunit packages/rest/tests/Unit/OpenApiGeneratorTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/PackageApiContractLoaderTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/AdminApiRuntimeTest.php`
+
+`larena/rest_doc` is retired and is not a separate validation target.

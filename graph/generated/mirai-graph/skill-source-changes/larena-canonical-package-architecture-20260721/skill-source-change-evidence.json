@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-07-21T22:04:00.602124+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-codex-skill-larena",
+  "base": "HEAD",
+  "base_commit": "66e7e55176ec4102847e5b71bd0bd6a6e196295c",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "531cfd1cdd0ba9dbedadc2e010f36d3731492566d019b4241c6fc191d37f89a3",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/larena-canonical-package-architecture-20260721/detector-report.json",
+  "changed_files": [
+    {
+      "path": "CHANGELOG.md",
+      "source_path": "CHANGELOG.md",
+      "change_types": [
+        "documentation",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b03071463faa2de4184ae49b924a7ee58786e4b6848e561414228dd0a68c6ba3",
+      "source_bytes": 17747,
+      "baseline_path": "CHANGELOG.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "0a90651196dc1441a6cc115c3007ec814a112b52285095a51ec11e48e6d10393",
+      "baseline_bytes": 17475
+    },
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c29faf12aa983805bf0f1f26ca4c8db462880d1d708c445013811b7742bfcc15",
+      "source_bytes": 3626,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "8db10f393755ebcc0521531a0bc9d2ef9f5899de1aafa6407c13072d4e8701e5",
+      "baseline_bytes": 3369
+    },
+    {
+      "path": "skills/larena/references/canonical-package-portfolio.md",
+      "source_path": "references/canonical-package-portfolio.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "??",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b34307b81169acd36fc746e8aaabbec4daf25bada5eafe8261c51e6340d0ed9c",
+      "source_bytes": 2593,
+      "baseline_path": "skills/larena/references/canonical-package-portfolio.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/specialists/docara-product/profile.md",
+      "source_path": "specialists/docara-product/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "2aaa7b4c743decc9b7f25d818d739ac68e9196fd7dec929a79d253afe9616472",
+      "source_bytes": 870,
+      "baseline_path": "skills/larena/specialists/docara-product/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "a58b60ddd70c8821116238417246f6c27876139979d7aa51e3924ee74dbc26c5",
+      "baseline_bytes": 815
+    },
+    {
+      "path": "skills/larena/specialists/rest-api/profile.md",
+      "source_path": "specialists/rest-api/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b4430c813bee39c10949d9fc36f3ae1e0c3d753bf7c927dabce3c00b1c812eb9",
+      "source_bytes": 1254,
+      "baseline_path": "skills/larena/specialists/rest-api/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "88451d7b764c4ea39a24369b9c372d6cc24c2d60dd51d7f48ddd4204f449ad16",
+      "baseline_bytes": 1344
+    }
+  ],
+  "change_types": [
+    "capability",
+    "documentation",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "specialist-update"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "detected_specialists": [
+    {
+      "id": "larena.docara-product",
+      "name": "Docara Product",
+      "raw_path": "skills/larena/specialists/docara-product/profile.md",
+      "source_path": "specialists/docara-product/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.rest-api",
+      "name": "REST API",
+      "raw_path": "skills/larena/specialists/rest-api/profile.md",
+      "source_path": "specialists/rest-api/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    }
+  ],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "CHANGELOG.md",
+    "skills/larena/SKILL.md",
+    "skills/larena/references/canonical-package-portfolio.md",
+    "skills/larena/specialists/docara-product/profile.md",
+    "skills/larena/specialists/rest-api/profile.md"
+  ],
+  "canonical_write_allowed": false
+}

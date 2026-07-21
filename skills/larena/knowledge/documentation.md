@@ -6,8 +6,11 @@
 - Troubleshooting для типовых проблем.
 
 ## Docara docs (где вести и обновлять)
-- В монорепе: `packages/docara-core/resources/docs`.
-- В выделенном репозитории `simai-docara-core` (локально: `../laravel.docara-core`):
-  - `../laravel.docara-core/resources/docs`.
 
-При релизе `docara-core` пути должны быть синхронизированы.
+- Product/package documentation belongs to the canonical
+  `larena-workspace/packages/docara` repository.
+- Cross-package product contracts belong to `larena-specs`.
+- Root keeps only distribution, installation, operation and acceptance docs.
+
+Do not synchronize documentation to retired `docara-core` or `docara-admin`
+repositories.

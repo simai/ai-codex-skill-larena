@@ -18,12 +18,18 @@ Docara can validate that Larena is usable as a CMS platform, not just a package 
 
 ## Product Boundary
 
-Keep Docara split into two deliberate layers:
+`larena/docara` is the single canonical package and domain owner. Keep two
+deliberate capability tiers inside it:
 
-- `larena/docara-core`: free public runtime for installed/imported documentation, local assets, public routes, file/DB reads and view access checks.
-- `larena/docara-admin`: paid/Pro editor/admin layer for page management, create/edit/save, preview, revisions, rollback, sync/import, product packs and AI-assisted documentation workflows.
+- free/runtime capabilities for installed or imported documentation, local
+  assets, public routes, safe file/database reads and view-access checks;
+- paid/editor capabilities for page management, create/edit/save, preview,
+  revisions, rollback, sync/import, product packs and AI-assisted workflows.
 
-Do not blur this boundary during package work. Commercial entitlement should later be enforced through the Larena update/registration server flow, not through ad hoc package-local checks.
+Do not model those tiers as `larena/docara-core` and
+`larena/docara-admin` packages. Commercial entitlement should later be
+enforced through Larena licensing/update/registration contracts, not ad hoc
+package-local checks.
 
 ## Product First Version
 
@@ -103,7 +109,10 @@ After browser/admin acceptance, the next Docara product proof is portable import
 
 Minimum direction:
 
-- Free Docara Core remains the public runtime for already installed/imported documentation.
-- Paid Docara Admin/Pro owns managed import/export, conflict resolution, revision governance, scheduled sync, product packs and AI-assisted documentation workflows.
+- The free/runtime capability tier remains available for already
+  installed/imported documentation.
+- The paid/editor capability tier owns managed import/export, conflict
+  resolution, revision governance, scheduled sync, product packs and
+  AI-assisted documentation workflows.
 - SitePack import/export must validate manifest+catalog first, avoid long web requests, use non-executable temp storage, import markdown through `larena/filesystem`, create revisions, and produce machine-readable reports.
 - SitePack is the neutral transport. Do not build a direct Bitrix-to-Docara converter as the durable architecture; use Bitrix -> SitePack -> Docara/Larena.

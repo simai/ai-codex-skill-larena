@@ -60,7 +60,10 @@ vendor/bin/phpunit
 php artisan larena:validate-packages --path=/path/to/package --strict
 ```
 
-## Обязательные Swagger-проверки (`rest` / `rest_doc`)
-- `vendor/bin/phpunit packages/rest/tests/Unit/SwaggerDocServiceTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerEndpointsTest.php`
-- `vendor/bin/phpunit packages/rest_doc/tests/Feature/SwaggerTryItOutTest.php`
+## Required OpenAPI checks (`larena/rest`)
+
+- `vendor/bin/phpunit packages/rest/tests/Unit/OpenApiGeneratorTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/PackageApiContractLoaderTest.php`
+- `vendor/bin/phpunit packages/rest/tests/Unit/AdminApiRuntimeTest.php`
+
+The current REST package owns both execution and documentation contracts.

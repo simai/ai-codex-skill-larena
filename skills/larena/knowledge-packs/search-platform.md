@@ -4,7 +4,9 @@ Use this knowledge pack when a task touches Larena search, indexing, global sear
 
 ## Canonical Position
 
-`larena/search` is a future cross-package search and indexing layer. It must not be treated as a local feature of `larena/storage`, `larena/admin`, `larena/rest`, `larena/mcp`, `larena/filesystem` or `larena/docara-core`.
+`larena/search` is the canonical cross-package search and indexing layer. It
+must not be treated as a local feature of `larena/storage`, `larena/admin`,
+`larena/rest`, `larena/mcp`, `larena/filesystem` or `larena/docara`.
 
 Source of truth in `simai/larena`:
 

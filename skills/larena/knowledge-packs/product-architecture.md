@@ -12,7 +12,8 @@ Larena should become a vertically integrated CMS/platform:
 - preferred controlled runtime through SIMAI Environment, while still supporting normal hosting/VPS baselines;
 - modular `larena/*` packages;
 - admin platform;
-- auth/access/2FA;
+- auth/access, with MFA/2FA lifecycle owned inside `larena/auth` rather than a
+  standalone package;
 - settings/storage/props/layout;
 - update and registration infrastructure;
 - SitePack data transport;
