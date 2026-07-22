@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.owner_skill.technology_contract_fixture",
+  "skill": "larena",
+  "positive_cases": [
+    {"id": "larena.paraphrase.1", "task": "Добавь административный модуль в Larena.", "expected_process_model_id": "larena_platform_delivery_conveyor"},
+    {"id": "larena.paraphrase.2", "task": "Реализуй новое действие панели управления Larena с совместимостью обновлений.", "expected_process_model_id": "larena_platform_delivery_conveyor"}
+  ],
+  "negative_cases": [
+    {"id": "larena.owner_boundary", "task": "Добавь агент обновления данных в модуль Битрикс.", "expected_primary_skill": "bitrix"}
+  ]
+}
