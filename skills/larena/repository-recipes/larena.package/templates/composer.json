@@ -1,0 +1,21 @@
+{
+  "$schema": "https://getcomposer.org/schema.json",
+  "name": "{{package_name}}",
+  "type": "library",
+  "description": "Larena package for the SIMAI Laravel platform.",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.3",
+    "illuminate/support": "^13.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "{{php_namespace}}\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "{{php_namespace}}\\Tests\\": "tests/"
+    }
+  }
+}

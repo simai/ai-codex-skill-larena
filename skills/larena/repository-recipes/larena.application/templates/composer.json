@@ -1,0 +1,26 @@
+{
+  "$schema": "https://getcomposer.org/schema.json",
+  "name": "simai/{{repository_name}}",
+  "type": "project",
+  "description": "Larena application built on the SIMAI Laravel platform.",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^13.8",
+    "larena/core": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "{{php_namespace}}\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

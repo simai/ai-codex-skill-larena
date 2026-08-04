@@ -98,15 +98,17 @@
     },
     {
       "path": "composer.json",
-      "ownership": "managed",
+      "ownership": "owner_template",
       "required": true,
-      "materializer": "managed_text"
+      "materializer": "template_file",
+      "source": "composer.json"
     },
     {
       "path": "artisan",
-      "ownership": "managed",
+      "ownership": "owner_template",
       "required": true,
-      "materializer": "managed_text"
+      "materializer": "template_file",
+      "source": "artisan"
     },
     {
       "path": "source/",
@@ -138,6 +140,8 @@
     "generator_contract": "repository_factory.manifest.v1",
     "template_root": "templates",
     "template_files": [
+      "artisan",
+      "composer.json",
       "docs/owner-contract.md"
     ]
   },
