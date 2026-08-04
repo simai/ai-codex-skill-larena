@@ -1,0 +1,152 @@
+{
+  "$schema": "https://simai.io/schemas/federation/repository-recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "larena.application",
+  "version": "1.0.0",
+  "kind": "structural_recipe",
+  "owner": "larena",
+  "title": "larena.application",
+  "repository_family": "larena",
+  "repository_kind": "application",
+  "base_recipe": "generic.repository",
+  "compatibility": {
+    "allowed_bases": [
+      "generic.repository"
+    ],
+    "allowed_overlays": [
+      "larena.technology-overlay",
+      "docs.technology-overlay",
+      "tester.technology-overlay"
+    ],
+    "incompatible_recipes": [
+      "graph.domain_atlas",
+      "client.project",
+      "bitrix.module",
+      "bitrix.client_project",
+      "sf4.project",
+      "sf5.project",
+      "orgportal.solution",
+      "docara.project"
+    ]
+  },
+  "required_inputs": [
+    {
+      "name": "repository_name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "php_namespace",
+      "required": true,
+      "type": "string"
+    }
+  ],
+  "source_contract": {
+    "entrypoints": [
+      "skills/larena/SKILL.md",
+      "skills/larena/references/canonical-package-portfolio.md"
+    ],
+    "processes": [
+      "skills/larena/activities/activity-registry.json"
+    ],
+    "checks": [
+      "graph/specs/index.json"
+    ]
+  },
+  "file_manifest": [
+    {
+      "path": "app/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "bootstrap/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "config/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "database/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "resources/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "routes/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "tests/",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "composer.json",
+      "ownership": "managed",
+      "required": true,
+      "materializer": "managed_text"
+    },
+    {
+      "path": "artisan",
+      "ownership": "managed",
+      "required": true,
+      "materializer": "managed_text"
+    },
+    {
+      "path": "source/",
+      "ownership": "local_only",
+      "required": true,
+      "materializer": "directory"
+    },
+    {
+      "path": "docs/larena-repository-contract.md",
+      "ownership": "owner_template",
+      "required": true,
+      "materializer": "template_file",
+      "source": "docs/owner-contract.md"
+    }
+  ],
+  "technology": {
+    "task_scoped": true,
+    "may_override_federation_safety": false,
+    "may_authorize_write": false,
+    "raw_source_required": true
+  },
+  "availability": {
+    "policy": "local_skill_override",
+    "default_state": "available"
+  },
+  "migrations": [],
+  "materialization": {
+    "mode": "declarative_manifest",
+    "generator_contract": "repository_factory.manifest.v1",
+    "template_root": "templates",
+    "template_files": [
+      "docs/owner-contract.md"
+    ]
+  },
+  "validators": [
+    {
+      "id": "larena.source-check.1",
+      "type": "owner_source",
+      "ref": "graph/specs/index.json",
+      "required": true
+    }
+  ]
+}

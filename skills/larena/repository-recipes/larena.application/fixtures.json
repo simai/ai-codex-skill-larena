@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "recipe_id": "larena.application",
+  "positive": [
+    {
+      "name": "declared-base",
+      "base_recipe": "generic.repository",
+      "overlays": [
+        "larena.technology-overlay"
+      ],
+      "expected": "compatible",
+      "expected_paths": [
+        "app/",
+        "bootstrap/",
+        "config/",
+        "database/",
+        "resources/",
+        "routes/",
+        "tests/",
+        "composer.json",
+        "artisan",
+        "source/",
+        "docs/larena-repository-contract.md"
+      ],
+      "expected_ownership": {
+        "app/": "owner_template",
+        "bootstrap/": "owner_template",
+        "config/": "owner_template",
+        "database/": "owner_template",
+        "resources/": "owner_template",
+        "routes/": "owner_template",
+        "tests/": "owner_template",
+        "composer.json": "managed",
+        "artisan": "managed",
+        "source/": "local_only",
+        "docs/larena-repository-contract.md": "owner_template"
+      }
+    }
+  ],
+  "negative": [
+    {
+      "name": "unknown-base",
+      "base_recipe": "unknown.repository",
+      "overlays": [],
+      "expected": "incompatible",
+      "expected_diagnostics": [
+        "unsupported_base_recipe"
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "name": "owner-overlay",
+      "base_recipe": "generic.repository",
+      "primary_owner": "larena",
+      "overlays": [
+        "larena.technology-overlay"
+      ],
+      "expected": "compatible",
+      "expected_recipe_signature": "larena.application@1.0.0"
+    }
+  ]
+}
