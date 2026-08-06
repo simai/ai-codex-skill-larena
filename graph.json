@@ -1,0 +1,54 @@
+{
+  "$schema": "https://mirai-graph.dev/schemas/graph-manifest.schema.json",
+  "aliases": [],
+  "evolution": {
+    "current_iteration": 1,
+    "migration_status": "mirai_graph_companion"
+  },
+  "extensions": {
+    "simai.legacy": {
+      "dna_path": "graph/dna"
+    }
+  },
+  "federation": {
+    "can_export": true,
+    "can_import": true,
+    "child_graphs": [],
+    "parent_graph": null
+  },
+  "format": "mirai-graph",
+  "graph": {
+    "generated": [
+      "graph/generated"
+    ],
+    "objects": [],
+    "raw_sources": [
+      "README.md",
+      "graph/source"
+    ],
+    "relations": [],
+    "root": "graph",
+    "schemas": [
+      "graph/schemas"
+    ],
+    "source_of_truth": [
+      "graph/specs"
+    ]
+  },
+  "id": "ai-codex-skill-larena.graph",
+  "imports": [],
+  "kind": "skill",
+  "owner": "larena",
+  "profiles": [
+    "skill"
+  ],
+  "runtime": {
+    "context_required_before_raw_source": false,
+    "fallback_policy": "raw_source_allowed_with_gap_record",
+    "graph_required": false,
+    "guard_command": "graph guard"
+  },
+  "schema_version": "2.0.0",
+  "scope": "skill",
+  "title": "ai-codex-skill-larena Graph"
+}
