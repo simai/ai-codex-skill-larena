@@ -37,7 +37,9 @@
     {
       "name": "unknown-base",
       "base_recipe": "unknown.repository",
-      "overlays": [],
+      "overlays": [
+
+      ],
       "expected": "incompatible",
       "expected_diagnostics": [
         "unsupported_base_recipe"
@@ -53,7 +55,7 @@
         "larena.technology-overlay"
       ],
       "expected": "compatible",
-      "expected_recipe_signature": "larena.package@1.0.0"
+      "expected_recipe_signature": "larena.package@2.0.0"
     }
   ]
 }
