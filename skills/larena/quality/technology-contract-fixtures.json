@@ -8,5 +8,15 @@
   ],
   "negative_cases": [
     {"id": "larena.owner_boundary", "task": "Добавь агент обновления данных в модуль Битрикс.", "expected_primary_skill": "bitrix"}
+  ],
+  "outcome_cases": [
+    {
+      "id": "larena.native_package_extension.outcome",
+      "capability_id": "larena.native_package_extension",
+      "prompt_ru": "Используй $larena. Выполни проверяемый синтетический сценарий larena.native_package_extension и верни evidence без внешних или live-записей.",
+      "prompt_en": "Use $larena. Complete the synthetic larena.native_package_extension scenario and return evidence without external or live writes.",
+      "fixture_repository": "graph/benchmarks/owner-outcomes/fixtures/larena/native_package_extension",
+      "rubric_ref": "graph/benchmarks/owner-outcomes/rubrics/larena.json"
+    }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.owner_skill.capability_map",
+  "owner_skill": "larena",
+  "readiness": "ready",
+  "capabilities": [
+    {
+      "id": "larena.native_package_extension",
+      "aliases": [
+        "Larena package",
+        "OperationRuntime"
+      ],
+      "user_outcome": "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot.",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "SKILL.md"
+      ],
+      "extension_points": [
+        "owner://larena/existing-methodology"
+      ],
+      "constraints": [
+        "Use raw owner sources for methodology and judgement.",
+        "Fail closed when required owner or platform evidence is unavailable."
+      ],
+      "non_goals": [
+        "Do not create a parallel owner or duplicate an existing platform capability."
+      ],
+      "validator_refs": [
+        "federation://owner-capability-map",
+        "federation://technology-conformance"
+      ]
+    }
+  ]
+}
