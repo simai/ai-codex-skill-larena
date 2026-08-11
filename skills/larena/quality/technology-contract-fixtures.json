@@ -18,7 +18,7 @@
     {
       "id": "larena.owner_boundary",
       "task": "Используй $dev для точечного backend bugfix в существующем API.",
-      "expected_primary_skill": "bitrix"
+      "expected_primary_skill": "dev"
     }
   ],
   "outcome_cases": [
