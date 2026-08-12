@@ -5,6 +5,261 @@
   "readiness": "ready",
   "capabilities": [
     {
+      "id": "larena.admin_contribution",
+      "aliases": [
+        "Admin contribution",
+        "admin contribution",
+        "вклад админки"
+      ],
+      "user_outcome": "Подключение административной функции через contribution",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "SKILL.md"
+      ],
+      "extension_points": [
+        {
+          "id": "larena.admin_contribution.extension",
+          "kind": "extend",
+          "source_ref": "SKILL.md",
+          "validator_ref": "federation://technology-conformance"
+        }
+      ],
+      "constraints": [
+        "Use the exact project version and native lifecycle, rights and APIs."
+      ],
+      "non_goals": [
+        "Do not create a parallel data, access, status or notification subsystem."
+      ],
+      "validator_refs": [
+        "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "Admin contribution",
+          "admin contribution",
+          "вклад админки",
+          "larena.admin_contribution",
+          "Подключение административной функции через contribution"
+        ],
+        "requirement_signals": [
+          "Admin contribution",
+          "admin contribution",
+          "вклад админки",
+          "larena.admin_contribution",
+          "Подключение административной функции через contribution"
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Подключение административной функции через contribution"
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
+      ]
+    },
+    {
+      "id": "larena.admin_slot",
+      "aliases": [
+        "Larena admin slot",
+        "admin slot",
+        "слот админки"
+      ],
+      "user_outcome": "Встраивание интерфейса в штатный admin slot",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "SKILL.md"
+      ],
+      "extension_points": [
+        {
+          "id": "larena.admin_slot.extension",
+          "kind": "extend",
+          "source_ref": "SKILL.md",
+          "validator_ref": "federation://technology-conformance"
+        }
+      ],
+      "constraints": [
+        "Use the exact project version and native lifecycle, rights and APIs."
+      ],
+      "non_goals": [
+        "Do not create a parallel data, access, status or notification subsystem."
+      ],
+      "validator_refs": [
+        "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "Larena admin slot",
+          "admin slot",
+          "слот админки",
+          "larena.admin_slot",
+          "Встраивание интерфейса в штатный admin slot"
+        ],
+        "requirement_signals": [
+          "Larena admin slot",
+          "admin slot",
+          "слот админки",
+          "larena.admin_slot",
+          "Встраивание интерфейса в штатный admin slot"
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Встраивание интерфейса в штатный admin slot"
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
+      ]
+    },
+    {
+      "id": "larena.laravel_extension",
+      "aliases": [
+        "Laravel extension point",
+        "service provider",
+        "container",
+        "event",
+        "middleware"
+      ],
+      "user_outcome": "Расширение Larena штатным механизмом Laravel",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "SKILL.md"
+      ],
+      "extension_points": [
+        {
+          "id": "larena.laravel_extension.extension",
+          "kind": "extend",
+          "source_ref": "SKILL.md",
+          "validator_ref": "federation://technology-conformance"
+        }
+      ],
+      "constraints": [
+        "Use the exact project version and native lifecycle, rights and APIs."
+      ],
+      "non_goals": [
+        "Do not create a parallel data, access, status or notification subsystem."
+      ],
+      "validator_refs": [
+        "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "Laravel extension point",
+          "service provider",
+          "container",
+          "event",
+          "middleware",
+          "larena.laravel_extension",
+          "Расширение Larena штатным механизмом Laravel"
+        ],
+        "requirement_signals": [
+          "Laravel extension point",
+          "service provider",
+          "container",
+          "event",
+          "middleware",
+          "larena.laravel_extension",
+          "Расширение Larena штатным механизмом Laravel"
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Расширение Larena штатным механизмом Laravel"
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
+      ]
+    },
+    {
       "id": "larena.native_package_extension",
       "aliases": [
         "Larena package",
@@ -16,7 +271,12 @@
         "SKILL.md"
       ],
       "extension_points": [
-        "owner://larena/existing-methodology"
+        {
+          "id": "larena.native_package_extension.extension",
+          "kind": "extend",
+          "source_ref": "SKILL.md",
+          "validator_ref": "federation://owner-capability-map"
+        }
       ],
       "constraints": [
         "Use raw owner sources for methodology and judgement.",
@@ -28,6 +288,226 @@
       "validator_refs": [
         "federation://owner-capability-map",
         "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "Larena package",
+          "OperationRuntime",
+          "larena.native_package_extension",
+          "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot."
+        ],
+        "requirement_signals": [
+          "Larena package",
+          "OperationRuntime",
+          "larena.native_package_extension",
+          "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot."
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot."
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
+      ]
+    },
+    {
+      "id": "larena.operation_runtime",
+      "aliases": [
+        "OperationRuntime",
+        "operationruntime",
+        "operation runtime",
+        "операция larena"
+      ],
+      "user_outcome": "Исполнение операции через штатный OperationRuntime",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "activities/ops-runtime.json"
+      ],
+      "extension_points": [
+        {
+          "id": "larena.operation_runtime.extension",
+          "kind": "extend",
+          "source_ref": "activities/ops-runtime.json",
+          "validator_ref": "federation://technology-conformance"
+        }
+      ],
+      "constraints": [
+        "Use the exact project version and native lifecycle, rights and APIs."
+      ],
+      "non_goals": [
+        "Do not create a parallel data, access, status or notification subsystem."
+      ],
+      "validator_refs": [
+        "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "OperationRuntime",
+          "operationruntime",
+          "operation runtime",
+          "операция larena",
+          "larena.operation_runtime",
+          "Исполнение операции через штатный OperationRuntime"
+        ],
+        "requirement_signals": [
+          "OperationRuntime",
+          "operationruntime",
+          "operation runtime",
+          "операция larena",
+          "larena.operation_runtime",
+          "Исполнение операции через штатный OperationRuntime"
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Исполнение операции через штатный OperationRuntime"
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
+      ]
+    },
+    {
+      "id": "larena.package_portfolio",
+      "aliases": [
+        "Larena package",
+        "larena package",
+        "пакет larena"
+      ],
+      "user_outcome": "Переиспользование существующего пакета Larena",
+      "readiness": "ready",
+      "canonical_source_refs": [
+        "references/canonical-package-portfolio.md"
+      ],
+      "extension_points": [
+        {
+          "id": "larena.package_portfolio.extension",
+          "kind": "extend",
+          "source_ref": "references/canonical-package-portfolio.md",
+          "validator_ref": "federation://technology-conformance"
+        }
+      ],
+      "constraints": [
+        "Use the exact project version and native lifecycle, rights and APIs."
+      ],
+      "non_goals": [
+        "Do not create a parallel data, access, status or notification subsystem."
+      ],
+      "validator_refs": [
+        "federation://technology-conformance"
+      ],
+      "roles": [
+        "discovery",
+        "outcome_harness"
+      ],
+      "discovery": {
+        "intent_signals": [
+          "Larena package",
+          "larena package",
+          "пакет larena",
+          "larena.package_portfolio",
+          "Переиспользование существующего пакета Larena"
+        ],
+        "requirement_signals": [
+          "Larena package",
+          "larena package",
+          "пакет larena",
+          "larena.package_portfolio",
+          "Переиспользование существующего пакета Larena"
+        ],
+        "project_signals": [
+          "larena"
+        ],
+        "dependency_signals": []
+      },
+      "applicability": {
+        "platform": "larena",
+        "editions": [],
+        "version_range": "exact-project-version-or-owner-contract",
+        "required_modules": []
+      },
+      "coverage": {
+        "provides": [
+          "Переиспользование существующего пакета Larena"
+        ],
+        "does_not_provide": [
+          "Capabilities outside the declared owner boundary"
+        ]
+      },
+      "ownership": {
+        "data": "larena",
+        "access": "larena",
+        "lifecycle": "larena",
+        "interface": "larena",
+        "runtime": "larena"
+      },
+      "composition": {
+        "requires": [],
+        "compatible_with": [],
+        "conflicts_with": []
+      },
+      "no_fit_conditions": [
+        "A required outcome remains uncovered after checking the exact owner source and project version."
       ]
     }
   ]
