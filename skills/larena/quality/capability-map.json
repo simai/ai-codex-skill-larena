@@ -14,7 +14,8 @@
       "user_outcome": "Подключение административной функции через contribution",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md"
+        "SKILL.md",
+        "quality/technology-contract-fixtures.json"
       ],
       "extension_points": [
         {
@@ -97,7 +98,8 @@
       "user_outcome": "Встраивание интерфейса в штатный admin slot",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md"
+        "SKILL.md",
+        "quality/technology-contract-fixtures.json"
       ],
       "extension_points": [
         {
@@ -182,7 +184,8 @@
       "user_outcome": "Расширение Larena штатным механизмом Laravel",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md"
+        "SKILL.md",
+        "quality/technology-contract-fixtures.json"
       ],
       "extension_points": [
         {
@@ -268,7 +271,8 @@
       "user_outcome": "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot.",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md"
+        "SKILL.md",
+        "quality/technology-contract-fixtures.json"
       ],
       "extension_points": [
         {
