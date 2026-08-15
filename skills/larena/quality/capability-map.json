@@ -14,14 +14,15 @@
       "user_outcome": "Подключение административной функции через contribution",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md",
-        "quality/technology-contract-fixtures.json"
+        "references/canonical-package-portfolio.md",
+        "knowledge-packs/core-platform.md",
+        "knowledge-packs/admin-platform.md"
       ],
       "extension_points": [
         {
           "id": "larena.admin_contribution.extension",
           "kind": "extend",
-          "source_ref": "SKILL.md",
+          "source_ref": "references/canonical-package-portfolio.md",
           "validator_ref": "federation://technology-conformance"
         }
       ],
@@ -98,14 +99,15 @@
       "user_outcome": "Встраивание интерфейса в штатный admin slot",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md",
-        "quality/technology-contract-fixtures.json"
+        "references/canonical-package-portfolio.md",
+        "knowledge-packs/core-platform.md",
+        "knowledge-packs/admin-platform.md"
       ],
       "extension_points": [
         {
           "id": "larena.admin_slot.extension",
           "kind": "extend",
-          "source_ref": "SKILL.md",
+          "source_ref": "references/canonical-package-portfolio.md",
           "validator_ref": "federation://technology-conformance"
         }
       ],
@@ -184,14 +186,15 @@
       "user_outcome": "Расширение Larena штатным механизмом Laravel",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md",
-        "quality/technology-contract-fixtures.json"
+        "references/canonical-package-portfolio.md",
+        "knowledge-packs/core-platform.md",
+        "knowledge-packs/admin-platform.md"
       ],
       "extension_points": [
         {
           "id": "larena.laravel_extension.extension",
           "kind": "extend",
-          "source_ref": "SKILL.md",
+          "source_ref": "references/canonical-package-portfolio.md",
           "validator_ref": "federation://technology-conformance"
         }
       ],
@@ -271,14 +274,15 @@
       "user_outcome": "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot.",
       "readiness": "ready",
       "canonical_source_refs": [
-        "SKILL.md",
-        "quality/technology-contract-fixtures.json"
+        "references/canonical-package-portfolio.md",
+        "knowledge-packs/core-platform.md",
+        "knowledge-packs/admin-platform.md"
       ],
       "extension_points": [
         {
           "id": "larena.native_package_extension.extension",
           "kind": "extend",
-          "source_ref": "SKILL.md",
+          "source_ref": "references/canonical-package-portfolio.md",
           "validator_ref": "federation://owner-capability-map"
         }
       ],
