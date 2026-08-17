@@ -6,6 +6,12 @@
     "migration_status": "mirai_graph_companion"
   },
   "extensions": {
+    "mirai.project_technology": {
+      "context_policy": "task_scoped",
+      "contract_version": "1.0.0",
+      "enabled": true,
+      "source_boundary": "hybrid_sot"
+    },
     "simai.legacy": {
       "dna_path": "graph/dna"
     }
@@ -21,18 +27,45 @@
     "generated": [
       "graph/generated"
     ],
-    "objects": [],
+    "objects": [
+      "graph/specs/objects/capability-larena-admin-platform.json",
+      "graph/specs/objects/capability-larena-docara-product.json",
+      "graph/specs/objects/capability-larena-entry-install-readiness.json",
+      "graph/specs/objects/capability-larena-new-package.json",
+      "graph/specs/objects/capability-larena-ops-runtime.json",
+      "graph/specs/objects/capability-larena-package-diagnostics.json",
+      "graph/specs/objects/capability-larena-release-readiness.json",
+      "graph/specs/objects/capability-larena-rest-api.json",
+      "graph/specs/objects/capability-larena-settings-storage-props-layout.json",
+      "graph/specs/objects/capability-larena-sitepack-bridge.json",
+      "graph/specs/objects/capability-larena-update-registration.json",
+      "graph/specs/objects/larena-core.json",
+      "graph/specs/objects/policy-larena-platform-boundary.json"
+    ],
     "raw_sources": [
       "README.md",
       "graph/source"
     ],
-    "relations": [],
+    "relations": [
+      "graph/specs/relations/relation-larena-core-depends-on-larena-platform-boundary.json",
+      "graph/specs/relations/relation-larena-core-implements-admin-platform.json",
+      "graph/specs/relations/relation-larena-core-implements-docara-product.json",
+      "graph/specs/relations/relation-larena-core-implements-entry-install-readiness.json",
+      "graph/specs/relations/relation-larena-core-implements-new-package.json",
+      "graph/specs/relations/relation-larena-core-implements-ops-runtime.json",
+      "graph/specs/relations/relation-larena-core-implements-package-diagnostics.json",
+      "graph/specs/relations/relation-larena-core-implements-release-readiness.json",
+      "graph/specs/relations/relation-larena-core-implements-rest-api.json",
+      "graph/specs/relations/relation-larena-core-implements-settings-storage-props-layout.json",
+      "graph/specs/relations/relation-larena-core-implements-sitepack-bridge.json",
+      "graph/specs/relations/relation-larena-core-implements-update-registration.json"
+    ],
     "root": "graph",
     "schemas": [
       "graph/schemas"
     ],
     "source_of_truth": [
-      "graph/specs"
+      "graph/specs/index.json"
     ]
   },
   "id": "ai-codex-skill-larena.graph",
@@ -40,7 +73,7 @@
   "kind": "skill",
   "owner": "larena",
   "profiles": [
-    "skill"
+    "skill_runtime"
   ],
   "runtime": {
     "context_required_before_raw_source": false,
