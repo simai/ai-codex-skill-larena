@@ -1,0 +1,1 @@
+{"positive":[{"task":"use one Larena application at its native mount","expected_recipe":"larena.application-profile"}],"negative":[{"task":"create a reusable Larena package","forbidden_recipe":"larena.application-profile"}],"compatibility":[{"shape":"application.repository","compatible":true}]}
