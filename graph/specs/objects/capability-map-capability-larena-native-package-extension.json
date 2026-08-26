@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Larena package",
+    "OperationRuntime"
+  ],
+  "applicability": {
+    "editions": [],
+    "platform": "larena",
+    "required_modules": [],
+    "version_range": "exact-project-version-or-owner-contract"
+  },
+  "authority": "owner_capability_map",
+  "evidence": [],
+  "expansion_policy": "expandable",
+  "id": "capability.larena.native_package_extension",
+  "kind": "capability",
+  "lifecycle": "accepted",
+  "negative_boundaries": [
+    "Do not create a parallel owner or duplicate an existing platform capability."
+  ],
+  "owner": "larena",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/larena/knowledge-packs/admin-platform.md",
+    "skills/larena/knowledge-packs/core-platform.md",
+    "skills/larena/quality/capability-map.json",
+    "skills/larena/references/canonical-package-portfolio.md"
+  ],
+  "subtype": "owner_capability_map_entry",
+  "summary": "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot.",
+  "title": "Deliver a Larena change through an existing package, OperationRuntime and admin contribution slot."
+}

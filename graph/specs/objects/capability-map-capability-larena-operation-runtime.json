@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "OperationRuntime",
+    "operation runtime",
+    "operationruntime",
+    "операция larena"
+  ],
+  "applicability": {
+    "editions": [],
+    "platform": "larena",
+    "required_modules": [],
+    "version_range": "exact-project-version-or-owner-contract"
+  },
+  "authority": "owner_capability_map",
+  "evidence": [],
+  "expansion_policy": "expandable",
+  "id": "capability.larena.operation_runtime",
+  "kind": "capability",
+  "lifecycle": "accepted",
+  "negative_boundaries": [
+    "Do not create a parallel data, access, status or notification subsystem."
+  ],
+  "owner": "larena",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/larena/activities/ops-runtime.json",
+    "skills/larena/quality/capability-map.json"
+  ],
+  "subtype": "owner_capability_map_entry",
+  "summary": "Исполнение операции через штатный OperationRuntime",
+  "title": "Исполнение операции через штатный OperationRuntime"
+}

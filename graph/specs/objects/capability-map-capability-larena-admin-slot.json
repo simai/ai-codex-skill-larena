@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Larena admin slot",
+    "admin slot",
+    "слот админки"
+  ],
+  "applicability": {
+    "editions": [],
+    "platform": "larena",
+    "required_modules": [],
+    "version_range": "exact-project-version-or-owner-contract"
+  },
+  "authority": "owner_capability_map",
+  "evidence": [],
+  "expansion_policy": "expandable",
+  "id": "capability.larena.admin_slot",
+  "kind": "capability",
+  "lifecycle": "accepted",
+  "negative_boundaries": [
+    "Do not create a parallel data, access, status or notification subsystem."
+  ],
+  "owner": "larena",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/larena/knowledge-packs/admin-platform.md",
+    "skills/larena/knowledge-packs/core-platform.md",
+    "skills/larena/quality/capability-map.json",
+    "skills/larena/references/canonical-package-portfolio.md"
+  ],
+  "subtype": "owner_capability_map_entry",
+  "summary": "Встраивание интерфейса в штатный admin slot",
+  "title": "Встраивание интерфейса в штатный admin slot"
+}
