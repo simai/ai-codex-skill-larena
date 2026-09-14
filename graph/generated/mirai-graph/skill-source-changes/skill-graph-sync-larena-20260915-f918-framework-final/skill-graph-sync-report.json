@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-09-14T21:16:03.963587+00:00",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "d650d3e64260cfa00f1b0db19c7d25dc746c2acb",
+  "base_commit": "d650d3e64260cfa00f1b0db19c7d25dc746c2acb",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "678ce0e034e7627a60dfe5ffe2e6d5dbbf651f8633b710d8b78368dd6ea78064",
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20260915-f918-framework-final/skill-source-change-evidence.json",
+  "runtime_verify_ref": "graph.json",
+  "runtime_context_ref": "graph/specs/project-continuity.json",
+  "federation_change_proposal_ref": "repo://ai-codex-skill-graph/graph/generated/mirai-graph/federation-change/skill-graph-sync-larena-20260915-f918-framework-final-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [
+    "repo://ai-codex-skill-graph/graph/generated/mirai-graph/specialist-promotion/skill-graph-sync-larena-20260915-f918-framework-final-specialist-larena-data-settings-props/specialist-promotion-proposal.json",
+    "repo://ai-codex-skill-graph/graph/generated/mirai-graph/specialist-promotion/skill-graph-sync-larena-20260915-f918-framework-final-specialist-larena-framework-integration/specialist-promotion-proposal.json",
+    "repo://ai-codex-skill-graph/graph/generated/mirai-graph/specialist-promotion/skill-graph-sync-larena-20260915-f918-framework-final-specialist-larena-platform-architect/specialist-promotion-proposal.json"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "sync_fingerprint": "33c99b1f0de7f8506944c5154ca3c7a7968c2fae3be47ba7849504d533bda706",
+  "task_sha256": "afb530956b73eedd4b8b88576620b9ec34e866e920105a6e978deba07190cdab",
+  "task_bytes": 93
+}
