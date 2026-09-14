@@ -26,6 +26,7 @@
   "format": "mirai-graph",
   "graph": {
     "generated": [
+      "graph/docs/project-context.md",
       "graph/generated"
     ],
     "objects": [
@@ -53,7 +54,8 @@
       "graph/specs/objects/capability-map-source-larena-core-platform-md-aa49e3c00551.json",
       "graph/specs/objects/capability-map-source-larena-ops-runtime-json-324b440b1550.json",
       "graph/specs/objects/larena-core.json",
-      "graph/specs/objects/policy-larena-platform-boundary.json"
+      "graph/specs/objects/policy-larena-platform-boundary.json",
+      "graph/specs/project-continuity.json"
     ],
     "raw_sources": [
       "README.md",
@@ -110,6 +112,7 @@
       "graph/schemas"
     ],
     "source_of_truth": [
+      "graph/specs",
       "graph/specs/index.json"
     ]
   },
