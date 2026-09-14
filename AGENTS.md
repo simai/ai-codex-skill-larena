@@ -24,7 +24,7 @@ templates.
 - Generated candidates из `graph/generated/` не являются canonical truth.
 - Larena domain ownership stays with `$larena`; `$graph` owns graph structure
   and gates only.
-- Do not collapse Larena into generic Laravel, Bitrix, SF5 or Docara ownership;
+- Do not collapse Larena into generic Laravel, Bitrix, SIMAI Framework or Docara ownership;
   use companion contracts instead.
 - Canonical changes in `graph/specs/` require an apply plan, validation and a
   rollback path.
