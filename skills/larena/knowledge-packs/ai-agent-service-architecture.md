@@ -15,9 +15,9 @@ A Larena building block can run:
 
 The architecture goal is Lego-like composition: humans and AI agents should be able to discover what exists, understand contracts, combine compatible units, and generate or configure missing glue without reverse-engineering the whole ecosystem.
 
-## SF5 Analogy
+## SIMAI Framework Analogy
 
-Use SF5 as the frontend analogy:
+Use SIMAI Framework as the frontend analogy:
 
 - utilities are atomic primitives;
 - components compose utilities into reusable UI units;

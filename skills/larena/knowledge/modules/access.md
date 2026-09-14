@@ -59,7 +59,7 @@
 - CRUD-проверки идут через `access.entity` + EntityConfig ability map.
 - Каждый защищенный endpoint должен быть отражен в `Access Matrix`.
 - Для новых модулей доступы должны подхватываться install-flow через `simai:install`.
-- Новый функционал должен идти через Larena Access DNA, а не через SF5-брендинг.
+- Новый функционал должен идти через Larena Access DNA, а не через SIMAI Framework-брендинг.
 - `hasAccess()` остается compatibility boolean API; новый код должен использовать `AccessChecker::decide()` там, где нужна объяснимость.
 - Для нового кода `AccessContext` должен передавать actor type, package, resource, scope и source, если эти данные доступны.
 - Bypass token не должен проходить без явного `ACCESS_BYPASS_USER_ID > 0`; bypass не является публичным API credential.

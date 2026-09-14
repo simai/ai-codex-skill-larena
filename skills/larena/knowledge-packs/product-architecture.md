@@ -17,7 +17,7 @@ Larena should become a vertically integrated CMS/platform:
 - settings/storage/props/layout;
 - update and registration infrastructure;
 - SitePack data transport;
-- Larena UI/frontend integration, including SF5 UI and smart components where they are the chosen frontend reference;
+- Larena UI/frontend integration, including SIMAI Framework UI and smart components where they are the chosen frontend reference;
 - Docara and future products;
 - AI-assisted development and diagnostics.
 
@@ -87,7 +87,7 @@ License bias:
 - Product direction should be checked against code, but current implementation gaps do not automatically invalidate the direction.
 - Before new package functionality, complete concept alignment for that package: identify the canonical Larena concept, matching Bitrix or older SIMAI migration references where they exist, Laravel-specific implementation details, gaps, risks and standard decisions.
 - First public path must work without update server.
-- Use SF5 as the frontend analogy for modular composition: small prepared primitives compose into richer units, while the runtime handles loading/caching/configuration without forcing ordinary hosting to run complex build infrastructure.
+- Use SIMAI Framework as the frontend analogy for modular composition: small prepared primitives compose into richer units, while the runtime handles loading/caching/configuration without forcing ordinary hosting to run complex build infrastructure.
 - Backend/platform modules should strive for the same Lego-like quality through manifests, docs, API contracts, service boundaries, install/update contracts and tests.
 
 For current repository cleanup, use the two-stage model documented in `simai/larena` at `docs/developer/repository-standardization-plan.md`:

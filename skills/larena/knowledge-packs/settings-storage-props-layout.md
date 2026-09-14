@@ -267,5 +267,5 @@ Larena page builder should map:
 - data provider;
 - view;
 - renderer;
-- SF5 components/smart components;
+- SIMAI Framework components/smart components;
 - machine-readable specs for editor/developer/AI workflows.

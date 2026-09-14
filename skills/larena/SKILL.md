@@ -48,7 +48,7 @@ routing, platform matrix and migration reference map.
 - The current Specs registry and Workspace profile define the canonical
   `larena/*` portfolio; do not reconstruct it from historical package files.
 - `larena-upserv`, split Docara packages, `rest_doc`, standalone 2FA and old
-  SIMAI/Bitrix/SF5 models are compatibility or migration references only.
+  SIMAI/Bitrix/SIMAI Framework models are compatibility or migration references only.
 - Keep update server and closed registration/licensing server separate.
 - Keep SitePack platform-neutral and Larena adapters platform-specific.
 - Never expose arbitrary REST class/method execution without registration,
@@ -59,7 +59,7 @@ routing, platform matrix and migration reference map.
 
 ## Companion Ownership
 
-Use `dev` for repository delivery, `sf5` for shared frontend contracts, `docs`
+Use `dev` for repository delivery, `framework` for shared frontend contracts, `docs`
 for documentation method, `ops` for runtime/deploy, `tester` for acceptance,
 `seo`/`ux` for their contracts, and `bitrix` for migration/source behavior.
 

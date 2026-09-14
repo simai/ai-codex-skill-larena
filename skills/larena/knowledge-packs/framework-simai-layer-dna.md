@@ -1,12 +1,12 @@
-# SF5 SIMAI Layer DNA For Larena
+# SIMAI Framework SIMAI Layer DNA For Larena
 
-Use this knowledge pack when a task compares Bitrix SF5 `/simai` or
+Use this knowledge pack when a task compares Bitrix SIMAI Framework `/simai` or
 `/simai.data` with Larena, or when Larena needs to implement blocks, sections,
 smart artifacts, design packs, overlays, or SitePack portability.
 
 ## Rule
 
-Preserve the SF5 layer DNA, not the Bitrix filesystem literally:
+Preserve the SIMAI Framework layer DNA, not the Bitrix filesystem literally:
 
 ```text
 /simai      = system library layer

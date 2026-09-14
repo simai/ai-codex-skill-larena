@@ -4,7 +4,7 @@ Owns settings, storage, universal properties, search/indexing, page/layout data 
 
 ## Load When
 
-- task touches `larena/setting`, `larena/property`, storage, filesystem metadata, search/indexing, page constructor data, import/export formats or Bitrix/SF5 data model alignment.
+- task touches `larena/setting`, `larena/property`, storage, filesystem metadata, search/indexing, page constructor data, import/export formats or Bitrix/SIMAI Framework data model alignment.
 
 ## Required Knowledge
 

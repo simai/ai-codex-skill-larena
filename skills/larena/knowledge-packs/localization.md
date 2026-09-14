@@ -23,5 +23,5 @@ For packages that touch translations or regional settings, require:
 - `module.yaml` command list that matches registered Artisan commands;
 - route/API documentation with session mode and permission expectations;
 - smoke check for route registration and at least one report/export/read path;
-- concept-alignment notes for Bitrix/SF5/SitePack parity;
+- concept-alignment notes for Bitrix/SIMAI Framework/SitePack parity;
 - clear note about source translations versus custom overrides.

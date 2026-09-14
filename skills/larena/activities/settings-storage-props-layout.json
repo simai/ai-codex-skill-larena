@@ -3,7 +3,7 @@
   "title": "Settings, storage, props and layout",
   "triggers": ["settings", "storage", "props", "properties", "layout", "page builder", "blocks"],
   "required_specialists": ["data-settings-props", "platform-architect", "qa-validation"],
-  "optional_specialists": ["sitepack-bridge", "sf5-integration", "security-permissions"],
+  "optional_specialists": ["sitepack-bridge", "framework-integration", "security-permissions"],
   "knowledge_packs": ["settings-storage-props-layout", "sitepack-bridge"],
   "required_gates": ["stable identifiers", "scope/ACL model", "import/export path", "tests or static verification"],
   "required_outputs": ["model decision", "implementation/findings", "verification", "migration path"]

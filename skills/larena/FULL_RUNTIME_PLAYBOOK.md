@@ -92,8 +92,8 @@ When new repeatable project experience should improve this skill, apply [rules/l
 - `larena-update-registration`: closed-contour registration/licensing server used by the update server for entitlement checks.
 - `SitePack`: portable data transport standard between Bitrix and Larena; keep adapters platform-specific.
 - `Docara`: likely first product-level proof that Larena is a usable CMS platform.
-- `SF5`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.
-- SF5 `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-native package resources, storage, database registries and adapters. Read [knowledge-packs/sf5-simai-layer-dna.md](./knowledge-packs/sf5-simai-layer-dna.md) for cross-platform mapping.
+- `SIMAI Framework`: historical/internal label and frontend/UI reference where useful; Larena backend/package contracts should use Larena names as the canonical identity.
+- SIMAI Framework `/simai` and `/simai.data` layer DNA: preserve the system-library/overlay meaning, but implement it through Laravel-native package resources, storage, database registries and adapters. Read [knowledge-packs/framework-simai-layer-dna.md](./knowledge-packs/framework-simai-layer-dna.md) for cross-platform mapping.
 
 ## Default Activities
 
@@ -123,7 +123,7 @@ Default specialist roles:
 - `modular-admin`: admin kernel, extension points, slots, contributions, CRUD, UI contracts.
 - `update-registration`: update server, registration server, licensing, channels, product delivery.
 - `sitepack-bridge`: SitePack profiles, artifacts, import/export, Bitrix/Larena adapters, SHA-256 blobs.
-- `sf5-integration`: SF5 UI, loader, smart components, layout/page builder contracts.
+- `framework-integration`: SIMAI Framework UI, loader, smart components, layout/page builder contracts.
 - `rest-api`: REST Runner, OpenAPI/Swagger, method safety, ACL-aware API contracts.
 - `data-settings-props`: settings, storage, universal properties, layout/content data models.
 - `docara-product`: unified `larena/docara` as first product proof and acceptance scenario.
@@ -139,7 +139,7 @@ Load specialist files only when selected:
 - [specialists/modular-admin/profile.md](./specialists/modular-admin/profile.md)
 - [specialists/update-registration/profile.md](./specialists/update-registration/profile.md)
 - [specialists/sitepack-bridge/profile.md](./specialists/sitepack-bridge/profile.md)
-- [specialists/sf5-integration/profile.md](./specialists/sf5-integration/profile.md)
+- [specialists/framework-integration/profile.md](./specialists/framework-integration/profile.md)
 - [specialists/rest-api/profile.md](./specialists/rest-api/profile.md)
 - [specialists/data-settings-props/profile.md](./specialists/data-settings-props/profile.md)
 - [specialists/docara-product/profile.md](./specialists/docara-product/profile.md)

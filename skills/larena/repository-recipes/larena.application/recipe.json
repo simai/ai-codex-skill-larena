@@ -24,7 +24,7 @@
       "bitrix.module",
       "bitrix.client_project",
       "sf4.project",
-      "sf5.project",
+      "framework.project",
       "orgportal.solution",
       "docara.project"
     ]

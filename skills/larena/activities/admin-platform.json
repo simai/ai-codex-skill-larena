@@ -3,7 +3,7 @@
   "title": "Modular admin platform",
   "triggers": ["admin", "crud", "extension point", "slot", "contribution", "widget"],
   "required_specialists": ["modular-admin", "security-permissions", "qa-validation"],
-  "optional_specialists": ["sf5-integration", "data-settings-props", "package-installer"],
+  "optional_specialists": ["framework-integration", "data-settings-props", "package-installer"],
   "knowledge_packs": ["admin-platform", "package-map"],
   "required_gates": ["permission/context awareness", "disabled module behavior", "UI smoke when runnable"],
   "required_outputs": ["admin contract", "patch/findings", "verification", "risks"]

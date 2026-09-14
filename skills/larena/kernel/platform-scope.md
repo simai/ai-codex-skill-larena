@@ -50,6 +50,6 @@ SitePack is platform-neutral data transport. Larena should use an adapter/packag
 
 Larena is the canonical product/platform identity for backend packages, access, settings, props, storage, REST, admin and update flows.
 
-`SF5` is an internal/historical label and remains useful mainly as a frontend/UI analogy or compatibility reference. Do not name new Larena backend contracts after SF5.
+`SIMAI Framework` is an internal/historical label and remains useful mainly as a frontend/UI analogy or compatibility reference. Do not name new Larena backend contracts after SIMAI Framework.
 
 Bitrix and older SIMAI implementations may provide migration references and adapter targets. They should not define Larena's package identity, runtime architecture or public product naming.

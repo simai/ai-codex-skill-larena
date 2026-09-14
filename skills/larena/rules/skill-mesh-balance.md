@@ -8,7 +8,7 @@ diagnostics, and Larena release readiness.
 ## Does Not Own
 
 - General repository delivery owned by `$dev`.
-- SF5 generic frontend contracts owned by `$sf5`.
+- SIMAI Framework generic frontend contracts owned by `$framework`.
 - Docara site mechanics owned by `$docara`.
 - Documentation methodology/content owned by `$docs`.
 - Runtime/deploy/hosting incidents owned by `$ops`.
@@ -18,7 +18,7 @@ diagnostics, and Larena release readiness.
 
 ## Companion Contracts
 
-- Use `$sf5` for shared frontend loader/components/layout contracts.
+- Use `$framework` for shared frontend loader/components/layout contracts.
 - Use `$docara` for Docara site mechanics and `$docs` for content/method.
 - Use `$ops` for runtime, deploy, update server, queues/cron, and hosting.
 - Use `$tester` for install/admin/public/API/Docara acceptance evidence.

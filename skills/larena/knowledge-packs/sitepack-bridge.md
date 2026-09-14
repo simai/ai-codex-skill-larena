@@ -46,7 +46,7 @@ When designing the Larena SitePack adapter for settings:
 
 - wrap the settings config-KV payload as the SitePack config key-value artifact instead of inventing a second settings format;
 - keep import review-first: SitePack settings import should create `sf_setting_pending_changes`, support dry-run/report, and never write runtime settings directly;
-- preserve namespace/key/context metadata so Bitrix/SF5 and Larena adapters can converge on the same conceptual settings model;
+- preserve namespace/key/context metadata so Bitrix/SIMAI Framework and Larena adapters can converge on the same conceptual settings model;
 - treat secrets and environment-only values as skipped or review-required entries, not as automatic imports.
 
 ## Docara Import/Export Baseline
