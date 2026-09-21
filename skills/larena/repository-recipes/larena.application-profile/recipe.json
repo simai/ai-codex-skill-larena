@@ -1,0 +1,8 @@
+{
+  "$schema":"https://simai.io/schemas/federation/repository-recipe.schema.json","schema_version":"3.0.0","id":"larena.application-profile","version":"3.0.0","kind":"platform_profile","owner":"larena","title":"Larena application native layout","repository_family":"platform","repository_kind":"larena_application","base_recipe":null,
+  "compatibility":{"allowed_bases":["application.repository","product.monorepo"],"allowed_overlays":[],"incompatible_recipes":[]},"capabilities":[],"requires_capabilities":[],"required_inputs":[],
+  "source_contract":{"entrypoints":["skills/larena/SKILL.md"],"processes":["skills/larena/rules/routing.md"],"checks":["skills/larena/rules/decision-policy.md"]},
+  "file_manifest":[],"materialization":{"mode":"declarative_manifest","generator_contract":"repository_factory.manifest.v1","template_root":null,"template_files":[]},
+  "validators":[{"id":"larena.structure","type":"owner_source","ref":"skills/larena/rules/decision-policy.md","required":true}],
+  "availability":{"policy":"local_skill_override","default_state":"available","disabled_state_behavior":"fail_closed"},"migrations":[]
+}
