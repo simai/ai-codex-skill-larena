@@ -1,0 +1,22 @@
+{
+  "operation_id": "graph.skill-evolution.changed-source",
+  "status": "success",
+  "mode": "write_generated",
+  "changed_canonical_objects": [],
+  "changed_generated_artifacts": [
+    "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/skill-source-change-evidence.json",
+    "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/detector-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/skill-graph-sync-report.json",
+    "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/skill-graph-sync-report.md",
+    "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/operation-result.json"
+  ],
+  "warnings": [],
+  "blockers": [],
+  "next_suggested_operations": [],
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/skill-source-change-evidence.json",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/detector-report.json",
+  "detector_fingerprint": "d3bea9ec30f80a69747a6023b6813b323dc856c9d7f056382e45dae4d2432a7a",
+  "skill_graph_sync_report_ref": "graph/generated/mirai-graph/skill-source-changes/larena-federation-10-cleanup-20260921/skill-graph-sync-report.json",
+  "canonical_write_allowed": false,
+  "retention_class": "skill_graph_sync"
+}
