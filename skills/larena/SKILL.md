@@ -59,7 +59,7 @@ routing, platform matrix and migration reference map.
 
 ## Companion Ownership
 
-Use `dev` for repository delivery, `sf5` for shared frontend contracts, `docs`
+Use `dev` for repository delivery, `framework` for shared frontend contracts, `docs`
 for documentation method, `ops` for runtime/deploy, `tester` for acceptance,
 `seo`/`ux` for their contracts, and `bitrix` for migration/source behavior.
 
