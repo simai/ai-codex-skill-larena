@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.larena.admin_contribution",
+  "id": "relation.capability-larena-admin-contribution.documented-by.source-larena-canonical-package-portfolio-md-e989b0fbf2dc",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "documented_by",
+  "schema_version": "1.0.0",
+  "source": "capability.larena.admin_contribution",
+  "source_refs": [
+    "skills/larena/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "source.larena.canonical-package-portfolio-md.e989b0fbf2dc",
+  "to": "source.larena.canonical-package-portfolio-md.e989b0fbf2dc",
+  "type": "documented_by"
+}

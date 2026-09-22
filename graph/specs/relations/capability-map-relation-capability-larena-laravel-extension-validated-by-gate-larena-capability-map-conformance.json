@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.larena.laravel_extension",
+  "id": "relation.capability-larena-laravel-extension.validated-by.gate-larena-capability-map-conformance",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "validated_by",
+  "schema_version": "1.0.0",
+  "source": "capability.larena.laravel_extension",
+  "source_refs": [
+    "skills/larena/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "gate.larena.capability-map-conformance",
+  "to": "gate.larena.capability-map-conformance",
+  "type": "validated_by"
+}

@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    "Larena package",
+    "larena package",
+    "пакет larena"
+  ],
+  "applicability": {
+    "editions": [],
+    "platform": "larena",
+    "required_modules": [],
+    "version_range": "exact-project-version-or-owner-contract"
+  },
+  "authority": "owner_capability_map",
+  "evidence": [],
+  "expansion_policy": "expandable",
+  "id": "capability.larena.package_portfolio",
+  "kind": "capability",
+  "lifecycle": "accepted",
+  "negative_boundaries": [
+    "Do not create a parallel data, access, status or notification subsystem."
+  ],
+  "owner": "larena",
+  "profile": "skill_runtime",
+  "readiness": "ready",
+  "schema_version": "1.0.0",
+  "source_refs": [
+    "skills/larena/quality/capability-map.json",
+    "skills/larena/references/canonical-package-portfolio.md"
+  ],
+  "subtype": "owner_capability_map_entry",
+  "summary": "Переиспользование существующего пакета Larena",
+  "title": "Переиспользование существующего пакета Larena"
+}

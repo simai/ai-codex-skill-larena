@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.larena.laravel_extension",
+  "id": "relation.capability-larena-laravel-extension.documented-by.source-larena-core-platform-md-aa49e3c00551",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "documented_by",
+  "schema_version": "1.0.0",
+  "source": "capability.larena.laravel_extension",
+  "source_refs": [
+    "skills/larena/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "source.larena.core-platform-md.aa49e3c00551",
+  "to": "source.larena.core-platform-md.aa49e3c00551",
+  "type": "documented_by"
+}

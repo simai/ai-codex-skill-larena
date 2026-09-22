@@ -1,0 +1,18 @@
+{
+  "evidence": [],
+  "from": "capability.larena.package_portfolio",
+  "id": "relation.capability-larena-package-portfolio.governed-by.constraint-larena-capability-map-boundary",
+  "kind": "relation",
+  "profile": "skill_runtime",
+  "readiness": "accepted",
+  "relation_type": "governed_by",
+  "schema_version": "1.0.0",
+  "source": "capability.larena.package_portfolio",
+  "source_refs": [
+    "skills/larena/quality/capability-map.json"
+  ],
+  "status": "accepted",
+  "target": "constraint.larena.capability-map-boundary",
+  "to": "constraint.larena.capability-map-boundary",
+  "type": "governed_by"
+}
