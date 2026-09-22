@@ -1,6 +1,6 @@
 ---
 name: larena
-description: Build, diagnose, document, and evolve Larena, the SIMAI Laravel CMS/application platform. Use for Larena application and larena/* package work, modular admin, installer/update flows, registration/licensing integration, SitePack bridge, Docara product proof, REST/API safety, settings/storage/props/layout/search alignment, migration references from Bitrix/older SIMAI systems, release readiness, QA, and repository knowledge capture.
+description: "Larena: SIMAI CMS на Laravel. Приложение и пакеты larena/*, модульная админка, установщик, обновления, лицензирование, SitePack, REST/API, настройки, layout, поиск, миграции с Bitrix, QA."
 ---
 
 # Larena
