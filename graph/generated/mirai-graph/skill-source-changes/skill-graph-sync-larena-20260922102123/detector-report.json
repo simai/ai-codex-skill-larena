@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-09-22T10:21:23.267583+00:00",
+  "repo": "repo://ai-codex-skill-larena",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "d650d3e64260cfa00f1b0db19c7d25dc746c2acb",
+  "base_commit": "d650d3e64260cfa00f1b0db19c7d25dc746c2acb",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 5,
+    "head": "725981b"
+  },
+  "changed_files": [
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "600232b985adc6fbc543b8d99f0e1441a18b585c17e1c438b7be6c0998b1f660",
+      "source_bytes": 3632,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c29faf12aa983805bf0f1f26ca4c8db462880d1d708c445013811b7742bfcc15",
+      "baseline_bytes": 3626
+    },
+    {
+      "path": "skills/larena/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "6e2ac6f7ca2363cc6fc7e994304e03263d56619c572a67b045fa369f0f733f5a",
+      "source_bytes": 1905,
+      "baseline_path": "skills/larena/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "a533a0af5c67304d90ee09b0e26aab1b0baa0387ab0d4278253140d051a0f15a",
+      "baseline_bytes": 1893
+    },
+    {
+      "path": "skills/larena/specialists/sf5-integration/profile.md",
+      "source_path": "specialists/sf5-integration/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ab0fbfb11da47204b12000619a250ef5a69bb5fe3bd8ac2ec676405a1ad6e9b6",
+      "source_bytes": 1165,
+      "baseline_path": "skills/larena/specialists/sf5-integration/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "0f99a83ca9616757c30994e032c0673269dc5f5811ce37b66039373aa4cfe050",
+      "baseline_bytes": 1159
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "specialist-update"
+  ],
+  "detected_specialists": [
+    {
+      "id": "larena.sf5-integration",
+      "name": "SF5 Integration",
+      "raw_path": "skills/larena/specialists/sf5-integration/profile.md",
+      "source_path": "specialists/sf5-integration/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    }
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "specialist_promotion_required": true,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "e1930289ecdeeff81ded279768893491aff8cb27ac65e9797da54459b3773150"
+}
