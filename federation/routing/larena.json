@@ -1,0 +1,41 @@
+{
+  "routing": {
+    "capabilities": [
+      "larena",
+      "operationruntime",
+      "larena package",
+      "admin slot"
+    ],
+    "companion_skills": [
+      "framework",
+      "tester",
+      "ops"
+    ],
+    "evidence_refs": [
+      "graph/generated/mirai-graph/gga10-owner-approved-apply-plans/larena-owner-approved-apply-plan-20260530/owner-approved-apply-plan.json",
+      "graph/generated/mirai-graph/gga10-apply-verdicts/larena-owner-approved-gga10-apply-validated-20260530/apply-verdict.json"
+    ],
+    "gga_status": "GGA10",
+    "graph_context_ref": "/Users/rim/Documents/GitHub/ai-codex-skill-larena/graph",
+    "keywords": [
+      "larena",
+      "operationruntime",
+      "larena package",
+      "admin slot"
+    ],
+    "owner_boundary": "larena owns its domain methodology and judgement; federation graph owns routing/contracts/readiness/evidence only.",
+    "raw_fallback_required": true,
+    "required_gates": [
+      "runtime_safety"
+    ],
+    "skill": "larena",
+    "task_types": [
+      "larena",
+      "operationruntime",
+      "larena package",
+      "admin slot"
+    ]
+  },
+  "schema": "simai.skill_routing.v1",
+  "skill": "larena"
+}
