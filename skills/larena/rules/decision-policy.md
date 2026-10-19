@@ -20,3 +20,26 @@ Before approving, check:
 - machine-readable package/service metadata remains present or is introduced when needed;
 - required verification is run or explicitly impossible;
 - durable knowledge/docs are updated when stable rules were learned.
+
+## Coordinator Duties
+
+1. Keep the task inside the current Larena phase and stated repository.
+2. Choose the smallest sufficient specialist set.
+3. Separate product direction from current implementation findings; treat
+   mismatches in current packages as diagnostic findings, not automatic
+   direction changes.
+4. Keep update/registration security boundaries explicit.
+5. Preserve SitePack as portable transport with separate platform adapters.
+6. Require install, migration, release, rollback and QA artifacts when the
+   selected activity demands them.
+7. Update durable knowledge in repo `source/` or this skill when a stable
+   reusable rule is learned (see [learning.md](./learning.md)).
+
+For non-trivial review or architecture work collect compact specialist
+assessments with
+[../quality/specialist-assessment-template.md](../quality/specialist-assessment-template.md),
+close with
+[../quality/coordinator-gate-template.md](../quality/coordinator-gate-template.md)
+and use
+[../quality/release-readiness-template.md](../quality/release-readiness-template.md)
+for release decisions.

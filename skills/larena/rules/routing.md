@@ -22,3 +22,21 @@ Choose the smallest sufficient specialist set.
 ## Conflict Rule
 
 If routing selects more than five specialists, split into stages and keep only the current stage active.
+
+## Activity Fallback
+
+Use [../activities/activity-registry.json](../activities/activity-registry.json)
+as the first routing layer. If no activity matches, create a temporary activity
+with `activity_id`, `title`, `triggers`, `required_specialists`,
+`optional_specialists`, `knowledge_packs`, `required_gates` and
+`required_outputs`.
+
+## Load Discipline
+
+Load only the selected specialist profiles
+([../references/specialist-roster.md](../references/specialist-roster.md)) and
+the knowledge packs they reference. Do not load every reference file.
+
+For simple edits, one primary specialist plus `qa-validation` is enough. For
+install/update, licensing, SitePack, REST safety, admin architecture or product
+proof work, use explicit gatekeepers.

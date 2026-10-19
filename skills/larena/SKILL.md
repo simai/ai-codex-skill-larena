@@ -23,9 +23,19 @@ Use federation route, Larena process contract, launch record and graph context
 for substantial work. Raw Larena/package sources remain authoritative. A
 markdown plan alone does not authorize package coding or release.
 
-Load [FULL_RUNTIME_PLAYBOOK.md](./FULL_RUNTIME_PLAYBOOK.md) for goal execution,
-developer feedback, legacy repository preparation, full activity/specialist
-routing, platform matrix and migration reference map.
+Executable technology: [technologies/platform-delivery.json](./technologies/platform-delivery.json)
+(scenarios: package delivery, diagnostics, release readiness).
+
+Load when relevant:
+
+- [rules/process-control.md](./rules/process-control.md): graph entry,
+  launch record, pre-codegen repository preparation;
+- [rules/goal-execution.md](./rules/goal-execution.md): goals and stages;
+- [rules/developer-feedback.md](./rules/developer-feedback.md): review findings;
+- [rules/routing.md](./rules/routing.md) and
+  [references/specialist-roster.md](./references/specialist-roster.md);
+- [references/baseline-verification.md](./references/baseline-verification.md)
+  and [references/reference-map.md](./references/reference-map.md).
 
 ## Core Workflow
 

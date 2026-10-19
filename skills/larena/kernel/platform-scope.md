@@ -53,3 +53,15 @@ Larena is the canonical product/platform identity for backend packages, access, 
 `SF5` is an internal/historical label and remains useful mainly as a frontend/UI analogy or compatibility reference. Do not name new Larena backend contracts after SF5.
 
 Bitrix and older SIMAI implementations may provide migration references and adapter targets. They should not define Larena's package identity, runtime architecture or public product naming.
+
+## Docara
+
+Docara (`larena/docara`) is the likely first product-level proof that Larena is
+a usable CMS platform.
+
+## SF5 Layer DNA
+
+Preserve the meaning of the SF5 `/simai` and `/simai.data` system-library and
+overlay layers, but implement it through Laravel-native package resources,
+storage, database registries and adapters. Cross-platform mapping:
+[../knowledge-packs/sf5-simai-layer-dna.md](../knowledge-packs/sf5-simai-layer-dna.md).

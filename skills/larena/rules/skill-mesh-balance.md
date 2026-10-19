@@ -39,3 +39,21 @@ companion owner expected to review.
 For reference-adaptive handoff, also return target behavior, allowed Larena
 adaptations, source-of-truth mapping, already-working baseline, do-not-break
 list, and regression checks after fix.
+
+## Surface Contracts
+
+- Modular admin, settings/storage/props/layout UI, install/update UI,
+  registration/licensing screens, Docara UI and package admin screens: read
+  [../knowledge-packs/ux-implementation-contract.md](../knowledge-packs/ux-implementation-contract.md)
+  and use the `$ux` screen spec or UX handoff as the interface contract.
+- Public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara
+  bridge, structured data and documentation/product pages: `$seo` owns the SEO
+  Contract. Implement it through Larena-native routes, storage, views,
+  middleware, packages or Docara bridge surfaces and return changed
+  routes/templates/config for `$seo` review and `$tester` acceptance. If the
+  contract conflicts with Larena constraints, report a blocker to `$seo`; do not
+  silently rewrite SEO decisions.
+- Substantial documentation, docs maps, screenshots, user/developer/API guides
+  and documentation audits: `$docs` owns the writing method; `$larena` stays
+  responsible for Larena facts, package contracts, runtime constraints and
+  Docara product specifics.
