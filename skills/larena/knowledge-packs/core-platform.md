@@ -2,7 +2,7 @@
 
 Use this knowledge pack when designing, reviewing, or explaining the future `larena/core` package.
 
-Canonical documentation lives in `/Users/rim/Documents/GitHub/larena/docs/developer/core/`:
+Canonical documentation lives in `repo://larena/docs/developer/core/`:
 
 - `README.md`;
 - `core-package-tz.md`;

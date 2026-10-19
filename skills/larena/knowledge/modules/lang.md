@@ -59,7 +59,7 @@ Do not build AI translation, language packs, marketplace translation flows, Site
 Use the Larena entry app to verify installed behavior:
 
 ```bash
-/Applications/ServBay/bin/php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-lang --strict
+/Applications/ServBay/bin/php artisan larena:validate-packages --path=repo://larena-lang --strict
 /Applications/ServBay/bin/php artisan route:list --path=admin/translations
 /Applications/ServBay/bin/php artisan route:list --path=admin/regional-settings
 /Applications/ServBay/bin/php artisan route:list --path=api/v1/regional-settings

@@ -5,15 +5,15 @@ Use this knowledge pack when a Larena task asks how one cross-cutting feature is
 Canonical project docs:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/README.md
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
+repo://larena/docs/developer/feature-graph/README.md
+repo://larena/docs/developer/feature-graph/features/*.yaml
 ```
 
 Generated outputs:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/generated/feature-adoption-matrix.md
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/generated/package-feature-gaps.md
+repo://larena/docs/developer/feature-graph/generated/feature-adoption-matrix.md
+repo://larena/docs/developer/feature-graph/generated/package-feature-gaps.md
 ```
 
 Validation and generation:

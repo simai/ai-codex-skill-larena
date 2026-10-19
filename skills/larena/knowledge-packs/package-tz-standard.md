@@ -5,7 +5,7 @@ Use this knowledge pack when a user asks to prepare, audit, improve or compare L
 Larena Package TZ is now a Larena-specific profile of the universal graph-based TZ standard owned by `$graph`.
 
 ```text
-/Users/rim/Documents/GitHub/ai-codex-skill-graph/skills/graph/references/universal-graph-tz-standard.md
+repo://ai-codex-skill-graph/skills/graph/references/universal-graph-tz-standard.md
 ```
 
 Use the universal standard for graph object roles, relations, readiness, evidence, adoption and AI context. Use this Larena profile for package graph, Larena contracts and repository validators.
@@ -13,31 +13,31 @@ Use the universal standard for graph object roles, relations, readiness, evidenc
 Canonical graph-based project standard:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/standards/graph-package-tz-standard.md
+repo://larena/docs/developer/standards/graph-package-tz-standard.md
 ```
 
 Transitional text-first standard:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/standards/package-tz-standard.md
+repo://larena/docs/developer/standards/package-tz-standard.md
 ```
 
 Template:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/standards/package-tz-template.md
+repo://larena/docs/developer/standards/package-tz-template.md
 ```
 
 Machine-readable readiness schema:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/schemas/package-tz-readiness.schema.json
+repo://larena/docs/developer/schemas/package-tz-readiness.schema.json
 ```
 
 Semantic validator:
 
 ```text
-/Users/rim/Documents/GitHub/larena/scripts/validate-package-tz.php
+repo://larena/scripts/validate-package-tz.php
 composer package-tz:validate
 composer package-tz:validate:strict
 ```
@@ -45,8 +45,8 @@ composer package-tz:validate:strict
 Cross-package feature adoption:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/README.md
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
+repo://larena/docs/developer/feature-graph/README.md
+repo://larena/docs/developer/feature-graph/features/*.yaml
 composer feature-graph:validate
 composer feature-graph:gaps
 php scripts/list-package-feature-gaps.php --package=larena/<name>
@@ -169,8 +169,8 @@ has valid graph specs but the human-readable TZ needs a deeper semantic pass.
 Canonical source of truth remains:
 
 ```text
-/Users/rim/Documents/GitHub/larena-specs/specs/packages/<package>/
-/Users/rim/Documents/GitHub/larena-specs/graph/specs/
+repo://larena-specs/specs/packages/<package>/
+repo://larena-specs/graph/specs/
 ```
 
 Human-readable package TZ documents are review/projection artifacts. They can
@@ -212,13 +212,13 @@ Do not promote noise:
 For every Larena package feedback cycle, create a report under:
 
 ```text
-/Users/rim/Documents/GitHub/larena-specs/docs/text-tz-sync/experiments/<package>/
+repo://larena-specs/docs/text-tz-sync/experiments/<package>/
 ```
 
 and update a workflow file under:
 
 ```text
-/Users/rim/Documents/GitHub/larena-specs/source/workflow/
+repo://larena-specs/source/workflow/
 ```
 
 The cycle is complete only when:
@@ -323,7 +323,7 @@ data is migrated into or generated from `larena-specs/graph/specs`.
 Each official package graph entry should have a `tz` block:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/package-graph/packages/*.yaml
+repo://larena/docs/developer/package-graph/packages/*.yaml
 ```
 
 Use `tz.maturity`, `tz.readiness`, `tz.blockers` and `tz.next_step` as the quick machine-readable view before deciding whether a package TZ can drive implementation.
@@ -333,7 +333,7 @@ Use `tz.maturity`, `tz.readiness`, `tz.blockers` and `tz.next_step` as the quick
 For cross-package mechanisms, also check:
 
 ```text
-/Users/rim/Documents/GitHub/larena/docs/developer/feature-graph/features/*.yaml
+repo://larena/docs/developer/feature-graph/features/*.yaml
 ```
 
 Feature graph is required when a feature spans several packages, for example:

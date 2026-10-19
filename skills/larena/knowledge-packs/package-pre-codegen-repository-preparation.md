@@ -19,8 +19,8 @@ reports and a committed clean baseline before coding starts.
 
 Canonical detailed process:
 
-- `/Users/rim/Documents/GitHub/larena-specs/docs/standards/package-repository-reset-and-pre-codegen-preparation.md`
-- `/Users/rim/Documents/GitHub/larena-specs/specs/standards/package-repository-reset-and-pre-codegen-preparation.json`
+- `repo://larena-specs/docs/standards/package-repository-reset-and-pre-codegen-preparation.md`
+- `repo://larena-specs/specs/standards/package-repository-reset-and-pre-codegen-preparation.json`
 
 ## Mandatory Rule
 

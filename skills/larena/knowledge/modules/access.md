@@ -111,4 +111,4 @@
 - Проверка legacy/logging hygiene: package root must not contain dead helper drafts such as old `test.back` / local migration shell scripts; runtime middleware must not write unguarded development debug logs into shared `laravel.log`.
 - Visual browser smoke по `/login`, `/admin`, `/admin/access`, `/admin/group`, `/admin/users`, `/admin/access-operations`, `/admin/access-operation-values`, `/admin/access-grants`, `/admin/access-audit-log`, `/admin/access-explain`, `/admin/key-api`.
 - Полный прогон `checklists/access-checklist.md`.
-- `php artisan larena:validate-packages --path=/Users/rim/Documents/GitHub/larena-access --strict`.
+- `php artisan larena:validate-packages --path=repo://larena-access --strict`.

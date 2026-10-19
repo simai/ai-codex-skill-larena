@@ -46,7 +46,7 @@ contracts stay in Specs. Never synchronize to retired `docara-core` or
 это проектная поставка, а не выпуск reusable package по умолчанию. Используй
 общий стандарт:
 
-`/Users/rim/Documents/GitHub/ai-codex-skill-teamlead/docs/client-project-repository-standard.md`
+`repo://ai-codex-skill-teamlead/docs/client-project-repository-standard.md`
 
 Правила:
 

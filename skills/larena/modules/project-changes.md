@@ -13,7 +13,7 @@
 3. Зафиксируй список `Do Not Touch`.
 4. Зафиксируй риски и путь rollback.
 5. Если это клиентская доработка в `client-*` репозитории, используй стандарт
-   `/Users/rim/Documents/GitHub/ai-codex-skill-teamlead/docs/standards/client-project-repository-standard.md`:
+   `repo://ai-codex-skill-teamlead/docs/standards/client-project-repository-standard.md`:
    `project/files/` зеркалит корень Larena/Laravel приложения, `project/migrations/`
    хранит одноразовые backfill/repair операции, `deploy/` хранит backup/deploy/
    smoke/rollback, а `source/` остается ignored рабочим слоем.

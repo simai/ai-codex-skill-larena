@@ -469,12 +469,12 @@ Universal concepts should remain platform-neutral:
 
 Platform-specific behavior belongs to adapters such as `bitrix-module`, `larena-package`, `sitepack` and `docara-product`.
 
-Canonical docs live in `/Users/rim/Documents/GitHub/larena-update-docs`, especially:
+Canonical docs live in `repo://larena-update-docs`, especially:
 
 - `docs/architecture/universal-update-platform.md`;
 - `docs/roadmap/artifact-level-v2-update-flow.md`.
 
-In the Larena architecture repository, the current canonical Update Platform v2 docs live in `/Users/rim/Documents/GitHub/larena/docs/developer/update/` and are split by layer:
+In the Larena architecture repository, the current canonical Update Platform v2 docs live in `repo://larena/docs/developer/update/` and are split by layer:
 
 - `standard/update-platform-v2-architecture.md`;
 - `standard/update-platform-v2-domain-model.md`;
@@ -495,7 +495,7 @@ In the Larena architecture repository, the current canonical Update Platform v2 
 
 Related canonical docs outside the update folder:
 
-- `/Users/rim/Documents/GitHub/larena/docs/developer/audit/audit-implementation-baseline.md`.
+- `repo://larena/docs/developer/audit/audit-implementation-baseline.md`.
 
 Use `server/larena-update-package-tz.md` as the package-level audit baseline for the `larena-update` repository. The package role is update server/catalog/API/delivery/entitlement-proxy/operator UX; it must not become the registration source of truth, local update executor, package source repository, or signing-key runtime.
 
@@ -527,7 +527,7 @@ Treat regional delivery as an update-platform concern, not as a package-local li
 
 Canonical Larena project doc:
 
-- `/Users/rim/Documents/GitHub/larena/docs/developer/update/standard/multi-region-distribution-rfc.md`.
+- `repo://larena/docs/developer/update/standard/multi-region-distribution-rfc.md`.
 
 Core rule:
 

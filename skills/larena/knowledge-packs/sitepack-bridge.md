@@ -1,6 +1,6 @@
 # SitePack Bridge
 
-Repository: `/Users/rim/Documents/GitHub/sitepack`
+Repository: `repo://sitepack`
 
 SitePack is the shared portable package format for moving website data between systems.
 
@@ -76,7 +76,7 @@ Working rules:
 The example package should validate with the SitePack PHP validator before implementation is considered ready:
 
 ```bash
-cd /Users/rim/Documents/GitHub/sitepack/sitepack-tools-php
-/Applications/ServBay/bin/php bin/sitepack-validate package /Users/rim/Documents/GitHub/larena/docs/developer/examples/sitepack/docara-docs-site --profile site-structure --no-digest --check-asset-blobs
-/Applications/ServBay/bin/php bin/sitepack-validate package /Users/rim/Documents/GitHub/larena/docs/developer/examples/sitepack/docara-docs-site --profile content-assets --no-digest --check-asset-blobs
+cd repo://sitepack/sitepack-tools-php
+/Applications/ServBay/bin/php bin/sitepack-validate package repo://larena/docs/developer/examples/sitepack/docara-docs-site --profile site-structure --no-digest --check-asset-blobs
+/Applications/ServBay/bin/php bin/sitepack-validate package repo://larena/docs/developer/examples/sitepack/docara-docs-site --profile content-assets --no-digest --check-asset-blobs
 ```

@@ -203,7 +203,7 @@ Prefer repository-native commands when available:
 - Existing monorepo checks when present: `composer run validate:repo`, `composer run lint:changed`, package PHPUnit suites.
 - REST/OpenAPI: route list, Swagger generation/tests, 401/403/2xx access checks.
 - UI/admin/docara: browser smoke when a runnable target exists.
-- SitePack: Node/PHP validators from `/Users/rim/Documents/GitHub/sitepack` when inspecting `.sitepack` packages.
+- SitePack: Node/PHP validators from `repo://sitepack` when inspecting `.sitepack` packages.
 
 If checks cannot run, report why and provide the closest safe static verification.
 

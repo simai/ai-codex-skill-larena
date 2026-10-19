@@ -17,7 +17,7 @@ Reference direction from Bitrix `simai.main`:
 
 Larena question: evolve `larena/setting` toward this model or split lower-level platform settings package.
 
-Canonical central package TZ now lives at `/Users/rim/Documents/GitHub/larena/docs/developer/setting/setting-package-tz.md`.
+Canonical central package TZ now lives at `repo://larena/docs/developer/setting/setting-package-tz.md`.
 
 Use it as the audit baseline for `larena/setting`. Treat the package as the Larena configuration layer: schema packs, runtime schema registry, `namespace + key`, `site_id + level + scope_id`, resolver/explain, pending review, config-KV and SitePack config-only adapter. Do not let settings become generic business-data storage, file storage, property storage, REST gateway, MCP write surface, licensing truth or update-server install policy.
 
@@ -37,8 +37,8 @@ Also keep runtime settings separate from bootstrap configuration:
 
 When schema-pack details matter, use the central contract:
 
-- `/Users/rim/Documents/GitHub/larena/docs/developer/setting/schema-pack-contract.md`;
-- `/Users/rim/Documents/GitHub/larena/docs/developer/schemas/settings-schema-pack.schema.json`.
+- `repo://larena/docs/developer/setting/schema-pack-contract.md`;
+- `repo://larena/docs/developer/schemas/settings-schema-pack.schema.json`.
 
 For future implementation, validate package-local `settings.schema-pack.json`
 against the JSON Schema, then run schema-publish dry-run. Treat this as an
@@ -180,7 +180,7 @@ Larena should separate property storage, UI render/edit/filter contracts and CRU
 
 Current `larena/property` is a file-based property type/template package, not the final universal property value model. Historical `larena/props` / `simai/props` aliases were removed before production adoption and must not be used as active package identities.
 
-Canonical central package TZ now lives at `/Users/rim/Documents/GitHub/larena/docs/developer/property/property-package-tz.md`.
+Canonical central package TZ now lives at `repo://larena/docs/developer/property/property-package-tz.md`.
 
 Use it as the audit baseline for `larena/property`. Treat the package as the typed field/property contract layer: property types, definitions, host binding, value lifecycle, render model, modes/surfaces, provider bindings, template policy, import/export shape and property demonstrator. Do not overclaim the current implementation as the final entity-bound value subsystem until `larena/storage`, `larena/filesystem`, provider registry and SitePack property profile are designed and implemented.
 
