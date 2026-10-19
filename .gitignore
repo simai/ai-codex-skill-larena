@@ -11,3 +11,6 @@ output/
 
 # Mirai Graph local Project Technology state
 .mirai-graph/project-technology/
+# compiled Python never belongs in a skill
+__pycache__/
+*.pyc
