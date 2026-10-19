@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-10-19T23:57:38.179665+00:00",
+  "repo": "repo://ai-codex-skill-larena",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "db8942b1d525ebb24456587bb029edf17794ac28",
+  "base_commit": "db8942b1d525ebb24456587bb029edf17794ac28",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": false,
+    "ahead": 2,
+    "head": "8ab973c"
+  },
+  "changed_files": [
+    {
+      "path": "skills/larena/FULL_RUNTIME_PLAYBOOK.md",
+      "source_path": "FULL_RUNTIME_PLAYBOOK.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "D",
+      "old_path": "",
+      "source_mode": "deleted",
+      "source_sha256": "deleted",
+      "source_bytes": 0,
+      "baseline_path": "skills/larena/FULL_RUNTIME_PLAYBOOK.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "cf6cc47c0df4cd9f2b75d82ce9231e2462118a27ae01b1fb6fdb1cd1b5bdb1a6",
+      "baseline_bytes": 17828
+    },
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "da8b86d43177184cd04d3b4a388dc98f02d8d064ef714f53534bf303237e6c61",
+      "source_bytes": 3998,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "27612e59a62a83365570e17b095c6347d4160ce7fdd872ef224f4fede40816ed",
+      "baseline_bytes": 3480
+    },
+    {
+      "path": "skills/larena/kernel/platform-scope.md",
+      "source_path": "kernel/platform-scope.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "abe5ce6311e4c6a4e412b883f8ef7fb5130f63d430c771904b327dfefe35506d",
+      "source_bytes": 2769,
+      "baseline_path": "skills/larena/kernel/platform-scope.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "2658180d8ab448ee73bdeea9a0e2790c64ce0152d77ff3f7a4046883912eda88",
+      "baseline_bytes": 2327
+    },
+    {
+      "path": "skills/larena/quality/technology-contract-fixtures.json",
+      "source_path": "quality/technology-contract-fixtures.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ee3209d37e2dba4bc5df2ef2c182459bd2ec77072c39c11c67afb5b377ccd228",
+      "source_bytes": 2923,
+      "baseline_path": "skills/larena/quality/technology-contract-fixtures.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ccf0263b0b11ef38f2742f00d763daa586b3dd19e9200c69075a627a23bc62e1",
+      "baseline_bytes": 1575
+    },
+    {
+      "path": "skills/larena/references/baseline-verification.md",
+      "source_path": "references/baseline-verification.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c2012b1cad8cda969e0ecdd67c0601b878158e99ee375b0b24eeccd2a53cb782",
+      "source_bytes": 765,
+      "baseline_path": "skills/larena/references/baseline-verification.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/references/reference-map.md",
+      "source_path": "references/reference-map.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f4a00684074843d1597e570fd33a26cd7a7d96db32513f5881af48f78285d634",
+      "source_bytes": 2025,
+      "baseline_path": "skills/larena/references/reference-map.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/references/specialist-roster.md",
+      "source_path": "references/specialist-roster.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e95a21e90ca7bd44890704b3a2e812485f8353bed65e812771a3e635c606b4ca",
+      "source_bytes": 2210,
+      "baseline_path": "skills/larena/references/specialist-roster.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/rules/decision-policy.md",
+      "source_path": "rules/decision-policy.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "b6d251d6d52a9d5533f9b07d10fdcf4068a9a84107c4da5fc950b3dbc42f26a3",
+      "source_bytes": 2320,
+      "baseline_path": "skills/larena/rules/decision-policy.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4c5b69adb8485399abab84966164f278846a3fcf0fb7f1e5cdcf0344246057a2",
+      "baseline_bytes": 1231
+    },
+    {
+      "path": "skills/larena/rules/developer-feedback.md",
+      "source_path": "rules/developer-feedback.md",
+      "change_types": [
+        "methodology"
+      ],
+      "routing_impact": false,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "08d7e6572e182576789b21e33eee82c8c841c91474a9ad456236e9281d82f3e3",
+      "source_bytes": 520,
+      "baseline_path": "skills/larena/rules/developer-feedback.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/rules/goal-execution.md",
+      "source_path": "rules/goal-execution.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c2846f2a6f8001b9be824dc14a81b56edc57b8b6771565cdb55396c9cc5951ed",
+      "source_bytes": 734,
+      "baseline_path": "skills/larena/rules/goal-execution.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/rules/process-control.md",
+      "source_path": "rules/process-control.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e6b99b0a9d313dfc91d8d9cac1b0c65a3bb072a1bafdacaf09ee7d5cdb38cb28",
+      "source_bytes": 2179,
+      "baseline_path": "skills/larena/rules/process-control.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/rules/routing.md",
+      "source_path": "rules/routing.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "fa9f21e292a9cf6c6ba5a69805ec9fca005ec8624c58b0136f5707f94d4fe2a3",
+      "source_bytes": 2552,
+      "baseline_path": "skills/larena/rules/routing.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c56df1caa36992ca86d9ed37c454d7d740d9d17b152cdd255b961da1840e2276",
+      "baseline_bytes": 1810
+    },
+    {
+      "path": "skills/larena/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "bf72209095bf73649eab334563b1962b691c4d45ac47f00769c1c277f610ef81",
+      "source_bytes": 2994,
+      "baseline_path": "skills/larena/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "6e2ac6f7ca2363cc6fc7e994304e03263d56619c572a67b045fa369f0f733f5a",
+      "baseline_bytes": 1905
+    },
+    {
+      "path": "skills/larena/technologies/platform-delivery.json",
+      "source_path": "technologies/platform-delivery.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "cc1cf935767e74f47e5f1e26e65b3276147de8ee1e8ccdef7d6ed83fd758a008",
+      "source_bytes": 20328,
+      "baseline_path": "skills/larena/technologies/platform-delivery.json",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "f776c5f859402580600a2a998b42ea76ee8f7f0d77b9dffd183302e6ffff6bf1"
+}
