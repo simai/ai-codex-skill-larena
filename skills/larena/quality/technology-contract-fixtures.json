@@ -6,12 +6,32 @@
     {
       "id": "larena.paraphrase.1",
       "task": "Добавь административный модуль в Larena.",
-      "expected_process_model_id": "larena_platform_delivery_conveyor"
+      "expected_process_model_id": "larena_platform_delivery_conveyor",
+      "expected_executable_technology_scenario_id": "scenario.package_delivery"
     },
     {
       "id": "larena.paraphrase.2",
       "task": "Реализуй новое действие панели управления Larena с совместимостью обновлений.",
-      "expected_process_model_id": "larena_platform_delivery_conveyor"
+      "expected_process_model_id": "larena_platform_delivery_conveyor",
+      "expected_executable_technology_scenario_id": "scenario.package_delivery"
+    },
+    {
+      "id": "larena.package_delivery.ru",
+      "task": "Используй $larena. Начни кодить пакет larena/search по process contract из подготовленного репозитория.",
+      "expected_process_model_id": "larena_platform_delivery_conveyor",
+      "expected_executable_technology_scenario_id": "scenario.package_delivery"
+    },
+    {
+      "id": "larena.diagnostics.ru",
+      "task": "Используй $larena. Диагностируй пакет larena/rest: почему провайдер не регистрирует маршруты, без изменения кода.",
+      "expected_process_model_id": "larena_platform_delivery_conveyor",
+      "expected_executable_technology_scenario_id": "scenario.package_diagnostics"
+    },
+    {
+      "id": "larena.release_readiness.ru",
+      "task": "Используй $larena. Проверь готовность пакета larena/update к релизу: метаданные, миграции и откат.",
+      "expected_process_model_id": "larena_platform_delivery_conveyor",
+      "expected_executable_technology_scenario_id": "scenario.release_readiness"
     }
   ],
   "negative_cases": [

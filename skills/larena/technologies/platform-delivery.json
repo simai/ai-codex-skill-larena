@@ -1,0 +1,481 @@
+{
+  "schema_version": "1.0.0",
+  "id": "technology.larena.platform-delivery",
+  "title": "Поставка платформы Larena",
+  "owner": "skill.larena",
+  "outcome": "Изменение пакета или приложения Larena реализовано из подготовленного репозитория по launch record и проверено, либо получен диагностический вердикт или решение о готовности к релизу — с доказательствами, заметками миграции и отката и решением координатора.",
+  "lifecycle": "reviewed",
+  "version": "1.0.0",
+  "source_refs": [
+    "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
+    "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
+    "repo://ai-codex-skill-larena/skills/larena/rules/routing.md",
+    "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md",
+    "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md"
+  ],
+  "operations": [
+    {
+      "id": "operation.surface_intake",
+      "title": "Зафиксировать цель и поверхность Larena",
+      "summary": "Определить цель, фазу и репозиторий, а также поверхность работы: entry app simai/larena, пакет larena/*, админка, update/registration, SitePack, Docara, REST, settings/storage/props/layout, документация, runtime или QA.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.package_portfolio",
+      "prerequisites": [],
+      "input_refs": [
+        "input.larena_goal",
+        "input.target_repository"
+      ],
+      "output_refs": [
+        "evidence.goal_surface_scope"
+      ],
+      "check_refs": [
+        "check.surface_declared",
+        "check.repository_in_current_phase"
+      ],
+      "stop_condition_refs": [
+        "stop.target_outside_larena_scope"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/platform-scope.md",
+        "repo://ai-codex-skill-larena/skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "applicability": [
+        "package_delivery",
+        "package_diagnostics",
+        "release_readiness"
+      ]
+    },
+    {
+      "id": "operation.activity_routing",
+      "title": "Выбрать активность и минимальный набор специалистов",
+      "summary": "Выбрать активность из реестра активностей (или временную активность), минимальный достаточный набор специалистов и компаньонов-владельцев смежных контрактов.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.package_portfolio",
+      "prerequisites": [
+        "operation.surface_intake"
+      ],
+      "input_refs": [
+        "evidence.goal_surface_scope"
+      ],
+      "output_refs": [
+        "evidence.selected_activity",
+        "evidence.specialist_set"
+      ],
+      "check_refs": [
+        "check.activity_from_registry_or_temporary",
+        "check.specialist_set_at_most_five_per_stage",
+        "check.companion_owners_named"
+      ],
+      "stop_condition_refs": [
+        "stop.more_than_five_specialists_without_staging"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/activities/activity-registry.json",
+        "repo://ai-codex-skill-larena/skills/larena/rules/routing.md",
+        "repo://ai-codex-skill-larena/skills/larena/references/specialist-roster.md"
+      ],
+      "applicability": [
+        "package_delivery",
+        "package_diagnostics",
+        "release_readiness"
+      ]
+    },
+    {
+      "id": "operation.source_of_truth_load",
+      "title": "Загрузить источники истины",
+      "summary": "Загрузить kernel, канонический портфель пакетов, выбранные knowledge packs и источники проекта в порядке авторитетности: Specs, Workspace, Root manifest и Composer lock, затем справка навыка.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.package_portfolio",
+      "prerequisites": [
+        "operation.activity_routing"
+      ],
+      "input_refs": [
+        "evidence.selected_activity",
+        "input.target_repository"
+      ],
+      "output_refs": [
+        "evidence.source_of_truth_map"
+      ],
+      "check_refs": [
+        "check.portfolio_verified_against_specs",
+        "check.retired_identities_not_used"
+      ],
+      "stop_condition_refs": [
+        "stop.specs_or_workspace_unavailable"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/references/canonical-package-portfolio.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/larena-dna.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md"
+      ],
+      "applicability": [
+        "package_delivery",
+        "package_diagnostics",
+        "release_readiness"
+      ]
+    },
+    {
+      "id": "operation.concept_alignment",
+      "title": "Проверить соответствие концепции Larena",
+      "summary": "До расширения функциональности пакета сверить его с каноничной моделью Larena для домена и записать, что является нативным Larena, а что — ссылкой миграции или совместимости.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.source_of_truth_load"
+      ],
+      "input_refs": [
+        "evidence.source_of_truth_map"
+      ],
+      "output_refs": [
+        "evidence.concept_alignment_record"
+      ],
+      "check_refs": [
+        "check.concept_alignment_recorded",
+        "check.non_negotiables_respected"
+      ],
+      "stop_condition_refs": [
+        "stop.change_violates_larena_dna"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/kernel/larena-dna.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.repository_preparation",
+      "title": "Подготовить репозиторий пакета до кодогенерации",
+      "summary": "Подготовить чистый репозиторий пакета: подтверждённый бэкап и очистка активного дерева для legacy, идентичность пакета, ссылка на specs, launch context, контракт Composer-команд, hooks, CI, scope checker, пути доказательств, граница graph-sync proposal.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.concept_alignment"
+      ],
+      "input_refs": [
+        "evidence.concept_alignment_record"
+      ],
+      "output_refs": [
+        "evidence.repository_preparation_report"
+      ],
+      "check_refs": [
+        "check.backup_confirmed_for_legacy",
+        "check.repository_preparation_validated"
+      ],
+      "stop_condition_refs": [
+        "stop.legacy_backup_not_confirmed",
+        "stop.enforcement_on_old_active_code"
+      ],
+      "rollback_refs": [
+        "rollback.restore_repository_from_backup"
+      ],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
+        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
+        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-repository-structure.md"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.launch_record",
+      "title": "Открыть launch record и перейти в ready_to_code",
+      "summary": "Зафиксировать process contract, launch scope, разрешённые файлы, тесты, путь доказательств и границу graph-sync proposal; пройти переход state machine до начала кодирования.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.repository_preparation"
+      ],
+      "input_refs": [
+        "evidence.repository_preparation_report"
+      ],
+      "output_refs": [
+        "evidence.launch_record"
+      ],
+      "check_refs": [
+        "check.allowed_files_declared",
+        "check.evidence_path_declared",
+        "check.state_transition_passed"
+      ],
+      "stop_condition_refs": [
+        "stop.markdown_plan_only",
+        "stop.action_gate_failed"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
+        "repo://ai-codex-skill-larena/skills/larena/activities/new-package.json"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.implement_slice",
+      "title": "Реализовать минимальный связный срез платформы",
+      "summary": "Внести изменение в пределах launch scope и разрешённых файлов, соблюдая non-negotiables (Blade только представление, idempotent install/update, безопасный REST) и контракты компаньонов ux/seo/docs/framework.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.launch_record"
+      ],
+      "input_refs": [
+        "evidence.launch_record"
+      ],
+      "output_refs": [
+        "evidence.package_change"
+      ],
+      "check_refs": [
+        "check.changes_within_allowed_files",
+        "check.blade_presentation_only",
+        "check.rest_allowlist_acl_audit"
+      ],
+      "stop_condition_refs": [
+        "stop.scope_expansion_without_launch_record"
+      ],
+      "rollback_refs": [
+        "rollback.revert_package_change"
+      ],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-codex-skill-larena/skills/larena/rules/skill-mesh-balance.md"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.package_verification",
+      "title": "Проверить пакет пропорционально риску",
+      "summary": "Запустить проверки пакета, установки, миграций, API и браузера пропорционально риску; если проверка невозможна, указать причину и ближайшую безопасную статическую проверку.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.implement_slice"
+      ],
+      "input_refs": [
+        "evidence.package_change"
+      ],
+      "output_refs": [
+        "evidence.verification_results"
+      ],
+      "check_refs": [
+        "check.composer_validate",
+        "check.package_tests",
+        "check.install_idempotent"
+      ],
+      "stop_condition_refs": [
+        "stop.required_check_failed"
+      ],
+      "rollback_refs": [
+        "rollback.revert_package_change"
+      ],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/references/baseline-verification.md",
+        "repo://ai-codex-skill-larena/skills/larena/specialists/qa-validation/profile.md"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.release_artifacts",
+      "title": "Обновить метаданные, документацию и артефакты отката",
+      "summary": "Обновить module.yaml, документацию, CHANGELOG, заметки миграции, обновления и отката, если поведение или контракты поставки изменились.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.native_package_extension",
+      "prerequisites": [
+        "operation.package_verification"
+      ],
+      "input_refs": [
+        "evidence.verification_results"
+      ],
+      "output_refs": [
+        "evidence.package_metadata_docs",
+        "evidence.rollback_notes"
+      ],
+      "check_refs": [
+        "check.module_yaml_present",
+        "check.changelog_updated",
+        "check.rollback_notes_present"
+      ],
+      "stop_condition_refs": [
+        "stop.metadata_missing_for_official_package"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md",
+        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/module-yaml-standard.md",
+        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-completion-standard.md"
+      ],
+      "applicability": [
+        "package_delivery"
+      ]
+    },
+    {
+      "id": "operation.diagnose",
+      "title": "Провести диагностику по реальному коду",
+      "summary": "Диагностировать пакет или приложение по реальному коду и командам: отделить подтверждённые факты, выведенные риски и открытые вопросы; несоответствия текущих пакетов — диагностические находки, а не смена направления.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.operation_runtime",
+      "prerequisites": [
+        "operation.source_of_truth_load"
+      ],
+      "input_refs": [
+        "evidence.source_of_truth_map"
+      ],
+      "output_refs": [
+        "evidence.diagnostic_findings"
+      ],
+      "check_refs": [
+        "check.findings_cite_files_or_commands",
+        "check.facts_separated_from_inference"
+      ],
+      "stop_condition_refs": [
+        "stop.runtime_access_without_ops_gate"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/activities/package-diagnostics.json",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md",
+        "repo://ai-codex-skill-larena/skills/larena/references/baseline-verification.md"
+      ],
+      "applicability": [
+        "package_diagnostics"
+      ]
+    },
+    {
+      "id": "operation.release_readiness_review",
+      "title": "Оценить готовность к релизу",
+      "summary": "Проверить гейты релиза: метаданные, установка и обновление, миграции и откат, документация, smoke и QA; разделить готовность пакета и состав runnable-сборки.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.package_portfolio",
+      "prerequisites": [
+        "operation.source_of_truth_load"
+      ],
+      "input_refs": [
+        "evidence.source_of_truth_map"
+      ],
+      "output_refs": [
+        "evidence.release_readiness_report"
+      ],
+      "check_refs": [
+        "check.release_gates_checked",
+        "check.rollback_notes_present",
+        "check.portfolio_membership_not_readiness_claim"
+      ],
+      "stop_condition_refs": [
+        "stop.required_check_failed"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/activities/release-readiness.json",
+        "repo://ai-codex-skill-larena/skills/larena/quality/release-readiness-template.md",
+        "repo://ai-codex-skill-larena/skills/larena/checklists/release-checklist.md"
+      ],
+      "applicability": [
+        "release_readiness"
+      ]
+    },
+    {
+      "id": "operation.coordinator_gate",
+      "title": "Пройти гейт координатора и передать результат",
+      "summary": "Свести оценки специалистов, вынести решение APPROVED/APPROVED_WITH_CONDITIONS/NEEDS_REVISION/REJECTED/BLOCKED и вернуть результат по контракту вывода с владельцем-компаньоном для приёмки.",
+      "owner": "skill.larena",
+      "capability_ref": "larena.package_portfolio",
+      "prerequisites": [
+        "operation.source_of_truth_load"
+      ],
+      "input_refs": [
+        "evidence.source_of_truth_map"
+      ],
+      "output_refs": [
+        "evidence.coordinator_decision",
+        "evidence.handoff"
+      ],
+      "check_refs": [
+        "check.coordinator_decision_recorded",
+        "check.output_contract_complete"
+      ],
+      "stop_condition_refs": [
+        "stop.non_negotiable_violation"
+      ],
+      "rollback_refs": [],
+      "source_refs": [
+        "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md",
+        "repo://ai-codex-skill-larena/skills/larena/quality/coordinator-gate-template.md",
+        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md"
+      ],
+      "applicability": [
+        "package_delivery",
+        "package_diagnostics",
+        "release_readiness"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "scenario.package_delivery",
+      "title": "Разработка или изменение пакета Larena",
+      "outcome": "Изменение пакета реализовано из подготовленного репозитория по launch record, проверено и сопровождено метаданными, документацией и заметками отката.",
+      "operation_ids": [
+        "operation.surface_intake",
+        "operation.activity_routing",
+        "operation.source_of_truth_load",
+        "operation.concept_alignment",
+        "operation.repository_preparation",
+        "operation.launch_record",
+        "operation.implement_slice",
+        "operation.package_verification",
+        "operation.release_artifacts",
+        "operation.coordinator_gate"
+      ],
+      "required_inputs": [
+        "input.larena_goal",
+        "input.target_repository"
+      ]
+    },
+    {
+      "id": "scenario.package_diagnostics",
+      "title": "Диагностика пакета или приложения Larena",
+      "outcome": "Диагностический вердикт с подтверждёнными фактами, рисками и следующим действием без изменения кода.",
+      "operation_ids": [
+        "operation.surface_intake",
+        "operation.activity_routing",
+        "operation.source_of_truth_load",
+        "operation.diagnose",
+        "operation.coordinator_gate"
+      ],
+      "required_inputs": [
+        "input.larena_goal",
+        "input.target_repository"
+      ]
+    },
+    {
+      "id": "scenario.release_readiness",
+      "title": "Оценка готовности к релизу",
+      "outcome": "Решение о готовности пакета или сборки к релизу с проверенными гейтами и заметками отката.",
+      "operation_ids": [
+        "operation.surface_intake",
+        "operation.activity_routing",
+        "operation.source_of_truth_load",
+        "operation.release_readiness_review",
+        "operation.coordinator_gate"
+      ],
+      "required_inputs": [
+        "input.larena_goal",
+        "input.target_repository"
+      ]
+    }
+  ]
+}
