@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "simai.skill-change.detect",
+  "created_at": "2026-10-20T22:24:52.339218+00:00",
+  "repo": "repo://ai-skill-larena",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "dee0716f30f6405dee73ff84ac48b58f0cf1a2b8",
+  "base_commit": "dee0716f30f6405dee73ff84ac48b58f0cf1a2b8",
+  "comparison_mode": "baseline_to_worktree",
+  "git": {
+    "dirty": true,
+    "ahead": 1,
+    "head": "56a99ce"
+  },
+  "changed_files": [
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "1317f0939b3c079124b0fa387262410d083432e2770ce57b44deb8f96002386c",
+      "source_bytes": 4396,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "da8b86d43177184cd04d3b4a388dc98f02d8d064ef714f53534bf303237e6c61",
+      "baseline_bytes": 3998
+    }
+  ],
+  "changed_skill_count": 1,
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "routing-impact"
+  ],
+  "detected_specialists": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "specialist_promotion_required": false,
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "blockers": [],
+  "status": "changed",
+  "detector_fingerprint": "34199e6137c62f0fd470f37aa82147bc2c125f7d4b5f3e9fbd1b9e2a68803b3f"
+}
