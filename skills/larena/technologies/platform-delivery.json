@@ -4,7 +4,7 @@
   "title": "Поставка платформы Larena",
   "owner": "skill.larena",
   "outcome": "Изменение пакета или приложения Larena реализовано из подготовленного репозитория по launch record и проверено, либо получен диагностический вердикт или решение о готовности к релизу — с доказательствами, заметками миграции и отката и решением координатора.",
-  "lifecycle": "reviewed",
+  "lifecycle": "accepted",
   "version": "1.0.0",
   "source_refs": [
     "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
@@ -339,7 +339,8 @@
       ],
       "check_refs": [
         "check.findings_cite_files_or_commands",
-        "check.facts_separated_from_inference"
+        "check.facts_separated_from_inference",
+        "check.no_code_changes_in_diagnostics"
       ],
       "stop_condition_refs": [
         "stop.runtime_access_without_ops_gate"
@@ -357,7 +358,7 @@
     {
       "id": "operation.release_readiness_review",
       "title": "Оценить готовность к релизу",
-      "summary": "Проверить гейты релиза: метаданные, установка и обновление, миграции и откат, документация, smoke и QA; разделить готовность пакета и состав runnable-сборки.",
+      "summary": "Проверить гейты релиза: метаданные, установка и обновление, миграции и откат, документация, smoke и QA; разделить готовность пакета и состав runnable-сборки. Итоговый вердикт о релизе выносит `$tester`, Larena даёт платформенную оценку.",
       "owner": "skill.larena",
       "capability_ref": "larena.package_portfolio",
       "prerequisites": [
@@ -372,7 +373,8 @@
       "check_refs": [
         "check.release_gates_checked",
         "check.rollback_notes_present",
-        "check.portfolio_membership_not_readiness_claim"
+        "check.portfolio_membership_not_readiness_claim",
+        "check.release_verdict_owned_by_tester"
       ],
       "stop_condition_refs": [
         "stop.required_check_failed"
