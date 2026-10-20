@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.report",
+  "created_at": "2026-10-20T15:54:43.732713+00:00",
+  "skill": "larena",
+  "owner": "larena",
+  "federation_control_plane": false,
+  "base": "df7eceb84d2e697c61cf08dadef4153d946f52a5",
+  "base_commit": "df7eceb84d2e697c61cf08dadef4153d946f52a5",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "9bb83996397ab1918d434c27d15834e382344d237e6f276adf79294aa0488b10",
+  "status": "success",
+  "source_change_evidence_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261020155442/skill-source-change-evidence.json",
+  "runtime_verify_ref": "graph.json",
+  "runtime_context_ref": "skills/larena/SKILL.md",
+  "federation_change_proposal_ref": "repo://ai-skill-graph/graph/generated/mirai-graph/federation-change/skill-graph-sync-larena-20261020155442-federation-proposal/federation-change-proposal.json",
+  "specialist_promotion_proposal_refs": [],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "blockers": [],
+  "canonical_write_allowed": false,
+  "sync_fingerprint": "191749e0c07ce4e45b2ba66c01b09df31d625b2d392ce202b82f2e10342a9f03",
+  "task_sha256": "4e66165408a1c3c5eaa5d0629e48f3ec6a9cca51aac671d275e845dad39e50c3",
+  "task_bytes": 68
+}

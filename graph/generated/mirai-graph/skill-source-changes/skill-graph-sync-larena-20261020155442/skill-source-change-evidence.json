@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-20T15:54:43.231295+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-skill-larena",
+  "base": "df7eceb84d2e697c61cf08dadef4153d946f52a5",
+  "base_commit": "df7eceb84d2e697c61cf08dadef4153d946f52a5",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "9bb83996397ab1918d434c27d15834e382344d237e6f276adf79294aa0488b10",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261020155442/detector-report.json",
+  "changed_files": [
+    {
+      "path": "README.md",
+      "source_path": "README.md",
+      "change_types": [
+        "documentation",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "dc401a6d0e200a53f3b7d2571f62f500d78abd39bd5f681d2c38c6537c78ea87",
+      "source_bytes": 1054,
+      "baseline_path": "README.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e620aa454a487d65e5382e0a6693a912503645881996bff1c43b5588fc307d3a",
+      "baseline_bytes": 1060
+    },
+    {
+      "path": "skills/larena/knowledge-packs/package-tz-standard.md",
+      "source_path": "knowledge-packs/package-tz-standard.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "655f67977ecc760c442b7ef0ff3cf99aa047dc9801e0624dfed43dea68860a03",
+      "source_bytes": 12670,
+      "baseline_path": "skills/larena/knowledge-packs/package-tz-standard.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "11f010d774dd517b8994b8cedb4691bc7a036b19b9930f75cd6ae14ef4c9209c",
+      "baseline_bytes": 12676
+    },
+    {
+      "path": "skills/larena/technologies/platform-delivery.json",
+      "source_path": "technologies/platform-delivery.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "74625b032fab272bc061c967a912ad2499164491b2d6a95e6e6228b0af86d5b1",
+      "source_bytes": 20316,
+      "baseline_path": "skills/larena/technologies/platform-delivery.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "9548f480c5342770c056ce14d4a634b177a0b0476794bb0b2831fab09f49c468",
+      "baseline_bytes": 20556
+    }
+  ],
+  "change_types": [
+    "capability",
+    "documentation",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "README.md",
+    "skills/larena/knowledge-packs/package-tz-standard.md",
+    "skills/larena/technologies/platform-delivery.json"
+  ],
+  "canonical_write_allowed": false
+}
