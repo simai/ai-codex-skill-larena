@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-20T10:36:03.028616+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-codex-skill-larena",
+  "base": "c50551026435fc671f7634be18e153c6a2002210",
+  "base_commit": "c50551026435fc671f7634be18e153c6a2002210",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "07e3a48378b255f919b2ad9c8e533cc8479d069b6189d2a724ef4d06b47624f7",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261020103602/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/larena/technologies/platform-delivery.json",
+      "source_path": "technologies/platform-delivery.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "9548f480c5342770c056ce14d4a634b177a0b0476794bb0b2831fab09f49c468",
+      "source_bytes": 20556,
+      "baseline_path": "skills/larena/technologies/platform-delivery.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "cc1cf935767e74f47e5f1e26e65b3276147de8ee1e8ccdef7d6ed83fd758a008",
+      "baseline_bytes": 20328
+    }
+  ],
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/larena/technologies/platform-delivery.json"
+  ],
+  "canonical_write_allowed": false
+}
