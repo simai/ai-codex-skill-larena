@@ -12,10 +12,10 @@
       "ops"
     ],
     "evidence_refs": [
-      "repo://ai-codex-skill-larena/skills/larena/quality/capability-map.json"
+      "repo://ai-skill-larena/skills/larena/quality/capability-map.json"
     ],
     "gga_status": "GGA10",
-    "graph_context_ref": "repo://ai-codex-skill-larena/graph",
+    "graph_context_ref": "repo://ai-skill-larena/graph",
     "keywords": [
       "larena",
       "operationruntime",

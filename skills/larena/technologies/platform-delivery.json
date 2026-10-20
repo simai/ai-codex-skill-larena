@@ -7,11 +7,11 @@
   "lifecycle": "accepted",
   "version": "1.0.0",
   "source_refs": [
-    "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
-    "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
-    "repo://ai-codex-skill-larena/skills/larena/rules/routing.md",
-    "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md",
-    "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md"
+    "repo://ai-skill-larena/skills/larena/SKILL.md",
+    "repo://ai-skill-larena/skills/larena/rules/process-control.md",
+    "repo://ai-skill-larena/skills/larena/rules/routing.md",
+    "repo://ai-skill-larena/skills/larena/rules/decision-policy.md",
+    "repo://ai-skill-larena/skills/larena/kernel/output-contract.md"
   ],
   "operations": [
     {
@@ -37,9 +37,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/platform-scope.md",
-        "repo://ai-codex-skill-larena/skills/larena/rules/skill-mesh-balance.md"
+        "repo://ai-skill-larena/skills/larena/SKILL.md",
+        "repo://ai-skill-larena/skills/larena/kernel/platform-scope.md",
+        "repo://ai-skill-larena/skills/larena/rules/skill-mesh-balance.md"
       ],
       "applicability": [
         "package_delivery",
@@ -73,9 +73,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/activities/activity-registry.json",
-        "repo://ai-codex-skill-larena/skills/larena/rules/routing.md",
-        "repo://ai-codex-skill-larena/skills/larena/references/specialist-roster.md"
+        "repo://ai-skill-larena/skills/larena/activities/activity-registry.json",
+        "repo://ai-skill-larena/skills/larena/rules/routing.md",
+        "repo://ai-skill-larena/skills/larena/references/specialist-roster.md"
       ],
       "applicability": [
         "package_delivery",
@@ -108,10 +108,10 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/references/canonical-package-portfolio.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/larena-dna.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
-        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md"
+        "repo://ai-skill-larena/skills/larena/references/canonical-package-portfolio.md",
+        "repo://ai-skill-larena/skills/larena/kernel/larena-dna.md",
+        "repo://ai-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-skill-larena/skills/larena/rules/process-control.md"
       ],
       "applicability": [
         "package_delivery",
@@ -143,9 +143,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/kernel/larena-dna.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
-        "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md"
+        "repo://ai-skill-larena/skills/larena/kernel/larena-dna.md",
+        "repo://ai-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-skill-larena/skills/larena/rules/decision-policy.md"
       ],
       "applicability": [
         "package_delivery"
@@ -178,9 +178,9 @@
         "rollback.restore_repository_from_backup"
       ],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
-        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
-        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-repository-structure.md"
+        "repo://ai-skill-larena/skills/larena/rules/process-control.md",
+        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
+        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-repository-structure.md"
       ],
       "applicability": [
         "package_delivery"
@@ -212,8 +212,8 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/rules/process-control.md",
-        "repo://ai-codex-skill-larena/skills/larena/activities/new-package.json"
+        "repo://ai-skill-larena/skills/larena/rules/process-control.md",
+        "repo://ai-skill-larena/skills/larena/activities/new-package.json"
       ],
       "applicability": [
         "package_delivery"
@@ -246,9 +246,9 @@
         "rollback.revert_package_change"
       ],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/SKILL.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/non-negotiables.md",
-        "repo://ai-codex-skill-larena/skills/larena/rules/skill-mesh-balance.md"
+        "repo://ai-skill-larena/skills/larena/SKILL.md",
+        "repo://ai-skill-larena/skills/larena/kernel/non-negotiables.md",
+        "repo://ai-skill-larena/skills/larena/rules/skill-mesh-balance.md"
       ],
       "applicability": [
         "package_delivery"
@@ -281,8 +281,8 @@
         "rollback.revert_package_change"
       ],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/references/baseline-verification.md",
-        "repo://ai-codex-skill-larena/skills/larena/specialists/qa-validation/profile.md"
+        "repo://ai-skill-larena/skills/larena/references/baseline-verification.md",
+        "repo://ai-skill-larena/skills/larena/specialists/qa-validation/profile.md"
       ],
       "applicability": [
         "package_delivery"
@@ -314,9 +314,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md",
-        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/module-yaml-standard.md",
-        "repo://ai-codex-skill-larena/skills/larena/knowledge-packs/package-completion-standard.md"
+        "repo://ai-skill-larena/skills/larena/kernel/output-contract.md",
+        "repo://ai-skill-larena/skills/larena/knowledge-packs/module-yaml-standard.md",
+        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-completion-standard.md"
       ],
       "applicability": [
         "package_delivery"
@@ -347,9 +347,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/activities/package-diagnostics.json",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md",
-        "repo://ai-codex-skill-larena/skills/larena/references/baseline-verification.md"
+        "repo://ai-skill-larena/skills/larena/activities/package-diagnostics.json",
+        "repo://ai-skill-larena/skills/larena/kernel/output-contract.md",
+        "repo://ai-skill-larena/skills/larena/references/baseline-verification.md"
       ],
       "applicability": [
         "package_diagnostics"
@@ -381,9 +381,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/activities/release-readiness.json",
-        "repo://ai-codex-skill-larena/skills/larena/quality/release-readiness-template.md",
-        "repo://ai-codex-skill-larena/skills/larena/checklists/release-checklist.md"
+        "repo://ai-skill-larena/skills/larena/activities/release-readiness.json",
+        "repo://ai-skill-larena/skills/larena/quality/release-readiness-template.md",
+        "repo://ai-skill-larena/skills/larena/checklists/release-checklist.md"
       ],
       "applicability": [
         "release_readiness"
@@ -414,9 +414,9 @@
       ],
       "rollback_refs": [],
       "source_refs": [
-        "repo://ai-codex-skill-larena/skills/larena/rules/decision-policy.md",
-        "repo://ai-codex-skill-larena/skills/larena/quality/coordinator-gate-template.md",
-        "repo://ai-codex-skill-larena/skills/larena/kernel/output-contract.md"
+        "repo://ai-skill-larena/skills/larena/rules/decision-policy.md",
+        "repo://ai-skill-larena/skills/larena/quality/coordinator-gate-template.md",
+        "repo://ai-skill-larena/skills/larena/kernel/output-contract.md"
       ],
       "applicability": [
         "package_delivery",

@@ -5,7 +5,7 @@ Use this knowledge pack when a user asks to prepare, audit, improve or compare L
 Larena Package TZ is now a Larena-specific profile of the universal graph-based TZ standard owned by `$graph`.
 
 ```text
-repo://ai-codex-skill-graph/skills/graph/references/universal-graph-tz-standard.md
+repo://ai-skill-graph/skills/graph/references/universal-graph-tz-standard.md
 ```
 
 Use the universal standard for graph object roles, relations, readiness, evidence, adoption and AI context. Use this Larena profile for package graph, Larena contracts and repository validators.

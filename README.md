@@ -1,4 +1,4 @@
-# ai-codex-skill-larena
+# ai-skill-larena
 
 Репозиторий skill `$larena` для Larena как SIMAI Laravel CMS/application
 platform.
