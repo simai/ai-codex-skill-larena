@@ -78,3 +78,9 @@ for documentation method, `ops` for runtime/deploy, `tester` for acceptance,
 Return goal/surface, selected activity and owners, confirmed facts versus
 inference, changed package/contracts, checks, migration/rollback impact,
 remaining risk and next action.
+
+Status wording must match evidence. With no changed files, say "решение/план",
+never "цель достигнута", "добавлено" or "реализовано". Name only resources the
+sources confirm (package, slot, contract fields); unknown concrete values
+(action id, permission, handler, wording) are required inputs, not
+"existing" items or placeholders presented as facts.
