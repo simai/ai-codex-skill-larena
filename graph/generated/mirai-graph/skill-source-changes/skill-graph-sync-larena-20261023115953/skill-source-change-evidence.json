@@ -1,0 +1,1337 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-23T11:59:54.830470+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-skill-larena",
+  "base": "5d9e2239534eb3452862772f434cea12b776a335",
+  "base_commit": "5d9e2239534eb3452862772f434cea12b776a335",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "72c1e55b7e108f35fbc448f54f2e271f76e03197ba1233341f97ca00329bc4a0",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261023115953/detector-report.json",
+  "changed_files": [
+    {
+      "path": "CHANGELOG.md",
+      "source_path": "CHANGELOG.md",
+      "change_types": [
+        "documentation",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "646b9ea4f9b0887769e8246abb0c0822ffedb6d60e533ad4f6813319225d8bc6",
+      "source_bytes": 19090,
+      "baseline_path": "CHANGELOG.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b03071463faa2de4184ae49b924a7ee58786e4b6848e561414228dd0a68c6ba3",
+      "baseline_bytes": 17747
+    },
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "8b227403ab232d3e4b6685e5b25ca928cd28ca8ccbca46a0ca20f040eb04f510",
+      "source_bytes": 5684,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "1317f0939b3c079124b0fa387262410d083432e2770ce57b44deb8f96002386c",
+      "baseline_bytes": 4396
+    },
+    {
+      "path": "skills/larena/activities/admin-platform.json",
+      "source_path": "activities/admin-platform.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "9fe38c3e21157ef2995090da2c26272d1bb0ac9e0eeeed05df348dec5981f74c",
+      "source_bytes": 729,
+      "baseline_path": "skills/larena/activities/admin-platform.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "9584922b36f03bc997c786c3e594b2075c6c756bdb7fabfb8a78bd166b8c2e54",
+      "baseline_bytes": 587
+    },
+    {
+      "path": "skills/larena/activities/settings-storage-props-layout.json",
+      "source_path": "activities/settings-storage-props-layout.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "fb3de6043021cdd363e942408eac6b653064192a9a777ec6d1cb32cfc0bf6ac8",
+      "source_bytes": 929,
+      "baseline_path": "skills/larena/activities/settings-storage-props-layout.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ecbfc18984d2cd447f161ca7c64243078fee2fd7fec097851444d7d34b6cd589",
+      "baseline_bytes": 676
+    },
+    {
+      "path": "skills/larena/agents/openai.yaml",
+      "source_path": "agents/openai.yaml",
+      "change_types": [
+        "capability",
+        "federation-impact"
+      ],
+      "routing_impact": false,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c4a28317176f97fb9517a10a387f9d09015caa742e203f60b039c3e16178de8c",
+      "source_bytes": 305,
+      "baseline_path": "skills/larena/agents/openai.yaml",
+      "baseline_mode": "100644",
+      "baseline_sha256": "815350b95b5d14171ec378e1855d04fb9dab9b0646c293791d52066632a29c97",
+      "baseline_bytes": 281
+    },
+    {
+      "path": "skills/larena/kernel/platform-scope.md",
+      "source_path": "kernel/platform-scope.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "3965a0ccd0df43c55445e2bc665a9f88306ce3b57bbb6ed203406388b57ff4e3",
+      "source_bytes": 3026,
+      "baseline_path": "skills/larena/kernel/platform-scope.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "abe5ce6311e4c6a4e412b883f8ef7fb5130f63d430c771904b327dfefe35506d",
+      "baseline_bytes": 2769
+    },
+    {
+      "path": "skills/larena/knowledge/access-platform.md",
+      "source_path": "knowledge-packs/access-platform.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/access-platform.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/access-platform.md",
+      "source_mode": "100644",
+      "source_sha256": "acb16407e0105937c09a6a520aad0d247dc0fc9f0d6601b67f130e21da85f70a",
+      "source_bytes": 8749,
+      "baseline_path": "skills/larena/knowledge-packs/access-platform.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "acb16407e0105937c09a6a520aad0d247dc0fc9f0d6601b67f130e21da85f70a",
+      "baseline_bytes": 8749
+    },
+    {
+      "path": "skills/larena/knowledge/admin-platform.md",
+      "source_path": "knowledge-packs/admin-platform.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/admin-platform.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/admin-platform.md",
+      "source_mode": "100644",
+      "source_sha256": "82cce3e52bc815ebcdf1968d4ddc3a06386258338e627ff9ac7dcfd03f20330d",
+      "source_bytes": 6143,
+      "baseline_path": "skills/larena/knowledge-packs/admin-platform.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "82cce3e52bc815ebcdf1968d4ddc3a06386258338e627ff9ac7dcfd03f20330d",
+      "baseline_bytes": 6143
+    },
+    {
+      "path": "skills/larena/knowledge/ai-agent-service-architecture.md",
+      "source_path": "knowledge-packs/ai-agent-service-architecture.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/ai-agent-service-architecture.md",
+      "status": "R098",
+      "old_path": "skills/larena/knowledge-packs/ai-agent-service-architecture.md",
+      "source_mode": "100644",
+      "source_sha256": "cf89f51220f960ba6917ccc516ad713966f6cbc335061d98dd2c9cacb619091a",
+      "source_bytes": 4509,
+      "baseline_path": "skills/larena/knowledge-packs/ai-agent-service-architecture.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ee375cd0090db1ceafd475bf7c841d8d6d31ed9e1ec0fe6bd38aca7bac8dc041",
+      "baseline_bytes": 4485
+    },
+    {
+      "path": "skills/larena/knowledge/core-platform.md",
+      "source_path": "knowledge-packs/core-platform.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/core-platform.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/core-platform.md",
+      "source_mode": "100644",
+      "source_sha256": "f7ea61135e5e4684de1377e6631d693b9e3a1ffcd87930d99afe29dc526f81ad",
+      "source_bytes": 5362,
+      "baseline_path": "skills/larena/knowledge-packs/core-platform.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "f7ea61135e5e4684de1377e6631d693b9e3a1ffcd87930d99afe29dc526f81ad",
+      "baseline_bytes": 5362
+    },
+    {
+      "path": "skills/larena/knowledge/developer-feedback-intake-protocol.md",
+      "source_path": "knowledge-packs/developer-feedback-intake-protocol.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/developer-feedback-intake-protocol.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/developer-feedback-intake-protocol.md",
+      "source_mode": "100644",
+      "source_sha256": "61448e597a06e3f03db8901aece8fe56ad5681ab3e1df235d6fbabc09aa97473",
+      "source_bytes": 2981,
+      "baseline_path": "skills/larena/knowledge-packs/developer-feedback-intake-protocol.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "61448e597a06e3f03db8901aece8fe56ad5681ab3e1df235d6fbabc09aa97473",
+      "baseline_bytes": 2981
+    },
+    {
+      "path": "skills/larena/knowledge/docara-proof.md",
+      "source_path": "knowledge-packs/docara-proof.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/docara-proof.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/docara-proof.md",
+      "source_mode": "100644",
+      "source_sha256": "0b5df0f67e37b44a0dd77c784366001c21b6d49f83ed07162eaa96b6cafa5f57",
+      "source_bytes": 4584,
+      "baseline_path": "skills/larena/knowledge-packs/docara-proof.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "0b5df0f67e37b44a0dd77c784366001c21b6d49f83ed07162eaa96b6cafa5f57",
+      "baseline_bytes": 4584
+    },
+    {
+      "path": "skills/larena/knowledge/feature-graph.md",
+      "source_path": "knowledge-packs/feature-graph.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/feature-graph.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/feature-graph.md",
+      "source_mode": "100644",
+      "source_sha256": "509a467555084efaffa94fa658de5750161b00828a1bbd0c4ade898f29f3d273",
+      "source_bytes": 2728,
+      "baseline_path": "skills/larena/knowledge-packs/feature-graph.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "509a467555084efaffa94fa658de5750161b00828a1bbd0c4ade898f29f3d273",
+      "baseline_bytes": 2728
+    },
+    {
+      "path": "skills/larena/knowledge/larena-goal-execution-profile.md",
+      "source_path": "knowledge-packs/larena-goal-execution-profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/larena-goal-execution-profile.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/larena-goal-execution-profile.md",
+      "source_mode": "100644",
+      "source_sha256": "8af3d5e15bbac50aff3dc1d996825d0cee6881c968674a7e09b6f8048e917631",
+      "source_bytes": 4174,
+      "baseline_path": "skills/larena/knowledge-packs/larena-goal-execution-profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "8af3d5e15bbac50aff3dc1d996825d0cee6881c968674a7e09b6f8048e917631",
+      "baseline_bytes": 4174
+    },
+    {
+      "path": "skills/larena/knowledge/legacy-detection-patterns.md",
+      "source_path": "knowledge-packs/legacy-detection-patterns.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/legacy-detection-patterns.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/legacy-detection-patterns.md",
+      "source_mode": "100644",
+      "source_sha256": "0687d7005a223f86cb1eebbd2ee4001a8e543654784e0aa4912f83407e51ef87",
+      "source_bytes": 13345,
+      "baseline_path": "skills/larena/knowledge-packs/legacy-detection-patterns.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "0687d7005a223f86cb1eebbd2ee4001a8e543654784e0aa4912f83407e51ef87",
+      "baseline_bytes": 13345
+    },
+    {
+      "path": "skills/larena/knowledge/localization.md",
+      "source_path": "knowledge-packs/localization.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/localization.md",
+      "status": "R095",
+      "old_path": "skills/larena/knowledge-packs/localization.md",
+      "source_mode": "100644",
+      "source_sha256": "17043335ee3ee14ea187e88a0072cce77aee42dd0853cb6102115aad245bf941",
+      "source_bytes": 1558,
+      "baseline_path": "skills/larena/knowledge-packs/localization.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "d1c2af7bfc0a387da905254b8dc5dae0b51ad80cfdf752a7c603fb439a938483",
+      "baseline_bytes": 1546
+    },
+    {
+      "path": "skills/larena/knowledge/module-yaml-standard.md",
+      "source_path": "knowledge-packs/module-yaml-standard.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/module-yaml-standard.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/module-yaml-standard.md",
+      "source_mode": "100644",
+      "source_sha256": "73004307079c723f53c8e04134b42867f7098d45353e1d4c701a930ab93cf3a9",
+      "source_bytes": 13670,
+      "baseline_path": "skills/larena/knowledge-packs/module-yaml-standard.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "73004307079c723f53c8e04134b42867f7098d45353e1d4c701a930ab93cf3a9",
+      "baseline_bytes": 13670
+    },
+    {
+      "path": "skills/larena/knowledge/ordinary-hosting-scheduler.md",
+      "source_path": "knowledge-packs/ordinary-hosting-scheduler.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/ordinary-hosting-scheduler.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/ordinary-hosting-scheduler.md",
+      "source_mode": "100644",
+      "source_sha256": "fb977ff29c9b569ef6e1641aa6824decae18489dee7bd6e1dd74c382a6622e7e",
+      "source_bytes": 1719,
+      "baseline_path": "skills/larena/knowledge-packs/ordinary-hosting-scheduler.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "fb977ff29c9b569ef6e1641aa6824decae18489dee7bd6e1dd74c382a6622e7e",
+      "baseline_bytes": 1719
+    },
+    {
+      "path": "skills/larena/knowledge/package-completion-standard.md",
+      "source_path": "knowledge-packs/package-completion-standard.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-completion-standard.md",
+      "status": "R099",
+      "old_path": "skills/larena/knowledge-packs/package-completion-standard.md",
+      "source_mode": "100644",
+      "source_sha256": "620f8102406b659d90092cf58ff6f399e00b5f246919d8d4d493e8e7f7dc3614",
+      "source_bytes": 21836,
+      "baseline_path": "skills/larena/knowledge-packs/package-completion-standard.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b5320db70b2fd5e8177663a92703e13bde6d899ea00124c9a989703699ab890b",
+      "baseline_bytes": 21842
+    },
+    {
+      "path": "skills/larena/knowledge/package-map.md",
+      "source_path": "knowledge-packs/package-map.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-map.md",
+      "status": "R055",
+      "old_path": "skills/larena/knowledge-packs/package-map.md",
+      "source_mode": "100644",
+      "source_sha256": "b27c53ccc3f884a5ed1b93f20afa6743f0614e2dce7519f04db084c82fd36193",
+      "source_bytes": 3082,
+      "baseline_path": "skills/larena/knowledge-packs/package-map.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "9801550f7b0035beefabdd7a1009e45cbd8a9e4cc737e8438c08a22577c6c8f9",
+      "baseline_bytes": 2514
+    },
+    {
+      "path": "skills/larena/knowledge/package-naming-standard.md",
+      "source_path": "knowledge-packs/package-naming-standard.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-naming-standard.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/package-naming-standard.md",
+      "source_mode": "100644",
+      "source_sha256": "40e1ae29994447a68471cfce7f3d7fa37839812f244ee909fa59130d31643bf5",
+      "source_bytes": 3740,
+      "baseline_path": "skills/larena/knowledge-packs/package-naming-standard.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "40e1ae29994447a68471cfce7f3d7fa37839812f244ee909fa59130d31643bf5",
+      "baseline_bytes": 3740
+    },
+    {
+      "path": "skills/larena/knowledge/package-pre-codegen-repository-preparation.md",
+      "source_path": "knowledge-packs/package-pre-codegen-repository-preparation.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-pre-codegen-repository-preparation.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
+      "source_mode": "100644",
+      "source_sha256": "9fd1462cde0c7ac0c60ee6b96d0413dcd40c34bb138ffdf2a06e946917fd893f",
+      "source_bytes": 6598,
+      "baseline_path": "skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "9fd1462cde0c7ac0c60ee6b96d0413dcd40c34bb138ffdf2a06e946917fd893f",
+      "baseline_bytes": 6598
+    },
+    {
+      "path": "skills/larena/knowledge/package-repository-structure.md",
+      "source_path": "knowledge-packs/package-repository-structure.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-repository-structure.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/package-repository-structure.md",
+      "source_mode": "100644",
+      "source_sha256": "ff64109290372c4267d7004ad4cd31de6c38f1531e48f70323a2e65c53bb4f1b",
+      "source_bytes": 3524,
+      "baseline_path": "skills/larena/knowledge-packs/package-repository-structure.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ff64109290372c4267d7004ad4cd31de6c38f1531e48f70323a2e65c53bb4f1b",
+      "baseline_bytes": 3524
+    },
+    {
+      "path": "skills/larena/knowledge/package-tz-standard.md",
+      "source_path": "knowledge-packs/package-tz-standard.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/package-tz-standard.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/package-tz-standard.md",
+      "source_mode": "100644",
+      "source_sha256": "655f67977ecc760c442b7ef0ff3cf99aa047dc9801e0624dfed43dea68860a03",
+      "source_bytes": 12670,
+      "baseline_path": "skills/larena/knowledge-packs/package-tz-standard.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "655f67977ecc760c442b7ef0ff3cf99aa047dc9801e0624dfed43dea68860a03",
+      "baseline_bytes": 12670
+    },
+    {
+      "path": "skills/larena/knowledge/product-architecture.md",
+      "source_path": "knowledge-packs/product-architecture.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/product-architecture.md",
+      "status": "R095",
+      "old_path": "skills/larena/knowledge-packs/product-architecture.md",
+      "source_mode": "100644",
+      "source_sha256": "62e16348baa503af6e9c08292046914de4eb5565d1c6889fdc870d1e866fc759",
+      "source_bytes": 7707,
+      "baseline_path": "skills/larena/knowledge-packs/product-architecture.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "f3f82f6ccb35e944ea2680af4dd4d15797f82cffdc01f727810e62f5b3b77ea6",
+      "baseline_bytes": 7683
+    },
+    {
+      "path": "skills/larena/knowledge/rest-safety.md",
+      "source_path": "knowledge-packs/rest-safety.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/rest-safety.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/rest-safety.md",
+      "source_mode": "100644",
+      "source_sha256": "76c33896fb240c8a0a5dd0aec25ffeb6deab6a86f27b4a5505c142d986274736",
+      "source_bytes": 3108,
+      "baseline_path": "skills/larena/knowledge-packs/rest-safety.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "76c33896fb240c8a0a5dd0aec25ffeb6deab6a86f27b4a5505c142d986274736",
+      "baseline_bytes": 3108
+    },
+    {
+      "path": "skills/larena/knowledge/search-platform.md",
+      "source_path": "knowledge-packs/search-platform.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/search-platform.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/search-platform.md",
+      "source_mode": "100644",
+      "source_sha256": "4847c8edeb2201b6b28d138bae232c7444c8811289b9427075eb3c76627659f9",
+      "source_bytes": 2204,
+      "baseline_path": "skills/larena/knowledge-packs/search-platform.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4847c8edeb2201b6b28d138bae232c7444c8811289b9427075eb3c76627659f9",
+      "baseline_bytes": 2204
+    },
+    {
+      "path": "skills/larena/knowledge/session-safe-background-enrichment.md",
+      "source_path": "knowledge-packs/session-safe-background-enrichment.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/session-safe-background-enrichment.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/session-safe-background-enrichment.md",
+      "source_mode": "100644",
+      "source_sha256": "4c0a43db63abedbb387d1dfd6e8c70f36fceb7607b49b7659c8dc649a01ee0f8",
+      "source_bytes": 4338,
+      "baseline_path": "skills/larena/knowledge-packs/session-safe-background-enrichment.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4c0a43db63abedbb387d1dfd6e8c70f36fceb7607b49b7659c8dc649a01ee0f8",
+      "baseline_bytes": 4338
+    },
+    {
+      "path": "skills/larena/knowledge/settings-storage-props-layout.md",
+      "source_path": "knowledge-packs/settings-storage-props-layout.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/settings-storage-props-layout.md",
+      "status": "R099",
+      "old_path": "skills/larena/knowledge-packs/settings-storage-props-layout.md",
+      "source_mode": "100644",
+      "source_sha256": "1c4c246e8caabcb463a24253815695694a03b5856509ee2f9532f582bf50e0dc",
+      "source_bytes": 18850,
+      "baseline_path": "skills/larena/knowledge-packs/settings-storage-props-layout.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "14af1155b1414812289422df8b0f3a6aa607e6d37fe8164167aabe49bc04c78a",
+      "baseline_bytes": 18838
+    },
+    {
+      "path": "skills/larena/knowledge/simai-layer-dna.md",
+      "source_path": "knowledge-packs/sf5-simai-layer-dna.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/sf5-simai-layer-dna.md",
+      "status": "R090",
+      "old_path": "skills/larena/knowledge-packs/sf5-simai-layer-dna.md",
+      "source_mode": "100644",
+      "source_sha256": "1d430886b3c500041a191b7fdb8fd22ec97ff07199e5039a8ef985bd30480358",
+      "source_bytes": 1743,
+      "baseline_path": "skills/larena/knowledge-packs/sf5-simai-layer-dna.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4acaf30d9b44763a495f59415dbba347313f898c36783d2ed96465134d1d6010",
+      "baseline_bytes": 1739
+    },
+    {
+      "path": "skills/larena/knowledge/sitepack-bridge.md",
+      "source_path": "knowledge-packs/sitepack-bridge.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/sitepack-bridge.md",
+      "status": "R096",
+      "old_path": "skills/larena/knowledge-packs/sitepack-bridge.md",
+      "source_mode": "100644",
+      "source_sha256": "db5f61d04350d25758b9cb72e5de04d3c894d6515c31864fc8773d8eb5e179de",
+      "source_bytes": 4055,
+      "baseline_path": "skills/larena/knowledge-packs/sitepack-bridge.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c294368f78b1ff10fe140671858216c39912b19bc4f4ef80171d3b4ea6ff3b08",
+      "baseline_bytes": 4043
+    },
+    {
+      "path": "skills/larena/knowledge/update-registration.md",
+      "source_path": "knowledge-packs/update-registration.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/update-registration.md",
+      "status": "R098",
+      "old_path": "skills/larena/knowledge-packs/update-registration.md",
+      "source_mode": "100644",
+      "source_sha256": "70e46cb0f0e8a66c6e108e6832665131f64d6f5321e8099688504ce8b5aea5d1",
+      "source_bytes": 37975,
+      "baseline_path": "skills/larena/knowledge-packs/update-registration.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ec7b17c2eafac458affc22bf7e8970991a29dd0e6d67504c93812a8915905fd6",
+      "baseline_bytes": 37446
+    },
+    {
+      "path": "skills/larena/knowledge/ux-implementation-contract.md",
+      "source_path": "knowledge-packs/ux-implementation-contract.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "old_source_path": "knowledge-packs/ux-implementation-contract.md",
+      "status": "R100",
+      "old_path": "skills/larena/knowledge-packs/ux-implementation-contract.md",
+      "source_mode": "100644",
+      "source_sha256": "94ed384a29ac33022f2e16e8127c3386013d61a6430fde611424e1858469f798",
+      "source_bytes": 1749,
+      "baseline_path": "skills/larena/knowledge-packs/ux-implementation-contract.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "94ed384a29ac33022f2e16e8127c3386013d61a6430fde611424e1858469f798",
+      "baseline_bytes": 1749
+    },
+    {
+      "path": "skills/larena/quality/capability-map.json",
+      "source_path": "quality/capability-map.json",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "94f97a1badebf504c254ca7bfefcceffe37faf3317b4d3f62dfb5bebf5005be0",
+      "source_bytes": 16195,
+      "baseline_path": "skills/larena/quality/capability-map.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "d393ceca1df860de83f27719da8b336a06c580f247e08b641f2bd20286214a1f",
+      "baseline_bytes": 16243
+    },
+    {
+      "path": "skills/larena/references/canonical-package-portfolio.md",
+      "source_path": "references/canonical-package-portfolio.md",
+      "change_types": [
+        "methodology"
+      ],
+      "routing_impact": false,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "8f3526fb197da7d1ab9bb3d7f93fc571650050f303c7d2786369c8659e41758f",
+      "source_bytes": 4703,
+      "baseline_path": "skills/larena/references/canonical-package-portfolio.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b34307b81169acd36fc746e8aaabbec4daf25bada5eafe8261c51e6340d0ed9c",
+      "baseline_bytes": 2593
+    },
+    {
+      "path": "skills/larena/references/reference-map.md",
+      "source_path": "references/reference-map.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "a3d4cf8a775b2f214dc8f89c531aa7ce4c6d87d80d57cd50679db12533446bb3",
+      "source_bytes": 2620,
+      "baseline_path": "skills/larena/references/reference-map.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "f4a00684074843d1597e570fd33a26cd7a7d96db32513f5881af48f78285d634",
+      "baseline_bytes": 2025
+    },
+    {
+      "path": "skills/larena/references/specialist-roster.md",
+      "source_path": "references/specialist-roster.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "4a7f85fa939fe47f350de02c772a346abf654183e66b567d39cc2feff27ee0a1",
+      "source_bytes": 2559,
+      "baseline_path": "skills/larena/references/specialist-roster.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e95a21e90ca7bd44890704b3a2e812485f8353bed65e812771a3e635c606b4ca",
+      "baseline_bytes": 2210
+    },
+    {
+      "path": "skills/larena/rules/decision-policy.md",
+      "source_path": "rules/decision-policy.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f1568f117871cb4e0bc565ec03b45d34d25151b7e9b9b492963b5132aea9632b",
+      "source_bytes": 2332,
+      "baseline_path": "skills/larena/rules/decision-policy.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b6d251d6d52a9d5533f9b07d10fdcf4068a9a84107c4da5fc950b3dbc42f26a3",
+      "baseline_bytes": 2320
+    },
+    {
+      "path": "skills/larena/rules/developer-feedback.md",
+      "source_path": "rules/developer-feedback.md",
+      "change_types": [
+        "methodology"
+      ],
+      "routing_impact": false,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "3945e7da47958650bd4d19db467fb82a6c0e1dfcf6327923e34bfcbf012fbf6b",
+      "source_bytes": 508,
+      "baseline_path": "skills/larena/rules/developer-feedback.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "08d7e6572e182576789b21e33eee82c8c841c91474a9ad456236e9281d82f3e3",
+      "baseline_bytes": 520
+    },
+    {
+      "path": "skills/larena/rules/goal-execution.md",
+      "source_path": "rules/goal-execution.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "f5a880689c56fe6cfcf1e2aee7794b812777a34d29d1ae9e12744eba9e120ffc",
+      "source_bytes": 722,
+      "baseline_path": "skills/larena/rules/goal-execution.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c2846f2a6f8001b9be824dc14a81b56edc57b8b6771565cdb55396c9cc5951ed",
+      "baseline_bytes": 734
+    },
+    {
+      "path": "skills/larena/rules/learning.md",
+      "source_path": "rules/learning.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "204f19980c23528b187bf1959bf2a654f35ba648150f5784d74b63a71cfeff5d",
+      "source_bytes": 826,
+      "baseline_path": "skills/larena/rules/learning.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "387303e230d496d71f15f40ef1b84417b24f47cd20269a5c42eaed5f7c9d9012",
+      "baseline_bytes": 831
+    },
+    {
+      "path": "skills/larena/rules/process-control.md",
+      "source_path": "rules/process-control.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "3fb927286761aab588eba94584c0bbf45261cd924998546677ba61288cc17f35",
+      "source_bytes": 2167,
+      "baseline_path": "skills/larena/rules/process-control.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e6b99b0a9d313dfc91d8d9cac1b0c65a3bb072a1bafdacaf09ee7d5cdb38cb28",
+      "baseline_bytes": 2179
+    },
+    {
+      "path": "skills/larena/rules/routing.md",
+      "source_path": "rules/routing.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "32ef42a144bcb6ba1a11af5574650c944dd1e2b12a54c5637c4002d45d5742a2",
+      "source_bytes": 2822,
+      "baseline_path": "skills/larena/rules/routing.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "fa9f21e292a9cf6c6ba5a69805ec9fca005ec8624c58b0136f5707f94d4fe2a3",
+      "baseline_bytes": 2552
+    },
+    {
+      "path": "skills/larena/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "6ada8f82abdd067706443716cc0cdb30baabd182a9c2a4cce26f7010e98d36fd",
+      "source_bytes": 2994,
+      "baseline_path": "skills/larena/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "bf72209095bf73649eab334563b1962b691c4d45ac47f00769c1c277f610ef81",
+      "baseline_bytes": 2994
+    },
+    {
+      "path": "skills/larena/specialists/data-settings-props/profile.md",
+      "source_path": "specialists/data-settings-props/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "c2c244bc8f99422052d7a166b377c2f245d02de40a7dec54bfdf5449efa3c502",
+      "source_bytes": 1157,
+      "baseline_path": "skills/larena/specialists/data-settings-props/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "d5406ecb3fd9dd148d4b89fce5875b87558b681d23f61ab607c4c85fc6626cf7",
+      "baseline_bytes": 1060
+    },
+    {
+      "path": "skills/larena/specialists/docara-product/profile.md",
+      "source_path": "specialists/docara-product/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "58d5db9731a02509d9c7fe667f4e00daa9794bf02c6081ed8ea55db4e1ad53c1",
+      "source_bytes": 860,
+      "baseline_path": "skills/larena/specialists/docara-product/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "2aaa7b4c743decc9b7f25d818d739ac68e9196fd7dec929a79d253afe9616472",
+      "baseline_bytes": 870
+    },
+    {
+      "path": "skills/larena/specialists/documentation-learning/profile.md",
+      "source_path": "specialists/documentation-learning/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "99480cdc43c18540759e4b9c974171fede4225b667c9e3af2d888e393881f6b5",
+      "source_bytes": 1201,
+      "baseline_path": "skills/larena/specialists/documentation-learning/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "32c5412333f4976a35d2d01cc161b474ca1416071bb38796865cacba74678653",
+      "baseline_bytes": 1213
+    },
+    {
+      "path": "skills/larena/specialists/framework-integration/profile.md",
+      "source_path": "specialists/framework-integration/profile.md",
+      "change_types": [
+        "methodology",
+        "new-specialist",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "A",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "925b86819ca0b5ec788e6762f9a79bc648951c3a85ffa66cc4eb50f294ad67b9",
+      "source_bytes": 1894,
+      "baseline_path": "skills/larena/specialists/framework-integration/profile.md",
+      "baseline_mode": "not_present",
+      "baseline_sha256": "not_present",
+      "baseline_bytes": 0
+    },
+    {
+      "path": "skills/larena/specialists/modular-admin/profile.md",
+      "source_path": "specialists/modular-admin/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "9fa198f4958ff767da052c2044d83e177d09f565a6cf59a9608ecefb5d6d8afa",
+      "source_bytes": 1083,
+      "baseline_path": "skills/larena/specialists/modular-admin/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "4c10bbb6f9afd5303808c895d7074774290c318749cd3a4496453e41cb48927d",
+      "baseline_bytes": 923
+    },
+    {
+      "path": "skills/larena/specialists/ops-runtime/profile.md",
+      "source_path": "specialists/ops-runtime/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "88017f5d8909aa8dd2af46108e7a6815d242dac38bec7bdc1c2ae706bf5da7c5",
+      "source_bytes": 1280,
+      "baseline_path": "skills/larena/specialists/ops-runtime/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "605e05a923ef938a19d41925685000e73da8b807b31e781f07575386aa88935d",
+      "baseline_bytes": 1316
+    },
+    {
+      "path": "skills/larena/specialists/package-installer/profile.md",
+      "source_path": "specialists/package-installer/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "164e042b301af2e2f4ee24ce84faae55c56a3822ec6bc3f98cd7d7cb7c2e2daf",
+      "source_bytes": 5853,
+      "baseline_path": "skills/larena/specialists/package-installer/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "e01f030161337fa132c261475c6fb6d684b15e3545f8e7441adb1c4ab16844b2",
+      "baseline_bytes": 5803
+    },
+    {
+      "path": "skills/larena/specialists/platform-architect/profile.md",
+      "source_path": "specialists/platform-architect/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "5ec5bcf8def579268614d43de928ffc07ae1001069657c716155e05c02caff09",
+      "source_bytes": 1624,
+      "baseline_path": "skills/larena/specialists/platform-architect/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b21b1d2a666ddeffb92802e73ad0f103f09cbe8179df422d75e6f7a9d5583494",
+      "baseline_bytes": 1636
+    },
+    {
+      "path": "skills/larena/specialists/rest-api/profile.md",
+      "source_path": "specialists/rest-api/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "6c8ca16d9fba5dff908a8cc8f5ea3ca04b3b497eb0879db4767168730574938c",
+      "source_bytes": 1220,
+      "baseline_path": "skills/larena/specialists/rest-api/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "b4430c813bee39c10949d9fc36f3ae1e0c3d753bf7c927dabce3c00b1c812eb9",
+      "baseline_bytes": 1254
+    },
+    {
+      "path": "skills/larena/specialists/security-permissions/profile.md",
+      "source_path": "specialists/security-permissions/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "e0e98988232b9451123465dad735d0c769909afe63e0fd74c8053b8d3690e4d4",
+      "source_bytes": 1320,
+      "baseline_path": "skills/larena/specialists/security-permissions/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ede4f3098d1ec9a9fce7de68dfbab422048fd282f45086b4c52c8aef4987ac05",
+      "baseline_bytes": 1344
+    },
+    {
+      "path": "skills/larena/specialists/sf5-integration/profile.md",
+      "source_path": "specialists/sf5-integration/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "D",
+      "old_path": "",
+      "source_mode": "deleted",
+      "source_sha256": "deleted",
+      "source_bytes": 0,
+      "baseline_path": "skills/larena/specialists/sf5-integration/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "ab0fbfb11da47204b12000619a250ef5a69bb5fe3bd8ac2ec676405a1ad6e9b6",
+      "baseline_bytes": 1165
+    },
+    {
+      "path": "skills/larena/specialists/sitepack-bridge/profile.md",
+      "source_path": "specialists/sitepack-bridge/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "edf259d3ad70c0e7df9a7d074ee02a65380a1b9c7b9e71061521fe9f977f7577",
+      "source_bytes": 1028,
+      "baseline_path": "skills/larena/specialists/sitepack-bridge/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "fc7239a7cd9487842042e53ab5892bf84431ae69404010c5763104a00b037bbf",
+      "baseline_bytes": 1052
+    },
+    {
+      "path": "skills/larena/specialists/update-registration/profile.md",
+      "source_path": "specialists/update-registration/profile.md",
+      "change_types": [
+        "methodology",
+        "routing-impact",
+        "specialist-update"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "4ace5339a082c227a217a894064f813ef6ce2c0a360ae6e39efb915472ee267d",
+      "source_bytes": 1150,
+      "baseline_path": "skills/larena/specialists/update-registration/profile.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "895e1ad87fc46ef9415701f9b68ad71a59a414d5bdbd31ed356edd17dab85666",
+      "baseline_bytes": 1174
+    },
+    {
+      "path": "skills/larena/technologies/platform-delivery.json",
+      "source_path": "technologies/platform-delivery.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "aad2d3ee2e77670f11e07ada7813723cb03badb875470a8cc835ea17c4e403ee",
+      "source_bytes": 20292,
+      "baseline_path": "skills/larena/technologies/platform-delivery.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "74625b032fab272bc061c967a912ad2499164491b2d6a95e6e6228b0af86d5b1",
+      "baseline_bytes": 20316
+    }
+  ],
+  "change_types": [
+    "capability",
+    "documentation",
+    "federation-impact",
+    "methodology",
+    "new-specialist",
+    "routing-impact",
+    "runtime",
+    "specialist-update"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context",
+    "specialist-promotion"
+  ],
+  "detected_specialists": [
+    {
+      "id": "larena.data-settings-props",
+      "name": "Data Settings Props",
+      "raw_path": "skills/larena/specialists/data-settings-props/profile.md",
+      "source_path": "specialists/data-settings-props/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.docara-product",
+      "name": "Docara Product",
+      "raw_path": "skills/larena/specialists/docara-product/profile.md",
+      "source_path": "specialists/docara-product/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.documentation-learning",
+      "name": "Documentation Learning",
+      "raw_path": "skills/larena/specialists/documentation-learning/profile.md",
+      "source_path": "specialists/documentation-learning/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.framework-integration",
+      "name": "SIMAI Framework Integration",
+      "raw_path": "skills/larena/specialists/framework-integration/profile.md",
+      "source_path": "specialists/framework-integration/profile.md",
+      "status": "new-specialist",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.modular-admin",
+      "name": "Modular Admin",
+      "raw_path": "skills/larena/specialists/modular-admin/profile.md",
+      "source_path": "specialists/modular-admin/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.ops-runtime",
+      "name": "Ops Runtime",
+      "raw_path": "skills/larena/specialists/ops-runtime/profile.md",
+      "source_path": "specialists/ops-runtime/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.package-installer",
+      "name": "Package Installer",
+      "raw_path": "skills/larena/specialists/package-installer/profile.md",
+      "source_path": "specialists/package-installer/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.platform-architect",
+      "name": "Platform Architect",
+      "raw_path": "skills/larena/specialists/platform-architect/profile.md",
+      "source_path": "specialists/platform-architect/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.rest-api",
+      "name": "REST API",
+      "raw_path": "skills/larena/specialists/rest-api/profile.md",
+      "source_path": "specialists/rest-api/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.security-permissions",
+      "name": "Security Permissions",
+      "raw_path": "skills/larena/specialists/security-permissions/profile.md",
+      "source_path": "specialists/security-permissions/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.sitepack-bridge",
+      "name": "SitePack Bridge",
+      "raw_path": "skills/larena/specialists/sitepack-bridge/profile.md",
+      "source_path": "specialists/sitepack-bridge/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    },
+    {
+      "id": "larena.update-registration",
+      "name": "Update Registration",
+      "raw_path": "skills/larena/specialists/update-registration/profile.md",
+      "source_path": "specialists/update-registration/profile.md",
+      "status": "specialist-update",
+      "promotion_required": true
+    }
+  ],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "CHANGELOG.md",
+    "skills/larena/SKILL.md",
+    "skills/larena/activities/admin-platform.json",
+    "skills/larena/activities/settings-storage-props-layout.json",
+    "skills/larena/agents/openai.yaml",
+    "skills/larena/kernel/platform-scope.md",
+    "skills/larena/knowledge/access-platform.md",
+    "skills/larena/knowledge/admin-platform.md",
+    "skills/larena/knowledge/ai-agent-service-architecture.md",
+    "skills/larena/knowledge/core-platform.md",
+    "skills/larena/knowledge/developer-feedback-intake-protocol.md",
+    "skills/larena/knowledge/docara-proof.md",
+    "skills/larena/knowledge/feature-graph.md",
+    "skills/larena/knowledge/larena-goal-execution-profile.md",
+    "skills/larena/knowledge/legacy-detection-patterns.md",
+    "skills/larena/knowledge/localization.md",
+    "skills/larena/knowledge/module-yaml-standard.md",
+    "skills/larena/knowledge/ordinary-hosting-scheduler.md",
+    "skills/larena/knowledge/package-completion-standard.md",
+    "skills/larena/knowledge/package-map.md",
+    "skills/larena/knowledge/package-naming-standard.md",
+    "skills/larena/knowledge/package-pre-codegen-repository-preparation.md",
+    "skills/larena/knowledge/package-repository-structure.md",
+    "skills/larena/knowledge/package-tz-standard.md",
+    "skills/larena/knowledge/product-architecture.md",
+    "skills/larena/knowledge/rest-safety.md",
+    "skills/larena/knowledge/search-platform.md",
+    "skills/larena/knowledge/session-safe-background-enrichment.md",
+    "skills/larena/knowledge/settings-storage-props-layout.md",
+    "skills/larena/knowledge/simai-layer-dna.md",
+    "skills/larena/knowledge/sitepack-bridge.md",
+    "skills/larena/knowledge/update-registration.md",
+    "skills/larena/knowledge/ux-implementation-contract.md",
+    "skills/larena/quality/capability-map.json",
+    "skills/larena/references/canonical-package-portfolio.md",
+    "skills/larena/references/reference-map.md",
+    "skills/larena/references/specialist-roster.md",
+    "skills/larena/rules/decision-policy.md",
+    "skills/larena/rules/developer-feedback.md",
+    "skills/larena/rules/goal-execution.md",
+    "skills/larena/rules/learning.md",
+    "skills/larena/rules/process-control.md",
+    "skills/larena/rules/routing.md",
+    "skills/larena/rules/skill-mesh-balance.md",
+    "skills/larena/specialists/data-settings-props/profile.md",
+    "skills/larena/specialists/docara-product/profile.md",
+    "skills/larena/specialists/documentation-learning/profile.md",
+    "skills/larena/specialists/framework-integration/profile.md",
+    "skills/larena/specialists/modular-admin/profile.md",
+    "skills/larena/specialists/ops-runtime/profile.md",
+    "skills/larena/specialists/package-installer/profile.md",
+    "skills/larena/specialists/platform-architect/profile.md",
+    "skills/larena/specialists/rest-api/profile.md",
+    "skills/larena/specialists/security-permissions/profile.md",
+    "skills/larena/specialists/sf5-integration/profile.md",
+    "skills/larena/specialists/sitepack-bridge/profile.md",
+    "skills/larena/specialists/update-registration/profile.md",
+    "skills/larena/technologies/platform-delivery.json"
+  ],
+  "canonical_write_allowed": false
+}
