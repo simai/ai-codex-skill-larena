@@ -14,9 +14,9 @@ skills/larena/
 Репозиторий содержит repo-local Mirai Graph companion layer:
 
 ```text
-graph/source/mirai-graph/      seeds, migration notes, review inputs
-graph/generated/mirai-graph/   adoption, semantic, effectiveness, gate reports
-graph/federation/exports/    bounded federation exports
+mirai/graph/source/mirai-graph/      seeds, migration notes, review inputs
+mirai/graph/generated/mirai-graph/   adoption, semantic, effectiveness, gate reports
+mirai/graph/federation/exports/    bounded federation exports
 ```
 
 Проверка локального Mirai Graph-контракта:

@@ -21,12 +21,12 @@ templates.
 - Не считать repo-local Mirai Graph migration успешной только из-за валидного
   JSON.
 - Не переписывать `skills/larena/SKILL.md` массово из generated artifacts.
-- Generated candidates из `graph/generated/` не являются canonical truth.
+- Generated candidates из `mirai/graph/generated/` не являются canonical truth.
 - Larena domain ownership stays with `$larena`; `$graph` owns graph structure
   and gates only.
 - Do not collapse Larena into generic Laravel, Bitrix, SIMAI Framework or Docara ownership;
   use companion contracts instead.
-- Canonical changes in `graph/specs/` require an apply plan, validation and a
+- Canonical changes in `mirai/graph/specs/` require an apply plan, validation and a
   rollback path.
 - If semantic preservation, effectiveness, federation export or integration
   review is missing, do not claim `GGA9` or graph-first repository migration.
@@ -52,15 +52,15 @@ skill:larena
 Canonical repo-local graph root:
 
 ```text
-graph/
+mirai/graph/
 ```
 
 Current Mirai Graph artifacts:
 
 ```text
-graph/source/mirai-graph/seeds/
-graph/generated/mirai-graph/
-graph/federation/exports/
+mirai/graph/source/mirai-graph/seeds/
+mirai/graph/generated/mirai-graph/
+mirai/graph/federation/exports/
 ```
 
 This repository is allowed to export a bounded federation contract after the

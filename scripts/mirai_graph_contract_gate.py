@@ -13,22 +13,22 @@ ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED_ARTIFACTS = {
     "semantic": Path(
-        "graph/generated/mirai-graph/semantic-preservation/"
+        "mirai/graph/generated/mirai-graph/semantic-preservation/"
         "larena-repo-local-semantic-review-20260529/semantic-preservation-verdict.json"
     ),
     "effectiveness": Path(
-        "graph/generated/mirai-graph/effectiveness-reports/"
+        "mirai/graph/generated/mirai-graph/effectiveness-reports/"
         "larena-repo-local-effectiveness-20260529/effectiveness-report.json"
     ),
     "adoption": Path(
-        "graph/generated/mirai-graph/adoption-reports/"
+        "mirai/graph/generated/mirai-graph/adoption-reports/"
         "larena-repo-local-adoption-gga9-active-gate-20260529/mirai-graph-adoption-report.json"
     ),
     "federation": Path(
-        "graph/federation/exports/larena-repo-local-federation-export-20260529/federation-export.json"
+        "mirai/graph/federation/exports/larena-repo-local-federation-export-20260529/federation-export.json"
     ),
     "integration": Path(
-        "graph/generated/mirai-graph/integration-reviews/"
+        "mirai/graph/generated/mirai-graph/integration-reviews/"
         "larena-repo-local-integration-review-active-gate-20260529/mirai-graph-integration-review.json"
     ),
 }

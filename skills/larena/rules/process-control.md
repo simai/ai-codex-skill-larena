@@ -2,7 +2,7 @@
 
 ## Mirai Graph Hybrid Entry
 
-For substantial Larena tasks use repo-local `graph/specs` and the latest Mirai
+For substantial Larena tasks use repo-local `mirai/graph/specs` and the latest Mirai
 Graph runtime context as the first machine-readable index for capability
 selection, routing, readiness, companion contracts and scenario evidence. The
 graph may choose the owner boundary, required gates, related skills and the

@@ -15,7 +15,7 @@
       "repo://ai-skill-larena/skills/larena/quality/capability-map.json"
     ],
     "gga_status": "GGA10",
-    "graph_context_ref": "repo://ai-skill-larena/graph",
+    "graph_context_ref": "repo://ai-skill-larena/mirai/graph",
     "keywords": [
       "larena",
       "operationruntime",

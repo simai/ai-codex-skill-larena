@@ -1,0 +1,109 @@
+boundaries:
+  canonical_writes: owner_approval_required
+  evidence_authority: false
+  generated_authority: false
+  source_of_truth: hybrid_sot
+compatibility:
+  legacy_facade: required_2_x
+contract_version: 1.0.0
+documentation:
+  owner_notes: mirai/owner-notes.md
+  start: mirai/START.md
+entrypoints:
+  components: mirai/components
+  context: mirai/context
+  graph:
+    objects:
+      - mirai/graph/specs/objects/capability-larena-admin-platform.json
+      - mirai/graph/specs/objects/capability-larena-docara-product.json
+      - mirai/graph/specs/objects/capability-larena-entry-install-readiness.json
+      - mirai/graph/specs/objects/capability-larena-new-package.json
+      - mirai/graph/specs/objects/capability-larena-ops-runtime.json
+      - mirai/graph/specs/objects/capability-larena-package-diagnostics.json
+      - mirai/graph/specs/objects/capability-larena-release-readiness.json
+      - mirai/graph/specs/objects/capability-larena-rest-api.json
+      - mirai/graph/specs/objects/capability-larena-settings-storage-props-layout.json
+      - mirai/graph/specs/objects/capability-larena-sitepack-bridge.json
+      - mirai/graph/specs/objects/capability-larena-update-registration.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-admin-contribution.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-admin-slot.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-laravel-extension.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-native-package-extension.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-operation-runtime.json
+      - mirai/graph/specs/objects/capability-map-capability-larena-package-portfolio.json
+      - mirai/graph/specs/objects/capability-map-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/objects/capability-map-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/objects/capability-map-source-larena-admin-platform-md-b2eac744822c.json
+      - mirai/graph/specs/objects/capability-map-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/objects/capability-map-source-larena-core-platform-md-aa49e3c00551.json
+      - mirai/graph/specs/objects/capability-map-source-larena-ops-runtime-json-324b440b1550.json
+      - mirai/graph/specs/objects/larena-core.json
+      - mirai/graph/specs/objects/policy-larena-platform-boundary.json
+    relations:
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-contribution-documented-by-source-larena-admin-platform-md-b2eac744822c.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-contribution-documented-by-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-contribution-documented-by-source-larena-core-platform-md-aa49e3c00551.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-contribution-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-contribution-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-slot-documented-by-source-larena-admin-platform-md-b2eac744822c.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-slot-documented-by-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-slot-documented-by-source-larena-core-platform-md-aa49e3c00551.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-slot-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-admin-slot-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-laravel-extension-documented-by-source-larena-admin-platform-md-b2eac744822c.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-laravel-extension-documented-by-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-laravel-extension-documented-by-source-larena-core-platform-md-aa49e3c00551.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-laravel-extension-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-laravel-extension-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-native-package-extension-documented-by-source-larena-admin-platform-md-b2eac744822c.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-native-package-extension-documented-by-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-native-package-extension-documented-by-source-larena-core-platform-md-aa49e3c00551.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-native-package-extension-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-native-package-extension-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-operation-runtime-documented-by-source-larena-ops-runtime-json-324b440b1550.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-operation-runtime-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-operation-runtime-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-package-portfolio-documented-by-source-larena-canonical-package-portfolio-md-e989b0fbf2dc.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-package-portfolio-governed-by-constraint-larena-capability-map-boundary.json
+      - mirai/graph/specs/relations/capability-map-relation-capability-larena-package-portfolio-validated-by-gate-larena-capability-map-conformance.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-admin-contribution.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-admin-slot.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-laravel-extension.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-native-package-extension.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-operation-runtime.json
+      - mirai/graph/specs/relations/capability-map-relation-skill-larena-core-contains-capability-larena-package-portfolio.json
+      - mirai/graph/specs/relations/relation-larena-core-depends-on-larena-platform-boundary.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-admin-platform.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-docara-product.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-entry-install-readiness.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-new-package.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-ops-runtime.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-package-diagnostics.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-release-readiness.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-rest-api.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-settings-storage-props-layout.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-sitepack-bridge.json
+      - mirai/graph/specs/relations/relation-larena-core-implements-update-registration.json
+    root: mirai/graph
+  interfaces: mirai/interfaces
+  policies: mirai/policies
+  programs: mirai/programs
+  sources: mirai/sources.yaml
+features:
+  - project_self_description
+  - graph_core
+  - proposal_first_learning
+  - legacy_graph_v2_compatibility
+profiles:
+  - skill_runtime
+project:
+  id: ai-codex-skill-larena.graph
+  kind: project
+  owner: larena
+  scope: skill
+  title: ai-codex-skill-larena Graph
+requires:
+  graph_contract: 2.0.0
+  mirai: ">=2.1.0-alpha <3.0.0"
+  program_contract: 1.0.0
+  runtime_contract: 1.0.0

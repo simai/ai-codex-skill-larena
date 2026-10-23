@@ -14,3 +14,7 @@ output/
 # compiled Python never belongs in a skill
 __pycache__/
 *.pyc
+
+
+# Mirai 2 local state: migration backups, staging, runtime
+.mirai/

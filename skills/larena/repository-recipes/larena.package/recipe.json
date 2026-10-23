@@ -64,7 +64,7 @@
       "skills/larena/activities/activity-registry.json"
     ],
     "checks": [
-      "graph/specs/index.json"
+      "mirai/graph/specs/index.json"
     ]
   },
   "file_manifest": [
@@ -151,7 +151,7 @@
     {
       "id": "larena.source-check.1",
       "type": "owner_source",
-      "ref": "graph/specs/index.json",
+      "ref": "mirai/graph/specs/index.json",
       "required": true
     }
   ]
