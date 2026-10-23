@@ -88,7 +88,7 @@ Load when relevant:
 
 Use `dev` for repository delivery, `framework` for shared frontend contracts, `docs`
 for documentation method, `ops` for runtime/deploy, `tester` for acceptance,
-`seo`/`ux` for their contracts, and `bitrix` for migration/source behavior.
+`marketing`/`ux` for their contracts, and `bitrix` for migration/source behavior.
 
 ## Output
 

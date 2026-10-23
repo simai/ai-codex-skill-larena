@@ -13,7 +13,7 @@ diagnostics, and Larena release readiness.
 - Documentation methodology/content owned by `$docs`.
 - Runtime/deploy/hosting incidents owned by `$ops`.
 - QA evidence owned by `$tester`.
-- SEO Contract and UX acceptance owned by `$seo` and `$ux`.
+- SEO Contract and UX acceptance owned by `$marketing` and `$ux`.
 - Bitrix-only facts outside Larena/Bitrix alignment work.
 
 ## Companion Contracts
@@ -23,7 +23,7 @@ diagnostics, and Larena release readiness.
 - Use `$ops` for runtime, deploy, update server, queues/cron, and hosting.
 - Use `$tester` for install/admin/public/API/Docara acceptance evidence.
 - Use `$bitrix` when comparing or porting Bitrix/SF/SitePack models.
-- Use `$seo` and `$ux` for public/search and interface gates.
+- Use `$marketing` and `$ux` for public/search and interface gates.
 - For Bitrix -> Larena or reference-adaptive work, use `$tester` for invariant
   evidence and `$bitrix` for source/reference behavior. `$larena` owns the
   target architecture adaptation: routes, controllers, requests, views,
@@ -47,11 +47,11 @@ list, and regression checks after fix.
   [../knowledge/ux-implementation-contract.md](../knowledge/ux-implementation-contract.md)
   and use the `$ux` screen spec or UX handoff as the interface contract.
 - Public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara
-  bridge, structured data and documentation/product pages: `$seo` owns the SEO
+  bridge, structured data and documentation/product pages: `$marketing` owns the SEO
   Contract. Implement it through Larena-native routes, storage, views,
   middleware, packages or Docara bridge surfaces and return changed
-  routes/templates/config for `$seo` review and `$tester` acceptance. If the
-  contract conflicts with Larena constraints, report a blocker to `$seo`; do not
+  routes/templates/config for `$marketing` review and `$tester` acceptance. If the
+  contract conflicts with Larena constraints, report a blocker to `$marketing`; do not
   silently rewrite SEO decisions.
 - Substantial documentation, docs maps, screenshots, user/developer/API guides
   and documentation audits: `$docs` owns the writing method; `$larena` stays
