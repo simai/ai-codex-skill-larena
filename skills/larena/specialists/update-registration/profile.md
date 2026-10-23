@@ -10,8 +10,8 @@ Owns update server, registration server, licensing, product channels, installers
 
 ## Required Knowledge
 
-- [knowledge-packs/update-registration.md](../../knowledge-packs/update-registration.md)
-- [knowledge-packs/product-architecture.md](../../knowledge-packs/product-architecture.md)
+- [knowledge/update-registration.md](../../knowledge/update-registration.md)
+- [knowledge/product-architecture.md](../../knowledge/product-architecture.md)
 
 ## Gatekeeper Rules
 

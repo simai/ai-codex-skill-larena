@@ -15,8 +15,8 @@
       "readiness": "ready",
       "canonical_source_refs": [
         "references/canonical-package-portfolio.md",
-        "knowledge-packs/core-platform.md",
-        "knowledge-packs/admin-platform.md"
+        "knowledge/core-platform.md",
+        "knowledge/admin-platform.md"
       ],
       "extension_points": [
         {
@@ -100,8 +100,8 @@
       "readiness": "ready",
       "canonical_source_refs": [
         "references/canonical-package-portfolio.md",
-        "knowledge-packs/core-platform.md",
-        "knowledge-packs/admin-platform.md"
+        "knowledge/core-platform.md",
+        "knowledge/admin-platform.md"
       ],
       "extension_points": [
         {
@@ -187,8 +187,8 @@
       "readiness": "ready",
       "canonical_source_refs": [
         "references/canonical-package-portfolio.md",
-        "knowledge-packs/core-platform.md",
-        "knowledge-packs/admin-platform.md"
+        "knowledge/core-platform.md",
+        "knowledge/admin-platform.md"
       ],
       "extension_points": [
         {
@@ -275,8 +275,8 @@
       "readiness": "ready",
       "canonical_source_refs": [
         "references/canonical-package-portfolio.md",
-        "knowledge-packs/core-platform.md",
-        "knowledge-packs/admin-platform.md"
+        "knowledge/core-platform.md",
+        "knowledge/admin-platform.md"
       ],
       "extension_points": [
         {

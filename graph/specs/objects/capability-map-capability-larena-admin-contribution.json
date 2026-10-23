@@ -24,8 +24,8 @@
   "readiness": "ready",
   "schema_version": "1.0.0",
   "source_refs": [
-    "skills/larena/knowledge-packs/admin-platform.md",
-    "skills/larena/knowledge-packs/core-platform.md",
+    "skills/larena/knowledge/admin-platform.md",
+    "skills/larena/knowledge/core-platform.md",
     "skills/larena/quality/capability-map.json",
     "skills/larena/references/canonical-package-portfolio.md"
   ],

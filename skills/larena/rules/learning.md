@@ -2,9 +2,9 @@
 
 When a reusable Larena lesson appears, store it at the narrowest useful level:
 
-- product/platform invariant -> `kernel/` or `knowledge-packs/product-architecture.md`;
+- product/platform invariant -> `kernel/` or `knowledge/product-architecture.md`;
 - routing or workflow rule -> `rules/` or `activities/`;
-- package implementation detail -> `knowledge/modules/*` or a package-specific knowledge pack;
+- package implementation detail -> `knowledge/packages/*` or a package-specific knowledge pack;
 - admin/update/SitePack/REST/settings rule -> the matching specialist or knowledge pack;
 - one-off project fact -> project repo `source/memory/`, not this skill.
 

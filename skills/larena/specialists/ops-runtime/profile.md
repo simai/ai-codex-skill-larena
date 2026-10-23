@@ -9,9 +9,9 @@ Owns Laravel runtime, hosting constraints, queues, cron, deploy, update-server e
 ## Required Knowledge
 
 - [knowledge/deployment-ops.md](../../knowledge/deployment-ops.md)
-- [knowledge-packs/update-registration.md](../../knowledge-packs/update-registration.md)
-- [knowledge-packs/ordinary-hosting-scheduler.md](../../knowledge-packs/ordinary-hosting-scheduler.md)
-- [knowledge-packs/session-safe-background-enrichment.md](../../knowledge-packs/session-safe-background-enrichment.md)
+- [knowledge/update-registration.md](../../knowledge/update-registration.md)
+- [knowledge/ordinary-hosting-scheduler.md](../../knowledge/ordinary-hosting-scheduler.md)
+- [knowledge/session-safe-background-enrichment.md](../../knowledge/session-safe-background-enrichment.md)
 
 ## Gatekeeper Rules
 

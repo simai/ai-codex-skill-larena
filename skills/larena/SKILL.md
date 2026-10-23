@@ -35,7 +35,9 @@ Load when relevant:
 - [rules/routing.md](./rules/routing.md) and
   [references/specialist-roster.md](./references/specialist-roster.md);
 - [references/baseline-verification.md](./references/baseline-verification.md)
-  and [references/reference-map.md](./references/reference-map.md).
+  and [references/reference-map.md](./references/reference-map.md);
+- [knowledge/README.md](./knowledge/README.md): the single knowledge layer
+  (settings catalog, «Хранилище», `larena/ui` components, package standards).
 
 ## Core Workflow
 
@@ -58,7 +60,8 @@ Load when relevant:
 - The current Specs registry and Workspace profile define the canonical
   `larena/*` portfolio; do not reconstruct it from historical package files.
 - `larena-upserv`, split Docara packages, `rest_doc`, standalone 2FA and old
-  SIMAI/Bitrix/SF5 models are compatibility or migration references only.
+  SIMAI/Bitrix models (including old SF5-era layers) are compatibility or migration
+  references only.
 - Keep update server and closed registration/licensing server separate.
 - Keep SitePack platform-neutral and Larena adapters platform-specific.
 - Never expose arbitrary REST class/method execution without registration,
@@ -66,6 +69,20 @@ Load when relevant:
 - Keep Blade presentation-only and assets/data logic in owned layers.
 - Preserve useful free/core capability and baseline safety.
 - Install/update must be idempotent with explicit migration and rollback notes.
+
+## Чем навык не занимается
+
+- Общая разработка на Laravel, ревью и рефакторинг вне платформенных правил
+  Larena — `dev` (навык даёт знания о Larena, репозиторий ведёт `dev`).
+- SIMAI Framework, его компоненты и сборка набора `larena` — `framework`;
+  визуальный QA — `designer`.
+- Отдельный сайт документации на Docara — `docara`; метод документации — `docs`.
+- Хостинг, деплой, доступы к серверам — `ops`; вердикт о готовности к
+  релизу — `tester`.
+- Структура графа — `graph`; упорядочивание данных — `mirai`; правила
+  Федерации — `federation`.
+- Имена пакетов, новые пакеты и репозитории, лицензии — решает владелец;
+  навык готовит варианты, но не объявляет их принятыми.
 
 ## Companion Ownership
 

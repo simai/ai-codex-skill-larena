@@ -10,8 +10,8 @@ edition boundaries inside the product, not separate package identities.
 
 ## Required Knowledge
 
-- [knowledge-packs/docara-proof.md](../../knowledge-packs/docara-proof.md)
-- [knowledge/modules/docara.md](../../knowledge/modules/docara.md)
+- [knowledge/docara-proof.md](../../knowledge/docara-proof.md)
+- [knowledge/packages/docara.md](../../knowledge/packages/docara.md)
 
 ## Gatekeeper Rules
 

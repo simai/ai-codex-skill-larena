@@ -4,40 +4,40 @@
 
 ## Маршрутизация сценариев
 - Новое поведение или расширение домена:
-  - Загрузи `modules/new-feature.md`
+  - Загрузи `knowledge/workflows/new-feature.md`
   - Требуй полный контракт (`AC`, checks, `Do Not Touch`, risks, rollback)
 - Локальный багфикс или рефакторинг:
-  - Загрузи `modules/project-changes.md`
+  - Загрузи `knowledge/workflows/project-changes.md`
   - Держи минимальный патч и жесткий scope
 - API или контрактные изменения:
-  - Загрузи `modules/api.md`
+  - Загрузи `knowledge/workflows/api.md`
   - Включи контракт endpoint-ов и Swagger-проверки
 - Изменения схемы или данных:
-  - Загрузи `modules/data-migrations.md`
+  - Загрузи `knowledge/workflows/data-migrations.md`
   - Всегда формируй Migration Notes
 - Async/event обработка:
-  - Загрузи `modules/jobs-queues.md`
+  - Загрузи `knowledge/workflows/jobs-queues.md`
   - Обеспечь идемпотентность и обработку retry
 - Изменения auth/access:
-  - Загрузи `modules/auth-authorization.md`
+  - Загрузи `knowledge/workflows/auth-authorization.md`
   - Загрузи `knowledge/access-control.md`
   - Сформируй `Access Matrix` и пройди `checklists/access-checklist.md`
   - Обеспечь проверки permission и негативные тесты
 - Performance-оптимизация:
-  - Загрузи `modules/performance.md`
+  - Загрузи `knowledge/workflows/performance.md`
   - Покажи измеримый результат до и после
 - Итерация, сфокусированная на тестах:
-  - Загрузи `modules/testing.md`
+  - Загрузи `knowledge/workflows/testing.md`
   - Сформируй QA Report и regression checklist
 - Документационная задача:
-  - Загрузи `modules/documentation.md`
+  - Загрузи `knowledge/workflows/documentation.md`
   - Используй шаблоны из `templates/wiki/*`
 - Release of a canonical Workspace package into the Root distribution:
-  - Загрузи `modules/release.md`
+  - Загрузи `knowledge/workflows/release.md`
   - Загрузи `knowledge/deployment-ops.md`
   - Pin the accepted package revision in Root and run the Root acceptance gate
 - Работа в конкретном пакете:
-  - Загрузи паспорт модуля из `knowledge/modules/*` (например, `admin.md`, `access.md`, `docara.md`)
+  - Загрузи паспорт модуля из `knowledge/packages/*` (например, `admin.md`, `access.md`, `docara.md`)
   - Проверь инварианты/риски до внесения правок
 
 ## Проектные ограничения

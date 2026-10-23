@@ -179,8 +179,8 @@
       ],
       "source_refs": [
         "repo://ai-skill-larena/skills/larena/rules/process-control.md",
-        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-pre-codegen-repository-preparation.md",
-        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-repository-structure.md"
+        "repo://ai-skill-larena/skills/larena/knowledge/package-pre-codegen-repository-preparation.md",
+        "repo://ai-skill-larena/skills/larena/knowledge/package-repository-structure.md"
       ],
       "applicability": [
         "package_delivery"
@@ -315,8 +315,8 @@
       "rollback_refs": [],
       "source_refs": [
         "repo://ai-skill-larena/skills/larena/kernel/output-contract.md",
-        "repo://ai-skill-larena/skills/larena/knowledge-packs/module-yaml-standard.md",
-        "repo://ai-skill-larena/skills/larena/knowledge-packs/package-completion-standard.md"
+        "repo://ai-skill-larena/skills/larena/knowledge/module-yaml-standard.md",
+        "repo://ai-skill-larena/skills/larena/knowledge/package-completion-standard.md"
       ],
       "applicability": [
         "package_delivery"

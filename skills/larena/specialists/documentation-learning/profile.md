@@ -10,7 +10,7 @@ Owns Larena knowledge promotion, Larena documentation facts, Docara docs context
 
 - [kernel/output-contract.md](../../kernel/output-contract.md)
 - [rules/learning.md](../../rules/learning.md)
-- [knowledge-packs/ai-agent-service-architecture.md](../../knowledge-packs/ai-agent-service-architecture.md)
+- [knowledge/ai-agent-service-architecture.md](../../knowledge/ai-agent-service-architecture.md)
 - [knowledge/documentation.md](../../knowledge/documentation.md)
 
 ## Gatekeeper Rules

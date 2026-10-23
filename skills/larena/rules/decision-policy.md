@@ -12,7 +12,7 @@ Before approving, check:
 
 - product DNA and non-negotiables are respected;
 - selected scope matches Larena phase and repository;
-- the change states which product goal it serves: self-install, update safety, admin UX, SitePack portability, Docara proof, AI readiness, marketplace ecosystem, or Bitrix/SF5 continuity;
+- the change states which product goal it serves: self-install, update safety, admin UX, SitePack portability, Docara proof, AI readiness, marketplace ecosystem, or Bitrix/SIMAI Framework continuity;
 - free/paid/core/pro/internal boundaries are explicit when product capability or package distribution is affected;
 - update/registration boundaries are respected;
 - SitePack standard and platform adapter responsibilities are separated;

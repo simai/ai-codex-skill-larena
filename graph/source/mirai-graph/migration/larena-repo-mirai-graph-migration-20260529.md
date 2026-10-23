@@ -31,7 +31,7 @@ skills/larena/activities/admin-platform.json
 skills/larena/activities/update-registration.json
 skills/larena/activities/sitepack-bridge.json
 skills/larena/activities/docara-product.json
-skills/larena/knowledge-packs/product-architecture.md
+skills/larena/knowledge/product-architecture.md
 ```
 
 Excluded:

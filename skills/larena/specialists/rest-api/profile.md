@@ -8,10 +8,10 @@ Owns Larena REST Runner, OpenAPI/Swagger, API method metadata, token access and 
 
 ## Required Knowledge
 
-- [knowledge-packs/rest-safety.md](../../knowledge-packs/rest-safety.md)
-- [knowledge-packs/ai-agent-service-architecture.md](../../knowledge-packs/ai-agent-service-architecture.md)
-- [knowledge-packs/session-safe-background-enrichment.md](../../knowledge-packs/session-safe-background-enrichment.md)
-- [knowledge/modules/rest.md](../../knowledge/modules/rest.md)
+- [knowledge/rest-safety.md](../../knowledge/rest-safety.md)
+- [knowledge/ai-agent-service-architecture.md](../../knowledge/ai-agent-service-architecture.md)
+- [knowledge/session-safe-background-enrichment.md](../../knowledge/session-safe-background-enrichment.md)
+- [knowledge/packages/rest.md](../../knowledge/packages/rest.md)
 
 ## Gatekeeper Rules
 

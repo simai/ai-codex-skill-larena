@@ -50,18 +50,20 @@ SitePack is platform-neutral data transport. Larena should use an adapter/packag
 
 Larena is the canonical product/platform identity for backend packages, access, settings, props, storage, REST, admin and update flows.
 
-`SF5` is an internal/historical label and remains useful mainly as a frontend/UI analogy or compatibility reference. Do not name new Larena backend contracts after SF5.
+SIMAI Framework (formerly "SF5") is the frontend/UI layer owned by `$framework`; Larena consumes it through `larena/ui` and the component package `larena`. Do not name new Larena backend contracts after the framework.
 
 Bitrix and older SIMAI implementations may provide migration references and adapter targets. They should not define Larena's package identity, runtime architecture or public product naming.
 
 ## Docara
 
 Docara (`larena/docara`) is the likely first product-level proof that Larena is
-a usable CMS platform.
+a usable CMS platform. On 2026-10-23 it is workspace-only (not in the Root
+assembly); check [../references/canonical-package-portfolio.md](../references/canonical-package-portfolio.md)
+before claiming it runs in the entry app.
 
-## SF5 Layer DNA
+## SIMAI Framework Layer DNA
 
-Preserve the meaning of the SF5 `/simai` and `/simai.data` system-library and
+Preserve the meaning of the SIMAI Framework `/simai` and `/simai.data` system-library and
 overlay layers, but implement it through Laravel-native package resources,
 storage, database registries and adapters. Cross-platform mapping:
-[../knowledge-packs/sf5-simai-layer-dna.md](../knowledge-packs/sf5-simai-layer-dna.md).
+[../knowledge/simai-layer-dna.md](../knowledge/simai-layer-dna.md).

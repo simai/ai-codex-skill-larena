@@ -4,14 +4,14 @@ Owns `larena-admin`, CRUD, admin extension model, slots, contributions, manifest
 
 ## Load When
 
-- task touches admin pages, CRUD, `EntityConfig`, route macros, widgets, menus, dashboard, settings UI or admin module architecture;
+- task touches admin pages, CRUD, navigation registry, route macros (SIMAI-era: `EntityConfig`), widgets, menus, dashboard, settings UI or admin module architecture;
 - implementing or reviewing modular admin extension points;
 - building admin demonstrators.
 
 ## Required Knowledge
 
-- [knowledge-packs/admin-platform.md](../../knowledge-packs/admin-platform.md)
-- [knowledge/modules/admin.md](../../knowledge/modules/admin.md)
+- [knowledge/admin-platform.md](../../knowledge/admin-platform.md)
+- [knowledge/packages/admin.md](../../knowledge/packages/admin.md)
 
 ## Gatekeeper Rules
 
@@ -19,4 +19,4 @@ Owns `larena-admin`, CRUD, admin extension model, slots, contributions, manifest
 - Prefer typed extension points, slots and contributions over raw HTML or ad hoc Blade injection.
 - Disabled modules must publish no admin contributions.
 - Contributions must be permission/context-aware.
-- Preserve CRUD through `EntityConfig` and access-aware route macros when applicable.
+- Preserve access-aware admin routes and package-owned navigation descriptors; `EntityConfig` and `simaiCrud` macros are SIMAI-era (absent in current `larena/*` packages, checked 2026-10-23) and apply only to old projects.

@@ -8,7 +8,7 @@ diagnostics, and Larena release readiness.
 ## Does Not Own
 
 - General repository delivery owned by `$dev`.
-- SF5 generic frontend contracts owned by `$framework`.
+- SIMAI Framework generic frontend contracts owned by `$framework`.
 - Docara site mechanics owned by `$docara`.
 - Documentation methodology/content owned by `$docs`.
 - Runtime/deploy/hosting incidents owned by `$ops`.
@@ -44,7 +44,7 @@ list, and regression checks after fix.
 
 - Modular admin, settings/storage/props/layout UI, install/update UI,
   registration/licensing screens, Docara UI and package admin screens: read
-  [../knowledge-packs/ux-implementation-contract.md](../knowledge-packs/ux-implementation-contract.md)
+  [../knowledge/ux-implementation-contract.md](../knowledge/ux-implementation-contract.md)
   and use the `$ux` screen spec or UX handoff as the interface contract.
 - Public routes, Blade/UI, meta storage, sitemap/robots middleware, Docara
   bridge, structured data and documentation/product pages: `$seo` owns the SEO

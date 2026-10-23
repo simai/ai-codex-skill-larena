@@ -1,7 +1,7 @@
 # Goal Execution
 
 For user-level Larena goals and stages, load
-[../knowledge-packs/larena-goal-execution-profile.md](../knowledge-packs/larena-goal-execution-profile.md).
+[../knowledge/larena-goal-execution-profile.md](../knowledge/larena-goal-execution-profile.md).
 
 - Hierarchy: `goal -> milestone -> batch -> checkpoint/evidence -> Kaizen`.
 - In Russian user-facing replies say `этап` for canonical `milestone`; accept

@@ -7,10 +7,10 @@ Choose the smallest sufficient specialist set.
 - Entry install/readiness: `package-installer` + `qa-validation`; add `ops-runtime` for host/runtime issues.
 - Package diagnostics: `platform-architect` + relevant surface specialist + `qa-validation`.
 - New package/module: `platform-architect` + `package-installer` + `security-permissions` + `qa-validation`.
-- Modular admin: `modular-admin` + `security-permissions` + `qa-validation`; add `sf5-integration` for layout/components.
+- Modular admin: `modular-admin` + `security-permissions` + `qa-validation`; add `framework-integration` for layout/components.
 - Update server or registration: `update-registration` + `security-permissions` + `ops-runtime` + `qa-validation`.
 - SitePack import/export/bridge: `sitepack-bridge` + `data-settings-props`; add `docara-product` for Docara data.
-- SF5 runtime/layout: `sf5-integration` + `platform-architect`; add `data-settings-props` for page/layout data.
+- SIMAI Framework runtime/layout, `larena/ui`, admin component kit: `framework-integration` + `platform-architect`; add `data-settings-props` for page/layout data. Component fixes themselves go to `$framework`.
 - REST/OpenAPI: `rest-api` + `security-permissions` + `qa-validation`.
 - AI-agent/service architecture, service discovery or module capability manifests: `platform-architect` + `rest-api` + `documentation-learning`; add `security-permissions` when operations can mutate data or cross trust boundaries.
 - Settings/storage/props/layout: `data-settings-props` + `platform-architect` + `qa-validation`.
@@ -36,6 +36,8 @@ with `activity_id`, `title`, `triggers`, `required_specialists`,
 Load only the selected specialist profiles
 ([../references/specialist-roster.md](../references/specialist-roster.md)) and
 the knowledge packs they reference. Do not load every reference file.
+An activity's `knowledge_packs` name resolves to `knowledge/<name>.md`; the
+index of the single knowledge layer is [../knowledge/README.md](../knowledge/README.md).
 
 For simple edits, one primary specialist plus `qa-validation` is enough. For
 install/update, licensing, SitePack, REST safety, admin architecture or product

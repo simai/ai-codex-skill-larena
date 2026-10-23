@@ -10,8 +10,8 @@ Owns SitePack usage as shared transport for Bitrix <-> Larena data, product pack
 
 ## Required Knowledge
 
-- [knowledge-packs/sitepack-bridge.md](../../knowledge-packs/sitepack-bridge.md)
-- [knowledge-packs/settings-storage-props-layout.md](../../knowledge-packs/settings-storage-props-layout.md)
+- [knowledge/sitepack-bridge.md](../../knowledge/sitepack-bridge.md)
+- [knowledge/settings-storage-props-layout.md](../../knowledge/settings-storage-props-layout.md)
 
 ## Gatekeeper Rules
 

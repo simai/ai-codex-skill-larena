@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+- 2026-10-23: состав пакетов сверен с larena-specs и Composer larena — 44 в
+  Specs (новые `security`, `telephony`), 26 в сборке Root (вошли `monitoring`,
+  `notification`, `queue`, `scheduler`, `secret`; вышли `content`, `docara`),
+  18 только в workspace; Laravel `^13.8`; `larena/content` выведен из
+  владения (Storage). Добавлена команда перепроверки и заголовок свежести.
+- Три слоя знаний (`knowledge/`, `knowledge-packs/`, `modules/`) сведены в
+  один `knowledge/` без потери содержимого: паспорта пакетов — `packages/`,
+  сценарии — `workflows/`, общий Laravel — `laravel/`; индекс
+  `knowledge/README.md`. Файлы с именами эпохи SIMAI (`simaiCrud`,
+  `simai:install`, `EntityConfig`, `config/simai_*`) помечены как справка.
+- SF5 → SIMAI Framework; специалист `sf5-integration` → `framework-integration`;
+  новые знания: `larena/ui` и набор компонентов админки, каталог настроек по
+  уровням и раздел «Хранилище». В `SKILL.md` добавлен блок «Чем навык не
+  занимается».
+
 - Reconciled package knowledge with the canonical Larena 42/23 portfolio:
   MFA/2FA is owned inside `larena/auth`, the retired `larena/two-fa` package is
   archive-only, and old split Docara/REST identities are no longer presented

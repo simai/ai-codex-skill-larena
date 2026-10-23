@@ -32,7 +32,7 @@ package, graph sync proposal, review gates and runtime feedback.
 ## Pre-Codegen Repository Preparation
 
 Before writing implementation code in any Larena package repository, load and
-obey [../knowledge-packs/package-pre-codegen-repository-preparation.md](../knowledge-packs/package-pre-codegen-repository-preparation.md).
+obey [../knowledge/package-pre-codegen-repository-preparation.md](../knowledge/package-pre-codegen-repository-preparation.md).
 
 - A legacy repository with confirmed backup is emptied in the active tree and
   rebuilt as a clean Larena package repository.

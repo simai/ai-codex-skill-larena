@@ -10,7 +10,7 @@
   "readiness": "ready",
   "schema_version": "1.0.0",
   "source_refs": [
-    "skills/larena/knowledge-packs/core-platform.md"
+    "skills/larena/knowledge/core-platform.md"
   ],
   "subtype": "owner_raw_source_ref",
   "summary": "Owner-authoritative raw source used by task-scoped context.",

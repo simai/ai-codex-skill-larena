@@ -13,7 +13,7 @@ migrations, release readiness and QA.
 `Mirai Graph` используется как companion layer для структуры, связей,
 adoption/readiness, semantic preservation, effectiveness и federation
 contracts. Он не заменяет `SKILL.md`, `kernel/`, `rules/`, `activities/`,
-`specialists/`, `knowledge-packs/`, `knowledge/`, `modules/`, `quality/` и
+`specialists/`, `knowledge/` (единый слой знаний), `quality/` и
 templates.
 
 ## Mirai Graph Rules
@@ -24,7 +24,7 @@ templates.
 - Generated candidates из `graph/generated/` не являются canonical truth.
 - Larena domain ownership stays with `$larena`; `$graph` owns graph structure
   and gates only.
-- Do not collapse Larena into generic Laravel, Bitrix, SF5 or Docara ownership;
+- Do not collapse Larena into generic Laravel, Bitrix, SIMAI Framework or Docara ownership;
   use companion contracts instead.
 - Canonical changes in `graph/specs/` require an apply plan, validation and a
   rollback path.
