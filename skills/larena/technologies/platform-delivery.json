@@ -5,6 +5,17 @@
   "owner": "skill.larena",
   "outcome": "Изменение пакета или приложения Larena реализовано из подготовленного репозитория по launch record и проверено, либо получен диагностический вердикт или решение о готовности к релизу — с доказательствами, заметками миграции и отката и решением координатора.",
   "lifecycle": "accepted",
+  "acceptance": {
+    "accepted_by": "AI review by Federation thread task-9654a45bb3c7477ab26c on the owner's decision",
+    "accepted_at": "2026-10-23",
+    "decision_ref": "owner decision 2026-10-23: re-accept technologies of 20.10 with a record",
+    "evidence": [
+      "контрактная проверка federation-skill-technology-contracts.py: структура навыка, маршрутизация примеров и пакеты технологии без замечаний; отметки outcome_evidence_* снимаются после Skill Sync",
+      "сводный прогон владельца: storage/outcome-runs/2026-10-21/larena.json — ready, 4/4 PASS",
+      "источники: все 40 ссылок source_refs существуют; у каждой операции есть входы, выходы, проверки и условия остановки; сценарии ссылаются только на существующие операции",
+      "сверка с правилами навыка: operation.repository_preparation (rules/process-control.md, knowledge/package-pre-codegen-repository-preparation.md), operation.release_artifacts (kernel/output-contract.md, knowledge/module-yaml-standard.md) — совпадают"
+    ]
+  },
   "version": "1.0.0",
   "source_refs": [
     "repo://ai-skill-larena/skills/larena/SKILL.md",
