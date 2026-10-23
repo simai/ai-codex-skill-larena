@@ -2,6 +2,6 @@
 
 Status: success
 Required actions: evidence, federation-proposal, route-check, runtime-context
-Evidence: `graph/generated/mirai-graph/skill-source-changes/repository-standard-v3-larena-20260825-bundled/skill-source-change-evidence.json`
+Evidence: `graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261023125131/skill-source-change-evidence.json`
 
 Canonical write allowed: false

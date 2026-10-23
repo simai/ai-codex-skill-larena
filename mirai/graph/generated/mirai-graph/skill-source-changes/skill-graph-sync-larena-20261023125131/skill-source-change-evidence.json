@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-23T12:51:31.457833+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-skill-larena",
+  "base": "2b7a46bb4f1f407da4b9cf06c69707e8397ea2aa",
+  "base_commit": "2b7a46bb4f1f407da4b9cf06c69707e8397ea2aa",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "51c78f122ff714cffffcd5e760153a927f39e5d8cfa9af831f36d4be4fe4725b",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261023125131/detector-report.json",
+  "changed_files": [
+    {
+      "path": "README.md",
+      "source_path": "README.md",
+      "change_types": [
+        "documentation",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "5f6c31cfeff4871ef200d03f5b41f23b72a850f25da92b972e0b404413e6705b",
+      "source_bytes": 1072,
+      "baseline_path": "README.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "dc401a6d0e200a53f3b7d2571f62f500d78abd39bd5f681d2c38c6537c78ea87",
+      "baseline_bytes": 1054
+    },
+    {
+      "path": "scripts/mirai_graph_contract_gate.py",
+      "source_path": "scripts/mirai_graph_contract_gate.py",
+      "change_types": [
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "2e28ca80a413650d7d628e5193e31b73c24cd2d4fe17b725fcc862b5aaf65ff6",
+      "source_bytes": 3048,
+      "baseline_path": "scripts/mirai_graph_contract_gate.py",
+      "baseline_mode": "100644",
+      "baseline_sha256": "7124bc236a3ed5e860d45816ac426882ad76fc281800faf519b7f48eec535b5b",
+      "baseline_bytes": 3018
+    },
+    {
+      "path": "skills/larena/repository-recipes/larena.application/recipe.json",
+      "source_path": "repository-recipes/larena.application/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "8df8978557f3ac714de60ab9bac1963f02ab3bdf7d34801f05b706f7dc545782",
+      "source_bytes": 3859,
+      "baseline_path": "skills/larena/repository-recipes/larena.application/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "bc22243d7b8dc9036f51ea484e64e1544fdaade4845292b1285bcb0dba1f6078",
+      "baseline_bytes": 3847
+    },
+    {
+      "path": "skills/larena/repository-recipes/larena.package/recipe.json",
+      "source_path": "repository-recipes/larena.package/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "df510a7116e30f7848a7a1ddf60dc5175ba4a943f1d3745b524df0941589dbb8",
+      "source_bytes": 3613,
+      "baseline_path": "skills/larena/repository-recipes/larena.package/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "c36b0eeac83dda8bbd20452a0be3830598c3dd8a34ddd14ab89961b7bd29c464",
+      "baseline_bytes": 3601
+    },
+    {
+      "path": "skills/larena/repository-recipes/technology-overlay/recipe.json",
+      "source_path": "repository-recipes/technology-overlay/recipe.json",
+      "change_types": [
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ef2a60aefd38fa9cc0f8a51f714127e260a877ae99fcd15e706a5af9fceb85aa",
+      "source_bytes": 1341,
+      "baseline_path": "skills/larena/repository-recipes/technology-overlay/recipe.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "7e948f70fe7c59c08befcc9dde67bcd3e6cd062a321a7fc1f0e6367ca207c35e",
+      "baseline_bytes": 1329
+    },
+    {
+      "path": "skills/larena/rules/process-control.md",
+      "source_path": "rules/process-control.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ce7a0b6a9b91befee3e8b6ada51ba9393f1843f59d5749fc4d5fa6106e462da8",
+      "source_bytes": 2173,
+      "baseline_path": "skills/larena/rules/process-control.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "3fb927286761aab588eba94584c0bbf45261cd924998546677ba61288cc17f35",
+      "baseline_bytes": 2167
+    },
+    {
+      "path": "skills/larena/technologies/platform-delivery.json",
+      "source_path": "technologies/platform-delivery.json",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "methodology",
+        "routing-impact",
+        "runtime"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "5e7bff9c62bead338f49b844c6d03f8f76c0a3fbe71dce5783225535d6e71a88",
+      "source_bytes": 21593,
+      "baseline_path": "skills/larena/technologies/platform-delivery.json",
+      "baseline_mode": "100644",
+      "baseline_sha256": "aad2d3ee2e77670f11e07ada7813723cb03badb875470a8cc835ea17c4e403ee",
+      "baseline_bytes": 20292
+    }
+  ],
+  "change_types": [
+    "capability",
+    "documentation",
+    "federation-impact",
+    "methodology",
+    "routing-impact",
+    "runtime"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "README.md",
+    "scripts/mirai_graph_contract_gate.py",
+    "skills/larena/repository-recipes/larena.application/recipe.json",
+    "skills/larena/repository-recipes/larena.package/recipe.json",
+    "skills/larena/repository-recipes/technology-overlay/recipe.json",
+    "skills/larena/rules/process-control.md",
+    "skills/larena/technologies/platform-delivery.json"
+  ],
+  "canonical_write_allowed": false
+}
