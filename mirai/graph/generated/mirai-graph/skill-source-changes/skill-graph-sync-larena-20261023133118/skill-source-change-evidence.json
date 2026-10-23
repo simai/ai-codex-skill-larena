@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "operation_id": "graph.skill-evolution.changed-source.evidence",
+  "created_at": "2026-10-23T13:31:19.049328+00:00",
+  "skill": "larena",
+  "repo": "repo://ai-skill-larena",
+  "base": "7eb8147071bae6fd232bac2d0656d4c0c347ddc2",
+  "base_commit": "7eb8147071bae6fd232bac2d0656d4c0c347ddc2",
+  "comparison_mode": "baseline_to_worktree",
+  "detector_fingerprint": "784caadf24b5a585e7726a5c72ba31ceea349177002f3fca4ba55eae6398ce7d",
+  "detector_report_ref": "graph/generated/mirai-graph/skill-source-changes/skill-graph-sync-larena-20261023133118/detector-report.json",
+  "changed_files": [
+    {
+      "path": "skills/larena/SKILL.md",
+      "source_path": "SKILL.md",
+      "change_types": [
+        "capability",
+        "federation-impact",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": true,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "8700748124654446324555a22e6266aae94797a0b837ab20c3a8d581a69e5f1b",
+      "source_bytes": 5690,
+      "baseline_path": "skills/larena/SKILL.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "8b227403ab232d3e4b6685e5b25ca928cd28ca8ccbca46a0ca20f040eb04f510",
+      "baseline_bytes": 5684
+    },
+    {
+      "path": "skills/larena/rules/skill-mesh-balance.md",
+      "source_path": "rules/skill-mesh-balance.md",
+      "change_types": [
+        "methodology",
+        "routing-impact"
+      ],
+      "routing_impact": true,
+      "federation_impact": false,
+      "status": "M",
+      "old_path": "",
+      "source_mode": "100644",
+      "source_sha256": "ab509f3b30af49868e0b2e01f80e05923e739df2b4fb6d7527b347c1bc5cc688",
+      "source_bytes": 3024,
+      "baseline_path": "skills/larena/rules/skill-mesh-balance.md",
+      "baseline_mode": "100644",
+      "baseline_sha256": "6ada8f82abdd067706443716cc0cdb30baabd182a9c2a4cce26f7010e98d36fd",
+      "baseline_bytes": 2994
+    }
+  ],
+  "change_types": [
+    "capability",
+    "federation-impact",
+    "methodology",
+    "routing-impact"
+  ],
+  "required_actions": [
+    "evidence",
+    "federation-proposal",
+    "route-check",
+    "runtime-context"
+  ],
+  "detected_specialists": [],
+  "route_check_required": true,
+  "federation_proposal_required": true,
+  "evidence_refs": [
+    "skills/larena/SKILL.md",
+    "skills/larena/rules/skill-mesh-balance.md"
+  ],
+  "canonical_write_allowed": false
+}

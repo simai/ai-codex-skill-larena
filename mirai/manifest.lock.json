@@ -131,7 +131,7 @@
   "entrypoint_digests": {
     "mirai/components": "sha256:0bcdf2e80057f6348dd29d4c6378308d1c60f894d6f3759694a2906d90f5e547",
     "mirai/context": "sha256:21df775001eec7208a9710460d39ff3d8c5afb6385b89e66b9211f4154242e50",
-    "mirai/graph": "sha256:3c5417525b548e1400fd178a42f5cec534829b603cab6ddc519cbad35f9ed736",
+    "mirai/graph": "sha256:98f1a757566a32974d484b55cc974ee7369fb85c73a8a910578c74e99a6c6b61",
     "mirai/graph/specs/objects/capability-larena-admin-platform.json": "sha256:7e587e02e307deb955f5ba7a88475b0767144259ef7be89c29845d91df26033e",
     "mirai/graph/specs/objects/capability-larena-docara-product.json": "sha256:575b84b23a30518b2ab3b3d39cf2c93159f1ce1a2b8a3e7ad685dcb0ab841925",
     "mirai/graph/specs/objects/capability-larena-entry-install-readiness.json": "sha256:e375ed5e8941cee7d20b878a804d7a82809b88965e1a04333224d2c2683622ec",
@@ -208,5 +208,5 @@
   },
   "source_reference_digest": "sha256:38e2a55a701b83a73ffafb7ea501aa3bb8e9b2ea8eeca71157798822f7804bfc",
   "canonical_write_allowed": false,
-  "digest": "sha256:f97608d16c74486dd6302402f8198638fa57c33cf81ce006adbfd4fc4a19edee"
+  "digest": "sha256:eb05acbf167671daa3d5deabc9df6c246c30494b619ceaba2d8abc7d739cd8fc"
 }
